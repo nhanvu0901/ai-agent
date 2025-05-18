@@ -1,0 +1,88 @@
+Graph Schema Description
+
+Node Labels:
+
+Law: Represents an individual law.
+    Properties:
+        law_id: (String, Unique) - The primary identifier for the law (e.g., "328/1991 Sb.").
+        title: (String) - The official title of the law.
+        promulgation_date: (String, Optional) - The date the law was promulgated.
+        effective_date: (String, Optional) - The date the law became effective.
+        source_file: (String, Optional) - The name of the source file for the law (e.g., a PDF document name).
+        full_text_content: (String) - The concatenated raw text content of the law, primarily for future full-text search or vector embedding.
+
+Agency: Represents a legal or governmental agency.
+    Properties:
+        name: (String, Unique) - The name of the agency (e.g., "Federální shromáždění České a Slovenské Federativní Republiky").
+
+Part: Represents a major structural part of a law (e.g., "ČÁST PRVNÍ").
+    Properties:
+        identifier: (String) - The identifier of the part (e.g., "ČÁST PRVN").
+        title: (String, Optional) - The title of the part (e.g., "VŠEOBECNÁ USTANOVENÍ").
+        law_id: (String) - The law_id of the parent Law, for context.
+        full_path: (String) - A constructed path for easier unique identification (e.g., "328/1991 Sb._part:ČÁST PRVN").
+
+Head: Represents a head or chapter within a Part of a law (e.g., "HLAVA I").
+    Properties:
+        identifier: (String) - The identifier of the head (e.g., "HLAVA I").
+        title: (String, Optional) - The title of the head (e.g., "PŘEDMĚT ÚPRAVY").
+        law_id: (String) - The law_id of the parent Law, for context.
+        full_path: (String) - A constructed path (e.g., "328/1991 Sb._part:ČÁST PRVN_head:HLAVA I").
+
+Paragraph: Represents a paragraph, typically denoted by "§" (e.g., "§ 1").
+    Properties:
+        identifier: (String) - The identifier of the paragraph (e.g., "§ 1").
+        text: (String) - The textual content of the paragraph.
+        law_id: (String) - The law_id of the parent Law, for context.
+        full_path: (String) - A constructed path (e.g., "328/1991 Sb._part:ČÁST PRVN_head:HLAVA I_para:§ 1").
+
+Subsection: Represents a nested subsection within a Paragraph or another Subsection (e.g., "(1)", "a)").
+    Properties:
+        identifier: (String) - The identifier of the subsection (e.g., "1", "a").
+        text: (String) - The textual content of the subsection. This might include concatenated text if the subsection itself has further nested textual elements in the JSON.
+        law_id: (String) - The law_id of the parent Law, for context.
+        full_path: (String) - A constructed path (e.g., "..._para:§ 1_sub:1_sub:a").
+
+UnresolvedReference: Represents a reference made by a law where a specific target law_id could not be automatically extracted from the reference text.
+    Properties:
+        text: (String) - The original text of the reference.
+
+Relationship Types:
+
+ENFORCES: Connects an Agency node to a Law node.
+    (Agency)-[:ENFORCES]->(Law)
+
+REFERENCES_LAW: Connects a Law node to another Law node that it references.
+    (Law)-[:REFERENCES_LAW {reference_text: string}]->(Law)
+    Properties:
+        reference_text: (String) - The original text string of the reference.
+
+HAS_UNRESOLVED_REFERENCE: Connects a Law node to an UnresolvedReference node when a specific law ID couldn't be parsed from a reference.
+    (Law)-[:HAS_UNRESOLVED_REFERENCE]->(UnresolvedReference)
+
+HAS_PART: Connects a Law node to its Part nodes.
+    (Law)-[:HAS_PART]->(Part)
+
+HAS_HEAD: Connects a Part node to its Head nodes.
+    (Part)-[:HAS_HEAD]->(Head)
+
+HAS_PARAGRAPH: Connects a Head node (or a Part node if paragraphs are directly under parts) to its Paragraph nodes.
+    (Head)-[:HAS_PARAGRAPH]->(Paragraph)
+    (Part)-[:HAS_PARAGRAPH]->(Paragraph)
+
+HAS_SUBSECTION: Connects a Paragraph node to its top-level Subsection nodes, or a Subsection node to its nested Subsection nodes.
+    (Paragraph)-[:HAS_SUBSECTION]->(Subsection)
+    (Subsection)-[:HAS_SUBSECTION]->(Subsection)
+
+Indexes and Constraints (as defined in initializeSchema):
+
+Constraints (for uniqueness and faster lookups/merges):
+    On (l:Law) for property law_id.
+    On (a:Agency) for property name.
+
+Indexes (for faster lookups):
+    On (l:Law) for property title.
+    On (p:Part) for properties (identifier, law_id).
+    On (h:Head) for properties (identifier, law_id).
+    On (p:Paragraph) for properties (identifier, law_id).
+    On (s:Subsection) for properties (identifier, law_id).

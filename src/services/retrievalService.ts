@@ -1,4 +1,3 @@
-
 import { SearchResultItem } from '../types';
 import * as neo4jService from './neo4jService';
 import * as qdrantService from './qdrantService';
@@ -10,6 +9,7 @@ export interface HybridSearchParams {
     query: string;
     useGraph: boolean;
     useVector: boolean;
+    useFullText?: boolean; // New option to use full-text search
     // Add more strategy options here if needed, e.g., weights, reranker model
 }
 
@@ -19,15 +19,32 @@ export interface HybridSearchParams {
  * More advanced: reranking using a cross-encoder or LLM.
  */
 export async function hybridSearch(params: HybridSearchParams): Promise<SearchResultItem[]> {
-    const { query, useGraph, useVector } = params;
+    const { query, useGraph, useVector, useFullText = true } = params;
     let graphResults: SearchResultItem[] = [];
     let vectorResults: SearchResultItem[] = [];
+    let fullTextResults: SearchResultItem[] = [];
     const allResults: SearchResultItem[] = [];
 
     if (useGraph) {
         try {
-            graphResults = await neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE);
-            console.log(`Graph search returned ${graphResults.length} results for query: "${query}"`);
+            if (useFullText) {
+                // Get law results from full-text search
+                graphResults = await neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE);
+
+                // Also get paragraph and subsection results from full-text search
+                const detailedResults = await neo4jService.searchParagraphsAndSubsectionsByFulltext(
+                    query,
+                    MAX_RESULTS_PER_SOURCE
+                );
+
+                fullTextResults = detailedResults;
+
+                console.log(`Graph + full-text search returned ${graphResults.length} law results and ${fullTextResults.length} paragraph/subsection results for query: "${query}"`);
+            } else {
+                // Fall back to keyword matching if full-text is disabled
+                graphResults = await neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE);
+                console.log(`Graph search returned ${graphResults.length} results for query: "${query}"`);
+            }
         } catch (error) {
             console.error('Error during graph search:', error);
         }
@@ -55,6 +72,14 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         }
     });
 
+    // Add full-text paragraph and subsection results
+    fullTextResults.forEach(item => {
+        item.score = item.score || 0.8; // Prioritize full-text matches
+        if (!combined.has(item.id) || (combined.get(item.id)?.score || 0) < item.score) {
+            combined.set(item.id, item);
+        }
+    });
+
     // Add vector results, potentially overwriting if score is higher
     vectorResults.forEach(item => {
         item.score = item.score || 0.0; // Vector search should always have a score
@@ -69,10 +94,3 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
     console.log(`Combined and sorted ${sortedResults.length} results.`);
     return sortedResults.slice(0, FINAL_CONTEXT_SIZE);
 }
-
-// Placeholder for a more advanced reranker if you implement one
-// async function rerankResults(query: string, items: SearchResultItem[]): Promise<SearchResultItem[]> {
-//   // This could use a cross-encoder model or an LLM to rerank based on relevance to the query.
-//   console.log(`Reranking ${items.length} items for query: "${query}" (Not implemented, returning original order)`);
-//   return items;
-// }

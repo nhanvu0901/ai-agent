@@ -41,11 +41,7 @@ export async function createServer(): Promise<FastifyInstance> {
 
   // Register routes
   await server.register(routes);
-  
-  // Health check endpoint
-  server.get('/health', async () => {
-    return { status: 'ok', timestamp: new Date().toISOString() };
-  });
+
 
   return server;
 }

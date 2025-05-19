@@ -73,27 +73,37 @@ async function executeQuery(query: string, params: Record<string, any>): Promise
 
 
 export async function searchLegalTextByKeyword(keywords: string, limit: number = 5): Promise<SearchResultItem[]> {
-  // Extremely simple query - just find laws with matching titles
+  // Use full-text search instead of the simple CONTAINS query
   const query = `
-    MATCH (l:Law) 
-    WHERE toLower(l.title) CONTAINS toLower($keywords)
+    CALL db.index.fulltext.queryNodes("law_text_content_fulltext", $keywords) 
+    YIELD node, score
     RETURN
-      l.law_id AS lawId,
-      l.title AS lawTitle,
-      l.law_id AS id, 
-      l.title AS content,
+      node.law_id AS lawId,
+      node.title AS lawTitle,
+      node.law_id AS id, 
+      CASE 
+        WHEN size(node.text_content) > 500 
+        THEN left(node.text_content, 500) + '...' 
+        ELSE node.text_content 
+      END AS content,
       'law' AS type,
-      1.0 AS relevanceScore,
-      { law_id: l.law_id, title: l.title, source_file: l.source_file } AS metadata
+      score AS relevanceScore,
+      { 
+        law_id: node.law_id, 
+        title: node.title, 
+        source_file: node.source_file,
+        score: score
+      } AS metadata
+    ORDER BY score DESC
     LIMIT $limit
-    `;
+  `;
 
   try {
     const records = await executeQuery(query, { keywords, limit });
     return records.map(record => ({
       id: record.get('id') as string,
       score: record.get('relevanceScore') as number,
-      type: record.get('type') as 'law' | 'paragraph' | 'subsection',
+      type: 'law',
       content: record.get('content') as string,
       title: record.get('lawTitle') as string,
       law_id: record.get('lawId') as string,
@@ -102,6 +112,128 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
     }));
   } catch (error) {
     console.error('Error in searchLegalTextByKeyword:', error);
+
+    // Fallback to the original CONTAINS query if full-text search fails or is not set up
+    console.log('Falling back to basic keyword search...');
+    const fallbackQuery = `
+      MATCH (l:Law) 
+      WHERE toLower(l.title) CONTAINS toLower($keywords)
+      RETURN
+        l.law_id AS lawId,
+        l.title AS lawTitle,
+        l.law_id AS id, 
+        l.title AS content,
+        'law' AS type,
+        1.0 AS relevanceScore,
+        { law_id: l.law_id, title: l.title, source_file: l.source_file } AS metadata
+      LIMIT $limit
+    `;
+
+    try {
+      const records = await executeQuery(fallbackQuery, { keywords, limit });
+      return records.map(record => ({
+        id: record.get('id') as string,
+        score: record.get('relevanceScore') as number,
+        type: 'law' as 'law' | 'paragraph' | 'subsection',
+        content: record.get('content') as string,
+        title: record.get('lawTitle') as string,
+        law_id: record.get('lawId') as string,
+        full_path: record.get('id') as string,
+        metadata: record.get('metadata') as Record<string, any>,
+      }));
+    } catch (fallbackError) {
+      console.error('Error in fallback search:', fallbackError);
+      return [];
+    }
+  }
+}
+
+// New method to search paragraphs and subsections by fulltext
+export async function searchParagraphsAndSubsectionsByFulltext(
+    keywords: string,
+    limit: number = 10
+): Promise<SearchResultItem[]> {
+  const paragraphQuery = `
+    CALL db.index.fulltext.queryNodes("paragraph_text_fulltext", $keywords) 
+    YIELD node, score
+    MATCH (law:Law {law_id: node.law_id})
+    RETURN
+      node.full_path AS id,
+      node.text AS content,
+      'paragraph' AS type,
+      law.title AS lawTitle,
+      node.law_id AS lawId,
+      node.full_path AS fullPath,
+      score AS relevanceScore,
+      { 
+        law_id: node.law_id, 
+        paragraph_identifier: node.identifier,
+        law_title: law.title,
+        score: score
+      } AS metadata
+    ORDER BY score DESC
+    LIMIT $limit
+  `;
+
+  const subsectionQuery = `
+    CALL db.index.fulltext.queryNodes("subsection_text_fulltext", $keywords) 
+    YIELD node, score
+    MATCH (law:Law {law_id: node.law_id})
+    RETURN
+      node.full_path AS id,
+      node.text AS content,
+      'subsection' AS type,
+      law.title AS lawTitle,
+      node.law_id AS lawId,
+      node.full_path AS fullPath,
+      score AS relevanceScore,
+      { 
+        law_id: node.law_id, 
+        subsection_identifier: node.identifier,
+        law_title: law.title,
+        score: score
+      } AS metadata
+    ORDER BY score DESC
+    LIMIT $limit
+  `;
+
+  try {
+    // Run both queries and combine results
+    const [paragraphRecords, subsectionRecords] = await Promise.all([
+      executeQuery(paragraphQuery, { keywords, limit: Math.ceil(limit/2) }),
+      executeQuery(subsectionQuery, { keywords, limit: Math.floor(limit/2) })
+    ]);
+
+    // Convert paragraph records to SearchResultItem
+    const paragraphResults = paragraphRecords.map(record => ({
+      id: record.get('id') as string,
+      score: record.get('relevanceScore') as number,
+      type: record.get('type') as 'paragraph',
+      content: record.get('content') as string,
+      title: record.get('lawTitle') as string,
+      law_id: record.get('lawId') as string,
+      full_path: record.get('fullPath') as string,
+      metadata: record.get('metadata') as Record<string, any>,
+    }));
+
+    // Convert subsection records to SearchResultItem
+    const subsectionResults = subsectionRecords.map(record => ({
+      id: record.get('id') as string,
+      score: record.get('relevanceScore') as number,
+      type: record.get('type') as 'subsection',
+      content: record.get('content') as string,
+      title: record.get('lawTitle') as string,
+      law_id: record.get('lawId') as string,
+      full_path: record.get('fullPath') as string,
+      metadata: record.get('metadata') as Record<string, any>,
+    }));
+
+    // Combine and sort by score
+    return [...paragraphResults, ...subsectionResults]
+        .sort((a, b) => (b.score || 0) - (a.score || 0))
+        .slice(0, limit);
+  } catch (error) {
+    console.error('Error in searchParagraphsAndSubsectionsByFulltext:', error);
     return [];
   }
 }
@@ -110,7 +242,10 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
 export async function getLawById(lawId: string): Promise<Neo4jLawNode | null> {
   const query = `
     MATCH (l:Law {law_id: $lawId})
-    RETURN l.law_id AS law_id, l.title AS title, l.promulgation_date AS promulgation_date, l.effective_date AS effective_date, l.full_text_content AS full_text_content
+    RETURN l.law_id AS law_id, l.title AS title, 
+           l.promulgation_date AS promulgation_date, 
+           l.effective_date AS effective_date, 
+           l.text_content AS text_content
     LIMIT 1
   `;
   try {

@@ -71,69 +71,25 @@ async function executeQuery(query: string, params: Record<string, any>): Promise
   }
 }
 
-/**
- * Searches for laws and related paragraphs/subsections based on keywords.
- */
+
 export async function searchLegalTextByKeyword(keywords: string, limit: number = 5): Promise<SearchResultItem[]> {
-  // Ensure limit is an integer (defensive programming)
-  const intLimit = Math.floor(Number(limit));
-
-  console.log(`searchLegalTextByKeyword with limit: ${limit} (${typeof limit}), converted to: ${intLimit} (${typeof intLimit})`);
-
-  // Modified query to use LIMIT toInteger($limit) as a safety measure
+  // Extremely simple query - just find laws with matching titles
   const query = `
-    // Match Laws by title
-    MATCH (l:Law)
+    MATCH (l:Law) 
     WHERE toLower(l.title) CONTAINS toLower($keywords)
-    WITH l, 10 AS score // Assign a base score for law title match
-    OPTIONAL MATCH (l)-[:HAS_PART]->()-[:HAS_HEAD|HAS_PARAGRAPH*0..]->(p:Paragraph)
-    WHERE p.text IS NOT NULL AND toLower(p.text) CONTAINS toLower($keywords)
-    WITH l, p, score + 5 AS newScore // Higher score for paragraph match
-    OPTIONAL MATCH (p)-[:HAS_SUBSECTION*1..]->(s:Subsection)
-    WHERE s.text IS NOT NULL AND toLower(s.text) CONTAINS toLower($keywords)
-    WITH l, p, s, CASE WHEN s IS NOT NULL THEN newScore + 5 ELSE newScore END AS finalScore
-
     RETURN
       l.law_id AS lawId,
       l.title AS lawTitle,
-      COALESCE(s.full_path, p.full_path, l.law_id) AS id,
-      COALESCE(s.text, p.text, l.title) AS content,
-      CASE
-        WHEN s IS NOT NULL THEN 'subsection'
-        WHEN p IS NOT NULL THEN 'paragraph'
-        ELSE 'law'
-      END AS type,
-      finalScore AS relevanceScore,
-      { law_id: l.law_id, title: l.title, source_file: l.source_file, full_path: COALESCE(s.full_path, p.full_path) } AS metadata
-    ORDER BY relevanceScore DESC
-    LIMIT toInteger($limit)
-
-    UNION
-
-    // Match Paragraphs directly
-    MATCH (p:Paragraph)<-[*]-(l:Law)
-    WHERE toLower(p.text) CONTAINS toLower($keywords)
-    WITH l, p, 20 AS score // Higher base score for direct paragraph match
-    OPTIONAL MATCH (p)-[:HAS_SUBSECTION*1..]->(s:Subsection)
-    WHERE s.text IS NOT NULL AND toLower(s.text) CONTAINS toLower($keywords)
-    WITH l, p, s, CASE WHEN s IS NOT NULL THEN score + 5 ELSE score END AS finalScore
-    RETURN
-      l.law_id AS lawId,
-      l.title AS lawTitle,
-      COALESCE(s.full_path, p.full_path) AS id,
-      COALESCE(s.text, p.text) AS content,
-      CASE
-        WHEN s IS NOT NULL THEN 'subsection'
-        ELSE 'paragraph'
-      END AS type,
-      finalScore AS relevanceScore,
-      { law_id: l.law_id, title: l.title, source_file: l.source_file, full_path: COALESCE(s.full_path, p.full_path) } AS metadata
-    ORDER BY relevanceScore DESC
-    LIMIT toInteger($limit)
-  `;
+      l.law_id AS id, 
+      l.title AS content,
+      'law' AS type,
+      1.0 AS relevanceScore,
+      { law_id: l.law_id, title: l.title, source_file: l.source_file } AS metadata
+    LIMIT $limit
+    `;
 
   try {
-    const records = await executeQuery(query, { keywords: keywords.trim(), limit: intLimit });
+    const records = await executeQuery(query, { keywords, limit });
     return records.map(record => ({
       id: record.get('id') as string,
       score: record.get('relevanceScore') as number,
@@ -146,36 +102,7 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
     }));
   } catch (error) {
     console.error('Error in searchLegalTextByKeyword:', error);
-    try {
-      console.log("Trying simplified fallback query...");
-      const fallbackQuery = `
-                MATCH (l:Law)
-                WHERE toLower(l.title) CONTAINS toLower($keywords)
-                RETURN 
-                  l.law_id AS lawId,
-                  l.title AS lawTitle,
-                  l.law_id AS id,
-                  l.title AS content,
-                  'law' AS type,
-                  10 AS relevanceScore,
-                  { law_id: l.law_id, title: l.title } AS metadata
-                LIMIT toInteger($limit)
-            `;
-      const records = await executeQuery(fallbackQuery, { keywords: keywords.trim(), limit: intLimit });
-      return records.map(record => ({
-        id: record.get('id') as string,
-        score: record.get('relevanceScore') as number,
-        type: record.get('type') as 'law',
-        content: record.get('content') as string,
-        title: record.get('lawTitle') as string,
-        law_id: record.get('lawId') as string,
-        full_path: record.get('id') as string,
-        metadata: record.get('metadata') as Record<string, any>,
-      }));
-    } catch (fallbackError) {
-      console.error('Fallback query also failed:', fallbackError);
-      return [];
-    }
+    return [];
   }
 }
 

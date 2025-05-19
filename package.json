@@ -21,7 +21,9 @@
     "neo4j-driver": "^5.20.0",
     "openai": "^4.47.1",
     "pino-pretty": "^11.0.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@azure/openai": "^1.0.0-beta.11",
+    "@langchain/azure-openai": "^0.0.11"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

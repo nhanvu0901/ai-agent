@@ -1,31 +1,44 @@
-// src/services/openAIService.ts
 import OpenAI from 'openai';
 import config from '../config/config';
-import { LLMCallTrace,SearchResultItem } from '../types';
-import { AzureOpenAI } from 'openai'; // Import AzureOpenAI
+import { LLMCallTrace, SearchResultItem } from '../types';
 
+// Azure SDK imports
+import { OpenAIClient } from '@azure/openai';
+import { AzureKeyCredential } from '@azure/core-auth';
 
-let azureOpenaiClient: AzureOpenAI | undefined;
+let openai: OpenAI | undefined;
+let azureClient: OpenAIClient | undefined;
 
-function getOpenAIClient(): AzureOpenAI {
-    if (!azureOpenaiClient) {
-        if (!config.openai.apiKey) { // Or however you name it in your config
-            throw new Error('AZURE_OPENAI_API_KEY is not configured.');
+/**
+ * Get the appropriate OpenAI client
+ * This function will either return a regular OpenAI client or an Azure-configured client
+ * based on the available configuration
+ */
+function getOpenAIClient(): OpenAI | OpenAIClient {
+    // If Azure configuration is available
+    if (config.openai.azureEndpoint && config.openai.apiKey) {
+        console.log("Using Azure OpenAI client");
+        if (!azureClient) {
+            azureClient = new OpenAIClient(
+                config.openai.azureEndpoint,
+                new AzureKeyCredential(config.openai.apiKey)
+            );
         }
-        if (!config.openai.azureEndpoint) {
-            throw new Error('AZURE_OPENAI_ENDPOINT is not configured.');
-        }
-        if (!config.openai.azureApiVersion) {
-            throw new Error('AZURE_OPENAI_API_VERSION is not configured.');
-        }
-
-        azureOpenaiClient = new AzureOpenAI({
-            apiKey: config.openai.apiKey,
-            endpoint: config.openai.azureEndpoint, // Corrected parameter name based on typical SDKs
-            apiVersion: config.openai.azureApiVersion, // Corrected parameter name
-        });
+        return azureClient;
     }
-    return azureOpenaiClient;
+    // Fallback to regular OpenAI
+    else {
+        console.log("Using regular OpenAI client");
+        if (!openai) {
+            if (!config.openai.apiKey) {
+                throw new Error('OPENAI_API_KEY is not configured. Please set it in your .env file.');
+            }
+            openai = new OpenAI({
+                apiKey: config.openai.apiKey,
+            });
+        }
+        return openai;
+    }
 }
 
 interface OpenAICompletionParams {
@@ -33,7 +46,7 @@ interface OpenAICompletionParams {
     model?: string;
     max_tokens?: number;
     temperature?: number;
-    systemMessage?: string; // Optional system message for chat models
+    systemMessage?: string;
 }
 
 interface OpenAICompletionResponse {
@@ -42,12 +55,12 @@ interface OpenAICompletionResponse {
 }
 
 /**
- * Generates a text completion using OpenAI's API.
- * Prefers chat completion endpoint.
+ * Generates a text completion using OpenAI's API
+ * Works with both regular OpenAI and Azure OpenAI
  */
 export async function getOpenAICompletion({
                                               prompt,
-                                              model = "gpt-4o-mini", // Default to a cost-effective chat model
+                                              model = config.agent.model,
                                               max_tokens = 1000,
                                               temperature = 0.7,
                                               systemMessage = "You are a helpful assistant.",
@@ -58,23 +71,38 @@ export async function getOpenAICompletion({
     let errorMsg: string | undefined;
 
     try {
-        const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [];
-        if (systemMessage) {
-            messages.push({ role: "system", content: systemMessage });
+        const messages = [
+            { role: "system", content: systemMessage },
+            { role: "user", content: prompt }
+        ];
+
+        // Check which client we're using
+        if (client === azureClient && azureClient) {
+            // Azure OpenAI
+            const deploymentName = model;
+            const completion = await azureClient.getChatCompletions(
+                deploymentName,
+                messages as any, // Type coercion needed here since Azure SDK has slightly different typing
+                {
+                    maxTokens: max_tokens,
+                    temperature: temperature
+                }
+            );
+            responseContent = completion.choices[0]?.message?.content || null;
         }
-        messages.push({ role: "user", content: prompt });
-
-        const completion = await client.chat.completions.create({
-            model: model,
-            messages: messages,
-            max_tokens: max_tokens,
-            temperature: temperature,
-        });
-        responseContent = completion.choices[0]?.message?.content?.trim() || null;
+        else if (client === openai && openai) {
+            // Regular OpenAI
+            const completion = await openai.chat.completions.create({
+                model: model,
+                messages: messages as any,
+                max_tokens: max_tokens,
+                temperature: temperature,
+            });
+            responseContent = completion.choices[0]?.message?.content || null;
+        }
     } catch (error) {
-        console.error('Error calling OpenAI API:', error);
+        console.error('Error calling OpenAI/Azure API:', error);
         errorMsg = error instanceof Error ? error.message : String(error);
-
     }
 
     const llmTrace: LLMCallTrace = {
@@ -89,13 +117,12 @@ export async function getOpenAICompletion({
 }
 
 /**
- * Analyzes the user query to determine intent, extract keywords, or classify.
- * This is a placeholder for more sophisticated query understanding.
+ * Analyzes a user query to determine intent, extract keywords, or classify
  */
 interface QueryAnalysisResult {
     keywords: string[];
     isPotentiallyIrrelevant: boolean;
-    intent?: string; // e.g., "definition", "requirements", "comparison"
+    intent?: string;
     llmTrace?: LLMCallTrace;
 }
 
@@ -124,14 +151,14 @@ export async function analyzeQueryWithOpenAI(query: string): Promise<QueryAnalys
     const { content, llmTrace } = await getOpenAICompletion({
         prompt,
         systemMessage,
-        model: "gpt-4o-mini", // Cheaper model for analysis
+        model: config.agent.model,
         temperature: 0.2,
         max_tokens: 200,
     });
 
     let analysis: QueryAnalysisResult = {
-        keywords: query.split(" ").filter(k => k.length > 2), // Fallback basic keywords
-        isPotentiallyIrrelevant: false, // Default to relevant
+        keywords: query.split(" ").filter(k => k.length > 2),
+        isPotentiallyIrrelevant: false,
         intent: "unknown",
         llmTrace,
     };
@@ -141,28 +168,28 @@ export async function analyzeQueryWithOpenAI(query: string): Promise<QueryAnalys
             const parsedContent = JSON.parse(content);
             analysis = {
                 keywords: parsedContent.keywords || analysis.keywords,
-                isPotentiallyIrrelevant: parsedContent.isPotentiallyIrrelevant !== undefined ? parsedContent.isPotentiallyIrrelevant : false,
+                isPotentiallyIrrelevant: parsedContent.isPotentiallyIrrelevant !== undefined
+                    ? parsedContent.isPotentiallyIrrelevant
+                    : false,
                 intent: parsedContent.intent || analysis.intent,
                 llmTrace,
             };
         } catch (e) {
             console.error("Failed to parse query analysis from LLM:", e, "LLM Raw:", content);
-            // Keep fallback analysis
             if (analysis.llmTrace) analysis.llmTrace.error = "Failed to parse LLM JSON response.";
         }
     }
     return analysis;
 }
 
-
 /**
- * Generates a final answer based on the user's query and retrieved context.
+ * Generates a final answer based on the user's query and retrieved context
  */
 export async function generateAnswerWithOpenAI(
     originalQuery: string,
     contextSnippets: SearchResultItem[],
     maxTokens: number = 1500,
-    model: string = "gpt-4o-mini" // Use a capable model for generation
+    model: string = config.agent.model
 ): Promise<OpenAICompletionResponse> {
     if (contextSnippets.length === 0) {
         return {
@@ -187,9 +214,6 @@ Structure your answer clearly. Use bullet points if appropriate for lists or mul
     let promptContext = "Context from legal documents:\n";
     contextSnippets.forEach((item, index) => {
         promptContext += `\n[Source Document ${index + 1}: Law ID: ${item.law_id || 'N/A'}, Path: ${item.full_path || item.id}, Title: ${item.title || 'N/A'}]\nContent: ${item.content}\n`;
-        if (item.metadata) {
-            // promptContext += `Metadata: ${JSON.stringify(item.metadata)}\n`;
-        }
     });
 
     const prompt = `${promptContext}\n\nUser Question: "${originalQuery}"\n\nAnswer directly based on the provided context:`;
@@ -199,6 +223,6 @@ Structure your answer clearly. Use bullet points if appropriate for lists or mul
         systemMessage,
         model,
         max_tokens: maxTokens,
-        temperature: 0.3, // Lower temperature for factual answers
+        temperature: 0.3,
     });
 }

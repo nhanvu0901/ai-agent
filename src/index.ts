@@ -1,9 +1,23 @@
+// src/index.ts
 import { createServer } from './api/server';
-import config  from './config/config';
+import config from './config/config';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 // Just logging that we're starting to make sure the app is running
 console.log('Starting AI Junior application...');
 console.log(`Environment: ${config.nodeEnv}`);
+
+// Log Azure OpenAI config if available
+if (process.env.AZURE_OPENAI_ENDPOINT && process.env.OPENAI_API_KEY) {
+    console.log('Azure OpenAI configuration detected:');
+    console.log(`- Endpoint: ${process.env.AZURE_OPENAI_ENDPOINT}`);
+    console.log(`- API Version: ${process.env.AZURE_OPENAI_API_VERSION}`);
+    console.log(`- Agent Model: ${process.env.AGENT_MODEL_DEPLOYMENT}`);
+    console.log(`- Embedding Model: ${process.env.EMBEDDING_MODEL_DEPLOYMENT}`);
+}
 
 async function start() {
     try {

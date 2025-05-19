@@ -1,6 +1,6 @@
-import neo4j, {Driver, Session, Record as Neo4jRecord, Neo4jError, int} from 'neo4j-driver';
+import neo4j, { Driver, Session, Record as Neo4jRecord, Neo4jError, int } from 'neo4j-driver';
 import config from '../config/config';
-import {SearchResultItem, Neo4jParagraphNode, Neo4jLawNode} from '../types';
+import { SearchResultItem, Neo4jParagraphNode, Neo4jLawNode } from '../types';
 
 let driver: Driver | undefined;
 
@@ -31,28 +31,38 @@ export async function closeNeo4jDriver(): Promise<void> {
   }
 }
 
+function prepareParameters(params: Record<string, any>): Record<string, any> {
+  const processedParams: Record<string, any> = {};
+
+  for (const [key, value] of Object.entries(params)) {
+    // Check if the parameter might be used as LIMIT or SKIP
+    if (key === 'limit' || key === 'skip' || key.toLowerCase().includes('limit') || key.toLowerCase().includes('skip')) {
+      // Use Neo4j's int() function to explicitly create an integer
+      processedParams[key] = neo4j.int(Math.floor(Number(value)));
+      console.log(`Converting parameter ${key}: ${value} (${typeof value}) to Neo4j integer: ${processedParams[key]}`);
+    } else {
+      processedParams[key] = value;
+    }
+  }
+
+  return processedParams;
+}
+
 async function executeQuery(query: string, params: Record<string, any>): Promise<Neo4jRecord[]> {
+  // Process parameters to ensure integers are properly handled
+  const processedParams = prepareParameters(params);
+
+  console.log("Executing Neo4j query with processed parameters:", processedParams);
+
   const currentDriver = getDriver();
   let session: Session | undefined;
   try {
-    session = currentDriver.session({database: 'neo4j'});
-
-    const executionParams = {...params};
-
-    if (executionParams.hasOwnProperty('limit') && typeof executionParams.limit === 'number') {
-      executionParams.limit = int(Math.floor(executionParams.limit));
-    }
-
-    const result = await session.run(query, executionParams);
+    session = currentDriver.session({ database: 'neo4j' });
+    const result = await session.run(query, processedParams);
     return result.records;
   } catch (error) {
     const neo4jError = error as Neo4jError;
-    console.error(`Neo4j query failed: ${neo4jError.message}`, {
-      query,
-      params, // Log original params for easier debugging
-      processedParams: executionParams, // Log processed params
-      errorCode: neo4jError.code
-    });
+    console.error(`Neo4j query failed: ${neo4jError.message}`, { query, params: processedParams, errorCode: neo4jError.code });
     throw new Error(`Neo4j query execution failed: ${neo4jError.message}`);
   } finally {
     if (session) {
@@ -61,10 +71,16 @@ async function executeQuery(query: string, params: Record<string, any>): Promise
   }
 }
 
+/**
+ * Searches for laws and related paragraphs/subsections based on keywords.
+ */
 export async function searchLegalTextByKeyword(keywords: string, limit: number = 5): Promise<SearchResultItem[]> {
-  // Basic keyword matching. Consider using Neo4j full-text search for better results.
-  // This query attempts to find keywords in Law titles, Paragraph text, or Subsection text.
-  // It prioritizes direct matches in Paragraphs and Subsections.
+  // Ensure limit is an integer (defensive programming)
+  const intLimit = Math.floor(Number(limit));
+
+  console.log(`searchLegalTextByKeyword with limit: ${limit} (${typeof limit}), converted to: ${intLimit} (${typeof intLimit})`);
+
+  // Modified query to use LIMIT toInteger($limit) as a safety measure
   const query = `
     // Match Laws by title
     MATCH (l:Law)
@@ -90,7 +106,7 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
       finalScore AS relevanceScore,
       { law_id: l.law_id, title: l.title, source_file: l.source_file, full_path: COALESCE(s.full_path, p.full_path) } AS metadata
     ORDER BY relevanceScore DESC
-    LIMIT $limit
+    LIMIT toInteger($limit)
 
     UNION
 
@@ -113,11 +129,11 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
       finalScore AS relevanceScore,
       { law_id: l.law_id, title: l.title, source_file: l.source_file, full_path: COALESCE(s.full_path, p.full_path) } AS metadata
     ORDER BY relevanceScore DESC
-    LIMIT $limit
+    LIMIT toInteger($limit)
   `;
 
   try {
-    const records = await executeQuery(query, {keywords: keywords.trim(), limit});
+    const records = await executeQuery(query, { keywords: keywords.trim(), limit: intLimit });
     return records.map(record => ({
       id: record.get('id') as string,
       score: record.get('relevanceScore') as number,
@@ -130,7 +146,36 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
     }));
   } catch (error) {
     console.error('Error in searchLegalTextByKeyword:', error);
-    return [];
+    try {
+      console.log("Trying simplified fallback query...");
+      const fallbackQuery = `
+                MATCH (l:Law)
+                WHERE toLower(l.title) CONTAINS toLower($keywords)
+                RETURN 
+                  l.law_id AS lawId,
+                  l.title AS lawTitle,
+                  l.law_id AS id,
+                  l.title AS content,
+                  'law' AS type,
+                  10 AS relevanceScore,
+                  { law_id: l.law_id, title: l.title } AS metadata
+                LIMIT toInteger($limit)
+            `;
+      const records = await executeQuery(fallbackQuery, { keywords: keywords.trim(), limit: intLimit });
+      return records.map(record => ({
+        id: record.get('id') as string,
+        score: record.get('relevanceScore') as number,
+        type: record.get('type') as 'law',
+        content: record.get('content') as string,
+        title: record.get('lawTitle') as string,
+        law_id: record.get('lawId') as string,
+        full_path: record.get('id') as string,
+        metadata: record.get('metadata') as Record<string, any>,
+      }));
+    } catch (fallbackError) {
+      console.error('Fallback query also failed:', fallbackError);
+      return [];
+    }
   }
 }
 
@@ -141,9 +186,14 @@ export async function getLawById(lawId: string): Promise<Neo4jLawNode | null> {
     RETURN l.law_id AS law_id, l.title AS title, l.promulgation_date AS promulgation_date, l.effective_date AS effective_date, l.full_text_content AS full_text_content
     LIMIT 1
   `;
-  const records = await executeQuery(query, {lawId});
-  if (records.length === 0) return null;
-  return records[0].toObject() as Neo4jLawNode;
+  try {
+    const records = await executeQuery(query, { lawId });
+    if (records.length === 0) return null;
+    return records[0].toObject() as Neo4jLawNode;
+  } catch (error) {
+    console.error(`Error in getLawById for ${lawId}:`, error);
+    return null;
+  }
 }
 
 
@@ -161,7 +211,7 @@ export async function getParagraphByFullPath(fullPath: string): Promise<SearchRe
       LIMIT 1
     `;
   try {
-    const records = await executeQuery(query, {fullPath});
+    const records = await executeQuery(query, { fullPath });
     if (records.length === 0) return null;
     const record = records[0];
     return {
@@ -184,9 +234,3 @@ export async function getParagraphByFullPath(fullPath: string): Promise<SearchRe
     return null;
   }
 }
-
-// Remember to call closeNeo4jDriver()  shuts down.
-// For Fastify, this can be done in a 'onClose' hook.
-// server.addHook('onClose', (instance, done) => {
-//   closeNeo4jDriver().then(done).catch(done);
-// });

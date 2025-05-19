@@ -41,6 +41,7 @@ services:
     ports:
       - "3000:3000"  # Web API port
       - "9229:9229"  # Node.js debugging port
+    command: npm run dev:debug
     volumes:
       - ./src:/app/src
       - ./data:/app/data

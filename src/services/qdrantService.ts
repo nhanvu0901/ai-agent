@@ -40,16 +40,20 @@ async function generateEmbedding(text: string): Promise<number[]> {
         throw new Error('Failed to generate text embedding.');
     }
 }
+export function isQdrantPayload(payload: any): payload is QdrantPayload {
+    return (
+      payload &&
+      typeof payload.text === 'string' &&
+      typeof payload.law_id === 'string' &&
+      typeof payload.full_path === 'string'
+    );
+}
 
-/**
- * Searches Qdrant collection for similar vectors.
- * Assumes your Qdrant points have a payload structure matching QdrantPayload.
- */
 export async function searchSimilarVectors(
-    queryText: string,
-    collectionName: string = QDRANT_COLLECTION_NAME,
-    limit: number = 5,
-    scoreThreshold?: number
+  queryText: string,
+  collectionName: string = QDRANT_COLLECTION_NAME,
+  limit: number = 5,
+  scoreThreshold?: number
 ): Promise<SearchResultItem[]> {
     const client = getQdrantClient();
     try {
@@ -58,30 +62,46 @@ export async function searchSimilarVectors(
         const searchResult = await client.search(collectionName, {
             vector: queryVector,
             limit: limit,
-            score_threshold: scoreThreshold, // Optional: Minimum similarity score
-            with_payload: true, // To retrieve the payload along with the vector
-            // with_vector: false // Usually not needed for the result
+            score_threshold: scoreThreshold,
+            with_payload: true,
         });
 
-        return searchResult.map(point => {
-            const payload = point.payload as QdrantPayload; // Cast to your defined payload type
-            return {
-                id: point.id.toString(), // Qdrant ID can be number or UUID
-                score: point.score,
-                type: 'vector', // Indicates the source of this result
-                content: payload.text, // The original text from the payload
-                title: payload.title || `Document chunk ${point.id}`,
-                law_id: payload.law_id,
-                full_path: payload.full_path,
-                metadata: {
-                    ...payload, // Include all other payload data in metadata
-                    qdrant_id: point.id,
-                },
-            };
-        });
+        const mappedResults: (SearchResultItem | null)[] = searchResult.map(
+          (point): SearchResultItem | null => { // Explicitly define the return type of the map callback
+              if (isQdrantPayload(point.payload)) {
+                  // Inside this block, point.payload is correctly typed as QdrantPayload
+                  // due to the type guard.
+                  const payload = point.payload;
+
+                  // Construct an object that explicitly matches the SearchResultItem interface
+                  const item: SearchResultItem = {
+                      id: point.id.toString(),
+                      score: point.score, // point.score (number) is assignable to SearchResultItem.score (number | undefined)
+                      type: 'vector',     // 'vector' is one of the allowed literal types for SearchResultItem.type
+                      content: payload.text,
+                      // payload.title can be undefined. If it is, the fallback makes title a string.
+                      // This is compatible with SearchResultItem.title (string | undefined).
+                      title: payload.title || `Document chunk ${point.id}`,
+                      law_id: payload.law_id,
+                      full_path: payload.full_path,
+                      metadata: { // This structure is compatible with Record<string, any>
+                          ...payload, // Spread all properties from QdrantPayload
+                          qdrant_id: point.id,
+                      },
+                  };
+                  return item;
+              } else {
+                  console.warn('Received Qdrant point with unexpected payload structure:', point);
+                  return null;
+              }
+          }
+        );
+
+        // The filter with the type predicate will now work correctly
+        return mappedResults.filter((item): item is SearchResultItem => item !== null);
+
     } catch (error) {
         console.error('Error searching Qdrant:', error);
-        // If it's a "Not found" error for the collection, you might want to log it differently
         if (error instanceof Error && error.message.includes("Not found: Collection")) {
             console.warn(`Qdrant collection "${collectionName}" not found. Ensure it's created and populated.`);
         }

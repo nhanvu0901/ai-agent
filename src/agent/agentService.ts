@@ -4,7 +4,6 @@ import {
     AgentReasoningTrace,
     AgentStep,
     QARequest,
-    SearchResultItem,
     LLMCallTrace,
     QAResponsePayload
 } from '../types';
@@ -85,7 +84,8 @@ export async function processQuery(
         // Step 1: Analyze Query (Relevance & Basic Keywords)
         addStepToTrace(agentCtx.trace, "Analyzing user query for relevance and keywords.", "analyzeQueryWithOpenAI", { query: agentCtx.originalQuery });
         const analysisResult = await openAIService.analyzeQueryWithOpenAI(agentCtx.originalQuery);
-        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = analysisResult;
+
+        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = JSON.stringify(analysisResult);
         if (analysisResult.llmTrace) addLlmCallToTrace(agentCtx.trace, analysisResult.llmTrace);
 
 
@@ -112,7 +112,8 @@ export async function processQuery(
             useVector: true,
         });
 
-        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = searchResults;
+
+        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = JSON.stringify(searchResults);
         agentCtx.trace.relevantSources = searchResults;
 
 
@@ -150,7 +151,7 @@ export async function processQuery(
             };
         }
 
-        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = { answer: finalAnswer };
+        agentCtx.trace.steps[agentCtx.trace.steps.length - 1].observation = JSON.stringify({ answer: finalAnswer });
         agentCtx.trace.status = 'success';
         agentCtx.trace.finalAnswer = finalAnswer;
         addStepToTrace(agentCtx.trace, "Final answer generated.", "finish", { answer: finalAnswer });

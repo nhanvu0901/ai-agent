@@ -2,7 +2,7 @@ import Fastify, { FastifyInstance } from 'fastify';
 import cors from '@fastify/cors';
 import swagger from '@fastify/swagger';
 import swaggerUI from '@fastify/swagger-ui';
-import { config } from '../config/config';
+import config  from '../config/config';
 import routes from './routes';
 
 export async function createServer(): Promise<FastifyInstance> {
@@ -28,10 +28,7 @@ export async function createServer(): Promise<FastifyInstance> {
         description: 'API for querying Czech legislation using graph and vector search',
         version: '1.0.0',
       },
-      externalDocs: {
-        url: 'https://github.com/yourusername/ai-junior',
-        description: 'Find more info here',
-      },
+
       schemes: ['http', 'https'],
       consumes: ['application/json'],
       produces: ['application/json'],

@@ -105,6 +105,9 @@ AI Junior extracts structured knowledge from Czech legislative PDFs (eSbírka) a
     - Neo4j Browser: http://localhost:7474 (user: neo4j, password: password)
     - Qdrant Dashboard: http://localhost:6333/dashboard
 
+5 **Import the data**
+- In window - `wsl bash -c "tr -d '\r' < /mnt/path-toi-the-import-laws.sh > /tmp/import-laws_fixed.sh && chmod +x /tmp/import-laws_fixed.sh && bash /tmp/import-laws_fixed.sh"`
+- In Mac - `./path-to-the-import-laws.sh"`
 ### Local Development
 
 ```bash
@@ -137,16 +140,3 @@ Once the system is running, the following endpoints will be available:
     - `POST /api/agent/query` - Ask questions in natural language
     - `GET /api/agent/debug/:queryId` - Get reasoning trace for a query
 
-## Development Roadmap
-
-- [x] Project setup and Docker configuration
-- [ ] PDF extraction and structuring
-- [ ] Neo4j graph schema implementation
-- [ ] Qdrant vector database integration
-- [ ] AI agent implementation
-- [ ] API endpoint development
-- [ ] Documentation and testing
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

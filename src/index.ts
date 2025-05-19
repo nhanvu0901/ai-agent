@@ -1,5 +1,5 @@
 import { createServer } from './api/server';
-import { config } from './config/config';
+import config  from './config/config';
 
 // Just logging that we're starting to make sure the app is running
 console.log('Starting AI Junior application...');

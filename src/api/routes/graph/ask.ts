@@ -3,9 +3,9 @@
 
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { Static, Type } from '@sinclair/typebox'; // For schema definition
-import appConfig from '../config'; // Assuming your config is in ../config
-import * as agentService from '../agent/agentService'; // Adjust path if needed
-import { QARequest, QAResponsePayload, AgentReasoningTrace, SearchResultItem, AgentStep, LLMCallTrace } from '../types'; // Adjust path if needed
+import config from '../../../config/config'; // Assuming your config is in ../config
+import * as agentService from '../../../agent/agentService'; // Adjust path if needed
+import { QARequest, QAResponsePayload, AgentReasoningTrace, SearchResultItem, AgentStep, LLMCallTrace } from '../../../types'; // Adjust path if needed
 
 // --- Schemas (can be moved to a central types/schemas file) ---
 
@@ -69,64 +69,55 @@ const QaResponseSchema = Type.Object({
 
 export default async function askEndpoint(fastify: FastifyInstance) {
   fastify.post<{ Body: QaQueryType; Reply: QAResponsePayload | { error: string; message: string, statusCode: number } }>(
-      // Consider prefixing your API routes, e.g., in your main routes index:
-      // fastify.register(askEndpoint, { prefix: '/api/qa' });
-      // If you do that, this path would just be '/ask' relative to that prefix.
-      // For now, assuming it's directly registered, let's use a more specific path.
-      '/api/agent/ask', // Changed from GET to POST and updated path
-      {
-        schema: {
-          description: 'Ask a question to the Legal AI Agent.',
-          tags: ['AI Agent Q&A'], // Updated tag
-          summary: 'Submit a question and get an answer from the AI agent.',
-          body: QaQuerySchema,
-          response: {
-            200: QaResponseSchema,
-            400: Type.Object({ // For client-side errors (e.g., bad request)
-              statusCode: Type.Number(),
-              error: Type.String(),
-              message: Type.String(),
-            }),
-            500: Type.Object({ // For server-side errors
-              statusCode: Type.Number(),
-              error: Type.String(),
-              message: Type.String(),
-            }),
-          },
+    '/ask', // <--- MODIFIED PATH HERE
+    {
+      schema: {
+        description: 'Ask a question to the Legal AI Agent.',
+        tags: ['AI Agent Q&A'],
+        summary: 'Submit a question and get an answer from the AI agent.',
+        body: QaQuerySchema,
+        response: {
+          200: QaResponseSchema,
+          400: Type.Object({
+            statusCode: Type.Number(),
+            error: Type.String(),
+            message: Type.String(),
+          }),
+          500: Type.Object({
+            statusCode: Type.Number(),
+            error: Type.String(),
+            message: Type.String(),
+          }),
         },
       },
-      async (request: FastifyRequest<{ Body: QaQueryType }>, reply: FastifyReply) => {
-        const { question, sessionId } = request.body;
-        request.log.info({ question, sessionId }, 'Received question for Legal AI Agent');
+    },
+    async (request: FastifyRequest<{ Body: QaQueryType }>, reply: FastifyReply) => {
+      const { question, sessionId } = request.body;
+      request.log.info({ question, sessionId }, 'Received question for Legal AI Agent');
 
-        if (!appConfig.OPENAI_API_KEY) {
-          request.log.error('OpenAI API key is not configured. Agent cannot function.');
-          return reply.status(500).send({
-            statusCode: 500,
-            error: "Configuration Error",
-            message: "The AI agent is not properly configured (missing API key). Please contact support."
-          });
-        }
-
-        try {
-          const qaRequest: QARequest = { question, sessionId };
-          // The agentService.processQuery handles the core logic
-          const result: QAResponsePayload = await agentService.processQuery(qaRequest, request.log);
-
-          return reply.status(200).send(result);
-
-        } catch (error) {
-          const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
-          request.log.error({ err: error, question }, 'Unhandled error in /api/agent/ask endpoint');
-          return reply.status(500).send({
-            statusCode: 500,
-            error: "Internal Server Error",
-            message: `An unexpected error occurred while processing your question: ${errorMessage}`
-          });
-        }
+      if (!config.openai.apiKey) {
+        request.log.error('OpenAI API key is not configured. Agent cannot function.');
+        return reply.status(500).send({
+          statusCode: 500,
+          error: "Configuration Error",
+          message: "The AI agent is not properly configured (missing API key). Please contact support."
+        });
       }
-  );
 
-  // You can add other agent-related utility endpoints here if needed in the future
-  // For example, an endpoint to get agent status or clear session (if you implement sessions)
+      try {
+        const qaRequest: QARequest = { question, sessionId };
+        const result: QAResponsePayload = await agentService.processQuery(qaRequest, request.log);
+        return reply.status(200).send(result);
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "An unknown error occurred";
+        request.log.error({ err: error, question }, 'Unhandled error in /ask endpoint');
+        return reply.status(500).send({
+          statusCode: 500,
+          error: "Internal Server Error",
+          message: `An unexpected error occurred while processing your question: ${errorMessage}`
+        });
+      }
+    }
+  );
 }
+    

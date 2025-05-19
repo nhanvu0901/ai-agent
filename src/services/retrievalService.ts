@@ -1,4 +1,4 @@
-// src/services/retrievalService.ts
+
 import { SearchResultItem } from '../types';
 import * as neo4jService from './neo4jService';
 import * as qdrantService from './qdrantService';

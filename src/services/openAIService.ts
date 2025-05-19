@@ -1,8 +1,7 @@
 // src/services/openAIService.ts
 import OpenAI from 'openai';
 import config from '../config/config';
-import { LLMCallTrace } from '../types';
-
+import { LLMCallTrace,SearchResultItem } from '../types';
 let openai: OpenAI | undefined;
 
 function getOpenAIClient(): OpenAI {

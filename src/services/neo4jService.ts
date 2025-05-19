@@ -8,13 +8,13 @@ function getDriver(): Driver {
   if (!driver) {
     try {
       driver = neo4j.driver(
-        config.neo4j.uri,
-        neo4j.auth.basic(config.neo4j.user, config.neo4j.password) // Correct: user and password from config
+          config.neo4j.uri,
+          neo4j.auth.basic(config.neo4j.user, config.neo4j.password)
       );
       // Verify connectivity during initialization
       driver.verifyConnectivity()
-        .then(() => console.log('Neo4j Driver connected and verified.'))
-        .catch(error => console.error('Neo4j Driver connection error:', error));
+          .then(() => console.log('Neo4j Driver connected and verified.'))
+          .catch(error => console.error('Neo4j Driver connection error:', error));
     } catch (error) {
       console.error('Failed to create Neo4j driver:', error);
       throw new Error('Could not establish Neo4j connection.');
@@ -39,12 +39,9 @@ async function executeQuery(query: string, params: Record<string, any>): Promise
 
     const executionParams = {...params};
 
-
     if (executionParams.hasOwnProperty('limit') && typeof executionParams.limit === 'number') {
-
       executionParams.limit = int(Math.floor(executionParams.limit));
     }
-
 
     const result = await session.run(query, executionParams);
     return result.records;

@@ -2,18 +2,30 @@
 import OpenAI from 'openai';
 import config from '../config/config';
 import { LLMCallTrace,SearchResultItem } from '../types';
-let openai: OpenAI | undefined;
+import { AzureOpenAI } from 'openai'; // Import AzureOpenAI
 
-function getOpenAIClient(): OpenAI {
-    if (!openai) {
-        if (!config.openai.apiKey) {
-            throw new Error('OPENAI_API_KEY is not configured. Please set it in your .env file.');
+
+let azureOpenaiClient: AzureOpenAI | undefined;
+
+function getOpenAIClient(): AzureOpenAI {
+    if (!azureOpenaiClient) {
+        if (!config.openai.apiKey) { // Or however you name it in your config
+            throw new Error('AZURE_OPENAI_API_KEY is not configured.');
         }
-        openai = new OpenAI({
+        if (!config.openai.azureEndpoint) {
+            throw new Error('AZURE_OPENAI_ENDPOINT is not configured.');
+        }
+        if (!config.openai.azureApiVersion) {
+            throw new Error('AZURE_OPENAI_API_VERSION is not configured.');
+        }
+
+        azureOpenaiClient = new AzureOpenAI({
             apiKey: config.openai.apiKey,
+            endpoint: config.openai.azureEndpoint, // Corrected parameter name based on typical SDKs
+            apiVersion: config.openai.azureApiVersion, // Corrected parameter name
         });
     }
-    return openai;
+    return azureOpenaiClient;
 }
 
 interface OpenAICompletionParams {
@@ -35,7 +47,7 @@ interface OpenAICompletionResponse {
  */
 export async function getOpenAICompletion({
                                               prompt,
-                                              model = "gpt-3.5-turbo", // Default to a cost-effective chat model
+                                              model = "gpt-4o-mini", // Default to a cost-effective chat model
                                               max_tokens = 1000,
                                               temperature = 0.7,
                                               systemMessage = "You are a helpful assistant.",
@@ -112,7 +124,7 @@ export async function analyzeQueryWithOpenAI(query: string): Promise<QueryAnalys
     const { content, llmTrace } = await getOpenAICompletion({
         prompt,
         systemMessage,
-        model: "gpt-3.5-turbo", // Cheaper model for analysis
+        model: "gpt-4o-mini", // Cheaper model for analysis
         temperature: 0.2,
         max_tokens: 200,
     });

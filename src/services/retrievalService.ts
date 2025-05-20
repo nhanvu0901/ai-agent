@@ -33,8 +33,8 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
 
                 // Also get paragraph and subsection results from full-text search
                 const detailedResults = await neo4jService.searchParagraphsAndSubsectionsByFulltext(
-                    query,
-                    MAX_RESULTS_PER_SOURCE
+                  query,
+                  MAX_RESULTS_PER_SOURCE
                 );
 
                 fullTextResults = detailedResults;
@@ -50,46 +50,66 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         }
     }
 
-    // if (useVector) {
-    //     try {
-    //         // Ensure Qdrant collection exists (optional, can be done at startup)
-    //         // await qdrantService.ensureQdrantCollection();
-    //         vectorResults = await qdrantService.searchSimilarVectors(query, undefined, MAX_RESULTS_PER_SOURCE, 0.7); // score_threshold example
-    //         console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
-    //     } catch (error) {
-    //         console.error('Error during vector search:', error);
-    //     }
-    // }
+    if (useVector) {
+        try {
+            // Use Qdrant for vector search
+            vectorResults = await qdrantService.searchSimilarVectors(
+              query,
+              undefined,
+              MAX_RESULTS_PER_SOURCE,
+              0.7  // score threshold, adjust as needed
+            );
+            console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
+        } catch (error) {
+            console.error('Error during vector search:', error);
+        }
+    }
 
-    // Combine and de-duplicate (simple de-duplication based on 'id' which should be full_path or qdrant id)
     const combined = new Map<string, SearchResultItem>();
 
-    // Add graph results, prioritizing them if scores are similar or not present
+    // Helper function to create a unique key for a search result
+    const getUniqueKey = (item: SearchResultItem): string => {
+        // For items with full_path, use that as it's most specific
+        if (item.full_path) {
+            return item.full_path;
+        }
+        // Otherwise use the id
+        return item.id;
+    };
+
+    // Add graph results
     graphResults.forEach(item => {
         item.score = item.score || 0.5; // Assign a default score if not present
-        if (!combined.has(item.id) || (combined.get(item.id)?.score || 0) < item.score) {
-            combined.set(item.id, item);
+        const key = getUniqueKey(item);
+        if (!combined.has(key) || (combined.get(key)?.score || 0) < item.score) {
+            combined.set(key, item);
         }
     });
 
     // Add full-text paragraph and subsection results
     fullTextResults.forEach(item => {
         item.score = item.score || 0.8; // Prioritize full-text matches
-        if (!combined.has(item.id) || (combined.get(item.id)?.score || 0) < item.score) {
-            combined.set(item.id, item);
+        const key = getUniqueKey(item);
+        if (!combined.has(key) || (combined.get(key)?.score || 0) < item.score) {
+            combined.set(key, item);
         }
     });
 
-    // Add vector results, potentially overwriting if score is higher
+    // Add vector results - vector search should always return a score
     vectorResults.forEach(item => {
-        item.score = item.score || 0.0; // Vector search should always have a score
-        if (!combined.has(item.id) || (combined.get(item.id)?.score || 0) < item.score) {
-            combined.set(item.id, item);
+        const key = getUniqueKey(item);
+        // Only add if score is better or item doesn't exist
+        if (!combined.has(key) || (combined.get(key)?.score || 0) < (item.score || 0)) {
+            combined.set(key, item);
         }
     });
 
     // Sort by score (descending)
-    const sortedResults = Array.from(combined.values()).sort((a, b) => (b.score || 0) - (a.score || 0));
+    const sortedResults = Array.from(combined.values()).sort((a, b) => {
+        const scoreA = a.score || 0;
+        const scoreB = b.score || 0;
+        return scoreB - scoreA;
+    });
 
     console.log(`Combined and sorted ${sortedResults.length} results.`);
     return sortedResults.slice(0, FINAL_CONTEXT_SIZE);

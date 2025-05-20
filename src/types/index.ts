@@ -126,7 +126,8 @@ export interface QdrantPayload {
     full_path: string; // Unique identifier for the text chunk (e.g., from Neo4j full_path)
     title?: string; // Title of the law or section this chunk belongs to
     source_file?: string;
-    // Add any other metadata you want to store and retrieve from Qdrant
+    type?: 'law' | 'part' | 'head' | 'paragraph' | 'subsection' | 'vector'; // Type of content
+    // No other properties with null values
 }
 
 

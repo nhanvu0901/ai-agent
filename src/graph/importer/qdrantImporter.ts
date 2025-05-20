@@ -1,50 +1,38 @@
 // src/graph/importer/qdrantImporter.ts
 import { QdrantClient } from '@qdrant/js-client-rest';
-import { OpenAIEmbeddings } from "@langchain/openai";
-import { AzureOpenAIEmbeddings } from "@langchain/azure-openai";
+import { CohereEmbeddings } from './embeddings/cohereEmbeddings';
 import { QdrantPayload } from '../../types';
 import config from '../../config/config';
 import { LawJson, Part, Head, Paragraph, SubsectionLevel1, SubsectionLevel2 } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
 
 type StructuralElement = Part | Head | Paragraph | SubsectionLevel1 | SubsectionLevel2;
 
 export class QdrantImporter {
   private client: QdrantClient;
-  private embeddings: OpenAIEmbeddings | AzureOpenAIEmbeddings;
+  private embeddings: CohereEmbeddings;
   private collectionName: string = 'legal_documents';
-  private batchSize: number = 20; // Reduced batch size to avoid rate limits
+  private batchSize: number = config.embeddings.batchSize || 20;
   private retryDelay: number = 2000; // milliseconds to wait between retries
   private maxRetries: number = 3; // maximum number of retries for each embedding
+  private idCounter: number = 1; // Counter for generating sequential IDs
 
   constructor() {
     // Initialize Qdrant client
     this.client = new QdrantClient({ url: config.qdrant.url });
 
     // Log the configuration to help with debugging
-    console.log("Azure OpenAI Configuration:");
-    console.log(`  API Key: ${config.openai.apiKey ? "Set (length: " + config.openai.apiKey.length + ")" : "Not set"}`);
-    console.log(`  Endpoint: ${config.openai.azureEndpoint || "Not set"}`);
-    console.log(`  API Version: ${config.openai.azureApiVersion || "Not set"}`);
-    console.log(`  Embedding Model: ${config.agent.embeddingModel || "Not set"}`);
+    console.log("Embedding Configuration:");
+    console.log(`  API Key: ${config.embeddings.apiKey ? "Set (length: " + config.embeddings.apiKey.length + ")" : "Not set"}`);
+    console.log(`  Model: ${config.embeddings.model}`);
 
-    // Initialize embeddings service (Azure or regular OpenAI)
-    if (config.openai.azureEndpoint && config.openai.apiKey) {
-      console.log("Using Azure OpenAI for embeddings");
-
-      // Create Azure OpenAI embeddings with correct parameters
-      this.embeddings = new AzureOpenAIEmbeddings({
-        azureOpenAIApiKey: config.openai.apiKey,
-        azureOpenAIEndpoint: config.openai.azureEndpoint,
-        // The apiVersion is not directly supported as a parameter, removed it
-        model: config.agent.embeddingModel
-      });
-    } else {
-      console.log("Using regular OpenAI for embeddings");
-      this.embeddings = new OpenAIEmbeddings({
-        openAIApiKey: config.openai.apiKey,
-        modelName: "text-embedding-ada-002", // Default model
-      });
-    }
+    // Initialize Cohere embeddings
+    this.embeddings = new CohereEmbeddings({
+      apiKey: config.embeddings.apiKey,
+      model: config.embeddings.model,
+      batchSize: config.embeddings.batchSize
+    });
   }
 
   /**
@@ -55,12 +43,11 @@ export class QdrantImporter {
       // Check if collection exists
       const collections = await this.client.getCollections();
       const exists = collections.collections.some(c => c.name === this.collectionName);
-
+      console.log(collections.collections[0]);
       if (!exists) {
         console.log(`Creating Qdrant collection: ${this.collectionName}`);
-        // Create collection for embeddings
-        // For Azure/OpenAI embedding models, dimension is typically 1536
-        const embeddingSize = 1536;
+        // Get dimension from Cohere embeddings
+        const embeddingSize = this.embeddings.getDimension();
 
         await this.client.createCollection(this.collectionName, {
           vectors: {
@@ -87,7 +74,7 @@ export class QdrantImporter {
   async generateEmbedding(text: string): Promise<number[]> {
     let retries = 0;
 
-    // Truncate text if it's too long (OpenAI embeddings have token limits)
+    // Truncate text if it's too long
     const truncatedText = text.length > 8000 ? text.substring(0, 8000) : text;
 
     while (retries <= this.maxRetries) {
@@ -117,8 +104,10 @@ export class QdrantImporter {
           throw new Error(`Failed to generate embedding after ${this.maxRetries + 1} attempts: ${errorMessage}`);
         }
 
-        // Wait before retrying
-        await new Promise(resolve => setTimeout(resolve, this.retryDelay));
+        // Wait before retrying, with exponential backoff
+        const delay = this.retryDelay * Math.pow(2, retries);
+        console.log(`Waiting ${delay}ms before retry ${retries + 1}...`);
+        await new Promise(resolve => setTimeout(resolve, delay));
         retries++;
       }
     }
@@ -128,17 +117,40 @@ export class QdrantImporter {
   }
 
   /**
+   * Generate embeddings for multiple texts in batch with queue processing
+   */
+  async generateBatchEmbeddings(texts: string[]): Promise<number[][]> {
+    // Use Cohere's batch embedding capability
+    return await this.embeddings.embedBatch(texts);
+  }
+
+  /**
+   * Convert a string ID to a numeric ID suitable for Qdrant
+   * This uses a hash function to generate a positive integer from a string
+   */
+  private getNumericId(stringId: string): number {
+    // Use the idCounter to generate a sequential ID
+    const id = this.idCounter++;
+    return id;
+  }
+
+  /**
    * Convert QdrantPayload to a plain object that Qdrant accepts
    */
-  private convertPayloadToPlainObject(payload: QdrantPayload): Record<string, unknown> {
+  private convertPayloadToPlainObject(payload: QdrantPayload, originalId: string): Record<string, unknown> {
     // Create a new plain object and copy all properties
-    const plainObject: Record<string, unknown> = {};
-    for (const key in payload) {
-      // Skip any null or undefined values
-      if (payload[key as keyof QdrantPayload] != null) {
-        plainObject[key] = payload[key as keyof QdrantPayload];
+    const plainObject: Record<string, unknown> = {
+      ...payload,
+      original_id: originalId // Store the original string ID in the payload
+    };
+
+    // Filter out null/undefined values
+    Object.keys(plainObject).forEach(key => {
+      if (plainObject[key] === null || plainObject[key] === undefined) {
+        delete plainObject[key];
       }
-    }
+    });
+
     return plainObject;
   }
 
@@ -149,36 +161,56 @@ export class QdrantImporter {
     if (textChunks.length === 0) return;
 
     try {
-      // Process each chunk individually to avoid losing an entire batch on failure
-      const points = [];
+      // Process in smaller batches to avoid overwhelming the embedding API
+      const batchSize = 5; // Smaller batch for embedding API
+      const batchResults = [];
 
-      for (const chunk of textChunks) {
+      // Process in batches
+      for (let i = 0; i < textChunks.length; i += batchSize) {
+        const batch = textChunks.slice(i, i + batchSize);
+        const texts = batch.map(chunk => chunk.text);
+
+        console.log(`Generating embeddings for batch ${i/batchSize + 1} of ${Math.ceil(textChunks.length/batchSize)}`);
         try {
-          console.log(`Generating embedding for chunk: ${chunk.id}`);
-          const vector = await this.generateEmbedding(chunk.text);
-          const plainPayload = this.convertPayloadToPlainObject(chunk.payload);
+          // Get embeddings for the entire batch
+          const vectors = await this.generateBatchEmbeddings(texts);
 
-          points.push({
-            id: chunk.id,
-            vector,
-            payload: plainPayload
+          // Prepare points for Qdrant
+          const points = batch.map((chunk, index) => {
+            // Convert string ID to numeric ID for Qdrant
+            const numericId = this.getNumericId(chunk.id);
+            // Add original ID to payload
+            const plainPayload = this.convertPayloadToPlainObject(chunk.payload, chunk.id);
+
+            return {
+              id: numericId,
+              vector: vectors[index],
+              payload: plainPayload
+            };
           });
+
+          batchResults.push(...points);
         } catch (error) {
-          console.error(`Failed to process chunk ${chunk.id}:`, error);
-          // Continue with other chunks instead of failing the entire batch
+          console.error(`Error processing batch starting at index ${i}:`, error);
+          // Continue with next batch instead of failing entirely
+        }
+
+        // Add delay between batches to respect rate limits
+        if (i + batchSize < textChunks.length) {
+          await new Promise(resolve => setTimeout(resolve, 1000));
         }
       }
 
-      if (points.length === 0) {
+      if (batchResults.length === 0) {
         throw new Error("All chunks failed to generate embeddings");
       }
 
-      // Store the successful points in Qdrant
+      // Store results in Qdrant
       await this.client.upsert(this.collectionName, {
-        points
+        points: batchResults
       });
 
-      console.log(`Successfully stored ${points.length}/${textChunks.length} vectors in Qdrant.`);
+      console.log(`Successfully stored ${batchResults.length}/${textChunks.length} vectors in Qdrant.`);
     } catch (error) {
       console.error('Error storing text chunks in Qdrant:', error);
       const errorMsg = error instanceof Error ? error.message : JSON.stringify(error);
@@ -306,6 +338,11 @@ export class QdrantImporter {
       console.log(`Processing batch ${Math.floor(i/this.batchSize) + 1} of ${Math.ceil(chunks.length/this.batchSize)}, size: ${batch.length}`);
       try {
         await this.storeTextChunks(batch);
+        // Add a delay between batches to avoid overwhelming the API
+        if (i + this.batchSize < chunks.length) {
+          console.log(`Waiting 5 seconds before processing next batch...`);
+          await new Promise(resolve => setTimeout(resolve, 5000));
+        }
       } catch (error) {
         console.error(`Error processing batch ${Math.floor(i/this.batchSize) + 1}:`, error);
         // Continue with next batch

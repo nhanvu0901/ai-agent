@@ -22,7 +22,11 @@ interface Config {
     apiKey: string;
     azureEndpoint?: string;
     azureApiVersion?: string;
-
+  };
+  embeddings: {
+    apiKey: string;   // Cohere API key
+    model: string;    // Cohere embedding model
+    batchSize: number; // Number of embeddings to process in a batch
   };
   paths: {
     pdfDir: string;
@@ -54,6 +58,11 @@ const config: Config = {
     azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT,
     azureApiVersion: process.env.AZURE_OPENAI_API_VERSION,
   },
+  embeddings: {
+    apiKey: process.env.COHERE_API_KEY || 'woKdWGHESvIwQLfRUxTm5p6hKm1SIGQ5R16HAiXG',  // Cohere API key
+    model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',  // Default model for Cohere
+    batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10), // Default batch size
+  },
   paths: {
     pdfDir: process.env.PDF_DIR || './data/pdfs',
     jsonDir: process.env.JSON_DIR || './data/json',
@@ -73,11 +82,13 @@ const config: Config = {
 });
 
 if (!config.openai.apiKey) {
-  console.warn('OPENAI_API_KEY is not set. Some features may not work correctly.');
+  console.warn('OPENAI_API_KEY is not set. LLM functions may not work correctly.');
 }
+
 if (!config.openai.azureEndpoint) {
   console.warn('AZURE_OPENAI_ENDPOINT is not set. Azure OpenAI features may not work correctly if you intend to use them.');
 }
+
 if (!config.openai.azureApiVersion) {
   console.warn('AZURE_OPENAI_API_VERSION is not set. Azure OpenAI features may not work correctly if you intend to use them.');
 }

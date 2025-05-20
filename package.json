@@ -24,7 +24,7 @@
     "zod": "^3.23.8",
     "@azure/openai": "^1.0.0-beta.11",
     "@langchain/azure-openai": "^0.0.11",
-    "lru-cache": "^11.1.0"
+    "cohere-ai": "^7.17.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",

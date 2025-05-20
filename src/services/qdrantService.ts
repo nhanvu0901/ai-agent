@@ -2,12 +2,11 @@
 import { QdrantClient } from '@qdrant/js-client-rest';
 import config from '../config/config';
 import { SearchResultItem, QdrantPayload } from '../types';
-import { OpenAIEmbeddings } from "@langchain/openai"; // Using Langchain's OpenAI for embeddings
-import { AzureOpenAIEmbeddings } from "@langchain/azure-openai"; // Add Azure OpenAI embeddings
+import { CohereEmbeddings } from '../graph/importer/embeddings/cohereEmbeddings';
 
 // Qdrant client instance
 let qdrantClient: QdrantClient | undefined;
-let embeddings: OpenAIEmbeddings | AzureOpenAIEmbeddings | undefined;
+let embeddings: CohereEmbeddings | undefined;
 
 const QDRANT_COLLECTION_NAME = 'legal_documents'; // Define your collection name
 const MAX_RETRIES = 3; // Maximum number of retries for embedding generation
@@ -20,24 +19,14 @@ function getQdrantClient(): QdrantClient {
     return qdrantClient;
 }
 
-function getEmbeddingsService() {
+function getEmbeddingsService(): CohereEmbeddings {
     if (!embeddings) {
-        // Check if Azure OpenAI configuration is available
-        if (config.openai.azureEndpoint && config.openai.apiKey) {
-            console.log("Using Azure OpenAI for embeddings in service");
-            embeddings = new AzureOpenAIEmbeddings({
-                azureOpenAIApiKey: config.openai.apiKey,
-                azureOpenAIEndpoint: config.openai.azureEndpoint,
-                // Removed apiVersion parameter as it's not supported
-                model: config.agent.embeddingModel
-            });
-        } else {
-            console.log("Using regular OpenAI for embeddings in service");
-            embeddings = new OpenAIEmbeddings({
-                openAIApiKey: config.openai.apiKey,
-                modelName: "text-embedding-ada-002", // Or your preferred embedding model
-            });
-        }
+        console.log("Initializing Cohere Embeddings for search");
+        embeddings = new CohereEmbeddings({
+            apiKey: config.embeddings.apiKey,
+            model: config.embeddings.model,
+            batchSize: config.embeddings.batchSize
+        });
     }
     return embeddings;
 }
@@ -49,7 +38,7 @@ export async function generateEmbedding(text: string): Promise<number[]> {
     const embeddingsService = getEmbeddingsService();
     let retries = 0;
 
-    // Truncate text if it's too long (OpenAI embeddings have token limits)
+    // Truncate text if it's too long
     const truncatedText = text.length > 8000 ? text.substring(0, 8000) : text;
 
     while (retries <= MAX_RETRIES) {
@@ -79,8 +68,10 @@ export async function generateEmbedding(text: string): Promise<number[]> {
                 throw new Error(`Failed to generate embedding after ${MAX_RETRIES + 1} attempts: ${errorMessage}`);
             }
 
-            // Wait before retrying
-            await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+            // Wait before retrying with exponential backoff
+            const delay = RETRY_DELAY * Math.pow(2, retries);
+            console.log(`Waiting ${delay}ms before retry ${retries + 1}...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
             retries++;
         }
     }
@@ -91,10 +82,10 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 
 export function isQdrantPayload(payload: any): payload is QdrantPayload {
     return (
-      payload &&
-      typeof payload.text === 'string' &&
-      typeof payload.law_id === 'string' &&
-      typeof payload.full_path === 'string'
+        payload &&
+        typeof payload.text === 'string' &&
+        typeof payload.law_id === 'string' &&
+        typeof payload.full_path === 'string'
     );
 }
 
@@ -111,8 +102,7 @@ export async function ensureQdrantCollection(collectionName: string = QDRANT_COL
         if (!exists) {
             console.log(`Creating Qdrant collection: ${collectionName}`);
             // Create collection for embeddings
-            // For Azure/OpenAI embedding models, dimension is typically 1536
-            const embeddingSize = 1536;
+            const embeddingSize = getEmbeddingsService().getDimension();
 
             await client.createCollection(collectionName, {
                 vectors: {
@@ -134,17 +124,17 @@ export async function ensureQdrantCollection(collectionName: string = QDRANT_COL
 }
 
 export async function searchSimilarVectors(
-  queryText: string,
-  collectionName: string = QDRANT_COLLECTION_NAME,
-  limit: number = 5,
-  scoreThreshold?: number
+    queryText: string,
+    collectionName: string = QDRANT_COLLECTION_NAME,
+    limit: number = 5,
+    scoreThreshold?: number
 ): Promise<SearchResultItem[]> {
     const client = getQdrantClient();
     try {
         // First, ensure the collection exists
         await ensureQdrantCollection(collectionName);
 
-        // Ensure limit is an integer (similar fix as in Neo4j service)
+        // Ensure limit is an integer
         const intLimit = Math.floor(limit);
 
         console.log(`Generating embedding for search query: "${queryText.substring(0, 50)}..."`);
@@ -163,7 +153,7 @@ export async function searchSimilarVectors(
         }
 
         console.log(`Searching Qdrant collection "${collectionName}" with params:`,
-          { limit: intLimit, withScoreThreshold: scoreThreshold !== undefined });
+            { limit: intLimit, withScoreThreshold: scoreThreshold !== undefined });
 
         const searchResult = await client.search(collectionName, searchParams);
         console.log(`Search returned ${searchResult.length} results`);
@@ -175,6 +165,9 @@ export async function searchSimilarVectors(
             if (isQdrantPayload(point.payload)) {
                 const payload = point.payload;
 
+                // Get the original string ID if available, otherwise use the numeric ID
+                const originalId = payload.original_id ? String(payload.original_id) : String(point.id);
+
                 // Map the type value - need to ensure it's one of the accepted values
                 let itemType: SearchResultItem['type'] = 'vector';
                 if (payload.type && ['law', 'part', 'head', 'paragraph', 'subsection', 'vector'].includes(payload.type)) {
@@ -182,11 +175,11 @@ export async function searchSimilarVectors(
                 }
 
                 mappedResults.push({
-                    id: point.id.toString(),
+                    id: originalId,
                     score: point.score,
                     type: itemType,
                     content: payload.text,
-                    title: payload.title || `Document chunk ${point.id}`,
+                    title: payload.title || `Document chunk ${originalId}`,
                     law_id: payload.law_id,
                     full_path: payload.full_path,
                     metadata: {
@@ -204,10 +197,10 @@ export async function searchSimilarVectors(
         console.error('Error searching Qdrant:', error);
         // Provide more detailed error for debugging
         const errorMsg = error instanceof Error
-          ? error.message
-          : (typeof error === 'object' && error !== null
-            ? JSON.stringify(error)
-            : String(error));
+            ? error.message
+            : (typeof error === 'object' && error !== null
+                ? JSON.stringify(error)
+                : String(error));
 
         console.error(`Qdrant search error details: ${errorMsg}`);
 

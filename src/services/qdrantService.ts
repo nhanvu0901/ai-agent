@@ -2,7 +2,7 @@
 import { QdrantClient } from '@qdrant/js-client-rest';
 import config from '../config/config';
 import { SearchResultItem, QdrantPayload } from '../types';
-import { CohereEmbeddings } from '../graph/importer/embeddings/cohereEmbeddings';
+import { CohereEmbeddings } from '../graph/embeddings/cohereEmbeddings';
 
 // Qdrant client instance
 let qdrantClient: QdrantClient | undefined;

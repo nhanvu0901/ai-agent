@@ -436,7 +436,7 @@
 import fs from 'fs';
 import path from 'path';
 import { Neo4jImporter } from './importer/neo4jImporter';
-import { QdrantImporter } from './importer/qdrantImporter';
+import { QdrantImporter } from './embeddings/qdrantImporter';
 import { NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, JSON_DATA_DIR } from './importer/config';
 import { isNeo4jError } from './importer/utils';
 import { LawJson } from './importer/types';

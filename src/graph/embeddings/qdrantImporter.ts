@@ -1,8 +1,8 @@
 import { QdrantClient } from '@qdrant/js-client-rest';
-import { CohereEmbeddings } from './embeddings/cohereEmbeddings';
+import { CohereEmbeddings } from './cohereEmbeddings';
 import { QdrantPayload } from '../../types';
 import config from '../../config/config';
-import { LawJson, Part, Head, Paragraph, SubsectionLevel1, SubsectionLevel2 } from './types';
+import { LawJson, Part, Head, Paragraph, SubsectionLevel1, SubsectionLevel2 } from '../importer/types';
 
 
 type StructuralElement = Part | Head | Paragraph | SubsectionLevel1 | SubsectionLevel2;

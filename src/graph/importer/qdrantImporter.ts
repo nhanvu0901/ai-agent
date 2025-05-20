@@ -1,11 +1,9 @@
-// src/graph/importer/qdrantImporter.ts
 import { QdrantClient } from '@qdrant/js-client-rest';
 import { CohereEmbeddings } from './embeddings/cohereEmbeddings';
 import { QdrantPayload } from '../../types';
 import config from '../../config/config';
 import { LawJson, Part, Head, Paragraph, SubsectionLevel1, SubsectionLevel2 } from './types';
-import { v4 as uuidv4 } from 'uuid';
-import crypto from 'crypto';
+
 
 type StructuralElement = Part | Head | Paragraph | SubsectionLevel1 | SubsectionLevel2;
 
@@ -19,15 +17,13 @@ export class QdrantImporter {
   private idCounter: number = 1; // Counter for generating sequential IDs
 
   constructor() {
-    // Initialize Qdrant client
+
     this.client = new QdrantClient({ url: config.qdrant.url });
 
-    // Log the configuration to help with debugging
     console.log("Embedding Configuration:");
     console.log(`  API Key: ${config.embeddings.apiKey ? "Set (length: " + config.embeddings.apiKey.length + ")" : "Not set"}`);
     console.log(`  Model: ${config.embeddings.model}`);
 
-    // Initialize Cohere embeddings
     this.embeddings = new CohereEmbeddings({
       apiKey: config.embeddings.apiKey,
       model: config.embeddings.model,
@@ -35,9 +31,6 @@ export class QdrantImporter {
     });
   }
 
-  /**
-   * Ensure Qdrant collection exists. Create it if it doesn't.
-   */
   async ensureCollection(): Promise<void> {
     try {
       // Check if collection exists
@@ -68,9 +61,7 @@ export class QdrantImporter {
     }
   }
 
-  /**
-   * Generate embedding for a text with retry logic
-   */
+
   async generateEmbedding(text: string): Promise<number[]> {
     let retries = 0;
 
@@ -192,10 +183,9 @@ export class QdrantImporter {
           batchResults.push(...points);
         } catch (error) {
           console.error(`Error processing batch starting at index ${i}:`, error);
-          // Continue with next batch instead of failing entirely
         }
 
-        // Add delay between batches to respect rate limits
+
         if (i + batchSize < textChunks.length) {
           await new Promise(resolve => setTimeout(resolve, 1000));
         }
@@ -218,9 +208,7 @@ export class QdrantImporter {
     }
   }
 
-  /**
-   * Map element type to a supported type in QdrantPayload
-   */
+
   private mapElementTypeToPayloadType(elementType: string): QdrantPayload['type'] {
     // Map the element types to types supported in QdrantPayload
     switch (elementType) {
@@ -238,6 +226,40 @@ export class QdrantImporter {
     }
   }
 
+
+  async lawExists(lawId: string,title:string): Promise<boolean> {
+    try {
+      const searchResult = await this.client.scroll(this.collectionName, {
+        filter: {
+          must: [
+            {
+              key: 'law_id',
+              match: {
+                value: lawId,
+              },
+            },
+            {
+              key: 'title',
+              match: {
+                value: title,
+              },
+            },
+          ],
+        },
+        limit: 1,
+        with_payload: false,
+        with_vector: false,
+      });
+      return searchResult.points.length > 0;
+    } catch (error) {
+      console.error(`Error checking if law ${lawId} exists:`, error);
+      // Depending on how you want to handle errors, you might re-throw or return false
+      // For now, let's assume if there's an error, we can't confirm existence,
+      // but in a production scenario, you might want more robust error handling.
+      return false;
+    }
+  }
+
   /**
    * Process a law and create vector embeddings for its content
    */
@@ -249,6 +271,13 @@ export class QdrantImporter {
       return;
     }
 
+    // Check if the law_id already exists
+    const exists = await this.lawExists(metadata.law_id,metadata.title);
+    if (exists) {
+      console.log(`Law ${metadata.law_id} - ${metadata.title} already exists in Qdrant. Skipping.`);
+      return;
+    }
+
     console.log(`Creating vector embeddings for Law: ${metadata.law_id} - ${metadata.title}`);
 
     // Create payloads and collect texts to be embedded
@@ -257,7 +286,7 @@ export class QdrantImporter {
     // 1. Add the overall law text
     const lawFullText = text_content.join('\n');
     chunks.push({
-      id: `law-${metadata.law_id}`,
+      id: `law-${metadata.law_id}`, // This ID should be unique for the law itself
       text: lawFullText,
       payload: {
         text: lawFullText.substring(0, 8000), // Truncate if too long
@@ -265,7 +294,7 @@ export class QdrantImporter {
         full_path: metadata.law_id,
         title: metadata.title,
         source_file: metadata.source_file || undefined, // Use undefined instead of null
-        type: 'law'
+        type: 'law' // Add a type for the main law document
       }
     });
 

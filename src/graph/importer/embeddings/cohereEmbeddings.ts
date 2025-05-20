@@ -11,16 +11,15 @@ export class CohereEmbeddings implements EmbeddingProvider {
     private apiKey: string;
     private model: string;
     private batchSize: number;
-    private cohere: any; // Use any type for flexibility
+    private cohere: any;
 
     constructor(options: CohereEmbeddingsOptions) {
         this.apiKey = options.apiKey;
         this.model = options.model || 'embed-multilingual-v3.0';
         this.batchSize = options.batchSize || 20;
 
-        // Initialize Cohere client with the new API
+
         try {
-            // Dynamic import with require to avoid TypeScript errors
             const { CohereClient } = require('cohere-ai');
             this.cohere = new CohereClient({
                 token: this.apiKey
@@ -69,7 +68,6 @@ export class CohereEmbeddings implements EmbeddingProvider {
                 }
             }
 
-            // Validate that we got a valid embedding
             if (!Array.isArray(embedding) || embedding.length === 0) {
                 throw new Error("Could not extract a valid embedding from response");
             }

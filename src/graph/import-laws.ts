@@ -441,7 +441,7 @@ import { NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, JSON_DATA_DIR } from './importer
 import { isNeo4jError } from './importer/utils';
 import { LawJson } from './importer/types';
 
-// runImportProcess function, now with Qdrant support
+
 async function runImportProcess(importer: Neo4jImporter, qdrantImporter: QdrantImporter): Promise<void> {
   const schemaSession = importer['driver'].session({ database: 'neo4j' });
   try {
@@ -503,7 +503,7 @@ async function main() {
       return;
     }
 
-    // Pass both importers to the import process
+
     await runImportProcess(importer, qdrantImporter);
     console.log('Import process has concluded for both Neo4j and Qdrant.');
 

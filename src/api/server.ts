@@ -15,12 +15,11 @@ export async function createServer(): Promise<FastifyInstance> {
     },
   });
 
-  // Register plugins
+
   await server.register(cors, {
     origin: true,
   });
 
-  // Register Swagger
   await server.register(swagger, {
     swagger: {
       info: {

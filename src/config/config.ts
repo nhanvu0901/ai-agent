@@ -59,7 +59,7 @@ const config: Config = {
     azureApiVersion: process.env.AZURE_OPENAI_API_VERSION,
   },
   embeddings: {
-    apiKey: process.env.COHERE_API_KEY || 'woKdWGHESvIwQLfRUxTm5p6hKm1SIGQ5R16HAiXG',  // Cohere API key
+    apiKey: process.env.COHERE_API_KEY || 'n17Op6Z8whuzzusJ8m2b0LnEyz9rmsBAiXxObNGE',  // Cohere API key
     model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',  // Default model for Cohere
     batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10), // Default batch size
   },

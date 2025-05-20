@@ -1,0 +1,69 @@
+Project Flow: From User Question to Legal Answer
+Let me walk you through the complete flow of how this system processes a user's legal question:
+1. Question Submission
+When a user submits a question about Czech legislation to the backend:
+
+The request hits the /api/graph/ask endpoint defined in src/api/routes/graph/ask.ts
+The input is validated against the QaQuerySchema (checking that it has a non-empty question string)
+The validated question is passed to the agentService.processQuery function
+
+2. Query Analysis
+The agent processes the question in several steps:
+
+First, it analyzes the query using openAIService.analyzeQueryWithOpenAI to:
+
+Extract keywords (e.g., "electronic signatures", "commercial contracts")
+Determine if the question is relevant to legal matters
+Identify the user's intent (e.g., seeking requirements, definitions)
+
+
+If the query is deemed irrelevant to legal matters (e.g., asking about weather), it returns a polite message explaining the system's purpose
+
+3. Information Retrieval
+For relevant queries, the system performs a hybrid search:
+
+The agent calls retrievalService.hybridSearch with the extracted keywords
+This hybrid search combines three techniques:
+a) Graph Database Search (Neo4j):
+
+Performs structured queries on the legal database
+Retrieves laws, paragraphs, and subsections that match keywords
+Uses graph relationships to understand context (which paragraph belongs to which law)
+
+b) Full-Text Search (Neo4j):
+
+Performs specialized full-text search on paragraphs and subsections
+Finds more precise text matches within legal documents
+
+c) Vector Search (Qdrant):
+
+Converts the query to a vector embedding using OpenAI/Azure OpenAI
+Finds semantically similar content in the vector database
+Returns results based on conceptual similarity rather than just keyword matching
+
+
+All search results are combined, deduplicated, and ranked by relevance
+
+4. Answer Generation
+With the relevant legal context gathered:
+
+The agent calls openAIService.generateAnswerWithOpenAI
+It formats all retrieved context snippets with their sources
+The LLM (either OpenAI or Azure OpenAI) generates a comprehensive answer based solely on the provided legal context
+The answer cites the sources (law_id, paragraph) for key pieces of information
+
+5. Response Delivery
+The system finalizes and returns the response:
+
+The final answer, along with the sources used, is packaged into the response
+If debug mode is enabled, the full reasoning trace is included
+This structured response is sent back to the client via the API
+
+6. Error Handling
+The system incorporates robust error handling:
+
+If any step fails (e.g., database connection issues, API errors), the error is caught and logged
+A user-friendly error message is returned
+Detailed error information is stored in the reasoning trace for debugging
+
+This architecture represents a sophisticated legal AI assistant that combines graph database technology with vector search capabilities to provide accurate, context-aware answers about Czech legislation. The hybrid search approach allows it to handle both precise keyword queries and more conceptual natural language questions.

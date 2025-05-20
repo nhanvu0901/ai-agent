@@ -120,32 +120,3 @@ export async function searchSimilarVectors(
     }
 }
 
-/**
- * Function to create Qdrant collection if it doesn't exist.
- */
-export async function ensureQdrantCollection(
-    collectionName: string = QDRANT_COLLECTION_NAME,
-    vectorSize: number = 1536, // For text-embedding-ada-002
-    distance: "Cosine" | "Euclid" | "Dot" = "Cosine"
-): Promise<void> {
-    const client = getQdrantClient();
-    try {
-        const collections = await client.getCollections();
-        const collectionExists = collections.collections.some(c => c.name === collectionName);
-
-        if (!collectionExists) {
-            console.log(`Collection "${collectionName}" does not exist. Creating...`);
-            await client.createCollection(collectionName, {
-                vectors: {
-                    size: vectorSize,
-                    distance: distance,
-                },
-            });
-            console.log(`Collection "${collectionName}" created successfully.`);
-        } else {
-            console.log(`Collection "${collectionName}" already exists.`);
-        }
-    } catch (error) {
-        console.error(`Error ensuring Qdrant collection "${collectionName}":`, error);
-    }
-}

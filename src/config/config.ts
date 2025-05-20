@@ -40,7 +40,7 @@ const config: Config = {
   nodeEnv: process.env.NODE_ENV || 'development',
   port: parseInt(process.env.PORT || '3000', 10),
   logLevel: process.env.LOG_LEVEL || 'info',
-  debugMode:true,
+  debugMode:process.env.DEBUG_MODE,
   neo4j: {
     uri: process.env.NEO4J_URI || 'bolt://localhost:7687',
     user: process.env.NEO4J_USER || 'neo4j',

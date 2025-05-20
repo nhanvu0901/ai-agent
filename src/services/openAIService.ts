@@ -1,8 +1,6 @@
 import OpenAI from 'openai';
 import config from '../config/config';
 import { LLMCallTrace, SearchResultItem } from '../types';
-
-// Azure SDK imports
 import { OpenAIClient } from '@azure/openai';
 import { AzureKeyCredential } from '@azure/core-auth';
 
@@ -15,7 +13,6 @@ let azureClient: OpenAIClient | undefined;
  * based on the available configuration
  */
 function getOpenAIClient(): OpenAI | OpenAIClient {
-    // If Azure configuration is available
     if (config.openai.azureEndpoint && config.openai.apiKey) {
         console.log("Using Azure OpenAI client");
         if (!azureClient) {
@@ -25,19 +22,6 @@ function getOpenAIClient(): OpenAI | OpenAIClient {
             );
         }
         return azureClient;
-    }
-    // Fallback to regular OpenAI
-    else {
-        console.log("Using regular OpenAI client");
-        if (!openai) {
-            if (!config.openai.apiKey) {
-                throw new Error('OPENAI_API_KEY is not configured. Please set it in your .env file.');
-            }
-            openai = new OpenAI({
-                apiKey: config.openai.apiKey,
-            });
-        }
-        return openai;
     }
 }
 
@@ -55,8 +39,7 @@ interface OpenAICompletionResponse {
 }
 
 /**
- * Generates a text completion using OpenAI's API
- * Works with both regular OpenAI and Azure OpenAI
+ * Generates a text completion
  */
 export async function getOpenAICompletion({
                                               prompt,
@@ -76,9 +59,7 @@ export async function getOpenAICompletion({
             { role: "user", content: prompt }
         ];
 
-        // Check which client we're using
         if (client === azureClient && azureClient) {
-            // Azure OpenAI
             const deploymentName = model;
             const completion = await azureClient.getChatCompletions(
                 deploymentName,
@@ -90,16 +71,16 @@ export async function getOpenAICompletion({
             );
             responseContent = completion.choices[0]?.message?.content || null;
         }
-        else if (client === openai && openai) {
-            // Regular OpenAI
-            const completion = await openai.chat.completions.create({
-                model: model,
-                messages: messages as any,
-                max_tokens: max_tokens,
-                temperature: temperature,
-            });
-            responseContent = completion.choices[0]?.message?.content || null;
-        }
+        // else if (client === openai && openai) {
+        //     // Regular OpenAI
+        //     const completion = await openai.chat.completions.create({
+        //         model: model,
+        //         messages: messages as any,
+        //         max_tokens: max_tokens,
+        //         temperature: temperature,
+        //     });
+        //     responseContent = completion.choices[0]?.message?.content || null;
+        // }
     } catch (error) {
         console.error('Error calling OpenAI/Azure API:', error);
         errorMsg = error instanceof Error ? error.message : String(error);
@@ -209,7 +190,8 @@ Be concise and informative. If the context doesn't directly answer the question,
 Do not make up information or answer from your general knowledge.
 Cite the source (e.g., law_id, paragraph, or title) for key pieces of information if available in the context metadata. Format citations like [Source: law_id, full_path].
 If multiple sources support a point, you can list them or choose the most relevant.
-Structure your answer clearly. Use bullet points if appropriate for lists or multiple requirements.`;
+Structure your answer clearly. Use bullet points if appropriate for lists or multiple requirements.
+Your response should be in English, but when directly quoting or referencing the text of Czech laws, you should maintain the original Czech language for those specific quotations.`;
 
     let promptContext = "Context from legal documents:\n";
     contextSnippets.forEach((item, index) => {

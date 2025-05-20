@@ -50,16 +50,16 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         }
     }
 
-    if (useVector) {
-        try {
-            // Ensure Qdrant collection exists (optional, can be done at startup)
-            // await qdrantService.ensureQdrantCollection();
-            vectorResults = await qdrantService.searchSimilarVectors(query, undefined, MAX_RESULTS_PER_SOURCE, 0.7); // score_threshold example
-            console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
-        } catch (error) {
-            console.error('Error during vector search:', error);
-        }
-    }
+    // if (useVector) {
+    //     try {
+    //         // Ensure Qdrant collection exists (optional, can be done at startup)
+    //         // await qdrantService.ensureQdrantCollection();
+    //         vectorResults = await qdrantService.searchSimilarVectors(query, undefined, MAX_RESULTS_PER_SOURCE, 0.7); // score_threshold example
+    //         console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
+    //     } catch (error) {
+    //         console.error('Error during vector search:', error);
+    //     }
+    // }
 
     // Combine and de-duplicate (simple de-duplication based on 'id' which should be full_path or qdrant id)
     const combined = new Map<string, SearchResultItem>();

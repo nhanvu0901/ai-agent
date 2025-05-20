@@ -42,48 +42,48 @@ AI Junior enables intelligent exploration of Czech legislative knowledge through
 ## Components
 
 1. **Neo4j Graph Database**
-   - Stores structured legislative data (laws, parts, paragraphs, subsections)
-   - Maintains relationships between legal entities
-   - Supports keyword and full-text search capabilities
-   - Enables structured queries for precise information retrieval
+    - Stores structured legislative data (laws, parts, paragraphs, subsections)
+    - Maintains relationships between legal entities
+    - Supports keyword and full-text search capabilities
+    - Enables structured queries for precise information retrieval
 
 2. **Qdrant Vector Database**
-   - Stores vector embeddings for legal text chunks
-   - Enables semantic search beyond keyword matching
-   - Finds conceptually similar content even with different terminology
+    - Stores vector embeddings for legal text chunks
+    - Enables semantic search beyond keyword matching
+    - Finds conceptually similar content even with different terminology
 
 3. **Agent Service**
-   - Analyzes user queries to determine intent and relevance
-   - Coordinates hybrid search strategies
-   - Synthesizes information from multiple sources
-   - Generates comprehensive, cited answers
+    - Analyzes user queries to determine intent and relevance
+    - Coordinates hybrid search strategies
+    - Synthesizes information from multiple sources
+    - Generates comprehensive, cited answers
 
 4. **Retrieval Service**
-   - Implements hybrid search combining graph and vector approaches
-   - Deduplicates and ranks results by relevance
-   - Provides context for answer generation
+    - Implements hybrid search combining graph and vector approaches
+    - Deduplicates and ranks results by relevance
+    - Provides context for answer generation
 
 5. **API Layer**
-   - RESTful endpoints for legal queries
-   - Interactive documentation with Swagger UI
-   - Error handling and logging
-   - Direct access to graph and vector search capabilities
+    - RESTful endpoints for legal queries
+    - Interactive documentation with Swagger UI
+    - Error handling and logging
+    - Direct access to graph and vector search capabilities
 
 ## Getting Started
 
 ### Prerequisites
-TODO update this 
+
 - Docker and Docker Compose
 - Node.js 20+ (for local development)
 - OpenAI API key (or Azure OpenAI credentials)
 
 ### Setup
-TODO  update the 1 step
+
 1. **Clone the repository**
 
    ```bash
    git clone https://github.com/nhanvu0901/ai-agent/
-   Checkout to the final branch
+   git checkout final
    cd ai-junior
    ```
 
@@ -93,7 +93,7 @@ TODO  update the 1 step
    cp .env.example .env
    ```
 
-   Edit the `.env` file to add your OpenAI API key or Azure OpenAI credentials add Cohere api key .
+   Edit the `.env` file to add your OpenAI API key or Azure OpenAI credentials.
 
 3. **Start the Docker services**
 
@@ -104,9 +104,9 @@ TODO  update the 1 step
    This will start Neo4j, Qdrant, and the application server.
 
 4. **Access the services**
-   - API and Swagger UI: http://localhost:3000/documentation
-   - Neo4j Browser: http://localhost:7474 (user: neo4j, password: password)
-   - Qdrant Dashboard: http://localhost:6333/dashboard
+    - API and Swagger UI: http://localhost:3000/documentation
+    - Neo4j Browser: http://localhost:7474 (user: neo4j, password: password)
+    - Qdrant Dashboard: http://localhost:6333/dashboard
 
 5. **Import legal data**
 
@@ -150,47 +150,47 @@ npm run start
 The main API endpoints are:
 
 - **AI Legal Assistant**
-   - `POST /api/graph/ask` - Ask legal questions in natural language
-      - Request body: `{ "question": "What are the requirements for electronic signatures?" }`
-      - Returns an answer with relevant legal sources
+    - `POST /api/graph/ask` - Ask legal questions in natural language
+        - Request body: `{ "question": "What are the requirements for electronic signatures?" }`
+        - Returns an answer with relevant legal sources
 
 - **Direct Search API**
-   - `GET /api/graph/search` - Search for legal documents using graph, vector, or hybrid approaches
-      - Query parameters:
-         - `query`: The search text (required)
-         - `searchType`: "graph", "vector", or "hybrid" (default: "hybrid")
-         - `limit`: Maximum number of results to return (default: 10)
-         - `threshold`: Score threshold for vector search (default: 0.7)
-      - Returns an array of search results with relevance scores and metadata
+    - `GET /api/graph/search` - Search for legal documents using graph, vector, or hybrid approaches
+        - Query parameters:
+            - `query`: The search text (required)
+            - `searchType`: "graph", "vector", or "hybrid" (default: "hybrid")
+            - `limit`: Maximum number of results to return (default: 10)
+            - `threshold`: Score threshold for vector search (default: 0.7)
+        - Returns an array of search results with relevance scores and metadata
 
 ## Configuration
 
 The application can be configured using environment variables:
 
 - **API and Server**
-   - `PORT` - Port for the API server (default: 3000)
-   - `NODE_ENV` - Environment setting: "development" or "production"
-   - `LOG_LEVEL` - Logging level (default: "info")
-   - `DEBUG_MODE` - Enable additional debug information (default: false)
+    - `PORT` - Port for the API server (default: 3000)
+    - `NODE_ENV` - Environment setting: "development" or "production"
+    - `LOG_LEVEL` - Logging level (default: "info")
+    - `DEBUG_MODE` - Enable additional debug information (default: false)
 
 - **OpenAI/Azure Integration**
-   - `OPENAI_API_KEY` - Your OpenAI API key or Azure OpenAI API key
-   - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
-   - `AZURE_OPENAI_API_VERSION` - Azure OpenAI API version
-   - `AGENT_MODEL_DEPLOYMENT` - Model to use for the agent (default: gpt-4o-mini)
-   - `EMBEDDING_MODEL_DEPLOYMENT` - Model to use for embeddings (default: ace-text-embedding-3-large)
-   - `CONTEXT_WINDOW_SIZE` - Maximum context window size for the LLM (default: 4096)
+    - `OPENAI_API_KEY` - Your OpenAI API key or Azure OpenAI API key
+    - `AZURE_OPENAI_ENDPOINT` - Azure OpenAI endpoint URL
+    - `AZURE_OPENAI_API_VERSION` - Azure OpenAI API version
+    - `AGENT_MODEL_DEPLOYMENT` - Model to use for the agent (default: gpt-4o-mini)
+    - `EMBEDDING_MODEL_DEPLOYMENT` - Model to use for embeddings (default: ace-text-embedding-3-large)
+    - `CONTEXT_WINDOW_SIZE` - Maximum context window size for the LLM (default: 4096)
 
 - **Database Connections**
-   - `NEO4J_URI` - Neo4j connection URI
-   - `NEO4J_USER` - Neo4j username
-   - `NEO4J_PASSWORD` - Neo4j password
-   - `QDRANT_URL` - Qdrant connection URL
+    - `NEO4J_URI` - Neo4j connection URI
+    - `NEO4J_USER` - Neo4j username
+    - `NEO4J_PASSWORD` - Neo4j password
+    - `QDRANT_URL` - Qdrant connection URL
 
 - **Embedding Configuration**
-   - `COHERE_API_KEY` - API key for Cohere embeddings (if used)
-   - `EMBEDDING_MODEL` - Model name for embeddings
-   - `EMBEDDING_BATCH_SIZE` - Batch size for processing embeddings
+    - `COHERE_API_KEY` - API key for Cohere embeddings (if used)
+    - `EMBEDDING_MODEL` - Model name for embeddings
+    - `EMBEDDING_BATCH_SIZE` - Batch size for processing embeddings
 
 ## Database Schema
 
@@ -199,22 +199,22 @@ The application can be configured using environment variables:
 The Neo4j graph schema includes:
 
 - **Law**: Represents a single piece of legislation
-   - Properties: law_id, title, promulgation_date, effective_date, source_file, text_content
+    - Properties: law_id, title, promulgation_date, effective_date, source_file, text_content
 
 - **Agency**: Represents a legal or governmental agency
-   - Properties: name
+    - Properties: name
 
 - **Part**: Major structural part of a law
-   - Properties: identifier, title, law_id, full_path
+    - Properties: identifier, title, law_id, full_path
 
 - **Head**: Chapter within a Part
-   - Properties: identifier, title, law_id, full_path
+    - Properties: identifier, title, law_id, full_path
 
 - **Paragraph**: Specific paragraph of a law (§)
-   - Properties: identifier, text, law_id, full_path
+    - Properties: identifier, text, law_id, full_path
 
 - **Subsection**: Nested subsection within a paragraph
-   - Properties: identifier, text, law_id, full_path
+    - Properties: identifier, text, law_id, full_path
 
 These entities are connected by relationships that represent the hierarchical structure of legal documents, including:
 - ENFORCES: (Agency)-[:ENFORCES]->(Law)
@@ -229,17 +229,17 @@ These entities are connected by relationships that represent the hierarchical st
 The Qdrant vector database stores:
 
 - **Vector Collection**: "legal_documents"
-   - Vector dimension: Typically 1024 for Cohere embeddings
-   - Distance metric: Cosine similarity
+    - Vector dimension: Typically 1024 for Cohere embeddings
+    - Distance metric: Cosine similarity
 
 - **Vector Payload**:
-   - text: The original text content that was embedded
-   - law_id: Identifier of the associated law
-   - full_path: Hierarchical path to locate the content in the document structure
-   - title: Title of the law or section
-   - source_file: Original source file
-   - type: Content type (law, part, head, paragraph, subsection)
-   - original_id: Original string identifier before numeric conversion
+    - text: The original text content that was embedded
+    - law_id: Identifier of the associated law
+    - full_path: Hierarchical path to locate the content in the document structure
+    - title: Title of the law or section
+    - source_file: Original source file
+    - type: Content type (law, part, head, paragraph, subsection)
+    - original_id: Original string identifier before numeric conversion
 
 ## Project Structure
 
@@ -251,16 +251,20 @@ The Qdrant vector database stores:
 │   ├── api/              # API routes and server setup
 │   │   ├── routes/          # API endpoints
 │   │   │   ├── graph/       # Graph-related endpoints
+│   │   │   │   ├── ask.ts      # QA endpoint
+│   │   │   │   └── search.ts   # Search endpoint
 │   │   │   └── index.ts     # Route registration
 │   │   └── server.ts        # Fastify server configuration
 │   ├── config/           # Configuration handling
 │   │   └── config.ts        # Environment configuration
 │   ├── graph/            # Neo4j database operations
+│   │   ├── embeddings/      # Vector embedding utilities
+│   │   │   ├── cohereEmbeddings.ts # Cohere embedding implementation
+│   │   │   ├── embeddingProvider.ts # Embedding interface
+│   │   │   └── qdrantImporter.ts # Qdrant import logic
 │   │   ├── importer/        # Data import utilities
-│   │   │   ├── embeddings/  # Vector embedding generation
 │   │   │   ├── config.ts    # Import configuration
 │   │   │   ├── neo4jImporter.ts # Neo4j import logic
-│   │   │   ├── qdrantImporter.ts # Qdrant import logic
 │   │   │   ├── types.ts     # Type definitions for import
 │   │   │   └── utils.ts     # Utility functions
 │   │   └── import-laws.ts   # Main import script
@@ -275,6 +279,12 @@ The Qdrant vector database stores:
 │   ├── json/               # Processed JSON files
 │   ├── pdfs/               # Source PDF documents
 │   └── uploads/            # User upload directory
+├── process_pdf_data_python/ # Python code for processing PDFs to JSON
+│   └── main.py              # Main PDF processing script
+├── shell_scripts/       # Helper shell scripts
+│   ├── debug-ports.sh      # Script to debug port issues
+│   ├── import-laws.sh      # Script to run law import process
+│   └── setup.sh            # Project setup automation
 ├── Dockerfile            # Container definition
 └── docker-compose.yml    # Multi-container setup
 ```

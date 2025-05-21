@@ -3,32 +3,24 @@ import * as neo4jService from './neo4jService';
 import * as qdrantService from './qdrantService';
 import config from '../config/config';
 
-const MAX_RESULTS_PER_SOURCE = 8; // Increased from 7 to get more candidates
-const FINAL_CONTEXT_SIZE = 10; // Max number of items to send to LLM after combining/reranking
+const MAX_RESULTS_PER_SOURCE = 8;
+const FINAL_CONTEXT_SIZE = 10;
 
 export interface HybridSearchParams {
     query: string;
     useGraph: boolean;
     useVector: boolean;
-    useFullText?: boolean; // New option to use full-text search
-    // Add more strategy options here if needed, e.g., weights, reranker model
+    useFullText?: boolean;
 }
 
-/**
- * Combines results from graph and vector searches.
- * Basic strategy: fetch from both, combine, remove duplicates, and take top N.
- * More advanced: reranking using a cross-encoder or LLM.
- */
 export async function hybridSearch(params: HybridSearchParams): Promise<SearchResultItem[]> {
     const { query, useGraph, useVector, useFullText = true } = params;
     let graphResults: SearchResultItem[] = [];
     let vectorResults: SearchResultItem[] = [];
     let fullTextResults: SearchResultItem[] = [];
 
-    // Track timing for debugging
     const startTime = Date.now();
 
-    // Start all searches concurrently with Promise.all
     try {
         const searchPromises = [];
 
@@ -79,7 +71,6 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
             );
         }
 
-        // Wait for all searches to complete
         await Promise.all(searchPromises);
 
         console.log(`Graph search returned ${graphResults.length} results for query: "${query}"`);
@@ -91,7 +82,6 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
 
     const combined = new Map<string, SearchResultItem>();
 
-
     const getUniqueKey = (item: SearchResultItem): string => {
         if (item.full_path) {
             return item.full_path;
@@ -100,14 +90,15 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
     };
 
     graphResults.forEach(item => {
-        item.score = item.score || 0.5; // Assign a default score if not present
+        item.score = item.score || 0.5;
         const key = getUniqueKey(item);
         if (!combined.has(key) || (combined.get(key)?.score || 0) < item.score) {
             combined.set(key, item);
         }
     });
+
     fullTextResults.forEach(item => {
-        item.score = item.score || 0.8; // Prioritize full-text matches
+        item.score = item.score || 0.8;
         const key = getUniqueKey(item);
         if (!combined.has(key) || (combined.get(key)?.score || 0) < item.score) {
             combined.set(key, item);
@@ -116,12 +107,10 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
 
     vectorResults.forEach(item => {
         const key = getUniqueKey(item);
-        // Only add if score is better or item doesn't exist
         if (!combined.has(key) || (combined.get(key)?.score || 0) < (item.score || 0)) {
             combined.set(key, item);
         }
     });
-
 
     if (combined.size === 0) {
         console.warn(`No results found from any source for query: "${query}"`);
@@ -133,7 +122,6 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         return scoreB - scoreA;
     });
 
-    // Log performance metrics
     const endTime = Date.now();
     const duration = endTime - startTime;
 
@@ -146,6 +134,5 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         console.log("Top result law_id:", sortedResults[0].law_id);
     }
 
-    // Apply context window size limit
     return sortedResults.slice(0, FINAL_CONTEXT_SIZE);
 }

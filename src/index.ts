@@ -3,14 +3,13 @@ import { createServer } from './api/server';
 import config from './config/config';
 import dotenv from 'dotenv';
 
-// Load environment variables
+
 dotenv.config();
 
-// Just logging that we're starting to make sure the app is running
 console.log('Starting AI Junior application...');
 console.log(`Environment: ${config.nodeEnv}`);
 
-// Log Azure OpenAI config if available
+
 if (process.env.AZURE_OPENAI_ENDPOINT && process.env.OPENAI_API_KEY) {
     console.log('Azure OpenAI configuration detected:');
     console.log(`- Endpoint: ${process.env.AZURE_OPENAI_ENDPOINT}`);
@@ -23,7 +22,6 @@ async function start() {
     try {
         const server = await createServer();
 
-        // Start the server
         await server.listen({ port: config.port, host: '0.0.0.0' });
 
         console.log(`Server is running on port ${config.port}`);
@@ -31,7 +29,7 @@ async function start() {
         console.log(`Neo4j browser: http://localhost:7474/browser/`);
         console.log(`Qdrant dashboard: http://localhost:6333/dashboard/`);
 
-        // Handle graceful shutdown
+
         const shutdown = async () => {
             console.log('Shutting down server...');
             await server.close();
@@ -47,5 +45,5 @@ async function start() {
     }
 }
 
-// Start the application
+
 start();

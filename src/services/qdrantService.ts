@@ -1,14 +1,12 @@
-// src/services/qdrantService.ts
 import { QdrantClient } from '@qdrant/js-client-rest';
 import config from '../config/config';
 import { SearchResultItem, QdrantPayload } from '../types';
 import { CohereEmbeddings } from '../graph/embeddings/cohereEmbeddings';
 
-// Qdrant client instance
 let qdrantClient: QdrantClient | undefined;
 let embeddings: CohereEmbeddings | undefined;
 
-const QDRANT_COLLECTION_NAME = 'legal_documents'; // Define your collection name
+const QDRANT_COLLECTION_NAME = 'legal_documents';
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 2000;
 
@@ -31,14 +29,10 @@ function getEmbeddingsService(): CohereEmbeddings {
     return embeddings;
 }
 
-/**
- * Generates an embedding for a given text with retry logic.
- */
 export async function generateEmbedding(text: string): Promise<number[]> {
     const embeddingsService = getEmbeddingsService();
     let retries = 0;
 
-    // Truncate text if it's too long
     const truncatedText = text.length > 8000 ? text.substring(0, 8000) : text;
 
     while (retries <= MAX_RETRIES) {
@@ -46,7 +40,6 @@ export async function generateEmbedding(text: string): Promise<number[]> {
             const vector = await embeddingsService.embedQuery(truncatedText);
             return vector;
         } catch (error) {
-            // Better error handling with detailed logging
             let errorMessage: string;
 
             if (error instanceof Error) {
@@ -63,12 +56,10 @@ export async function generateEmbedding(text: string): Promise<number[]> {
 
             console.error(`Error generating embedding (attempt ${retries + 1}/${MAX_RETRIES + 1}): ${errorMessage}`);
 
-            // Last retry failed - throw the error
             if (retries === MAX_RETRIES) {
                 throw new Error(`Failed to generate embedding after ${MAX_RETRIES + 1} attempts: ${errorMessage}`);
             }
 
-            // Wait before retrying with exponential backoff
             const delay = RETRY_DELAY * Math.pow(2, retries);
             console.log(`Waiting ${delay}ms before retry ${retries + 1}...`);
             await new Promise(resolve => setTimeout(resolve, delay));
@@ -76,7 +67,6 @@ export async function generateEmbedding(text: string): Promise<number[]> {
         }
     }
 
-    // This should never happen with the logic above, but TypeScript needs a return
     throw new Error("Failed to generate embedding: Retry logic failed unexpectedly");
 }
 
@@ -89,11 +79,9 @@ export function isQdrantPayload(payload: any): payload is QdrantPayload {
     );
 }
 
-
 export async function ensureQdrantCollection(collectionName: string = QDRANT_COLLECTION_NAME): Promise<boolean> {
     const client = getQdrantClient();
     try {
-        // Check if collection exists
         const collections = await client.getCollections();
         console.log("Available Qdrant collections:", collections.collections.map(c => c.name));
 
@@ -130,21 +118,18 @@ export async function searchSimilarVectors(
 ): Promise<SearchResultItem[]> {
     const client = getQdrantClient();
     try {
-        // First, ensure the collection exists
         const collectionExists = await ensureQdrantCollection(collectionName);
         if (!collectionExists) {
             console.error(`Collection "${collectionName}" does not exist. Cannot perform search.`);
             return [];
         }
 
-        // Ensure limit is an integer
         const intLimit = Math.floor(limit);
 
         console.log(`Generating embedding for search query: "${queryText.substring(0, 50)}..."`);
         const queryVector = await generateEmbedding(queryText);
         console.log(`Successfully generated embedding vector of length ${queryVector.length}`);
 
-        // First try with score threshold if provided
         if (scoreThreshold !== undefined && scoreThreshold > 0) {
             try {
                 const searchParams = {
@@ -160,20 +145,16 @@ export async function searchSimilarVectors(
                 const searchResult = await client.search(collectionName, searchParams);
                 console.log(`Search with threshold ${scoreThreshold} returned ${searchResult.length} results`);
 
-                // If we got results, process them
                 if (searchResult.length > 0) {
                     return processSearchResults(searchResult);
                 }
 
-                // If no results with threshold, we'll try without threshold below
                 console.log(`No results with score threshold ${scoreThreshold}, trying without threshold...`);
             } catch (thresholdError) {
                 console.error('Error during threshold search:', thresholdError);
-                // Fall through to non-threshold search
             }
         }
 
-        // Try without score threshold if we got here
         const searchParams = {
             vector: queryVector,
             limit: intLimit,
@@ -186,7 +167,6 @@ export async function searchSimilarVectors(
         console.log(`Search without threshold returned ${searchResult.length} results`);
 
         if (searchResult.length === 0) {
-            // If still no results, try with a smaller vector sample to confirm the API is working
             console.log("Testing with a minimal search to check if Qdrant is responsive...");
             const testResult = await client.search(collectionName, {
                 vector: queryVector,
@@ -207,7 +187,6 @@ export async function searchSimilarVectors(
         return processSearchResults(searchResult);
     } catch (error) {
         console.error('Error searching Qdrant:', error);
-        // Provide more detailed error for debugging
         const errorMsg = error instanceof Error
             ? error.message
             : (typeof error === 'object' && error !== null
@@ -224,13 +203,11 @@ export async function searchSimilarVectors(
 }
 
 function processSearchResults(searchResult: any[]): SearchResultItem[] {
-    // Map results to SearchResultItem type
     const mappedResults: SearchResultItem[] = [];
 
     for (const point of searchResult) {
         console.log(`Processing search result point with id: ${point.id}, score: ${point.score}`);
 
-        // Log full payload for debugging
         if (config.debugMode) {
             console.log(`Full payload for point ${point.id}:`, JSON.stringify(point.payload));
         }
@@ -238,10 +215,8 @@ function processSearchResults(searchResult: any[]): SearchResultItem[] {
         if (isQdrantPayload(point.payload)) {
             const payload = point.payload;
 
-            // Get the original string ID if available, otherwise use the numeric ID
             const originalId = payload.original_id ? String(payload.original_id) : String(point.id);
 
-            // Map the type value - need to ensure it's one of the accepted values
             let itemType: SearchResultItem['type'] = 'vector';
             if (payload.type && ['law', 'part', 'head', 'paragraph', 'subsection', 'vector'].includes(payload.type)) {
                 itemType = payload.type as SearchResultItem['type'];

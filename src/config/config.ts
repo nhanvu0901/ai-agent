@@ -59,9 +59,9 @@ const config: Config = {
     azureApiVersion: process.env.AZURE_OPENAI_API_VERSION,
   },
   embeddings: {
-    apiKey: process.env.COHERE_API_KEY || 'rcHJfbnk4UsDArKjG30lDo3YnAS9V6GmXNQ4F8ag',  // Cohere API key
-    model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',  // Default model for Cohere
-    batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10), // Default batch size
+    apiKey: process.env.COHERE_API_KEY || 'rcHJfbnk4UsDArKjG30lDo3YnAS9V6GmXNQ4F8ag',
+    model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',
+    batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10),
   },
   paths: {
     pdfDir: process.env.PDF_DIR || './data/pdfs',

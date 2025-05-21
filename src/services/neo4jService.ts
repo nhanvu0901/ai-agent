@@ -11,7 +11,6 @@ function getDriver(): Driver {
           config.neo4j.uri,
           neo4j.auth.basic(config.neo4j.user, config.neo4j.password)
       );
-      // Verify connectivity during initialization
       driver.verifyConnectivity()
           .then(() => console.log('Neo4j Driver connected and verified.'))
           .catch(error => console.error('Neo4j Driver connection error:', error));
@@ -35,9 +34,7 @@ function prepareParameters(params: Record<string, any>): Record<string, any> {
   const processedParams: Record<string, any> = {};
 
   for (const [key, value] of Object.entries(params)) {
-    // Check if the parameter might be used as LIMIT or SKIP
     if (key === 'limit' || key === 'skip' || key.toLowerCase().includes('limit') || key.toLowerCase().includes('skip')) {
-      // Use Neo4j's int() function to explicitly create an integer
       processedParams[key] = neo4j.int(Math.floor(Number(value)));
       console.log(`Converting parameter ${key}: ${value} (${typeof value}) to Neo4j integer: ${processedParams[key]}`);
     } else {
@@ -49,7 +46,6 @@ function prepareParameters(params: Record<string, any>): Record<string, any> {
 }
 
 async function executeQuery(query: string, params: Record<string, any>): Promise<Neo4jRecord[]> {
-  // Process parameters to ensure integers are properly handled
   const processedParams = prepareParameters(params);
 
   console.log("Executing Neo4j query with processed parameters:", processedParams);
@@ -71,9 +67,7 @@ async function executeQuery(query: string, params: Record<string, any>): Promise
   }
 }
 
-
 export async function searchLegalTextByKeyword(keywords: string, limit: number = 5): Promise<SearchResultItem[]> {
-  // Use full-text search instead of the simple CONTAINS query
   const query = `
     CALL db.index.fulltext.queryNodes("law_text_content_fulltext", $keywords) 
     YIELD node, score
@@ -113,7 +107,6 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
   } catch (error) {
     console.error('Error in searchLegalTextByKeyword:', error);
 
-    // Fallback to the original CONTAINS query if full-text search fails or is not set up
     console.log('Falling back to basic keyword search...');
     const fallbackQuery = `
       MATCH (l:Law) 
@@ -148,7 +141,6 @@ export async function searchLegalTextByKeyword(keywords: string, limit: number =
   }
 }
 
-// New method to search paragraphs and subsections by fulltext
 export async function searchParagraphsAndSubsectionsByFulltext(
     keywords: string,
     limit: number = 10
@@ -198,13 +190,10 @@ export async function searchParagraphsAndSubsectionsByFulltext(
   `;
 
   try {
-    // Run both queries and combine results
     const [paragraphRecords, subsectionRecords] = await Promise.all([
       executeQuery(paragraphQuery, { keywords, limit: Math.ceil(limit/2) }),
       executeQuery(subsectionQuery, { keywords, limit: Math.floor(limit/2) })
     ]);
-
-    // Convert paragraph records to SearchResultItem
     const paragraphResults = paragraphRecords.map(record => ({
       id: record.get('id') as string,
       score: record.get('relevanceScore') as number,
@@ -216,7 +205,6 @@ export async function searchParagraphsAndSubsectionsByFulltext(
       metadata: record.get('metadata') as Record<string, any>,
     }));
 
-    // Convert subsection records to SearchResultItem
     const subsectionResults = subsectionRecords.map(record => ({
       id: record.get('id') as string,
       score: record.get('relevanceScore') as number,
@@ -228,7 +216,6 @@ export async function searchParagraphsAndSubsectionsByFulltext(
       metadata: record.get('metadata') as Record<string, any>,
     }));
 
-    // Combine and sort by score
     return [...paragraphResults, ...subsectionResults]
         .sort((a, b) => (b.score || 0) - (a.score || 0))
         .slice(0, limit);
@@ -237,7 +224,6 @@ export async function searchParagraphsAndSubsectionsByFulltext(
     return [];
   }
 }
-
 
 export async function getLawById(lawId: string): Promise<Neo4jLawNode | null> {
   const query = `
@@ -258,11 +244,10 @@ export async function getLawById(lawId: string): Promise<Neo4jLawNode | null> {
   }
 }
 
-
 export async function getParagraphByFullPath(fullPath: string): Promise<SearchResultItem | null> {
   const query = `
       MATCH (p:Paragraph {full_path: $fullPath})
-      OPTIONAL MATCH (l:Law {law_id: p.law_id}) // Get the parent law for context
+      OPTIONAL MATCH (l:Law {law_id: p.law_id})
       RETURN p.full_path AS id,
              p.text AS content,
              'paragraph' AS type,
@@ -289,7 +274,7 @@ export async function getParagraphByFullPath(fullPath: string): Promise<SearchRe
         source_file: record.get('source_file'),
         law_title: record.get('lawTitle'),
       },
-      score: 1.0, // Default score as it's a direct lookup
+      score: 1.0,
     };
   } catch (error) {
     console.error(`Error fetching paragraph by full_path ${fullPath}:`, error);

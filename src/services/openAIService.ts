@@ -7,11 +7,6 @@ import { AzureKeyCredential } from '@azure/core-auth';
 let openai: OpenAI | undefined;
 let azureClient: OpenAIClient | undefined;
 
-/**
- * Get the appropriate OpenAI client
- * This function will either return a regular OpenAI client or an Azure-configured client
- * based on the available configuration
- */
 function getOpenAIClient(): OpenAI | OpenAIClient {
     if (config.openai.azureEndpoint && config.openai.apiKey) {
         console.log("Using Azure OpenAI client");
@@ -38,9 +33,6 @@ interface OpenAICompletionResponse {
     llmTrace: LLMCallTrace;
 }
 
-/**
- * Generates a text completion
- */
 export async function getOpenAICompletion({
                                               prompt,
                                               model = config.agent.model,
@@ -63,7 +55,7 @@ export async function getOpenAICompletion({
             const deploymentName = model;
             const completion = await azureClient.getChatCompletions(
                 deploymentName,
-                messages as any, // Type coercion needed here since Azure SDK has slightly different typing
+                messages as any,
                 {
                     maxTokens: max_tokens,
                     temperature: temperature
@@ -71,16 +63,6 @@ export async function getOpenAICompletion({
             );
             responseContent = completion.choices[0]?.message?.content || null;
         }
-        // else if (client === openai && openai) {
-        //     // Regular OpenAI
-        //     const completion = await openai.chat.completions.create({
-        //         model: model,
-        //         messages: messages as any,
-        //         max_tokens: max_tokens,
-        //         temperature: temperature,
-        //     });
-        //     responseContent = completion.choices[0]?.message?.content || null;
-        // }
     } catch (error) {
         console.error('Error calling OpenAI/Azure API:', error);
         errorMsg = error instanceof Error ? error.message : String(error);
@@ -97,9 +79,6 @@ export async function getOpenAICompletion({
     return { content: responseContent, llmTrace };
 }
 
-/**
- * Analyzes a user query to determine intent, extract keywords, or classify
- */
 interface QueryAnalysisResult {
     keywords: string[];
     isPotentiallyIrrelevant: boolean;
@@ -163,9 +142,6 @@ export async function analyzeQueryWithOpenAI(query: string): Promise<QueryAnalys
     return analysis;
 }
 
-/**
- * Generates a final answer based on the user's query and retrieved context
- */
 export async function generateAnswerWithOpenAI(
     originalQuery: string,
     contextSnippets: SearchResultItem[],

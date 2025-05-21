@@ -33,7 +33,6 @@ export class QdrantImporter {
 
   async ensureCollection(): Promise<void> {
     try {
-      // Check if collection exists
       const collections = await this.client.getCollections();
       const exists = collections.collections.some(c => c.name === this.collectionName);
       console.log(collections.collections[0]);
@@ -66,7 +65,7 @@ export class QdrantImporter {
   async generateBatchEmbeddings(texts: string[]): Promise<number[][]> {
     if (texts.length === 0) return [];
 
-    // Truncate texts if they're too long
+
     const truncatedTexts = texts.map(text =>
         text.length > 8000 ? text.substring(0, 8000) : text
     );
@@ -102,7 +101,6 @@ export class QdrantImporter {
 
 
   private getNumericId(stringId: string): number {
-    // Use the idCounter to generate a sequential ID
     const id = this.idCounter++;
     return id;
   }
@@ -125,32 +123,27 @@ export class QdrantImporter {
     return plainObject;
   }
 
-  /**
-   * Store a batch of text chunks with their embeddings
-   */
+
   async storeTextChunks(textChunks: { id: string, text: string, payload: QdrantPayload }[]): Promise<void> {
     if (textChunks.length === 0) return;
 
     try {
-      // Process in smaller batches to avoid overwhelming the embedding API
+
       const batchSize = 5; // Smaller batch for embedding API
       const batchResults = [];
 
-      // Process in batches
+
       for (let i = 0; i < textChunks.length; i += batchSize) {
         const batch = textChunks.slice(i, i + batchSize);
         const texts = batch.map(chunk => chunk.text);
 
         console.log(`Generating embeddings for batch ${i/batchSize + 1} of ${Math.ceil(textChunks.length/batchSize)}`);
         try {
-          // Get embeddings for the entire batch
+
           const vectors = await this.generateBatchEmbeddings(texts);
 
-          // Prepare points for Qdrant
           const points = batch.map((chunk, index) => {
-            // Convert string ID to numeric ID for Qdrant
             const numericId = this.getNumericId(chunk.id);
-            // Add original ID to payload
             const plainPayload = this.convertPayloadToPlainObject(chunk.payload, chunk.id);
 
             return {
@@ -175,7 +168,7 @@ export class QdrantImporter {
         throw new Error("All chunks failed to generate embeddings");
       }
 
-      // Store results in Qdrant
+
       await this.client.upsert(this.collectionName, {
         points: batchResults
       });
@@ -190,7 +183,6 @@ export class QdrantImporter {
 
 
   private mapElementTypeToPayloadType(elementType: string): QdrantPayload['type'] {
-    // Map the element types to types supported in QdrantPayload
     switch (elementType) {
       case 'part':
         return 'part';
@@ -256,21 +248,21 @@ export class QdrantImporter {
 
     console.log(`Creating vector embeddings for Law: ${metadata.law_id} - ${metadata.title}`);
 
-    // Create payloads and collect texts to be embedded
+
     const chunks: { id: string, text: string, payload: QdrantPayload }[] = [];
 
-    // 1. Add the overall law text
+
     const lawFullText = text_content.join('\n');
     chunks.push({
-      id: `law-${metadata.law_id}`, // This ID should be unique for the law itself
+      id: `law-${metadata.law_id}`,
       text: lawFullText,
       payload: {
-        text: lawFullText.substring(0, 8000), // Truncate if too long
+        text: lawFullText.substring(0, 8000),
         law_id: metadata.law_id,
         full_path: metadata.law_id,
         title: metadata.title,
-        source_file: metadata.source_file || undefined, // Use undefined instead of null
-        type: 'law' // Add a type for the main law document
+        source_file: metadata.source_file || undefined,
+        type: 'law'
       }
     });
 
@@ -300,7 +292,7 @@ export class QdrantImporter {
           if (textContent && textContent.trim().length > 0) {
             chunkCounter++;
 
-            // Map the element type to a supported type in QdrantPayload
+
             const payloadType = this.mapElementTypeToPayloadType(element.type);
 
             chunks.push({
@@ -316,7 +308,7 @@ export class QdrantImporter {
             });
           }
 
-          // Process sub-elements recursively
+
           if ('paragraphs' in element && element.paragraphs) {
             processStructuredElements(element.paragraphs, fullPath);
           }
@@ -332,23 +324,21 @@ export class QdrantImporter {
       }
     };
 
-    // Start processing from structured_text
     processStructuredElements(structured_text);
 
-    // Process chunks in batches to avoid API rate limits
     for (let i = 0; i < chunks.length; i += this.batchSize) {
       const batch = chunks.slice(i, i + this.batchSize);
       console.log(`Processing batch ${Math.floor(i/this.batchSize) + 1} of ${Math.ceil(chunks.length/this.batchSize)}, size: ${batch.length}`);
       try {
         await this.storeTextChunks(batch);
-        // Add a delay between batches to avoid overwhelming the API
+
         if (i + this.batchSize < chunks.length) {
           console.log(`Waiting 5 seconds before processing next batch...`);
           await new Promise(resolve => setTimeout(resolve, 5000));
         }
       } catch (error) {
         console.error(`Error processing batch ${Math.floor(i/this.batchSize) + 1}:`, error);
-        // Continue with next batch
+
       }
     }
 

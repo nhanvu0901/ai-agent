@@ -1,4 +1,4 @@
-// src/agent/agentService.ts
+
 import config from '../config/config';
 import {
     AgentReasoningTrace,
@@ -7,12 +7,7 @@ import {
     LLMCallTrace,
     QAResponsePayload
 } from '../types';
-// import * // SYSTEM_PROMPT_LEGAL_AGENT,
-// // TOOL_SELECTION_PROMPT,
-// // RELEVANCE_CHECK_PROMPT,
-// // ANSWER_SYNTHESIS_PROMPT_TEMPLATE,
-// // REACT_STEP_PROMPT_TEMPLATE
-//     from './prompts';
+
 import * as openAIService from '../services/openAIService';
 import * as retrievalService from '../services/retrievalService';
 import { FastifyLoggerInstance } from 'fastify';
@@ -162,7 +157,7 @@ export async function processQuery(
 
         return {
             answer: finalAnswer,
-            sources: searchResults, // Return the sources used for the answer
+            sources: searchResults,
             debugInfo: config.debugMode ? agentCtx.trace : undefined,
         };
 
@@ -171,7 +166,7 @@ export async function processQuery(
         agentCtx.trace.status = 'error';
         if (agentCtx.trace.steps.length > 0) {
             agentCtx.trace.steps[agentCtx.trace.steps.length -1].error = error instanceof Error ? error.message : String(error);
-        } else { // Error before any step was added
+        } else {
             addStepToTrace(agentCtx.trace, "Initial error before processing.", "error_handler", {}, String(error));
         }
         return {

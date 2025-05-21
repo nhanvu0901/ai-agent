@@ -1,6 +1,4 @@
-// src/agent/prompts.ts
 
-// These are example prompts. You'll want to refine them significantly.
 
 export const SYSTEM_PROMPT_LEGAL_AGENT = `You are an AI assistant specialized in retrieving information from Czech legal documents.
 You have access to a hybrid search system (graph database for structured data and keyword search, vector database for semantic search).
@@ -56,8 +54,7 @@ User Question: "${query}"
 Answer:
 `;
 
-// This is a very basic ReAct style prompt.
-// More sophisticated ReAct would involve multiple thought-action-observation cycles.
+
 export const REACT_STEP_PROMPT_TEMPLATE = (
     originalQuery: string,
     previousSteps: string, // Stringified history of previous steps

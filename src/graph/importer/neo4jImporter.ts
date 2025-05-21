@@ -1,4 +1,3 @@
-
 import neo4j, { Driver, Session, Transaction, Neo4jError } from 'neo4j-driver';
 import {
     LawJson,
@@ -36,6 +35,14 @@ export class Neo4jImporter {
             'CREATE INDEX subsection_identifier_index IF NOT EXISTS FOR (s:Subsection) ON (s.identifier, s.law_id)',
         ];
 
+        // Add fulltext search index
+        const fulltextIndexes = [
+            'CREATE FULLTEXT INDEX law_text_content_fulltext IF NOT EXISTS FOR (l:Law) ON EACH [l.text_content]',
+            'CREATE FULLTEXT INDEX paragraph_text_fulltext IF NOT EXISTS FOR (p:Paragraph) ON EACH [p.text]',
+            'CREATE FULLTEXT INDEX subsection_text_fulltext IF NOT EXISTS FOR (s:Subsection) ON EACH [s.text]'
+        ];
+
+        // First create constraints and regular indexes
         for (const query of constraintsAndIndexes) {
             try {
                 await session.run(query);
@@ -48,6 +55,22 @@ export class Neo4jImporter {
                 }
             }
         }
+
+        // Then create fulltext indexes
+        for (const query of fulltextIndexes) {
+            try {
+                await session.run(query);
+                console.log(`Full-text index created: ${query}`);
+            } catch (error) {
+                if (isNeo4jError(error) && (error.message.includes('already exists') || error.message.includes('IndexAlreadyExists'))) {
+                    console.log(`Full-text index from query "${query.substring(0, 50)}..." already exists: ${error.message}`);
+                } else {
+                    console.error(`Error creating full-text index "${query.substring(0,50)}...":`, error);
+                    throw error;
+                }
+            }
+        }
+
         console.log('Schema initialization complete (or elements already exist).');
     }
 
@@ -141,8 +164,8 @@ export class Neo4jImporter {
             await session.writeTransaction(async tx => {
                 const lawResult = await tx.run(
                     `MERGE (l:Law {law_id: $law_id})
-                     ON CREATE SET l.title = $title, l.promulgation_date = $p_date, l.effective_date = $e_date, l.source_file = $s_file, l.full_text_content = $textContent
-                     ON MATCH SET l.title = $title, l.promulgation_date = $p_date, l.effective_date = $e_date, l.source_file = $s_file, l.full_text_content = $textContent
+                     ON CREATE SET l.title = $title, l.promulgation_date = $p_date, l.effective_date = $e_date, l.source_file = $s_file, l.text_content = $textContent
+                     ON MATCH SET l.title = $title, l.promulgation_date = $p_date, l.effective_date = $e_date, l.source_file = $s_file, l.text_content = $textContent
                      RETURN id(l) as nodeId`,
                     {
                         law_id: metadata.law_id,
@@ -304,5 +327,160 @@ export class Neo4jImporter {
         }
     }
 
+    // New method to perform full-text search against Laws
+    async fullTextSearch(searchText: string, limit: number = 10): Promise<any[]> {
+        const session = this.driver.session({database: 'neo4j'});
+        try {
+            // Use the fulltext search procedure with the index we created
+            const result = await session.run(
+                `CALL db.index.fulltext.queryNodes("law_text_content_fulltext", $searchText) 
+                 YIELD node, score
+                 RETURN node.law_id AS law_id, 
+                        node.title AS title, 
+                        score,
+                        node.text_content AS snippet
+                 ORDER BY score DESC
+                 LIMIT $limit`,
+                { searchText, limit: neo4j.int(limit) }
+            );
 
+            return result.records.map(record => ({
+                law_id: record.get('law_id'),
+                title: record.get('title'),
+                score: record.get('score'),
+                snippet: this.extractRelevantSnippet(record.get('snippet'), searchText)
+            }));
+        } catch (error) {
+            console.error('Error executing full-text search:', error);
+            throw error;
+        } finally {
+            await session.close();
+        }
+    }
+
+    // New method to perform full-text search against Paragraphs
+    async fullTextSearchParagraphs(searchText: string, limit: number = 20): Promise<any[]> {
+        const session = this.driver.session({database: 'neo4j'});
+        try {
+            // Use the fulltext search procedure with the paragraph index
+            const result = await session.run(
+                `CALL db.index.fulltext.queryNodes("paragraph_text_fulltext", $searchText) 
+                 YIELD node, score
+                 MATCH (law:Law {law_id: node.law_id})
+                 RETURN node.identifier AS paragraph_id,
+                        node.text AS paragraph_text,
+                        node.law_id AS law_id,
+                        node.full_path AS full_path,
+                        law.title AS law_title,
+                        score
+                 ORDER BY score DESC
+                 LIMIT $limit`,
+                { searchText, limit: neo4j.int(limit) }
+            );
+
+            return result.records.map(record => ({
+                paragraph_id: record.get('paragraph_id'),
+                paragraph_text: record.get('paragraph_text'),
+                law_id: record.get('law_id'),
+                full_path: record.get('full_path'),
+                law_title: record.get('law_title'),
+                score: record.get('score')
+            }));
+        } catch (error) {
+            console.error('Error executing paragraph full-text search:', error);
+            throw error;
+        } finally {
+            await session.close();
+        }
+    }
+
+    // New method to perform full-text search against Subsections
+    async fullTextSearchSubsections(searchText: string, limit: number = 20): Promise<any[]> {
+        const session = this.driver.session({database: 'neo4j'});
+        try {
+            // Use the fulltext search procedure with the subsection index
+            const result = await session.run(
+                `CALL db.index.fulltext.queryNodes("subsection_text_fulltext", $searchText) 
+                 YIELD node, score
+                 MATCH (law:Law {law_id: node.law_id})
+                 RETURN node.identifier AS subsection_id,
+                        node.text AS subsection_text,
+                        node.law_id AS law_id,
+                        node.full_path AS full_path,
+                        law.title AS law_title,
+                        score
+                 ORDER BY score DESC
+                 LIMIT $limit`,
+                { searchText, limit: neo4j.int(limit) }
+            );
+
+            return result.records.map(record => ({
+                subsection_id: record.get('subsection_id'),
+                subsection_text: record.get('subsection_text'),
+                law_id: record.get('law_id'),
+                full_path: record.get('full_path'),
+                law_title: record.get('law_title'),
+                score: record.get('score')
+            }));
+        } catch (error) {
+            console.error('Error executing subsection full-text search:', error);
+            throw error;
+        } finally {
+            await session.close();
+        }
+    }
+
+    // Helper method to extract relevant text around search terms
+    private extractRelevantSnippet(text: string, searchTerms: string, snippetLength: number = 200): string {
+        if (!text) return '';
+
+        // Convert search terms to an array and create a regex pattern
+        const terms = searchTerms
+            .split(' ')
+            .filter(term => term.length > 2)
+            .map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); // Escape regex special chars
+
+        if (terms.length === 0) return text.substring(0, snippetLength) + '...';
+
+        const regex = new RegExp(terms.join('|'), 'i');
+        const match = text.match(regex);
+
+        if (!match || match.index === undefined) {
+            return text.substring(0, snippetLength) + '...';
+        }
+
+        const startPos = Math.max(0, match.index - snippetLength / 2);
+        const endPos = Math.min(text.length, startPos + snippetLength);
+
+        let snippet = text.substring(startPos, endPos);
+
+        // Add ellipsis if we're not at the beginning or end
+        if (startPos > 0) snippet = '...' + snippet;
+        if (endPos < text.length) snippet = snippet + '...';
+
+        return snippet;
+    }
+
+    // Combined search method that searches across all node types
+    async comprehensiveSearch(searchText: string, limit: number = 20): Promise<any> {
+        try {
+            // Get results from all three search methods
+            const [lawResults, paragraphResults, subsectionResults] = await Promise.all([
+                this.fullTextSearch(searchText, Math.floor(limit / 3)),
+                this.fullTextSearchParagraphs(searchText, Math.floor(limit / 3)),
+                this.fullTextSearchSubsections(searchText, Math.floor(limit / 3))
+            ]);
+
+            // Return a combined object with all results
+            return {
+                laws: lawResults,
+                paragraphs: paragraphResults,
+                subsections: subsectionResults,
+                totalResults: lawResults.length + paragraphResults.length + subsectionResults.length
+            };
+        } catch (error) {
+            console.error('Error in comprehensive search:', error);
+            throw error;
+        }
+    }
 }

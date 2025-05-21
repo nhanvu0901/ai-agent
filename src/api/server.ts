@@ -15,12 +15,11 @@ export async function createServer(): Promise<FastifyInstance> {
     },
   });
 
-  // Register plugins
+
   await server.register(cors, {
     origin: true,
   });
 
-  // Register Swagger
   await server.register(swagger, {
     swagger: {
       info: {
@@ -41,11 +40,7 @@ export async function createServer(): Promise<FastifyInstance> {
 
   // Register routes
   await server.register(routes);
-  
-  // Health check endpoint
-  server.get('/health', async () => {
-    return { status: 'ok', timestamp: new Date().toISOString() };
-  });
+
 
   return server;
 }

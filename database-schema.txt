@@ -9,7 +9,7 @@ Law: Represents an individual law.
         promulgation_date: (String, Optional) - The date the law was promulgated.
         effective_date: (String, Optional) - The date the law became effective.
         source_file: (String, Optional) - The name of the source file for the law (e.g., a PDF document name).
-        full_text_content: (String) - The concatenated raw text content of the law, primarily for future full-text search or vector embedding.
+        text_content: (String) - The concatenated raw text content of the law, primarily for future full-text search or vector embedding.
 
 Agency: Represents a legal or governmental agency.
     Properties:

@@ -1,4 +1,3 @@
-// src/graph/importer/config.ts
 
 export const NEO4J_URI = process.env.NEO4J_URI || 'neo4j://localhost:7687';
 export const NEO4J_USER = process.env.NEO4J_USER || 'neo4j';

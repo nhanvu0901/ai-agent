@@ -431,22 +431,27 @@
 // });
 // src/graph/import-laws.ts
 
+// src/graph/import-laws.ts
+
 import fs from 'fs';
 import path from 'path';
 import { Neo4jImporter } from './importer/neo4jImporter';
+import { QdrantImporter } from './embeddings/qdrantImporter';
 import { NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD, JSON_DATA_DIR } from './importer/config';
-import { isNeo4jError } from './importer/utils'; // Or import directly if used here
-import { LawJson } from './importer/types'; // For type casting when reading JSON
+import { isNeo4jError } from './importer/utils';
+import { LawJson } from './importer/types';
 
-// runImportProcess function, adapted to be outside the class
-async function runImportProcess(importer: Neo4jImporter): Promise<void> {
-  const schemaSession = importer['driver'].session({ database: 'neo4j' }); // Access driver if needed, or refactor importer to expose initializeSchema differently
+
+async function runImportProcess(importer: Neo4jImporter, qdrantImporter: QdrantImporter): Promise<void> {
+  const schemaSession = importer['driver'].session({ database: 'neo4j' });
   try {
-    // Consider if initializeSchema needs to be public or called differently
-    // For now, assuming direct call or it's part of the constructor/another public method
+    // Initialize Neo4j schema
     await importer.initializeSchema(schemaSession);
+
+    // Initialize Qdrant collection
+    await qdrantImporter.ensureCollection();
   } catch (schemaError) {
-    console.error("Failed to initialize schema, stopping import:", schemaError);
+    console.error("Failed to initialize databases, stopping import:", schemaError);
     await schemaSession.close();
     return;
   } finally {
@@ -458,25 +463,71 @@ async function runImportProcess(importer: Neo4jImporter): Promise<void> {
     console.log(`No JSON files found in ${JSON_DATA_DIR}.`);
     return;
   }
+  //If able to run the embed vector in a single run
+  // for (const file of files) {
+  //   const filePath = path.join(JSON_DATA_DIR, file);
+  //   console.log(`Reading file: ${filePath}`);
+  //   try {
+  //     const fileContent = fs.readFileSync(filePath, 'utf-8');
+  //     const lawData: LawJson = JSON.parse(fileContent);
+  //
+  //     // Import to Neo4j
+  //     await importer.importLawData(lawData);
+  //
+  //     // Create vector embeddings and store in Qdrant
+  //     await qdrantImporter.processLaw(lawData);
+  //
+  //     console.log(`Successfully processed file ${file} in both Neo4j and Qdrant.`);
+  //   } catch (fileProcessingError) {
+  //     console.error(`Error processing file ${filePath}:`, fileProcessingError);
+  //   }
+  // }
+  // console.log('All JSON files have been processed and imported to both Neo4j and Qdrant.');
 
+  // STEP 1: Process all files with Neo4j first
+  console.log("=== PHASE 1: IMPORTING DATA TO NEO4J ===");
   for (const file of files) {
     const filePath = path.join(JSON_DATA_DIR, file);
-    console.log(`Reading file: ${filePath}`);
+    console.log(`Reading file for Neo4j import: ${filePath}`);
     try {
       const fileContent = fs.readFileSync(filePath, 'utf-8');
-      const lawData: LawJson = JSON.parse(fileContent); // Use LawJson type
+      const lawData: LawJson = JSON.parse(fileContent);
+
+      // Import to Neo4j only
       await importer.importLawData(lawData);
+      console.log(`Successfully imported file ${file} to Neo4j.`);
     } catch (fileProcessingError) {
-      console.error(`Error parsing or initiating import for file ${filePath}:`, fileProcessingError);
+      console.error(`Error processing file ${filePath} for Neo4j:`, fileProcessingError);
     }
   }
-  console.log('All JSON files have been processed.');
+  console.log("=== COMPLETED NEO4J IMPORT ===");
+
+  // STEP 2: Now process all files with Qdrant
+  console.log("=== PHASE 2: GENERATING EMBEDDINGS AND IMPORTING TO QDRANT ===");
+  for (const file of files) {
+    const filePath = path.join(JSON_DATA_DIR, file);
+    console.log(`Reading file for Qdrant import: ${filePath}`);
+    try {
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const lawData: LawJson = JSON.parse(fileContent);
+
+      // Process with Qdrant only
+      await qdrantImporter.processLaw(lawData);
+      console.log(`Successfully processed embeddings for file ${file} in Qdrant.`);
+    } catch (fileProcessingError) {
+      console.error(`Error processing file ${filePath} for Qdrant:`, fileProcessingError);
+    }
+  }
+  console.log("=== COMPLETED QDRANT IMPORT ===");
+
+  console.log('All JSON files have been processed and imported to both Neo4j and Qdrant.');
 }
 
 
 async function main() {
   console.log(`Connecting to Neo4j at ${NEO4J_URI}`);
   const importer = new Neo4jImporter(NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD);
+  const qdrantImporter = new QdrantImporter();
 
   try {
     await importer.verifyConnectivity();
@@ -490,13 +541,13 @@ async function main() {
       return;
     }
 
-    // Call the refactored runImportProcess
-    await runImportProcess(importer);
-    console.log('Import process has concluded.');
+
+    await runImportProcess(importer, qdrantImporter);
+    console.log('Import process has concluded for both Neo4j and Qdrant.');
 
   } catch (error) {
     console.error('A critical error occurred during the import process:', error);
-    if (isNeo4jError(error)) { // Use the imported utility
+    if (isNeo4jError(error)) {
       if (error.code === 'Neo.ClientError.Security.AuthenticationRateLimit') {
         console.error("Authentication failed: Too many failed attempts. Check credentials and Neo4j server logs.");
       } else if (error.code === 'Neo.ClientError.Security.Unauthorized') {

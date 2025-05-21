@@ -1,5 +1,4 @@
-// src/routes/ask.ts
-// This file will now handle the AI Q&A functionality.
+
 
 import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { Static, Type } from '@sinclair/typebox'; // For schema definition
@@ -7,16 +6,14 @@ import config from '../../../config/config'; // Assuming your config is in ../co
 import * as agentService from '../../../agent/agentService'; // Adjust path if needed
 import { QARequest, QAResponsePayload, AgentReasoningTrace, SearchResultItem, AgentStep, LLMCallTrace } from '../../../types'; // Adjust path if needed
 
-// --- Schemas (can be moved to a central types/schemas file) ---
 
-// Schema for the request body when asking a question
 const QaQuerySchema = Type.Object({
   question: Type.String({ minLength: 1, description: 'The user question for the Legal AI Agent.' }),
   sessionId: Type.Optional(Type.String({ description: 'Optional session ID for conversation history.' })),
 });
 type QaQueryType = Static<typeof QaQuerySchema>;
 
-// Schema for individual search result items (sources)
+
 const SearchResultItemSchema = Type.Object({
   id: Type.String(),
   score: Type.Optional(Type.Number()),
@@ -28,7 +25,7 @@ const SearchResultItemSchema = Type.Object({
   metadata: Type.Object({}, { additionalProperties: true, description: "Other relevant metadata" }),
 });
 
-// Schema for a single step in the agent's reasoning trace
+
 const AgentStepSchema = Type.Object({
   step: Type.Number(),
   thought: Type.String(),
@@ -38,7 +35,7 @@ const AgentStepSchema = Type.Object({
   error: Type.Optional(Type.String()),
 });
 
-// Schema for LLM call trace
+
 const LLMCallTraceSchema = Type.Object({
   prompt: Type.String(),
   response: Type.Union([Type.String(), Type.Null()]),
@@ -47,7 +44,7 @@ const LLMCallTraceSchema = Type.Object({
   error: Type.Optional(Type.String())
 });
 
-// Schema for the agent's full reasoning trace (debug information)
+
 const AgentReasoningTraceSchema = Type.Object({
   sessionId: Type.Optional(Type.String()),
   originalQuery: Type.String(),
@@ -58,18 +55,18 @@ const AgentReasoningTraceSchema = Type.Object({
   relevantSources: Type.Optional(Type.Array(SearchResultItemSchema)),
 });
 
-// Schema for the main response payload of the /ask endpoint
+
 const QaResponseSchema = Type.Object({
   answer: Type.String(),
   sources: Type.Optional(Type.Array(SearchResultItemSchema)),
-  debugInfo: Type.Optional(AgentReasoningTraceSchema), // Included if DEBUG_MODE is true
+  debugInfo: Type.Optional(AgentReasoningTraceSchema),
 });
 
-// --- Endpoint Definition ---
+
 
 export default async function askEndpoint(fastify: FastifyInstance) {
   fastify.post<{ Body: QaQueryType; Reply: QAResponsePayload | { error: string; message: string, statusCode: number } }>(
-    '/ask', // <--- MODIFIED PATH HERE
+    '/ask',
     {
       schema: {
         description: 'Ask a question to the Legal AI Agent.',

@@ -1,3 +1,4 @@
+// src/config/config.ts
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
@@ -8,7 +9,7 @@ interface Config {
   nodeEnv: string;
   port: number;
   logLevel: string;
-  debugMode:Boolean;
+  debugMode: boolean;
   neo4j: {
     uri: string;
     user: string;
@@ -18,11 +19,14 @@ interface Config {
     url: string;
   };
   openai: {
-    apiKey: string; // Stays as is, will hold AZURE_API_KEY
-    azureEndpoint?: string; // New: For Azure endpoint
-    azureApiVersion?: string; // New: For Azure API version
-    // It's generally better to pass deployment names directly where needed
-    // or map them via the agent model/embeddingModel config.
+    apiKey: string;
+    azureEndpoint?: string;
+    azureApiVersion?: string;
+  };
+  embeddings: {
+    apiKey: string;   // Cohere API key
+    model: string;    // Cohere embedding model
+    batchSize: number; // Number of embeddings to process in a batch
   };
   paths: {
     pdfDir: string;
@@ -30,8 +34,8 @@ interface Config {
     uploadDir: string;
   };
   agent: {
-    model: string; // Will use AZURE_OPENAI_CHAT_MODEL_DEPLOYMENT
-    embeddingModel: string; // Will use AZURE_OPENAI_EMBED_MODEL_DEPLOYMENT
+    model: string;
+    embeddingModel: string;
     contextWindowSize: number;
   };
 }
@@ -40,7 +44,7 @@ const config: Config = {
   nodeEnv: process.env.NODE_ENV || 'development',
   port: parseInt(process.env.PORT || '3000', 10),
   logLevel: process.env.LOG_LEVEL || 'info',
-  debugMode:true,
+  debugMode: process.env.DEBUG_MODE === 'true' || process.env.DEBUG_MODE === '1' || false,
   neo4j: {
     uri: process.env.NEO4J_URI || 'bolt://localhost:7687',
     user: process.env.NEO4J_USER || 'neo4j',
@@ -50,9 +54,14 @@ const config: Config = {
     url: process.env.QDRANT_URL || 'http://localhost:6333',
   },
   openai: {
-    apiKey: process.env.OPENAI_API_KEY || '', // This will load your AZURE_API_KEY
-    azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT, // Load new env variable
-    azureApiVersion: process.env.AZURE_OPENAI_API_VERSION, // Load new env variable
+    apiKey: process.env.OPENAI_API_KEY || '',
+    azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT,
+    azureApiVersion: process.env.AZURE_OPENAI_API_VERSION,
+  },
+  embeddings: {
+    apiKey: process.env.COHERE_API_KEY || 'RY81j0WHTg3jSWbuPXJkd14h7qr3RE0BpimrUdq2',
+    model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',
+    batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10),
   },
   paths: {
     pdfDir: process.env.PDF_DIR || './data/pdfs',
@@ -60,9 +69,8 @@ const config: Config = {
     uploadDir: process.env.UPLOAD_DIR || './data/uploads',
   },
   agent: {
-    // Ensure these environment variables are set to your Azure *Deployment Names*
-    model: process.env.AGENT_MODEL_DEPLOYMENT || 'gpt-4o-mini', // Use the deployment name for chat
-    embeddingModel: process.env.EMBEDDING_MODEL_DEPLOYMENT || 'ace-text-embedding-3-large', // Use the deployment name for embeddings
+    model: process.env.AGENT_MODEL_DEPLOYMENT || 'gpt-4o-mini',
+    embeddingModel: process.env.EMBEDDING_MODEL_DEPLOYMENT || 'ace-text-embedding-3-large',
     contextWindowSize: parseInt(process.env.CONTEXT_WINDOW_SIZE || '4096', 10),
   },
 };
@@ -73,13 +81,14 @@ const config: Config = {
   }
 });
 
-// Validate configuration
 if (!config.openai.apiKey) {
-  console.warn('OPENAI_API_KEY is not set. Some features may not work correctly.');
+  console.warn('OPENAI_API_KEY is not set. LLM functions may not work correctly.');
 }
+
 if (!config.openai.azureEndpoint) {
   console.warn('AZURE_OPENAI_ENDPOINT is not set. Azure OpenAI features may not work correctly if you intend to use them.');
 }
+
 if (!config.openai.azureApiVersion) {
   console.warn('AZURE_OPENAI_API_VERSION is not set. Azure OpenAI features may not work correctly if you intend to use them.');
 }

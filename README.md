@@ -6,11 +6,11 @@ This project implements an AI-powered retrieval system for Czech legislation, co
 
 AI Junior enables intelligent exploration of Czech legislative knowledge through:
 
-- A Graph Database (Neo4j) storing structured legal knowledge
-- A Vector Database (Qdrant) enabling semantic search
-- A Hybrid Search system combining graph and semantic capabilities
+- A Graph Database (Neo4j) storing structured legal knowledge with fulltext search capabilities for precise keyword matching
+- A Vector Database (Qdrant) powered by Cohere multilingual embeddings enabling semantic similarity search
+- A Hybrid Retrieval Service that combines results from both graph and vector searches to provide comprehensive answers
 - An Agentic AI layer that interprets user queries and generates accurate responses
-- A Fastify-based API with OpenAPI/Swagger documentation
+- A Fastify-based API with OpenAPI/Swagger documentation featuring both direct search and AI-assisted question answering endpoints
 
 ## System Architecture
 
@@ -23,20 +23,29 @@ AI Junior enables intelligent exploration of Czech legislative knowledge through
 └─────────────────┘     └─────────────────┘     └────────┬────────┘
                                                          │
                                                          ▼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│                 │     │                 │     │                 │
-│   OpenAI/Azure  │◀───▶│  Retrieval      │◀───▶│   Neo4j Graph   │
-│   Language Model│     │  Service        │     │   Database      │
-│                 │     │                 │     │                 │
-└─────────────────┘     └────────┬────────┘     └─────────────────┘
-                                 │
-                                 ▼
-                        ┌─────────────────┐
-                        │                 │
-                        │ Qdrant Vector   │
-                        │ Database        │
-                        │                 │
-                        └─────────────────┘
+┌─────────────────┐                            ┌─────────────────┐
+│                 │                            │                 │
+│   OpenAI/Azure  │◀───────────────────────────┤  Retrieval      │
+│   Service       │                            │  Service        │
+│                 │                            │                 │
+└─────────────────┘                            └─────┬─────┬─────┘
+                                                     │     │
+                                                     │     │
+                                                     ▼     ▼
+                                           ┌─────────────┐ ┌─────────────┐
+                                           │             │ │             │
+                                           │  Neo4j      │ │  Qdrant     │
+                                           │  Graph DB   │ │  Vector DB  │
+                                           │             │ │             │
+                                           └─────────────┘ └──────┬──────┘
+                                                                  │
+                                                                  ▼
+                                                          ┌─────────────┐
+                                                          │             │
+                                                          │  Cohere     │
+                                                          │  Embeddings │
+                                                          │             │
+                                                          └─────────────┘
 ```
 
 ## Components
@@ -64,18 +73,23 @@ AI Junior enables intelligent exploration of Czech legislative knowledge through
     - Provides context for answer generation
 
 5. **API Layer**
-    - RESTful endpoints for legal queries
+    - RESTful endpoints for legal queries (/api/graph/ask and /api/graph/search)
     - Interactive documentation with Swagger UI
-    - Error handling and logging
-    - Direct access to graph and vector search capabilities
+    - Detailed error handling with appropriate status codes and messages
+    - Performance metrics including execution time for searches
+    - Debug mode with detailed information about agent reasoning, LLM calls, and search results
 
 ## Getting Started
 
 ### Prerequisites
 
 - Docker and Docker Compose
-- Node.js 20+ (for local development)
-- OpenAI API key (or Azure OpenAI credentials)
+- Node.js 20+ 
+- Azure OpenAI credentials
+- Cohere API key (for multilingual embeddings)
+- Legal document PDFs or pre-processed JSON files
+- 8GB+ RAM recommended (for running Neo4j, Qdrant, and Node.js containers)
+- Bash/Shell environment for running import scripts (WSL for Windows users)
 
 ### Setup
 

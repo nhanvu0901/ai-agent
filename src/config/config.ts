@@ -59,7 +59,7 @@ const config: Config = {
     azureApiVersion: process.env.AZURE_OPENAI_API_VERSION,
   },
   embeddings: {
-    apiKey: process.env.COHERE_API_KEY || 'rcHJfbnk4UsDArKjG30lDo3YnAS9V6GmXNQ4F8ag',
+    apiKey: process.env.COHERE_API_KEY || 'RY81j0WHTg3jSWbuPXJkd14h7qr3RE0BpimrUdq2',
     model: process.env.EMBEDDING_MODEL || 'embed-multilingual-v3.0',
     batchSize: parseInt(process.env.EMBEDDING_BATCH_SIZE || '20', 10),
   },

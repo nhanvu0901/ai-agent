@@ -1,10 +1,10 @@
 {
     "metadata": {
         "law_id": "328/1991 Sb.",
-        "title": "o živnostenském podnikání (živnostenský zákon)",
-        "promulgation_date": "2. října 1991 ",
+        "title": "kursu a vyrovnání, se rozumí likvidace majetku pro předlužení.47) (2)   K likvidaci majetku pro předlužení, která byla provedena před 1. lednem 1990, se nepřihlíží.",
         "effective_date": "1. ledna 1992",
-        "agency": "Federální shromáždění České a Slovenské Federativní Republiky",
+        "publication_date": "2. října 1991",
+        "enforcing_agency": "UNKNOWN",
         "references": [
             "zákona č. 328/1991 Sb.",
             "zákon č. 105/1990 Sb.",
@@ -167,7 +167,6 @@
         "source_file": "Sb_1991_455_2024-01-01_IZ.pdf"
     },
     "text_content": [
-        "455",
         "ZÁKON",
         "ze dne 2. října 1991",
         "o živnostenském podnikání (živnostenský zákon)",
@@ -3452,7 +3451,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 5",
-                            "text": "Subjekty oprávněné provozovat živnost Subjekty oprávněné provozovat živnost",
+                            "text": "Subjekty oprávněné provozovat živnost",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -3524,7 +3523,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 6",
-                            "text": "Všeobecné podmínky provozování živnosti Všeobecné podmínky provozování živnosti",
+                            "text": "Všeobecné podmínky provozování živnosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -3586,7 +3585,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 7",
-                            "text": "Zvláštní podmínky provozování živnosti Zvláštní podmínky provozování živnosti",
+                            "text": "Zvláštní podmínky provozování živnosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -3727,7 +3726,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 8",
-                            "text": "Překážky provozování živnosti Překážky provozování živnosti",
+                            "text": "Překážky provozování živnosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -3835,7 +3834,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 8a",
-                            "text": "Překážky provozování některých živností právnickými osobami Překážky provozování některých živností právnickými osobami",
+                            "text": "Překážky provozování některých živností právnickými osobami",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -3864,7 +3863,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 9",
-                            "text": "Rozdělení živností Rozdělení živností Živnosti jsou:",
+                            "text": "Rozdělení živností Živnosti jsou:",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -3881,7 +3880,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 10",
-                            "text": "Živnostenské oprávnění Živnostenské oprávnění",
+                            "text": "Živnostenské oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -4105,7 +4104,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 13",
-                            "text": "Pokračování v provozování živnosti při úmrtí podnikatele Pokračování v provozování živnosti při úmrtí podnikatele",
+                            "text": "Pokračování v provozování živnosti při úmrtí podnikatele",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -4456,7 +4455,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 19",
-                            "text": "Ohlašovacími živnostmi jsou Ohlašovacími živnostmi jsou",
+                            "text": "Ohlašovacími živnostmi jsou",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -4592,7 +4591,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 24",
-                            "text": "Odborná způsobilost Odborná způsobilost",
+                            "text": "Odborná způsobilost",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -4654,7 +4653,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 27",
-                            "text": "Odborná způsobilost a podmínky provozování živnosti Odborná způsobilost a podmínky provozování živnosti",
+                            "text": "Odborná způsobilost a podmínky provozování živnosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5489,7 +5488,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 50",
-                            "text": "Náležitosti žádosti o koncesi Náležitosti žádosti o koncesi",
+                            "text": "Náležitosti žádosti o koncesi",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5539,7 +5538,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 52",
-                            "text": "Projednání žádosti Projednání žádosti",
+                            "text": "Projednání žádosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5568,7 +5567,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 53",
-                            "text": "Rozhodování o koncesi Rozhodování o koncesi",
+                            "text": "Rozhodování o koncesi",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5682,7 +5681,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 56",
-                            "text": "Změny údajů uvedených v žádosti o koncesi Změny údajů uvedených v žádosti o koncesi",
+                            "text": "Změny údajů uvedených v žádosti o koncesi",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6233,7 +6232,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 31",
-                    "text": "Povinnosti podnikatele Povinnosti podnikatele",
+                    "text": "Povinnosti podnikatele",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -6632,7 +6631,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 61",
-                            "text": "Přestupky fyzických osob Přestupky fyzických osob",
+                            "text": "Přestupky fyzických osob",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7011,7 +7010,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 64",
-                            "text": "Společná ustanovení Společná ustanovení",
+                            "text": "Společná ustanovení",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7095,7 +7094,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 68",
-                            "text": "Součinnost orgánů státní správy Součinnost orgánů státní správy",
+                            "text": "Součinnost orgánů státní správy",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7290,7 +7289,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 71",
-                            "text": "Místní příslušnost Místní příslušnost",
+                            "text": "Místní příslušnost",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7399,7 +7398,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 73",
-                            "text": "Mezinárodní smlouvy Mezinárodní smlouvy Ustanovení tohoto zákona se nepoužijí, stanoví-li něco jiného mezinárodní smlouva, jíž je Česká republika vázána a která byla vyhlášena ve Sbírce zákonů a mezinárodních smluv nebo v předcházející obdobné sbírce."
+                            "text": "Mezinárodní smlouvy Ustanovení tohoto zákona se nepoužijí, stanoví-li něco jiného mezinárodní smlouva, jíž je Česká republika vázána a která byla vyhlášena ve Sbírce zákonů a mezinárodních smluv nebo v předcházející obdobné sbírce."
                         },
                         {
                             "type": "paragraph",
@@ -7416,7 +7415,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 74",
-                            "text": "Zachování dosavadních oprávnění Zachování dosavadních oprávnění",
+                            "text": "Zachování dosavadních oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7524,7 +7523,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 79",
-                            "text": "Likvidace majetku pro předlužení Likvidace majetku pro předlužení",
+                            "text": "Likvidace majetku pro předlužení",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7546,12 +7545,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 80",
-                            "text": "Zrušovací ustanovení Zrušovací ustanovení Ke dni účinnosti tohoto zákona se zrušuje: 1.   zákon č. 105/1990 Sb., o soukromém podnikání občanů, ve znění zákona č. 219/1991 Sb., kromě § 12a až 12e, 2.   § 2 dekretu prezidenta republiky č. 100/1945 Sb., o znárodnění dolů a některých průmyslových podniků, ve znění zákona č. 114/1948 Sb., o znárodnění některých dalších průmyslových a jiných podniků a závodů a o úpravě některých poměrů znárodněných a národních podniků, 3.   § 4 zákona č. 114/1948 Sb., o znárodnění některých dalších průmyslových a jiných podniků a závodů a o úpravě některých poměrů znárodněných a národních podniků, 4.   § 3 zákona č. 115/1948 Sb., o znárodnění dalších průmyslových a jiných výrobních podniků a závodů v oboru potravinářském a o úpravě některých poměrů znárodněných a národních podniků tohoto oboru, ve znění zákona č. 108/1950 Sb., kterým se mění a doplňují předpisy o znárodnění některých podniků průmyslu potravinářského, 5.   § 3 zákona č. 120/1948 Sb., o znárodnění obchodních podniků s 50 nebo více činnými osobami, 6.   § 1 odst. 2 zákona č. 121/1948 Sb., o znárodnění ve stavebnictví, ve znění zákona č. 58/1951 Sb., kterým se mění a doplňuje zákon o znárodnění ve stavebnictví, 7.   § 3 zákona č. 123/1948 Sb., o znárodnění polygrafických podniků, 8.   § 8 zákona č. 124/1948 Sb., o znárodnění některých hostinských a výčepnických podniků a ubytovacích zařízení."
+                            "text": "Zrušovací ustanovení Ke dni účinnosti tohoto zákona se zrušuje: 1.   zákon č. 105/1990 Sb., o soukromém podnikání občanů, ve znění zákona č. 219/1991 Sb., kromě § 12a až 12e, 2.   § 2 dekretu prezidenta republiky č. 100/1945 Sb., o znárodnění dolů a některých průmyslových podniků, ve znění zákona č. 114/1948 Sb., o znárodnění některých dalších průmyslových a jiných podniků a závodů a o úpravě některých poměrů znárodněných a národních podniků, 3.   § 4 zákona č. 114/1948 Sb., o znárodnění některých dalších průmyslových a jiných podniků a závodů a o úpravě některých poměrů znárodněných a národních podniků, 4.   § 3 zákona č. 115/1948 Sb., o znárodnění dalších průmyslových a jiných výrobních podniků a závodů v oboru potravinářském a o úpravě některých poměrů znárodněných a národních podniků tohoto oboru, ve znění zákona č. 108/1950 Sb., kterým se mění a doplňují předpisy o znárodnění některých podniků průmyslu potravinářského, 5.   § 3 zákona č. 120/1948 Sb., o znárodnění obchodních podniků s 50 nebo více činnými osobami, 6.   § 1 odst. 2 zákona č. 121/1948 Sb., o znárodnění ve stavebnictví, ve znění zákona č. 58/1951 Sb., kterým se mění a doplňuje zákon o znárodnění ve stavebnictví, 7.   § 3 zákona č. 123/1948 Sb., o znárodnění polygrafických podniků, 8.   § 8 zákona č. 124/1948 Sb., o znárodnění některých hostinských a výčepnických podniků a ubytovacích zařízení."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 81",
-                            "text": "Tento zákon nabývá účinnosti dnem 1. ledna 1992. Tento zákon nabývá účinnosti dnem 1. ledna 1992. Havel v. r. Dubček v. r. Čalfa v. r. Příloha č. 1 k zákonu č. 455/1991 Sb. ŽIVNOSTI ŘEMESLNÉ (K § 20)"
+                            "text": "Tento zákon nabývá účinnosti dnem 1. ledna 1992. Havel v. r. Dubček v. r. Čalfa v. r. Příloha č. 1 k zákonu č. 455/1991 Sb. ŽIVNOSTI ŘEMESLNÉ (K § 20)"
                         }
                     ]
                 }
@@ -8508,7 +8507,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 33a",
-                    "text": "zákona Kontrolní testování profesionálních zařízení pro aplikaci přípravků Kontrolní testování profesionálních zařízení pro aplikaci přípravků",
+                    "text": "zákona Kontrolní testování profesionálních zařízení pro aplikaci přípravků",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -9212,12 +9211,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 45",
-                    "text": "až 47 a § 60 zákona č. 111/1998 Sb., o vysokých školách a o změně a doplnění dalších zákonů (zákon o vysokých školách), ve znění zákona č. 147/2001 Sb. školách), ve znění zákona č. 147/2001 Sb. 23e)  Zákon č. 19/1997 Sb., o některých opatřeních souvisejících se zákazem chemických zbraní a o změně a doplnění zákona č. 50/1976 Sb., o územním plánování a stavebním řádu (stavební zákon), ve znění pozdějších předpisů, zákona č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů, a zákona č. 140/1961 Sb., trestní zákon, ve znění pozdějších předpisů. 23f)  Zákon č. 49/1997 Sb., o civilním letectví a o změně a doplnění zákona č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů. 23h)  § 27 zákona č. 250/2000 Sb., o rozpočtových pravidlech územních rozpočtů. 23i)  § 4 odst. 2 písm. b) a § 48 až 50 zákona č. 359/1999 Sb., o sociálně-právní ochraně dětí. 23j)  Zákon č. 158/2000 Sb., o vyhledávání, průzkumu a těžbě nerostných zdrojů z mořského dna za hranicemi pravomocí států a o změně některých zákonů. 23k)  Zákon č. 256/2001 Sb., o pohřebnictví a o změně některých zákonů. 23l)  Zákon č. 477/2001 Sb., o obalech a o změně některých zákonů (zákon o obalech). 23m)  Zákon č. 281/2002 Sb., o některých opatřeních souvisejících se zákazem bakteriologických (biologických) a toxinových zbraní a o změně živnostenského zákona. 23n)  Zákon č. 162/2003 Sb., o podmínkách provozování zoologických zahrad a o změně některých zákonů (zákon o zoolo­ gických zahradách). 23o)  Zákon č. 499/2004 Sb., o archivnictví a spisové službě a o změně některých zákonů. 23p)  Zákon č. 108/2006 Sb., o sociálních službách. 23p)  Zákon č. 179/2006 Sb., o ověřování a uznávání výsledků dalšího vzdělávání a o změně některých zákonů (zákon o uzná­ vání výsledků dalšího vzdělávání). 23q)  Zákon č. 179/2006 Sb. 24a)  Zákon č. 36/1967 Sb., o znalcích a tlumočnících. 24b)  Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění pozdějších předpisů. 24c)  § 503 občanského zákoníku. 25a)  Například § 60, 60a, 70 trestního zákona. 25b)  Zákon č. 269/1994 Sb., o Rejstříku trestů, ve znění pozdějších předpisů. 25c)  Zákon č. 18/2004 Sb., o uznávání odborné kvalifikace a jiné způsobilosti státních příslušníků členských států Evropské unie a o změně některých zákonů (zákon o uznávání odborné kvalifikace), ve znění pozdějších předpisů. 25d)  Zákon č. 101/2000 Sb., o ochraně osobních údajů a o změně některých zákonů, ve znění pozdějších předpisů. 26)  Zákon č. 182/2006 Sb., o úpadku a způsobech jeho řešení (insolvenční zákon), ve znění pozdějších předpisů. 27)  § 5 zákona č. 328/1991 Sb., ve znění pozdějších předpisů. 28a)  Zákon č. 115/2006 Sb., o registrovaném partnerství a o změně některých souvisejících zákonů, ve znění pozdějších před­ pisů. 28b)  Například zákon č. 250/2000 Sb., o rozpočtových pravidlech územních rozpočtů, ve znění pozdějších předpisů. 28c)  § 8a zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů. 28d)  Zákon č. 111/2009 Sb., o základních registrech. 29)  § 1553 až 1560 občanského zákoníku. § 157 až 159 zákona č. 292/2013 Sb., o zvláštních řízeních soudních. 29a)  Zákon č. 125/2008 Sb., o přeměnách obchodních společností a družstev, ve znění pozdějších předpisů. 29b)  Například zákon č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon). 29c)  Zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. 29d)  Vyhláška č. 137/1998 Sb., o obecných technických požadavcích na výstavbu. 29e)  Například zákon č. 79/2005 Sb., o opatřeních k ochraně před škodami působenými tabákovými výrobky, alkoholem a jinými návykovými látkami a o změně souvisejících zákonů. 29f)  § 11 odst. 1 zákona č. 128/2000 Sb., o obcích (obecní zřízení), ve znění pozdějších předpisů. 29g)  Zákon č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon), ve znění pozdějších předpisů. 30)  Například zákon č. 29/1984 Sb., o soustavě základních škol, středních škol a vyšších odborných škol (školský zákon), ve znění pozdějších předpisů, vyhláška Ministerstva školství ČSR č. 31/1987 Sb., o ukončování studia ve středních školách a o ukončování přípravy ve zvláštních odborných učilištích, vyhláška Ministerstva školství, mládeže a tělovýchovy ČR č. 354/1991 Sb., o středních školách, ve znění pozdějších předpisů, zákon č. 561/2004 Sb., o předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon), ve znění pozdějších předpisů. 30a)  Vyhláška č. 21/1991 Sb., o bližších podmínkách zabezpečování rekvalifikace uchazečů o zaměstnání a zaměstnanců, ve znění vyhlášky č. 324/1992 Sb. Vyhláška č. 524/2004 Sb., o akreditaci zařízení k provádění rekvalifikace uchazečů o zaměstnání a zájemců o zaměstnání. Vyhláška č. 176/2009 Sb., kterou se stanoví náležitosti žádosti o akreditaci vzdělávacího programu, organizace vzdělávání v rekvalifikačním zařízení a způsob jeho ukončení. 31)  Například zákon č. 29/1984 Sb., ve znění pozdějších předpisů, zákon č. 561/2004 Sb., ve znění pozdějších předpisů. 31a)  § 45, 46 a § 98 odst. 1 zákona č. 111/1998 Sb., o vysokých školách a o změně a doplnění dalších zákonů (zákon o vyso­ kých školách), ve znění pozdějších předpisů. 31c)  Vyhláška Ministerstva hospodářství ČR, Ministerstva průmyslu a obchodu ČR, Ministerstva školství, mládeže a tělový­ chovy ČR, Ministerstva vnitra ČR, Ministerstva zdravotnictví ČR a Ministerstva zemědělství ČR č. 525/1992 Sb., k provádění kvalifikačních zkoušek nahrazujících odbornou způsobilost pro provozování některých živností. 31d)  § 108 zákona č. 561/2004 Sb. Vyhláška č. 12/2005 Sb., o podmínkách uznání rovnocennosti a nostrifikace vysvědčení vydaných zahraničními školami. 31e)  § 89 a 90 zákona č. 111/1998 Sb., ve znění zákona č. 165/2006 Sb. a zákona č. 189/2008 Sb. 31g)  § 158 zákona č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění zákona č. 227/2009 Sb. 33)  Například zákon č. 258/2000 Sb., o ochraně veřejného zdraví a o změně některých souvisejících zákonů. 34)  Zákon č. 505/1990 Sb., o metrologii. 35)  Např. zákon č. 20/1966 Sb., ve znění pozdějších předpisů, zákon č. 87/1987 Sb., ve znění pozdějších předpisů, zákon č. 42/1980 Sb., o hospodářských stycích se zahraničím, ve znění pozdějších předpisů, zákon č. 547/1990 Sb., o nakládání s některými druhy zboží a technologií a o jejich kontrole, zákon ČNR č. 133/1985 Sb., ve znění pozdějších předpisů, zákon č. 219/1995 Sb., devizový zákon, zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. 36)  § 11 vyhlášky Ministerstva zdravotnictví ČSR č. 91/1984 Sb., o opatřeních proti přenosným nemocem, ve znění vyhlášky č. 204/1988 Sb. 36i)  Zákon č. 634/2004 Sb., o správních poplatcích, ve znění pozdějších předpisů. 37)  § 93 zákona č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění pozděj­ ších předpisů. 38b)  Zákon č. 570/1991 Sb., o živnostenských úřadech, ve znění pozdějších předpisů. 38b)  § 8 až 26 zákona ČNR č. 552/1991 Sb., o státní kontrole, ve znění zákona č. 166/1993 Sb. 38c)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění zákona č. 517/2002 Sb. 38d)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 38e)  Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech a o změně některých zákonů (zákon o evidenci obyvatel), ve znění pozdějších předpisů. 39)  Zákon č. 570/1991 Sb., o živnostenských úřadech, ve znění pozdějších předpisů. 42)  Např. zákon ČNR č. 337/1992 Sb., o správě daní a poplatků, ve znění pozdějších předpisů. 43)  § 36a zákona č. 18/2004 Sb., o uznávání odborné kvalifikace a jiné způsobilosti státních příslušníků členských států Evropské unie a některých příslušníků jiných států, a o změně některých zákonů (zákon o uznávání odborné kvalifikace), ve znění pozdějších předpisů. 44)  § 36a odst. 4 zákona č. 18/2004 Sb., ve znění zákona č. 189/2008 Sb. 46)  Zákon č. 269/1994 Sb., o Rejstříku trestů. 47)  § 352 až 354 občanského soudního řádu č. 99/1963 Sb. 48)  Zákon č. 42/1994 Sb., o penzijním připojištění se státním příspěvkem a o změnách některých zákonů souvisejících s jeho zavedením. 52)  Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění zákona č. 152/2011 Sb. 53)  § 10 odst. 5 a § 10a zákona č. 133/2000 Sb., ve znění pozdějších předpisů. 55a)  Zákon č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách). 56)  § 81 zákona č. 326/2004 Sb., o rostlinolékařské péči a o změně některých souvisejících zákonů, ve znění zákona č. 199/2012 Sb. 55)  Zákon č. 427/2011 Sb., o doplňkovém penzijním spoření. 54)  § 98a odst. 3 zákona č. 326/1999 Sb., ve znění zákona č. 274/2008 Sb. 57)  Zákon č. 29/2000 Sb., o poštovních službách a o změně některých zákonů (zákon o poštovních službách), ve znění po­ zdějších předpisů. 58)  § 33 občanského zákoníku. 59)  § 197, 203 až 205 zákona č. 292/2013 Sb., o zvláštních řízeních soudních. 60)  § 1448 až 1456 občanského zákoníku. 61)  Článek 23 a článek 24 odst. 1 směrnice Evropského parlamentu a Rady 2004/38/ES ze dne 29. dubna 2004 o právu občanů Unie a jejich rodinných příslušníků svobodně se pohybovat a pobývat na území členských států, o změně nařízení (EHS) č. 1612/68 a o zrušení směrnic 64/221/EHS, 68/360/EHS, 72/194/EHS, 73/148/EHS, 75/34/EHS, 75/35/ EHS, 90/364/EHS, 90/365/EHS a 93/96/EHS. 62)  Článek 11 odst. 1 písm. a) a článek 21 odst. 1 směrnice Rady 2003/109/ES ze dne 25. listopadu 2003 o právním postave­ ní státních příslušníků třetích zemí, kteří jsou dlouhodobě pobývajícími rezidenty. 63)  Čl. 22 směrnice Evropského parlamentu a Rady (EU) 2016/801 ze dne 11. května 2016 o podmínkách vstupu a pobytu státních příslušníků třetích zemí za účelem výzkumu, studia, stáže, dobrovolnické služby, programů výměnných pobytů žáků či vzdělávacích projektů a činnosti au-pair. 64)  Článek 14 odst. 1 písm. b) směrnice Rady 2003/86/ES ze dne 22. září 2003 o právu na sloučení rodiny. 66)  Článek 11 odst. 1 směrnice Rady 2004/81/ES ze dne 29. dubna 2004 o povolení k pobytu pro státní příslušníky třetích zemí, kteří jsou oběťmi obchodování s lidmi nebo obdrželi pomoc k nedovolenému přistěhovalectví a kteří spolupracují s příslušnými orgány. 67)  Článek 14 odst. 1 a 4 směrnice Rady 2009/50/ES ze dne 25. května 2009 o podmínkách pro vstup a pobyt státních příslušníků třetích zemí za účelem výkonu zaměstnání vyžadujícího vysokou kvalifikaci. 68)  Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob a o evidenci svěřenských fondů, ve znění pozdějších předpisů. 69)  § 18 odst. 2 zákona č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů, ve znění pozdějších předpisů."
+                    "text": "až 47 a § 60 zákona č. 111/1998 Sb., o vysokých školách a o změně a doplnění dalších zákonů (zákon o vysokých školách), ve znění zákona č. 147/2001 Sb. 23e) Zákon č. 19/1997 Sb., o některých opatřeních souvisejících se zákazem chemických zbraní a o změně a doplnění zákona č. 50/1976 Sb., o územním plánování a stavebním řádu (stavební zákon), ve znění pozdějších předpisů, zákona č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů, a zákona č. 140/1961 Sb., trestní zákon, ve znění pozdějších předpisů. 23f) Zákon č. 49/1997 Sb., o civilním letectví a o změně a doplnění zákona č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů. 23h) § 27 zákona č. 250/2000 Sb., o rozpočtových pravidlech územních rozpočtů. 23i) § 4 odst. 2 písm. b) a § 48 až 50 zákona č. 359/1999 Sb., o sociálně-právní ochraně dětí. 23j) Zákon č. 158/2000 Sb., o vyhledávání, průzkumu a těžbě nerostných zdrojů z mořského dna za hranicemi pravomocí států a o změně některých zákonů. 23k) Zákon č. 256/2001 Sb., o pohřebnictví a o změně některých zákonů. 23l) Zákon č. 477/2001 Sb., o obalech a o změně některých zákonů (zákon o obalech). 23m) Zákon č. 281/2002 Sb., o některých opatřeních souvisejících se zákazem bakteriologických (biologických) a toxinových zbraní a o změně živnostenského zákona. 23n) Zákon č. 162/2003 Sb., o podmínkách provozování zoologických zahrad a o změně některých zákonů (zákon o zoolo­ gických zahradách). 23o) Zákon č. 499/2004 Sb., o archivnictví a spisové službě a o změně některých zákonů. 23p) Zákon č. 108/2006 Sb., o sociálních službách. 23p) Zákon č. 179/2006 Sb., o ověřování a uznávání výsledků dalšího vzdělávání a o změně některých zákonů (zákon o uzná­ vání výsledků dalšího vzdělávání). 23q) Zákon č. 179/2006 Sb. 24a) Zákon č. 36/1967 Sb., o znalcích a tlumočnících. 24b) Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění pozdějších předpisů. 24c) § 503 občanského zákoníku. 25a) Například § 60, 60a, 70 trestního zákona. 25b) Zákon č. 269/1994 Sb., o Rejstříku trestů, ve znění pozdějších předpisů. 25c) Zákon č. 18/2004 Sb., o uznávání odborné kvalifikace a jiné způsobilosti státních příslušníků členských států Evropské unie a o změně některých zákonů (zákon o uznávání odborné kvalifikace), ve znění pozdějších předpisů. 25d) Zákon č. 101/2000 Sb., o ochraně osobních údajů a o změně některých zákonů, ve znění pozdějších předpisů. 26) Zákon č. 182/2006 Sb., o úpadku a způsobech jeho řešení (insolvenční zákon), ve znění pozdějších předpisů. 27) § 5 zákona č. 328/1991 Sb., ve znění pozdějších předpisů. 28a) Zákon č. 115/2006 Sb., o registrovaném partnerství a o změně některých souvisejících zákonů, ve znění pozdějších před­ pisů. 28b) Například zákon č. 250/2000 Sb., o rozpočtových pravidlech územních rozpočtů, ve znění pozdějších předpisů. 28c) § 8a zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů. 28d) Zákon č. 111/2009 Sb., o základních registrech. 29) § 1553 až 1560 občanského zákoníku. § 157 až 159 zákona č. 292/2013 Sb., o zvláštních řízeních soudních. 29a) Zákon č. 125/2008 Sb., o přeměnách obchodních společností a družstev, ve znění pozdějších předpisů. 29b) Například zákon č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon). 29c) Zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. 29d) Vyhláška č. 137/1998 Sb., o obecných technických požadavcích na výstavbu. 29e) Například zákon č. 79/2005 Sb., o opatřeních k ochraně před škodami působenými tabákovými výrobky, alkoholem a jinými návykovými látkami a o změně souvisejících zákonů. 29f) § 11 odst. 1 zákona č. 128/2000 Sb., o obcích (obecní zřízení), ve znění pozdějších předpisů. 29g) Zákon č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon), ve znění pozdějších předpisů. 30) Například zákon č. 29/1984 Sb., o soustavě základních škol, středních škol a vyšších odborných škol (školský zákon), ve znění pozdějších předpisů, vyhláška Ministerstva školství ČSR č. 31/1987 Sb., o ukončování studia ve středních školách a o ukončování přípravy ve zvláštních odborných učilištích, vyhláška Ministerstva školství, mládeže a tělovýchovy ČR č. 354/1991 Sb., o středních školách, ve znění pozdějších předpisů, zákon č. 561/2004 Sb., o předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon), ve znění pozdějších předpisů. 30a) Vyhláška č. 21/1991 Sb., o bližších podmínkách zabezpečování rekvalifikace uchazečů o zaměstnání a zaměstnanců, ve znění vyhlášky č. 324/1992 Sb. Vyhláška č. 524/2004 Sb., o akreditaci zařízení k provádění rekvalifikace uchazečů o zaměstnání a zájemců o zaměstnání. Vyhláška č. 176/2009 Sb., kterou se stanoví náležitosti žádosti o akreditaci vzdělávacího programu, organizace vzdělávání v rekvalifikačním zařízení a způsob jeho ukončení. 31) Například zákon č. 29/1984 Sb., ve znění pozdějších předpisů, zákon č. 561/2004 Sb., ve znění pozdějších předpisů. 31a) § 45, 46 a § 98 odst. 1 zákona č. 111/1998 Sb., o vysokých školách a o změně a doplnění dalších zákonů (zákon o vyso­ kých školách), ve znění pozdějších předpisů. 31c) Vyhláška Ministerstva hospodářství ČR, Ministerstva průmyslu a obchodu ČR, Ministerstva školství, mládeže a tělový­ chovy ČR, Ministerstva vnitra ČR, Ministerstva zdravotnictví ČR a Ministerstva zemědělství ČR č. 525/1992 Sb., k provádění kvalifikačních zkoušek nahrazujících odbornou způsobilost pro provozování některých živností. 31d) § 108 zákona č. 561/2004 Sb. Vyhláška č. 12/2005 Sb., o podmínkách uznání rovnocennosti a nostrifikace vysvědčení vydaných zahraničními školami. 31e) § 89 a 90 zákona č. 111/1998 Sb., ve znění zákona č. 165/2006 Sb. a zákona č. 189/2008 Sb. 31g) § 158 zákona č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění zákona č. 227/2009 Sb. 33) Například zákon č. 258/2000 Sb., o ochraně veřejného zdraví a o změně některých souvisejících zákonů. 34) Zákon č. 505/1990 Sb., o metrologii. 35) Např. zákon č. 20/1966 Sb., ve znění pozdějších předpisů, zákon č. 87/1987 Sb., ve znění pozdějších předpisů, zákon č. 42/1980 Sb., o hospodářských stycích se zahraničím, ve znění pozdějších předpisů, zákon č. 547/1990 Sb., o nakládání s některými druhy zboží a technologií a o jejich kontrole, zákon ČNR č. 133/1985 Sb., ve znění pozdějších předpisů, zákon č. 219/1995 Sb., devizový zákon, zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. 36) § 11 vyhlášky Ministerstva zdravotnictví ČSR č. 91/1984 Sb., o opatřeních proti přenosným nemocem, ve znění vyhlášky č. 204/1988 Sb. 36i) Zákon č. 634/2004 Sb., o správních poplatcích, ve znění pozdějších předpisů. 37) § 93 zákona č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění pozděj­ ších předpisů. 38b) Zákon č. 570/1991 Sb., o živnostenských úřadech, ve znění pozdějších předpisů. 38b) § 8 až 26 zákona ČNR č. 552/1991 Sb., o státní kontrole, ve znění zákona č. 166/1993 Sb. 38c) Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění zákona č. 517/2002 Sb. 38d) Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 38e) Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech a o změně některých zákonů (zákon o evidenci obyvatel), ve znění pozdějších předpisů. 39) Zákon č. 570/1991 Sb., o živnostenských úřadech, ve znění pozdějších předpisů. 42) Např. zákon ČNR č. 337/1992 Sb., o správě daní a poplatků, ve znění pozdějších předpisů. 43) § 36a zákona č. 18/2004 Sb., o uznávání odborné kvalifikace a jiné způsobilosti státních příslušníků členských států Evropské unie a některých příslušníků jiných států, a o změně některých zákonů (zákon o uznávání odborné kvalifikace), ve znění pozdějších předpisů. 44) § 36a odst. 4 zákona č. 18/2004 Sb., ve znění zákona č. 189/2008 Sb. 46) Zákon č. 269/1994 Sb., o Rejstříku trestů. 47) § 352 až 354 občanského soudního řádu č. 99/1963 Sb. 48) Zákon č. 42/1994 Sb., o penzijním připojištění se státním příspěvkem a o změnách některých zákonů souvisejících s jeho zavedením. 52) Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění zákona č. 152/2011 Sb. 53) § 10 odst. 5 a § 10a zákona č. 133/2000 Sb., ve znění pozdějších předpisů. 55a) Zákon č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách). 56) § 81 zákona č. 326/2004 Sb., o rostlinolékařské péči a o změně některých souvisejících zákonů, ve znění zákona č. 199/2012 Sb. 55) Zákon č. 427/2011 Sb., o doplňkovém penzijním spoření. 54) § 98a odst. 3 zákona č. 326/1999 Sb., ve znění zákona č. 274/2008 Sb. 57) Zákon č. 29/2000 Sb., o poštovních službách a o změně některých zákonů (zákon o poštovních službách), ve znění po­ zdějších předpisů. 58) § 33 občanského zákoníku. 59) § 197, 203 až 205 zákona č. 292/2013 Sb., o zvláštních řízeních soudních. 60) § 1448 až 1456 občanského zákoníku. 61) Článek 23 a článek 24 odst. 1 směrnice Evropského parlamentu a Rady 2004/38/ES ze dne 29. dubna 2004 o právu občanů Unie a jejich rodinných příslušníků svobodně se pohybovat a pobývat na území členských států, o změně nařízení (EHS) č. 1612/68 a o zrušení směrnic 64/221/EHS, 68/360/EHS, 72/194/EHS, 73/148/EHS, 75/34/EHS, 75/35/ EHS, 90/364/EHS, 90/365/EHS a 93/96/EHS. 62) Článek 11 odst. 1 písm. a) a článek 21 odst. 1 směrnice Rady 2003/109/ES ze dne 25. listopadu 2003 o právním postave­ ní státních příslušníků třetích zemí, kteří jsou dlouhodobě pobývajícími rezidenty. 63) Čl. 22 směrnice Evropského parlamentu a Rady (EU) 2016/801 ze dne 11. května 2016 o podmínkách vstupu a pobytu státních příslušníků třetích zemí za účelem výzkumu, studia, stáže, dobrovolnické služby, programů výměnných pobytů žáků či vzdělávacích projektů a činnosti au-pair. 64) Článek 14 odst. 1 písm. b) směrnice Rady 2003/86/ES ze dne 22. září 2003 o právu na sloučení rodiny. 66) Článek 11 odst. 1 směrnice Rady 2004/81/ES ze dne 29. dubna 2004 o povolení k pobytu pro státní příslušníky třetích zemí, kteří jsou oběťmi obchodování s lidmi nebo obdrželi pomoc k nedovolenému přistěhovalectví a kteří spolupracují s příslušnými orgány. 67) Článek 14 odst. 1 a 4 směrnice Rady 2009/50/ES ze dne 25. května 2009 o podmínkách pro vstup a pobyt státních příslušníků třetích zemí za účelem výkonu zaměstnání vyžadujícího vysokou kvalifikaci. 68) Zákon č. 304/2013 Sb., o veřejných rejstřících právnických a fyzických osob a o evidenci svěřenských fondů, ve znění pozdějších předpisů. 69) § 18 odst. 2 zákona č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů, ve znění pozdějších předpisů."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 6",
-                    "text": "odst. 1 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce. 70)  Například zákon č. 40/1995 Sb., o regulaci reklamy a o změně a doplnění zákona č. 468/1991 Sb., o provozování rozhla­ sového a televizního vysílání, ve znění pozdějších předpisů, ve znění pozdějších předpisů, zákon č. 634/1992 Sb., o ochra­ ně spotřebitele, ve znění pozdějších předpisů. 71)  Vyhláška č. 359/2011 Sb., o základním registru územní identifikace, adres a nemovitostí. 72)  Zákon č. 254/2019 Sb., o znalcích, znaleckých kancelářích a znaleckých ústavech."
+                    "text": "odst. 1 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce. 70) Například zákon č. 40/1995 Sb., o regulaci reklamy a o změně a doplnění zákona č. 468/1991 Sb., o provozování rozhla­ 70) Například zákon č. 40/1995 Sb., o regulaci reklamy a o změně a doplnění zákona č. 468/1991 Sb., o provozování rozhla­ sového a televizního vysílání, ve znění pozdějších předpisů, zákon č. 634/1992 Sb., o ochra­ ně spotřebitele, ve znění pozdějších předpisů. 71) Vyhláška č. 359/2011 Sb., o základním registru územní identifikace, adres a nemovitostí. 72) Zákon č. 254/2019 Sb., o znalcích, znaleckých kancelářích a znaleckých ústavech."
                 }
             ]
         }

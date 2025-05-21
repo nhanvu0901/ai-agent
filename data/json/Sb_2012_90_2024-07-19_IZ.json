@@ -1,10 +1,10 @@
 {
     "metadata": {
         "law_id": "42/1992 Sb.",
-        "title": "o obchodních společnostech a družstvech (zákon o obchodních korporacích)",
+        "title": "UNKNOWN",
         "effective_date": "1. ledna 2014",
         "publication_date": "25. ledna 2012",
-        "enforcing_agency": "Parlament",
+        "enforcing_agency": "UNKNOWN",
         "references": [
             "zákona č. 42/1992 Sb.",
             "zákon č. 412/2005 Sb.",
@@ -17,7 +17,6 @@
         "source_file": "Sb_2012_90_2024-07-19_IZ.pdf"
     },
     "text_content": [
-        "90",
         "ZÁKON",
         "ze dne 25. ledna 2012",
         "o obchodních společnostech a družstvech (zákon o obchodních korporacích)",
@@ -5602,7 +5601,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 25",
-                            "text": "Převod vlastnického práva Převod vlastnického práva",
+                            "text": "Převod vlastnického práva",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5679,7 +5678,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 30",
-                            "text": "Základní kapitál obchodní korporace je souhrn všech vkladů. Základní kapitál obchodní korporace je souhrn všech vkladů. Díl 6 Podíl"
+                            "text": "Základní kapitál obchodní korporace je souhrn všech vkladů. Díl 6 Podíl"
                         },
                         {
                             "type": "paragraph",
@@ -5740,7 +5739,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 34",
-                            "text": "Podíl na zisku a na jiných vlastních zdrojích Podíl na zisku a na jiných vlastních zdrojích",
+                            "text": "Podíl na zisku a na jiných vlastních zdrojích",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5791,7 +5790,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 35",
-                            "text": "Záloha na podíl na zisku Záloha na podíl na zisku",
+                            "text": "Záloha na podíl na zisku",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5817,7 +5816,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 36",
-                            "text": "Vypořádací podíl Vypořádací podíl",
+                            "text": "Vypořádací podíl",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5996,7 +5995,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 42",
-                            "text": "Přechod podílu Přechod podílu",
+                            "text": "Přechod podílu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6020,7 +6019,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 43",
-                            "text": "Rozdělení podílu Rozdělení podílu",
+                            "text": "Rozdělení podílu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6504,7 +6503,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 58",
-                            "text": "Odstoupení z funkce Odstoupení z funkce",
+                            "text": "Odstoupení z funkce",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6731,7 +6730,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 66",
-                            "text": "Zvláštní povinnosti při úpadku obchodní korporace Zvláštní povinnosti při úpadku obchodní korporace",
+                            "text": "Zvláštní povinnosti při úpadku obchodní korporace",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6774,7 +6773,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 69",
-                            "text": "Společné ustanovení Společné ustanovení",
+                            "text": "Společné ustanovení",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6804,7 +6803,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 70a",
-                            "text": "Do evidence vyloučených osob se zapisují osoby, Do evidence vyloučených osob se zapisují osoby,",
+                            "text": "Do evidence vyloučených osob se zapisují osoby,",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -7033,7 +7032,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 71",
-                            "text": "Ovlivnění Ovlivnění",
+                            "text": "Ovlivnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7079,7 +7078,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 72",
-                            "text": "Zproštění povinnosti hradit újmu Zproštění povinnosti hradit újmu",
+                            "text": "Zproštění povinnosti hradit újmu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7109,7 +7108,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 73",
-                            "text": "Většinový společník Většinový společník",
+                            "text": "Většinový společník",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7224,7 +7223,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 78",
-                            "text": "Jednání ve shodě Jednání ve shodě",
+                            "text": "Jednání ve shodě",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7321,7 +7320,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 80",
-                            "text": "Závody řízené osoby a řídící osoby jsou koncernové závody. Závody řízené osoby a řídící osoby jsou koncernové závody."
+                            "text": "Závody řízené osoby a řídící osoby jsou koncernové závody."
                         },
                         {
                             "type": "paragraph",
@@ -7875,7 +7874,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 98",
-                            "text": "Společenská smlouva obsahuje také Společenská smlouva obsahuje také",
+                            "text": "Společenská smlouva obsahuje také",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -8065,7 +8064,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 108",
-                            "text": "Společnická žaloba Společnická žaloba",
+                            "text": "Společnická žaloba",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8360,7 +8359,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 116",
-                            "text": "Převod podílu společníka ve veřejné obchodní společnosti se zakazuje. Převod podílu společníka ve veřejné obchodní společnosti se zakazuje."
+                            "text": "Převod podílu společníka ve veřejné obchodní společnosti se zakazuje."
                         },
                         {
                             "type": "paragraph",
@@ -8483,7 +8482,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 124",
-                            "text": "Společenská smlouva obsahuje také Společenská smlouva obsahuje také",
+                            "text": "Společenská smlouva obsahuje také",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -9512,7 +9511,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 161",
-                            "text": "Podíl na zisku a na jiných vlastních zdrojích Podíl na zisku a na jiných vlastních zdrojích",
+                            "text": "Podíl na zisku a na jiných vlastních zdrojích",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10604,7 +10603,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 199",
-                            "text": "Neurčí-li společenská smlouva jinak, jednatel nesmí Neurčí-li společenská smlouva jinak, jednatel nesmí",
+                            "text": "Neurčí-li společenská smlouva jinak, jednatel nesmí",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -10626,7 +10625,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 200",
-                            "text": "Finanční asistence Finanční asistence",
+                            "text": "Finanční asistence",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10734,7 +10733,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 202",
-                            "text": "Vystoupení společníka Vystoupení společníka",
+                            "text": "Vystoupení společníka",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10765,12 +10764,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 203",
-                            "text": "Dohoda o ukončení účasti společníka Dohoda o ukončení účasti společníka Účast společníka ve společnosti může být ukončena písemnou dohodou s úředně ověřenými podpisy všech společníků a odevzdáním kmenového listu společnosti, byl-li vydán."
+                            "text": "Dohoda o ukončení účasti společníka Účast společníka ve společnosti může být ukončena písemnou dohodou s úředně ověřenými podpisy všech společníků a odevzdáním kmenového listu společnosti, byl-li vydán."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 204",
-                            "text": "Vyloučení společníka Vyloučení společníka",
+                            "text": "Vyloučení společníka",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10799,7 +10798,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 205",
-                            "text": "Zrušení účasti společníka soudem Zrušení účasti společníka soudem",
+                            "text": "Zrušení účasti společníka soudem",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11004,7 +11003,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 211",
-                            "text": "Zrušení účasti dědice Zrušení účasti dědice",
+                            "text": "Zrušení účasti dědice",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11034,7 +11033,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 212",
-                            "text": "Uvolněný podíl Uvolněný podíl",
+                            "text": "Uvolněný podíl",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11384,7 +11383,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 223",
-                            "text": "Usnesení valné hromady obsahuje Usnesení valné hromady obsahuje",
+                            "text": "Usnesení valné hromady obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -11658,7 +11657,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 233",
-                            "text": "Usnesení valné hromady o snížení základního kapitálu obsahuje Usnesení valné hromady o snížení základního kapitálu obsahuje",
+                            "text": "Usnesení valné hromady o snížení základního kapitálu obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -11983,7 +11982,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 244",
-                            "text": "Společnost zachází za stejných podmínek se všemi akcionáři stejně. Společnost zachází za stejných podmínek se všemi akcionáři stejně."
+                            "text": "Společnost zachází za stejných podmínek se všemi akcionáři stejně."
                         },
                         {
                             "type": "paragraph",
@@ -12034,7 +12033,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 247",
-                            "text": "Emisní kurs akcie Emisní kurs akcie",
+                            "text": "Emisní kurs akcie",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12251,7 +12250,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 252",
-                            "text": "Správce vkladů předá každému upisovateli písemné potvrzení, které obsahuje Správce vkladů předá každému upisovateli písemné potvrzení, které obsahuje",
+                            "text": "Správce vkladů předá každému upisovateli písemné potvrzení, které obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -12429,7 +12428,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 257",
-                            "text": "Kusové akcie Kusové akcie",
+                            "text": "Kusové akcie",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12571,7 +12570,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 261",
-                            "text": "Akcie téže společnosti mohou mít různou jmenovitou hodnotu. Akcie téže společnosti mohou mít různou jmenovitou hodnotu."
+                            "text": "Akcie téže společnosti mohou mít různou jmenovitou hodnotu."
                         },
                         {
                             "type": "paragraph",
@@ -12581,7 +12580,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 263",
-                            "text": "Forma akcie Forma akcie",
+                            "text": "Forma akcie",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12844,7 +12843,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 274",
-                            "text": "Akcie na majitele Akcie na majitele",
+                            "text": "Akcie na majitele",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12866,7 +12865,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 275",
-                            "text": "Zaknihované akcie Zaknihované akcie",
+                            "text": "Zaknihované akcie",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13059,7 +13058,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 284",
-                            "text": "Rozhodný den Rozhodný den",
+                            "text": "Rozhodný den",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13092,7 +13091,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 285",
-                            "text": "Zatímní list Zatímní list",
+                            "text": "Zatímní list",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13190,7 +13189,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 287",
-                            "text": "Usnesení valné hromady o vydání dluhopisů podle § 286 obsahuje Usnesení valné hromady o vydání dluhopisů podle § 286 obsahuje",
+                            "text": "Usnesení valné hromady o vydání dluhopisů podle § 286 obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -13410,7 +13409,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 296",
-                            "text": "Opční list obsahuje Opční list obsahuje",
+                            "text": "Opční list obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -14544,7 +14543,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 353",
-                            "text": "Hlasovací právo Hlasovací právo",
+                            "text": "Hlasovací právo",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -14567,7 +14566,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 354",
-                            "text": "Určí-li tak stanovy, volí se členové orgánů společnosti kumulativním hlasováním. Určí-li tak stanovy, volí se členové orgánů společnosti kumulativním hlasováním."
+                            "text": "Určí-li tak stanovy, volí se členové orgánů společnosti kumulativním hlasováním."
                         },
                         {
                             "type": "paragraph",
@@ -15515,7 +15514,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 395",
-                            "text": "Právo odkupu Právo odkupu Vlastníci účastnických cenných papírů, vůči kterým může hlavní akcionář uplatnit postup podle § 375, mohou požadovat, aby jejich účastnické cenné papíry hlavní akcionář odkoupil postupem podle ustanovení tohoto zákona o povinném veřejném návrhu smlouvy. Díl 5 Orgány společnosti Oddíl 1 Systém vnitřní struktury společnosti"
+                            "text": "Právo odkupu Vlastníci účastnických cenných papírů, vůči kterým může hlavní akcionář uplatnit postup podle § 375, mohou požadovat, aby jejich účastnické cenné papíry hlavní akcionář odkoupil postupem podle ustanovení tohoto zákona o povinném veřejném návrhu smlouvy. Díl 5 Orgány společnosti Oddíl 1 Systém vnitřní struktury společnosti"
                         },
                         {
                             "type": "paragraph",
@@ -15744,7 +15743,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 405",
-                            "text": "Rozhodný den k účasti na valné hromadě Rozhodný den k účasti na valné hromadě",
+                            "text": "Rozhodný den k účasti na valné hromadě",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -15948,7 +15947,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 412",
-                            "text": "Schopnost valné hromady se usnášet Schopnost valné hromady se usnášet",
+                            "text": "Schopnost valné hromady se usnášet",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -16019,7 +16018,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 414",
-                            "text": "Náhradní valná hromada Náhradní valná hromada",
+                            "text": "Náhradní valná hromada",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -16456,7 +16455,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 426",
-                            "text": "Akcionář nevykonává své hlasovací právo Akcionář nevykonává své hlasovací právo",
+                            "text": "Akcionář nevykonává své hlasovací právo",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -16510,7 +16509,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 428",
-                            "text": "Neplatnost usnesení valné hromady Neplatnost usnesení valné hromady",
+                            "text": "Neplatnost usnesení valné hromady",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -16761,7 +16760,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 438a",
-                            "text": "Člen představenstva jmenovaný akcionářem Člen představenstva jmenovaný akcionářem",
+                            "text": "Člen představenstva jmenovaný akcionářem",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -16835,7 +16834,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 441",
-                            "text": "Zákaz konkurence Zákaz konkurence",
+                            "text": "Zákaz konkurence",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -17031,7 +17030,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 448a",
-                            "text": "Člen dozorčí rady volený zaměstnanci Člen dozorčí rady volený zaměstnanci",
+                            "text": "Člen dozorčí rady volený zaměstnanci",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -17110,7 +17109,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 448b",
-                            "text": "Člen dozorčí rady jmenovaný akcionářem Člen dozorčí rady jmenovaný akcionářem",
+                            "text": "Člen dozorčí rady jmenovaný akcionářem",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -17215,7 +17214,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 451",
-                            "text": "Zákaz konkurence Zákaz konkurence",
+                            "text": "Zákaz konkurence",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -17426,7 +17425,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 459",
-                            "text": "Zákaz konkurence Zákaz konkurence",
+                            "text": "Zákaz konkurence",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -18315,7 +18314,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 487",
-                            "text": "Přednostní právo nelze ve stanovách omezit ani vyloučit. Přednostní právo nelze ve stanovách omezit ani vyloučit."
+                            "text": "Přednostní právo nelze ve stanovách omezit ani vyloučit."
                         },
                         {
                             "type": "paragraph",
@@ -18380,7 +18379,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 490",
-                            "text": "Zánik a vzdání se přednostního práva Zánik a vzdání se přednostního práva",
+                            "text": "Zánik a vzdání se přednostního práva",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -18416,7 +18415,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 491",
-                            "text": "Zvýšení základního kapitálu dohodou všech akcionářů Zvýšení základního kapitálu dohodou všech akcionářů",
+                            "text": "Zvýšení základního kapitálu dohodou všech akcionářů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -18745,7 +18744,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 507",
-                            "text": "Usnesení valné hromady o podmíněném zvýšení základního kapitálu společnosti obsahuje Usnesení valné hromady o podmíněném zvýšení základního kapitálu společnosti obsahuje",
+                            "text": "Usnesení valné hromady o podmíněném zvýšení základního kapitálu společnosti obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -18938,7 +18937,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 516",
-                            "text": "Usnesení valné hromady o snížení základního kapitálu obsahuje alespoň Usnesení valné hromady o snížení základního kapitálu obsahuje alespoň",
+                            "text": "Usnesení valné hromady o snížení základního kapitálu obsahuje alespoň",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -19427,7 +19426,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 536",
-                            "text": "Upuštění od vydání akcií Upuštění od vydání akcií",
+                            "text": "Upuštění od vydání akcií",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -19572,12 +19571,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 542",
-                            "text": "Výměna akcie nebo změna údajů na akcii Výměna akcie nebo změna údajů na akcii Společnost může na základě rozhodnutí valné hromady vyzvat akcionáře, aby jí předložili ve lhůtě jí určené akcie k výměně nebo vyznačení nových údajů na akcii, došlo-li ke změně údajů dosud na akciích uvedených. Ustanovení § 537 až 541 se použijí obdobně."
+                            "text": "Výměna akcie nebo změna údajů na akcii Společnost může na základě rozhodnutí valné hromady vyzvat akcionáře, aby jí předložili ve lhůtě jí určené akcie k výměně nebo vyznačení nových údajů na akcii, došlo-li ke změně údajů dosud na akciích uvedených. Ustanovení § 537 až 541 se použijí obdobně."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 543",
-                            "text": "Výměna akcie na žádost akcionáře Výměna akcie na žádost akcionáře",
+                            "text": "Výměna akcie na žádost akcionáře",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -19802,7 +19801,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 553",
-                            "text": "Stanovy družstva obsahují také Stanovy družstva obsahují také",
+                            "text": "Stanovy družstva obsahují také",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -19921,7 +19920,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 557",
-                            "text": "Ustavující schůzi řídí svolavatel nebo jím pověřená osoba. Ustavující schůzi řídí svolavatel nebo jím pověřená osoba."
+                            "text": "Ustavující schůzi řídí svolavatel nebo jím pověřená osoba."
                         },
                         {
                             "type": "paragraph",
@@ -20002,7 +20001,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 561a",
-                            "text": "Založení družstva bez ustavující schůze Založení družstva bez ustavující schůze",
+                            "text": "Založení družstva bez ustavující schůze",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -20060,7 +20059,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 562",
-                            "text": "Informační deska Informační deska",
+                            "text": "Informační deska",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -20445,7 +20444,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 572",
-                            "text": "Další členský vklad Další členský vklad",
+                            "text": "Další členský vklad",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -20759,7 +20758,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 584",
-                            "text": "Členská žaloba Členská žaloba",
+                            "text": "Členská žaloba",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -20807,7 +20806,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 586",
-                            "text": "Podíl člena na zisku a na jiných vlastních zdrojích Podíl člena na zisku a na jiných vlastních zdrojích",
+                            "text": "Podíl člena na zisku a na jiných vlastních zdrojích",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -20880,7 +20879,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 593",
-                            "text": "Uhrazovací povinnost lze uložit, jestliže Uhrazovací povinnost lze uložit, jestliže",
+                            "text": "Uhrazovací povinnost lze uložit, jestliže",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -20957,7 +20956,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 597",
-                            "text": "Stanovy mohou vyloučit, aby byl družstevní podíl ve spoluvlastnictví. Stanovy mohou vyloučit, aby byl družstevní podíl ve spoluvlastnictví."
+                            "text": "Stanovy mohou vyloučit, aby byl družstevní podíl ve spoluvlastnictví."
                         },
                         {
                             "type": "paragraph",
@@ -21087,17 +21086,17 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 606",
-                            "text": "Splynutí družstevních podílů Splynutí družstevních podílů Nabude-li člen za trvání svého členství v družstvu další družstevní podíl, jeho družstevní podíly splývají v jediný družstevní podíl v den, kdy je člen nabude. Jsou-li však s každým z družstevních podílů spojena práva třetích osob, družstevní podíly splývají až dnem, kdy tato práva třetích osob zaniknou, ledaže dohoda člena družstva s takovou třetí osobou určí jinak."
+                            "text": "Splynutí družstevních podílů Nabude-li člen za trvání svého členství v družstvu další družstevní podíl, jeho družstevní podíly splývají v jediný družstevní podíl v den, kdy je člen nabude. Jsou-li však s každým z družstevních podílů spojena práva třetích osob, družstevní podíly splývají až dnem, kdy tato práva třetích osob zaniknou, ledaže dohoda člena družstva s takovou třetí osobou určí jinak."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 607",
-                            "text": "Rozdělení družstevního podílu Rozdělení družstevního podílu Dovolují-li to stanovy, lze družstevní podíl rozdělit se souhlasem představenstva. Rozdělit družstevní podíl nelze, pokud by v důsledku rozdělení družstevního podílu klesla majetková účast převodce nebo nabyvatele družstevního podílu v družstvu pod výši základního členského vkladu. Finanční asistence"
+                            "text": "Rozdělení družstevního podílu Dovolují-li to stanovy, lze družstevní podíl rozdělit se souhlasem představenstva. Rozdělit družstevní podíl nelze, pokud by v důsledku rozdělení družstevního podílu klesla majetková účast převodce nebo nabyvatele družstevního podílu v družstvu pod výši základního členského vkladu. Finanční asistence"
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 608",
-                            "text": "Neurčí-li stanovy další podmínky, může družstvo poskytnout finanční asistenci, jestliže Neurčí-li stanovy další podmínky, může družstvo poskytnout finanční asistenci, jestliže",
+                            "text": "Neurčí-li stanovy další podmínky, může družstvo poskytnout finanční asistenci, jestliže",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -21141,7 +21140,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 610",
-                            "text": "Členství v družstvu zaniká Členství v družstvu zaniká",
+                            "text": "Členství v družstvu zaniká",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -21525,7 +21524,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 629",
-                            "text": "Orgány družstva jsou Orgány družstva jsou",
+                            "text": "Orgány družstva jsou",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -21552,7 +21551,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 630",
-                            "text": "Členem orgánu družstva může být jen člen družstva. Členem orgánu družstva může být jen člen družstva."
+                            "text": "Členem orgánu družstva může být jen člen družstva."
                         },
                         {
                             "type": "paragraph",
@@ -21597,7 +21596,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 635",
-                            "text": "Úvodní ustanovení Úvodní ustanovení",
+                            "text": "Úvodní ustanovení",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -21783,7 +21782,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 643",
-                            "text": "Doplnění programu členské schůze Doplnění programu členské schůze",
+                            "text": "Doplnění programu členské schůze",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -21868,7 +21867,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 649",
-                            "text": "Právo hlasovat na členské schůzi mají členové družstva. Právo hlasovat na členské schůzi mají členové družstva."
+                            "text": "Právo hlasovat na členské schůzi mají členové družstva."
                         },
                         {
                             "type": "paragraph",
@@ -21945,7 +21944,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 653",
-                            "text": "Návrh rozhodnutí obsahuje Návrh rozhodnutí obsahuje",
+                            "text": "Návrh rozhodnutí obsahuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -22026,7 +22025,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 656",
-                            "text": "Členská schůze Členská schůze",
+                            "text": "Členská schůze",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -22186,7 +22185,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 660",
-                            "text": "Člen nemůže na členské schůzi vykonávat hlasovací právo, Člen nemůže na členské schůzi vykonávat hlasovací právo,",
+                            "text": "Člen nemůže na členské schůzi vykonávat hlasovací právo,",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -22244,7 +22243,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 663",
-                            "text": "Neplatnost usnesení členské schůze Neplatnost usnesení členské schůze",
+                            "text": "Neplatnost usnesení členské schůze",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -22589,7 +22588,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 677",
-                            "text": "Práva a povinnosti delegáta Práva a povinnosti delegáta",
+                            "text": "Práva a povinnosti delegáta",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -22774,7 +22773,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 684",
-                            "text": "Hlasovací právo Hlasovací právo",
+                            "text": "Hlasovací právo",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -22929,7 +22928,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 690",
-                            "text": "Doplnění programu shromáždění delegátů Doplnění programu shromáždění delegátů",
+                            "text": "Doplnění programu shromáždění delegátů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23105,7 +23104,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 703",
-                            "text": "Usnesení shromáždění delegátů není neplatné jen z toho důvodu, že Usnesení shromáždění delegátů není neplatné jen z toho důvodu, že",
+                            "text": "Usnesení shromáždění delegátů není neplatné jen z toho důvodu, že",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -23137,7 +23136,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 705",
-                            "text": "Statutárním orgánem družstva je představenstvo. Statutárním orgánem družstva je představenstvo."
+                            "text": "Statutárním orgánem družstva je představenstvo."
                         },
                         {
                             "type": "paragraph",
@@ -23214,7 +23213,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 709",
-                            "text": "Zápis o jednání představenstva Zápis o jednání představenstva",
+                            "text": "Zápis o jednání představenstva",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23244,7 +23243,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 710",
-                            "text": "Zákaz konkurence člena představenstva Zákaz konkurence člena představenstva",
+                            "text": "Zákaz konkurence člena představenstva",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23423,7 +23422,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 721",
-                            "text": "Zápis o jednání kontrolní komise Zápis o jednání kontrolní komise",
+                            "text": "Zápis o jednání kontrolní komise",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23453,7 +23452,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 722",
-                            "text": "Zákaz konkurence člena kontrolní komise Zákaz konkurence člena kontrolní komise",
+                            "text": "Zákaz konkurence člena kontrolní komise",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23577,12 +23576,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 728",
-                            "text": "Firma obsahuje označení „bytové družstvo“. Firma obsahuje označení „bytové družstvo“."
+                            "text": "Firma obsahuje označení „bytové družstvo“."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 729",
-                            "text": "Družstevní byt a družstevní nebytový prostor Družstevní byt a družstevní nebytový prostor",
+                            "text": "Družstevní byt a družstevní nebytový prostor",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23770,7 +23769,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 736",
-                            "text": "Převod družstevního podílu v bytovém družstvu Převod družstevního podílu v bytovém družstvu",
+                            "text": "Převod družstevního podílu v bytovém družstvu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23802,7 +23801,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 737",
-                            "text": "Přechod družstevního podílu v bytovém družstvu Přechod družstevního podílu v bytovém družstvu",
+                            "text": "Přechod družstevního podílu v bytovém družstvu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23823,7 +23822,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 738",
-                            "text": "Rozdělení družstevního podílu v bytovém družstvu Rozdělení družstevního podílu v bytovém družstvu",
+                            "text": "Rozdělení družstevního podílu v bytovém družstvu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -23905,7 +23904,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 742",
-                            "text": "Člen bytového družstva má zejména právo Člen bytového družstva má zejména právo",
+                            "text": "Člen bytového družstva má zejména právo",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -24138,7 +24137,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 755",
-                            "text": "Členská schůze bytového družstva Členská schůze bytového družstva",
+                            "text": "Členská schůze bytového družstva",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -24207,7 +24206,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 759",
-                            "text": "Firma obsahuje označení „sociální družstvo“. Firma obsahuje označení „sociální družstvo“."
+                            "text": "Firma obsahuje označení „sociální družstvo“."
                         },
                         {
                             "type": "paragraph",
@@ -24238,7 +24237,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 762",
-                            "text": "Stanovy sociálního družstva, kromě náležitostí podle § 553, obsahují také Stanovy sociálního družstva, kromě náležitostí podle § 553, obsahují také",
+                            "text": "Stanovy sociálního družstva, kromě náležitostí podle § 553, obsahují také",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -24316,7 +24315,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 765",
-                            "text": "Sociální družstvo nesmí Sociální družstvo nesmí",
+                            "text": "Sociální družstvo nesmí",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -24543,7 +24542,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 774",
-                            "text": "Tento zákon zapracovává příslušné předpisy Evropské unie1). Tento zákon zapracovává příslušné předpisy Evropské unie1)."
+                            "text": "Tento zákon zapracovává příslušné předpisy Evropské unie1)."
                         }
                     ]
                 },
@@ -24815,7 +24814,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 786",
-                    "text": "Tento zákon nabývá účinnosti dnem 1. ledna 2014. Tento zákon nabývá účinnosti dnem 1. ledna 2014. Němcová v. r. Klaus v. r. Nečas v. r. 1)   Směrnice Evropského parlamentu a Rady 2004/25/ES ze dne 21. dubna 2004 o nabídkách převzetí. Směrnice Evropského parlamentu a Rady 2007/36/ES ze dne 11. července 2007 o výkonu některých práv akcionářů ve společnostech s kótovanými akciemi. Směrnice Evropského parlamentu a Rady 2009/102/ES ze dne 16. září 2009 v oblasti práva společností o společnostech s ručením omezeným s jediným společníkem. Směrnice Evropského parlamentu a Rady 2013/34/EU ze dne 26. června 2013 o ročních účetních závěrkách, konsolidovaných účetních závěrkách a souvisejících zprávách některých forem podniků, o změně směrnice Evropského parlamentu a Rady 2006/43/ES a o zrušení směrnic Rady 78/660/EHS a 83/349/EHS. Směrnice Evropského parlamentu a Rady (EU) 2017/1132 ze dne 14. června 2017 o některých aspektech práva obchodních společností (kodifikované znění). 2)   Například zákon č. 412/2005 Sb., o ochraně utajovaných informací a o bezpečnostní způsobilosti, nařízení Evropského parlamentu a Rady (EU) 596/2014 ze dne 16. dubna 2014 o zneužívání trhu (nařízení o zneužívání trhu) a o zrušení směrnice Evropského parlamentu a Rady 2003/6/ES a směrnic Komise 2003/124/ES, 2003/125/ES a 2004/72/ES. 3)   Čl. 13i odst. 4, čl. 22 odst. 1 a čl. 24 směrnice Evropského parlamentu a Rady (EU) 2017/1132 ze dne 14. června 2017 o některých aspektech práva obchodních společností, v platném znění. 4)   Například § 18 odst. 2 zákona č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů, § 6 odst. 1 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce, ve znění zákona č. 261/2021 Sb."
+                    "text": "Tento zákon nabývá účinnosti dnem 1. ledna 2014. Němcová v. r. Klaus v. r. Nečas v. r. 1)   Směrnice Evropského parlamentu a Rady 2004/25/ES ze dne 21. dubna 2004 o nabídkách převzetí. Směrnice Evropského parlamentu a Rady 2007/36/ES ze dne 11. července 2007 o výkonu některých práv akcionářů ve společnostech s kótovanými akciemi. Směrnice Evropského parlamentu a Rady 2009/102/ES ze dne 16. září 2009 v oblasti práva společností o společnostech s ručením omezeným s jediným společníkem. Směrnice Evropského parlamentu a Rady 2013/34/EU ze dne 26. června 2013 o ročních účetních závěrkách, konsolidovaných účetních závěrkách a souvisejících zprávách některých forem podniků, o změně směrnice Evropského parlamentu a Rady 2006/43/ES a o zrušení směrnic Rady 78/660/EHS a 83/349/EHS. Směrnice Evropského parlamentu a Rady (EU) 2017/1132 ze dne 14. června 2017 o některých aspektech práva obchodních společností (kodifikované znění). 2)   Například zákon č. 412/2005 Sb., o ochraně utajovaných informací a o bezpečnostní způsobilosti, nařízení Evropského parlamentu a Rady (EU) 596/2014 ze dne 16. dubna 2014 o zneužívání trhu (nařízení o zneužívání trhu) a o zrušení směrnice Evropského parlamentu a Rady 2003/6/ES a směrnic Komise 2003/124/ES, 2003/125/ES a 2004/72/ES. 3)   Čl. 13i odst. 4, čl. 22 odst. 1 a čl. 24 směrnice Evropského parlamentu a Rady (EU) 2017/1132 ze dne 14. června 2017 o některých aspektech práva obchodních společností, v platném znění. 4)   Například § 18 odst. 2 zákona č. 300/2008 Sb., o elektronických úkonech a autorizované konverzi dokumentů, § 6 odst. 1 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce, ve znění zákona č. 261/2021 Sb."
                 }
             ]
         }

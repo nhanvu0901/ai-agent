@@ -97,7 +97,6 @@
         "source_file": "Sb_2000_361_2024-07-01_IZ.pdf"
     },
     "text_content": [
-        "361",
         "ZÁKON",
         "ze dne 14. září 2000",
         "o provozu na pozemních",
@@ -4881,7 +4880,6 @@
         "požití, po kterou je řidič ještě pod vlivem alkoholu, je-li zjištěný obsah alkoholu u řidiče vyšší než 0,3",
         "promile, nebo řízení motorového vozidla bezprostředně po užití jiné návykové látky nebo v takové",
         "době po jejím užití, po kterou je řidič ještě pod jejím vlivem",
-        "6",
         "2.",
         "řízení motorového vozidla ve stavu vylučujícím způsobilost, který si řidič přivodil požitím alkoholic­",
         "kého nápoje nebo užitím jiné návykové látky",
@@ -4892,10 +4890,8 @@
         "6",
         "4.",
         "způsobení dopravní nehody, při které došlo k usmrcení nebo k těžké újmě na zdraví jiné osoby",
-        "6",
         "5.",
         "otáčení, couvání nebo jízda v protisměru na dálnici nebo na silnici pro motorová vozidla",
-        "6",
         "6.",
         "vjíždění na železniční přejezd v případě, kdy je to zakázáno",
         "6",
@@ -4904,7 +4900,6 @@
         "6",
         "8.",
         "překročení nejvyšší dovolené rychlosti o 40 km.h-1 a více v obci nebo o 50 km.h-1 a více mimo obec",
-        "6",
         "9.",
         "nezastavení vozidla na signál, který přikazuje řidiči zastavit vozidlo, nebo nezastavení vozidla na",
         "pokyn k zastavení vozidla daný při řízení nebo usměrňování provozu na pozemních komunikacích",
@@ -4921,7 +4916,6 @@
         "z důvodu nebezpečné závady2)",
         "6",
         "12. omezení chodce, který přechází pozemní komunikaci po přechodu pro chodce",
-        "4",
         "13.",
         "neprodlené nezastavení vozidla při dopravní nehodě nebo nedovolené opuštění místa dopravní neho­",
         "dy nebo neprodlené nevrácení se na místo dopravní nehody po poskytnutí nebo přivolání pomoci",
@@ -4930,32 +4924,23 @@
         "14. nedání přednosti v jízdě",
         "4",
         "15. řízení motorového vozidla bez držení řidičského oprávnění pro příslušnou skupinu vozidel",
-        "4",
         "16. porušení povinnosti použít dětskou autosedačku nebo bezpečnostní pás při přepravě dětí",
-        "4",
         "17. překročení nejvyšší dovolené rychlosti o 20 km.h-1 a více v obci nebo o 30 km.h-1 a více mimo obec",
-        "4",
         "18. řízení motorového vozidla řidičem, kterému byl řidičský průkaz zadržen nebo prohlášen za zadržený",
-        "4",
         "19.",
         "řízení motorového vozidla řidičem, který je držitel řidičského průkazu členského státu, řidičského",
         "průkazu vydaného cizím státem nebo mezinárodního řidičského průkazu vydaného cizím státem",
         "a pozbyl právo k řízení motorového vozidla na území České republiky nebo je ve výkonu správního",
         "trestu nebo trestu zákazu činnosti spočívajícího v zákazu řízení motorových vozidel",
-        "4",
         "20. ohrožení jiného řidiče při přejíždění z jednoho jízdního pruhu do druhého",
-        "4",
         "21. porušení povinnosti být za jízdy připoután bezpečnostním pásem nebo užít ochrannou přílbu",
-        "4",
         "22. držení telefonního přístroje nebo jiného hovorového nebo záznamového zařízení v ruce nebo jiným",
         "způsobem při jízdě vozidlem",
         "4",
         "23. překročení nejvyšší dovolené rychlosti o 10 km.h-1 a více",
-        "2",
         "24. řízení motorového vozidla bez profesní způsobilosti",
         "2",
         "25. nezastavení vozidla před přechodem pro chodce v případech, kdy je řidič povinen tak učinit",
-        "2",
         "26.",
         "neoprávněné stání s vozidlem na parkovišti vyhrazeném pro vozidlo označené parkovacím průkazem",
         "pro osoby se zdravotním postižením nebo neoprávněné použití parkovacího průkazu pro osoby se",
@@ -5111,7 +5096,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 1",
-                            "text": "Předmět úpravy Předmět úpravy Tento zákon zapracovává příslušné předpisy Evropské unie47) a upravuje",
+                            "text": "Předmět úpravy Tento zákon zapracovává příslušné předpisy Evropské unie47) a upravuje",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -5143,7 +5128,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 2",
-                            "text": "Vymezení základních pojmů Vymezení základních pojmů Pro účely tohoto zákona",
+                            "text": "Vymezení základních pojmů Pro účely tohoto zákona",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -5287,7 +5272,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 3",
-                            "text": "Základní podmínky účasti na Základní podmínky účasti na provozu na pozemních komunikacích",
+                            "text": "Základní podmínky účasti na provozu na pozemních komunikacích",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5417,7 +5402,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 4",
-                            "text": "Povinnosti účastníka provozu na pozemních komunikacích Povinnosti účastníka provozu na pozemních komunikacích Při účasti na provozu na pozemních komunikacích je každý povinen",
+                            "text": "Povinnosti účastníka provozu na pozemních komunikacích Při účasti na provozu na pozemních komunikacích je každý povinen",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -5439,7 +5424,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 5",
-                            "text": "Povinnosti řidiče Povinnosti řidiče",
+                            "text": "Povinnosti řidiče",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -5785,7 +5770,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 6a",
-                            "text": "Technická silniční kontrola Technická silniční kontrola",
+                            "text": "Technická silniční kontrola",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6096,7 +6081,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 8",
-                            "text": "Povinnosti řidiče tramvaje Povinnosti řidiče tramvaje",
+                            "text": "Povinnosti řidiče tramvaje",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6119,7 +6104,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 8a",
-                            "text": "Povinnosti učitele autoškoly Povinnosti učitele autoškoly",
+                            "text": "Povinnosti učitele autoškoly",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6172,7 +6157,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 9",
-                            "text": "Povinnosti přepravované osoby Povinnosti přepravované osoby",
+                            "text": "Povinnosti přepravované osoby",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6279,7 +6264,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 10",
-                            "text": "Povinnosti provozovatele vozidla Povinnosti provozovatele vozidla",
+                            "text": "Povinnosti provozovatele vozidla",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6359,7 +6344,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 11",
-                            "text": "Směr a způsob jízdy Směr a způsob jízdy",
+                            "text": "Směr a způsob jízdy",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6382,7 +6367,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 12",
-                            "text": "Jízda v jízdních pruzích Jízda v jízdních pruzích",
+                            "text": "Jízda v jízdních pruzích",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6494,12 +6479,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 80",
-                            "text": "Základní ustanovení Základní ustanovení Řidičské oprávnění opravňuje jeho držitele k řízení motorového vozidla zařazeného do skupiny vozidel, pro kterou mu bylo řidičské oprávnění uděleno."
+                            "text": "Základní ustanovení Řidičské oprávnění opravňuje jeho držitele k řízení motorového vozidla zařazeného do skupiny vozidel, pro kterou mu bylo řidičské oprávnění uděleno."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 80a",
-                            "text": "Skupiny vozidel Skupiny vozidel",
+                            "text": "Skupiny vozidel",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6596,7 +6581,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 81",
-                            "text": "Rovnocennost řidičských oprávnění Rovnocennost řidičských oprávnění",
+                            "text": "Rovnocennost řidičských oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6705,7 +6690,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 82",
-                            "text": "Podmínky udělení a držení řidičského oprávnění Podmínky udělení a držení řidičského oprávnění",
+                            "text": "Podmínky udělení a držení řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6799,7 +6784,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 83",
-                            "text": "Věk Věk",
+                            "text": "Věk",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -6931,7 +6916,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 83a",
-                            "text": "Řízení s mentorem Řízení s mentorem",
+                            "text": "Řízení s mentorem",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7333,7 +7318,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 87a",
-                            "text": "Dopravně psychologické vyšetření Dopravně psychologické vyšetření",
+                            "text": "Dopravně psychologické vyšetření",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7673,7 +7658,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 90",
-                            "text": "Odborná způsobilost k řízení motorových vozidel Odborná způsobilost k řízení motorových vozidel",
+                            "text": "Odborná způsobilost k řízení motorových vozidel",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7719,7 +7704,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 91",
-                            "text": "Další podmínky k udělení řidičského oprávnění Další podmínky k udělení řidičského oprávnění Řidičské oprávnění pro",
+                            "text": "Další podmínky k udělení řidičského oprávnění Řidičské oprávnění pro",
                             "subsections": [
                                 {
                                     "type": "subsection_level2",
@@ -7761,7 +7746,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 92",
-                            "text": "Udělení a rozšíření řidičského oprávnění Udělení a rozšíření řidičského oprávnění",
+                            "text": "Udělení a rozšíření řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7887,7 +7872,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 93",
-                            "text": "Podmínění a omezení řidičského oprávnění Podmínění a omezení řidičského oprávnění",
+                            "text": "Podmínění a omezení řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -7977,7 +7962,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 94",
-                            "text": "Odnětí řidičského oprávnění a vzdání se řidičského oprávnění Odnětí řidičského oprávnění a vzdání se řidičského oprávnění",
+                            "text": "Odnětí řidičského oprávnění a vzdání se řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8060,7 +8045,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 94a",
-                            "text": "Pozbytí řidičského oprávnění Pozbytí řidičského oprávnění",
+                            "text": "Pozbytí řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8115,7 +8100,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 95",
-                            "text": "Pozastavení řidičského oprávnění Pozastavení řidičského oprávnění",
+                            "text": "Pozastavení řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8139,7 +8124,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 96",
-                            "text": "Přezkoumání zdravotní způsobilosti Přezkoumání zdravotní způsobilosti",
+                            "text": "Přezkoumání zdravotní způsobilosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8199,7 +8184,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 97",
-                            "text": "Přezkoušení z odborné způsobilosti Přezkoušení z odborné způsobilosti",
+                            "text": "Přezkoušení z odborné způsobilosti",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8834,7 +8819,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 102a",
-                            "text": "Terapeutický program Terapeutický program",
+                            "text": "Terapeutický program",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8888,7 +8873,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 102b",
-                            "text": "Metodické centrum Metodické centrum",
+                            "text": "Metodické centrum",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -8955,7 +8940,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 102c",
-                            "text": "Lektor Lektor",
+                            "text": "Lektor",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9022,7 +9007,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 102d",
-                            "text": "Informační internetový portál Informační internetový portál",
+                            "text": "Informační internetový portál",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9160,7 +9145,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 102e",
-                            "text": "Kontrola uskutečňování terapeutických programů Kontrola uskutečňování terapeutických programů",
+                            "text": "Kontrola uskutečňování terapeutických programů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9378,7 +9363,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 104",
-                            "text": "Druhy řidičských průkazů Druhy řidičských průkazů",
+                            "text": "Druhy řidičských průkazů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9452,7 +9437,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 105",
-                            "text": "Údaje zapisované do řidičského průkazu Údaje zapisované do řidičského průkazu",
+                            "text": "Údaje zapisované do řidičského průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9688,7 +9673,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 108",
-                            "text": "Změna údajů v řidičském průkazu Změna údajů v řidičském průkazu nebo mezinárodním řidičském průkazu",
+                            "text": "Změna údajů v řidičském průkazu nebo mezinárodním řidičském průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -9985,7 +9970,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 110a",
-                            "text": "Karta řidiče Karta řidiče",
+                            "text": "Karta řidiče",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10090,7 +10075,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 111",
-                            "text": "Vydání mezinárodního řidičského průkazu Vydání mezinárodního řidičského průkazu",
+                            "text": "Vydání mezinárodního řidičského průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10185,7 +10170,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 113",
-                            "text": "Odevzdání řidičského průkazu Odevzdání řidičského průkazu a mezinárodního řidičského průkazu",
+                            "text": "Odevzdání řidičského průkazu a mezinárodního řidičského průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10281,7 +10266,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 114",
-                            "text": "Vrácení řidičského průkazu a mezinárodního řidičského průkazu Vrácení řidičského průkazu a mezinárodního řidičského průkazu",
+                            "text": "Vrácení řidičského průkazu a mezinárodního řidičského průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10309,7 +10294,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 115",
-                            "text": "Ztráta, odcizení, poškození nebo zničení Ztráta, odcizení, poškození nebo zničení řidičského průkazu a mezinárodního řidičského průkazu",
+                            "text": "Ztráta, odcizení, poškození nebo zničení řidičského průkazu a mezinárodního řidičského průkazu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10406,7 +10391,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 116",
-                            "text": "Výměna řidičského průkazu členského státu, Výměna řidičského průkazu členského státu, řidičského průkazu vydaného cizím státem",
+                            "text": "Výměna řidičského průkazu členského státu, řidičského průkazu vydaného cizím státem",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10528,7 +10513,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 118",
-                            "text": "Neplatnost řidičských průkazů Neplatnost řidičských průkazů",
+                            "text": "Neplatnost řidičských průkazů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -10581,7 +10566,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 118a",
-                            "text": "Zabránění v jízdě Zabránění v jízdě",
+                            "text": "Zabránění v jízdě",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11061,7 +11046,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 121",
-                            "text": "Výdej dat z registru řidičů Výdej dat z registru řidičů",
+                            "text": "Výdej dat z registru řidičů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11119,7 +11104,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 122",
-                            "text": "Centrální registr řidičů Centrální registr řidičů",
+                            "text": "Centrální registr řidičů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11188,7 +11173,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 122c",
-                            "text": "Informační systém digitálního tachografu Informační systém digitálního tachografu",
+                            "text": "Informační systém digitálního tachografu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11320,7 +11305,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 123",
-                            "text": "Evidence dopravních nehod Evidence dopravních nehod",
+                            "text": "Evidence dopravních nehod",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11629,7 +11614,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 123d",
-                            "text": "Vrácení řidičského oprávnění Vrácení řidičského oprávnění",
+                            "text": "Vrácení řidičského oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11677,7 +11662,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 123e",
-                            "text": "Odečítání bodů Odečítání bodů",
+                            "text": "Odečítání bodů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -11819,7 +11804,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 124",
-                            "text": "Působnost Působnost",
+                            "text": "Působnost",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12232,7 +12217,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 124a",
-                            "text": "Vybírání kauce Vybírání kauce",
+                            "text": "Vybírání kauce",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12297,7 +12282,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 124b",
-                            "text": "Vrácení, započtení a propadnutí kauce Vrácení, započtení a propadnutí kauce",
+                            "text": "Vrácení, započtení a propadnutí kauce",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12358,7 +12343,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 124c",
-                            "text": "Zajištění vozidla a zadržení tabulek registrační značky Zajištění vozidla a zadržení tabulek registrační značky",
+                            "text": "Zajištění vozidla a zadržení tabulek registrační značky",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12463,7 +12448,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 125b",
-                            "text": "Státní odborný dozor a vrchní státní odborný dozor Státní odborný dozor a vrchní státní odborný dozor",
+                            "text": "Státní odborný dozor a vrchní státní odborný dozor",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12497,7 +12482,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 125c",
-                            "text": "Přestupky fyzických osob Přestupky fyzických osob",
+                            "text": "Přestupky fyzických osob",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12720,7 +12705,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 125d",
-                            "text": "Přestupky právnických a podnikajících fyzických osob Přestupky právnických a podnikajících fyzických osob",
+                            "text": "Přestupky právnických a podnikajících fyzických osob",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12779,7 +12764,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 125e",
-                            "text": "Společná ustanovení k přestupkům Společná ustanovení k přestupkům",
+                            "text": "Společná ustanovení k přestupkům",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -12843,7 +12828,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 125f",
-                            "text": "Přestupek provozovatele vozidla Přestupek provozovatele vozidla",
+                            "text": "Přestupek provozovatele vozidla",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13340,7 +13325,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 129",
-                            "text": "Vztah ke správnímu řádu Vztah ke správnímu řádu",
+                            "text": "Vztah ke správnímu řádu",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13387,12 +13372,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 130",
-                            "text": "Pracovněprávní vztahy Pracovněprávní vztahy Práva a povinnosti z pracovněprávních vztahů zaměstnanců k zaměstnavateli podle zvláštního právního předpisu,40) kteří ke dni účinnosti zákona vykonávají převážně činnost ve věcech stanovení místní a přechodné úpravy provozu na pozemních komunikacích, řidičských oprávnění a řidičských průkazů, evidencí uvedených v registru řidičů podle § 119 a přestupků proti bezpečnosti provozu na pozemních komunikacích, přecházejí ke dni účinnosti zákona z Ministerstva vnitra a z policie na ministerstvo a na okresní úřady."
+                            "text": "Pracovněprávní vztahy Práva a povinnosti z pracovněprávních vztahů zaměstnanců k zaměstnavateli podle zvláštního právního předpisu,40) kteří ke dni účinnosti zákona vykonávají převážně činnost ve věcech stanovení místní a přechodné úpravy provozu na pozemních komunikacích, řidičských oprávnění a řidičských průkazů, evidencí uvedených v registru řidičů podle § 119 a přestupků proti bezpečnosti provozu na pozemních komunikacích, přecházejí ke dni účinnosti zákona z Ministerstva vnitra a z policie na ministerstvo a na okresní úřady."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 131",
-                            "text": "Předání agendy dopravním úřadům Předání agendy dopravním úřadům Útvary Ministerstva vnitra a policie, které ke dni účinnosti zákona vykonávají správní činnosti ve věcech stanovení místní a přechodné úpravy provozu na pozemních komunikacích, řidičských průkazů a řidičských oprávnění, evidencí uvedených v registru řidičů podle § 119 a projednávání přestupků proti bezpečnosti provozu na pozemních komunikacích, jsou povinny předat spisovou agendu příslušným útvarům ministerstva a okresním úřadům nejpozději do 30 dnů ode dne nabytí účinnosti zákona."
+                            "text": "Předání agendy dopravním úřadům Útvary Ministerstva vnitra a policie, které ke dni účinnosti zákona vykonávají správní činnosti ve věcech stanovení místní a přechodné úpravy provozu na pozemních komunikacích, řidičských průkazů a řidičských oprávnění, evidencí uvedených v registru řidičů podle § 119 a projednávání přestupků proti bezpečnosti provozu na pozemních komunikacích, jsou povinny předat spisovou agendu příslušným útvarům ministerstva a okresním úřadům nejpozději do 30 dnů ode dne nabytí účinnosti zákona."
                         },
                         {
                             "type": "paragraph",
@@ -13419,7 +13404,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 133",
-                            "text": "Rozsah platnosti dosavadních řidičských oprávnění Rozsah platnosti dosavadních řidičských oprávnění",
+                            "text": "Rozsah platnosti dosavadních řidičských oprávnění",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13533,7 +13518,7 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 134",
-                            "text": "Výměna dosavadních řidičských průkazů Výměna dosavadních řidičských průkazů",
+                            "text": "Výměna dosavadních řidičských průkazů",
                             "subsections": [
                                 {
                                     "type": "subsection_level1",
@@ -13568,12 +13553,12 @@
                         {
                             "type": "paragraph",
                             "identifier": "§ 135",
-                            "text": "Platnost dosavadních mezinárodních řidičských průkazů Platnost dosavadních mezinárodních řidičských průkazů Mezinárodní řidičský průkaz vydaný podle dosavadních právních předpisů platí po dobu jeho platnosti i po nabytí účinnosti zákona."
+                            "text": "Platnost dosavadních mezinárodních řidičských průkazů Mezinárodní řidičský průkaz vydaný podle dosavadních právních předpisů platí po dobu jeho platnosti i po nabytí účinnosti zákona."
                         },
                         {
                             "type": "paragraph",
                             "identifier": "§ 136",
-                            "text": "Platnost dosavadních speciálních označení Platnost dosavadních speciálních označení Označení vozidla přepravujícího osobu těžce postiženou na zdraví, označení vozidla přepravujícího osobu těžce pohybově postiženou nebo označení vozidla řízeného osobou sluchově postiženou, která byla vydána podle stávajících právních předpisů, platí do 30. června 2001."
+                            "text": "Platnost dosavadních speciálních označení Označení vozidla přepravujícího osobu těžce postiženou na zdraví, označení vozidla přepravujícího osobu těžce pohybově postiženou nebo označení vozidla řízeného osobou sluchově postiženou, která byla vydána podle stávajících právních předpisů, platí do 30. června 2001."
                         },
                         {
                             "type": "paragraph",
@@ -13728,12 +13713,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 16",
-                    "text": "Objíždění Objíždění Řidič, který při objíždění vozidla, jež zastavilo nebo stojí, nebo při objíždění překážky provozu na pozemních komunikacích anebo chodce vybočuje ze směru své jízdy, nesmí ohrozit ani omezit proti­ jedoucí řidiče a ohrozit ostatní účastníky provozu na pozemních komunikacích. Přitom musí dávat znamení o změně směru jízdy."
+                    "text": "Objíždění Řidič, který při objíždění vozidla, jež zastavilo nebo stojí, nebo při objíždění překážky provozu na pozemních komunikacích anebo chodce vybočuje ze směru své jízdy, nesmí ohrozit ani omezit proti­ jedoucí řidiče a ohrozit ostatní účastníky provozu na pozemních komunikacích. Přitom musí dávat znamení o změně směru jízdy."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 17",
-                    "text": "Předjíždění Předjíždění",
+                    "text": "Předjíždění",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -13827,7 +13812,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 18",
-                    "text": "Rychlost jízdy Rychlost jízdy",
+                    "text": "Rychlost jízdy",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -13928,7 +13913,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 19",
-                    "text": "Vzdálenost mezi vozidly Vzdálenost mezi vozidly",
+                    "text": "Vzdálenost mezi vozidly",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -13962,12 +13947,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20",
-                    "text": "Vyhýbání Vyhýbání Řidiči protijedoucích vozidel se vyhýbají vpravo, včas a v dostatečné míře. Nemohou-li se bezpečně vyhnout, musí dát přednost v jízdě ten, na jehož straně jízdy je překážka nebo zúžená vozovka. Musí-li jeden z nich couvat, učiní tak ten, pro něhož je to snazší nebo méně nebezpečné. Není-li možno se vyhnout protijedoucí tramvaji vpravo, vyhýbá se jí vlevo."
+                    "text": "Vyhýbání Řidiči protijedoucích vozidel se vyhýbají vpravo, včas a v dostatečné míře. Nemohou-li se bezpečně vyhnout, musí dát přednost v jízdě ten, na jehož straně jízdy je překážka nebo zúžená vozovka. Musí-li jeden z nich couvat, učiní tak ten, pro něhož je to snazší nebo méně nebezpečné. Není-li možno se vyhnout protijedoucí tramvaji vpravo, vyhýbá se jí vlevo."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 21",
-                    "text": "Odbočování Odbočování",
+                    "text": "Odbočování",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14037,7 +14022,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 22",
-                    "text": "Jízda křižovatkou Jízda křižovatkou",
+                    "text": "Jízda křižovatkou",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14098,7 +14083,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23",
-                    "text": "Vjíždění na pozemní komunikaci Vjíždění na pozemní komunikaci",
+                    "text": "Vjíždění na pozemní komunikaci",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14132,7 +14117,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 24",
-                    "text": "Otáčení a couvání Otáčení a couvání",
+                    "text": "Otáčení a couvání",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14572,7 +14557,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30",
-                    "text": "Znamení o změně směru jízdy Znamení o změně směru jízdy",
+                    "text": "Znamení o změně směru jízdy",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14628,7 +14613,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 31",
-                    "text": "Výstražná znamení Výstražná znamení",
+                    "text": "Výstražná znamení",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14746,7 +14731,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34",
-                    "text": "Vlečení motorových vozidel Vlečení motorových vozidel",
+                    "text": "Vlečení motorových vozidel",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15103,7 +15088,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 40a",
-                    "text": "Provoz vozidel v zimním období Provoz vozidel v zimním období",
+                    "text": "Provoz vozidel v zimním období",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15353,7 +15338,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 43",
-                    "text": "Omezení jízdy některých vozidel Omezení jízdy některých vozidel",
+                    "text": "Omezení jízdy některých vozidel",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15521,7 +15506,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 43a",
-                    "text": "Hmotnosti a rozměry vozidel Hmotnosti a rozměry vozidel",
+                    "text": "Hmotnosti a rozměry vozidel",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15599,7 +15584,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 44",
-                    "text": "Čerpání pohonných hmot Čerpání pohonných hmot",
+                    "text": "Čerpání pohonných hmot",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15624,7 +15609,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 45",
-                    "text": "Překážka provozu na pozemních komunikacích Překážka provozu na pozemních komunikacích",
+                    "text": "Překážka provozu na pozemních komunikacích",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15687,7 +15672,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 46",
-                    "text": "Zastavení vozidla v tunelu Zastavení vozidla v tunelu",
+                    "text": "Zastavení vozidla v tunelu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15733,7 +15718,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 47",
-                    "text": "Dopravní nehoda Dopravní nehoda",
+                    "text": "Dopravní nehoda",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15864,12 +15849,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 47a",
-                    "text": "Zákaz účasti na některých akcích Zákaz účasti na některých akcích v provozu na pozemních komunikacích Řidič nesmí na dálnici, silnici a místní komunikaci použít vozidlo k účasti na sportovních a podobných akcích, jestliže by jimi mohla být ohrožena bezpečnost silničního provozu, nejde-li o akce pořádané v souladu s rozhodnutím příslušného správního úřadu o zvláštním užívání pozemní komunikace podle jiného právního předpisu1). Oddíl 4 Přeprava osob a nákladu"
+                    "text": "Zákaz účasti na některých akcích v provozu na pozemních komunikacích Řidič nesmí na dálnici, silnici a místní komunikaci použít vozidlo k účasti na sportovních a podobných akcích, jestliže by jimi mohla být ohrožena bezpečnost silničního provozu, nejde-li o akce pořádané v souladu s rozhodnutím příslušného správního úřadu o zvláštním užívání pozemní komunikace podle jiného právního předpisu1). Oddíl 4 Přeprava osob a nákladu"
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 48",
-                    "text": "Přeprava osob Přeprava osob",
+                    "text": "Přeprava osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15926,7 +15911,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 49",
-                    "text": "Přeprava osob vozidlem hromadné dopravy osob Přeprava osob vozidlem hromadné dopravy osob",
+                    "text": "Přeprava osob vozidlem hromadné dopravy osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15966,7 +15951,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 50",
-                    "text": "Přeprava osob vozidlem taxislužby Přeprava osob vozidlem taxislužby",
+                    "text": "Přeprava osob vozidlem taxislužby",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15989,7 +15974,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 51",
-                    "text": "Přeprava osob v ložném prostoru nákladního automobilu Přeprava osob v ložném prostoru nákladního automobilu a v ložném prostoru nákladního přívěsu traktoru",
+                    "text": "Přeprava osob v ložném prostoru nákladního automobilu a v ložném prostoru nákladního přívěsu traktoru",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16053,7 +16038,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 52",
-                    "text": "Přeprava nákladu Přeprava nákladu",
+                    "text": "Přeprava nákladu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16331,7 +16316,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 56",
-                    "text": "Útvar chodců Útvar chodců",
+                    "text": "Útvar chodců",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16558,7 +16543,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 59",
-                    "text": "Jízda potahovými vozidly a ručními vozíky Jízda potahovými vozidly a ručními vozíky",
+                    "text": "Jízda potahovými vozidly a ručními vozíky",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16608,7 +16593,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 60",
-                    "text": "Jízda na zvířatech a vedení a hnaní zvířat Jízda na zvířatech a vedení a hnaní zvířat",
+                    "text": "Jízda na zvířatech a vedení a hnaní zvířat",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16708,7 +16693,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 60a",
-                    "text": "Užívání osobního přepravníku Užívání osobního přepravníku",
+                    "text": "Užívání osobního přepravníku",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16793,7 +16778,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 61",
-                    "text": "Obecná, místní a přechodná Obecná, místní a přechodná úprava provozu na pozemních komunikacích",
+                    "text": "Obecná, místní a přechodná úprava provozu na pozemních komunikacích",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16836,7 +16821,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 62",
-                    "text": "Dopravní značky Dopravní značky",
+                    "text": "Dopravní značky",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16893,7 +16878,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 63",
-                    "text": "Svislé dopravní značky Svislé dopravní značky",
+                    "text": "Svislé dopravní značky",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16944,12 +16929,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 64",
-                    "text": "Vodorovné dopravní značky Vodorovné dopravní značky Vodorovné dopravní značky se užívají samostatně nebo ve spojení se svislými dopravními značkami, popřípadě s dopravními zařízeními, jejichž význam zdůrazňují nebo zpřesňují. Vodorovné dopravní značky jsou vyznačeny barvou nebo jiným srozumitelným způsobem; přechodná změna místní úpravy provozu na pozemních komunikacích je vyznačena žlutou nebo oranžovou barvou."
+                    "text": "Vodorovné dopravní značky se užívají samostatně nebo ve spojení se svislými dopravními značkami, popřípadě s dopravními zařízeními, jejichž význam zdůrazňují nebo zpřesňují. Vodorovné dopravní značky jsou vyznačeny barvou nebo jiným srozumitelným způsobem; přechodná změna místní úpravy provozu na pozemních komunikacích je vyznačena žlutou nebo oranžovou barvou."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 65",
-                    "text": "Světelné, doprovodné akustické signály a výstražná světla Světelné, doprovodné akustické signály a výstražná světla",
+                    "text": "Světelné, doprovodné akustické signály a výstražná světla",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16990,7 +16975,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 66",
-                    "text": "Dopravní zařízení Dopravní zařízení",
+                    "text": "Dopravní zařízení",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17029,7 +17014,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 67",
-                    "text": "Speciální označení vozidel a osob Speciální označení vozidel a osob",
+                    "text": "Speciální označení vozidel a osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17141,7 +17126,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 68",
-                    "text": "Zařízení pro provozní informace Zařízení pro provozní informace",
+                    "text": "Zařízení pro provozní informace",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17183,7 +17168,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 69",
-                    "text": "Řízení provozu na pozemních komunikacích Řízení provozu na pozemních komunikacích Provoz na pozemních komunikacích se řídí světelnými, případně i doprovodnými akustickými signály nebo pokyny policisty nebo osob oprávněných k řízení nebo usměrňování provozu na pozemních komunikacích podle § 75 odst. 5, 8, 9 nebo 10 nebo zvláštního právního předpisu12). Řízení provozu světelnými signály"
+                    "text": "Řízení provozu na pozemních komunikacích Provoz na pozemních komunikacích se řídí světelnými, případně i doprovodnými akustickými signály nebo pokyny policisty nebo osob oprávněných k řízení nebo usměrňování provozu na pozemních komunikacích podle § 75 odst. 5, 8, 9 nebo 10 nebo zvláštního právního předpisu12). Řízení provozu světelnými signály"
                 },
                 {
                     "type": "paragraph",
@@ -17425,7 +17410,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 75",
-                    "text": "Řízení provozu pokyny policisty Řízení provozu pokyny policisty",
+                    "text": "Řízení provozu pokyny policisty",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17550,7 +17535,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 76",
-                    "text": "Vztahy mezi obecnou, místní a přechodnou Vztahy mezi obecnou, místní a přechodnou úpravou provozu na pozemních komunikacích",
+                    "text": "Vztahy mezi obecnou, místní a přechodnou úpravou provozu na pozemních komunikacích",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17613,7 +17598,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 77",
-                    "text": "Místní a přechodná úprava provozu na Místní a přechodná úprava provozu na dálnicích, silnicích, místních komunikacích a veřejně přístupných účelových komunikacích",
+                    "text": "Místní a přechodná úprava provozu na dálnicích, silnicích, místních komunikacích a veřejně přístupných účelových komunikacích",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17740,7 +17725,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 77a",
-                    "text": "Místní a přechodná úprava provozu na Místní a přechodná úprava provozu na účelových komunikacích, které nejsou veřejně přístupné",
+                    "text": "Místní a přechodná úprava provozu na účelových komunikacích, které nejsou veřejně přístupné",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17776,7 +17761,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 78",
-                    "text": "Užití dopravních značek, světelných signálů, Užití dopravních značek, světelných signálů, dopravních zařízení a provozních informací",
+                    "text": "Užití dopravních značek, světelných signálů, dopravních zařízení a provozních informací",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17998,7 +17983,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 79a",
-                    "text": "Měření rychlosti vozidel Měření rychlosti vozidel Za účelem zvýšení bezpečnosti provozu na pozemních komunikacích je policie a obecní policie opráv­ něna měřit rychlost vozidel. Obecní policie tuto činnost vykonává výhradně na místech určených policií, přitom postupuje v součinnosti s policií5)."
+                    "text": "Měření rychlosti vozidel Za účelem zvýšení bezpečnosti provozu na pozemních komunikacích je policie a obecní policie opráv­ něna měřit rychlost vozidel. Obecní policie tuto činnost vykonává výhradně na místech určených policií, přitom postupuje v součinnosti s policií5)."
                 }
             ]
         },
@@ -18042,7 +18027,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 143",
-                    "text": "Tento zákon nabývá účinnosti dnem 1. ledna 2001 s výjimkou části šesté, která nabývá účinnosti dnem vyhlášení. Klaus v. r. Havel v. r. Zeman v. r. Příloha k zákonu č. 361/2000 Sb. Přehled jednání spočívajících v porušení vybraných povinností a počet bodů za tato jednání Porušení vybraných povinností Po­ čet bo­ dů 1. řízení motorového vozidla bezprostředně po požití alkoholického nápoje nebo v takové době po jeho požití, po kterou je řidič ještě pod vlivem alkoholu, je-li zjištěný obsah alkoholu u řidiče vyšší než 0,3 promile, nebo řízení motorového vozidla bezprostředně po užití jiné návykové látky nebo v takové době po jejím užití, po kterou je řidič ještě pod jejím vlivem 6 2. řízení motorového vozidla ve stavu vylučujícím způsobilost, který si řidič přivodil požitím alkoholic­ kého nápoje nebo užitím jiné návykové látky 6 3. odmítnutí řidiče podrobit se vyšetření ke zjištění, zda není ovlivněn alkoholem nebo jinou návykovou látkou 6 4. způsobení dopravní nehody, při které došlo k usmrcení nebo k těžké újmě na zdraví jiné osoby 6 5. otáčení, couvání nebo jízda v protisměru na dálnici nebo na silnici pro motorová vozidla 6 6. vjíždění na železniční přejezd v případě, kdy je to zakázáno 6 7. předjíždění vozidla v případě, kdy je to zakázáno 6 8. překročení nejvyšší dovolené rychlosti o 40 km.h-1 a více v obci nebo o 50 km.h-1 a více mimo obec 6 9. nezastavení vozidla na signál, který přikazuje řidiči zastavit vozidlo, nebo nezastavení vozidla na pokyn k zastavení vozidla daný při řízení nebo usměrňování provozu na pozemních komunikacích anebo při dohledu na bezpečnost a plynulost provozu na pozemních komunikacích osobou k tomu oprávněnou 6 10. ohrožení chodce přecházejícího pozemní komunikaci po přechodu pro chodce nebo ohrožení chodce přecházejícího pozemní komunikaci, na kterou řidič odbočuje, nebo ohrožení chodce při odbočování s vozidlem na místo ležící mimo pozemní komunikaci, při vjíždění na pozemní komunikaci nebo při otáčení nebo couvání 6 11. řízení motorového vozidla, které je technicky nezpůsobilé k provozu na pozemních komunikacích z důvodu nebezpečné závady2) 6 12. omezení chodce, který přechází pozemní komunikaci po přechodu pro chodce 4 13. neprodlené nezastavení vozidla při dopravní nehodě nebo nedovolené opuštění místa dopravní neho­ dy nebo neprodlené nevrácení se na místo dopravní nehody po poskytnutí nebo přivolání pomoci nebo po ohlášení nehody 4 14. nedání přednosti v jízdě 4 15. řízení motorového vozidla bez držení řidičského oprávnění pro příslušnou skupinu vozidel 4 16. porušení povinnosti použít dětskou autosedačku nebo bezpečnostní pás při přepravě dětí 4 17. překročení nejvyšší dovolené rychlosti o 20 km.h-1 a více v obci nebo o 30 km.h-1 a více mimo obec 4 18. řízení motorového vozidla řidičem, kterému byl řidičský průkaz zadržen nebo prohlášen za zadržený 4 19. řízení motorového vozidla řidičem, který je držitel řidičského průkazu členského státu, řidičského průkazu vydaného cizím státem nebo mezinárodního řidičského průkazu vydaného cizím státem a pozbyl právo k řízení motorového vozidla na území České republiky nebo je ve výkonu správního trestu nebo trestu zákazu činnosti spočívajícího v zákazu řízení motorových vozidel 4 20. ohrožení jiného řidiče při přejíždění z jednoho jízdního pruhu do druhého 4 21. porušení povinnosti být za jízdy připoután bezpečnostním pásem nebo užít ochrannou přílbu 4 22. držení telefonního přístroje nebo jiného hovorového nebo záznamového zařízení v ruce nebo jiným způsobem při jízdě vozidlem 4 23. překročení nejvyšší dovolené rychlosti o 10 km.h-1 a více 2 24. řízení motorového vozidla bez profesní způsobilosti 2 25. nezastavení vozidla před přechodem pro chodce v případech, kdy je řidič povinen tak učinit 2 26. neoprávněné stání s vozidlem na parkovišti vyhrazeném pro vozidlo označené parkovacím průkazem pro osoby se zdravotním postižením nebo neoprávněné použití parkovacího průkazu pro osoby se zdravotním postižením při stání nebo při jízdě 2 1)   Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 2)   Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích, ve znění pozdějších předpisů. 3)   Zákon č. 328/1999 Sb., o občanských průkazech. Zákon č. 329/1999 Sb., o cestovních dokladech a o změně zákona č. 283/1991 Sb., o Policii České republiky, ve znění pozdějších předpisů, (zákon o cestovních dokladech). Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů. 4)   Zákon č. 247/2000 Sb., o získávání a zdokonalování odborné způsobilosti k řízení motorových vozidel a o změnách ně­ kterých zákonů, ve znění pozdějších předpisů. 4a)  § 45 zákona č. 247/2000 Sb. 5)   Například § 17b zákona č. 553/1991 Sb., o obecní policii, ve znění pozdějších předpisů. 6)   Vyhláška č. 174/1994 Sb., kterou se stanoví obecné technické požadavky zabezpečující užívání staveb osobami s omeze­ nou schopností pohybu a orientace. 7)   Zákon č. 65/2017 Sb., o ochraně zdraví před škodlivými účinky návykových látek, ve znění pozdějších předpisů. 8)   Zákon č. 246/1992 Sb., na ochranu zvířat proti týrání, ve znění pozdějších předpisů. 8a)  § 2 písm. b) zákona č. 239/2000 Sb., o integrovaném záchranném systému a o změně některých zákonů, ve znění pozděj­ ších předpisů. 9a)  § 46 odst. 3 zákona č. 247/2000 Sb. 9b)  § 47 odst. 3 a 4 zákona č. 247/2000 Sb. 9c)  § 2 zákona č. 262/2006 Sb., zákoník práce. 9d)  Zákon č. 185/2004 Sb., o Celní správě České republiky. Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 10)  § 2 odst. 10 zákona č. 111/1994 Sb., o silniční dopravě, ve znění zákona č. 150/2000 Sb. 11)  Zákon č. 266/1994 Sb., o dráhách, ve znění pozdějších předpisů. 12)  Zákon č. 300/2013 Sb., o Vojenské policii a o změně některých zákonů (zákon o Vojenské policii), ve znění pozdějších předpisů. 12a)  Například zákon č. 111/1994 Sb., o silniční dopravě, ve znění pozdějších předpisů, zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 13)  Zákon č. 273/2008 Sb., o Policii České republiky, ve znění pozdějších předpisů. 14)  Zákon č. 17/2012 Sb., o Celní správě České republiky, ve znění pozdějších předpisů. 14a)  Zákon č. 553/1991 Sb., o obecní policii, ve znění pozdějších předpisů. 14b)  § 24b zákona č. 555/1992 Sb., o Vězeňské službě a justiční stráži České republiky, ve znění zákona č. 436/2003 Sb. 14c)  Vyhláška č. 247/2001 Sb., o organizaci a činnosti jednotek požární ochrany. 15)  Zákon č. 153/1994 Sb., o zpravodajských službách České republiky, ve znění pozdějších předpisů. 16)  Například zákon č. 154/1994 Sb., o Bezpečnostní informační službě, ve znění pozdějších předpisů, zákon č. 67/1992 Sb., o Vojenském obranném zpravodajství, ve znění pozdějších předpisů, zákon č. 283/1991 Sb., o Policii České republiky, ve znění pozdějších předpisů. 17)  § 9 vyhlášky č. 177/1995 Sb., kterou se vydává stavební a technický řád drah. 18)  Zákon č. 54/1946 Sb., o letním čase. Nařízení vlády č. 41/1998 Sb., o zavedení letního času v letech 1998 až 2001. 18a)  § 21 odst. 3 vyhlášky č. 341/2002 Sb., o schvalování technické způsobilosti a o technických podmínkách provozu vozi­ del na pozemních komunikacích, ve znění pozdějších předpisů. 19)  Zákon č. 245/2000 Sb., o státních svátcích, o ostatních svátcích, o významných dnech a o dnech pracovního klidu. 20)  Vyhláška č. 61/1983 Sb., o Dohodě o mezinárodních přepravách zkazitelných potravin a o specializovaných prostředcích určených pro tyto přepravy (ATP), ve znění pozdějších předpisů. 20a)  § 12 a 13 zákona č. 13/1997 Sb., o pozemních komunikacích, ve znění zákona č. 102/2000 Sb. a zákona č. 80/2006 Sb. 21)  Zákon č. 111/1994 Sb., ve znění pozdějších předpisů. 22)  Například ČSN 01 8020 Dopravní značky na pozemních komunikacích, ČSN 36 560-1-1 Světelná signalizační zařízení, technické a funkční požadavky, ČSN 73 6021 Světelná signalizační zařízení, umístění a použití návěstidel. 23)  Například § 23 zákona č. 13/1997 Sb., ve znění zákona č. 102/2000 Sb. 24)  Zákon č. 329/2011 Sb., o poskytování dávek osobám se zdravotním postižením a o změně souvisejících zákonů. 25)  § 25 zákona č. 13/1997 Sb., ve znění zákona č. 102/2000 Sb. 27)  Zákon č. 553/1991 Sb., ve znění pozdějších předpisů. 27a)  Zákon č. 269/1994 Sb., o Rejstříku trestů, ve znění pozdějších předpisů. 28)  Zákon č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů. 29)  ČSN 66 6416. 31)  Zákon č. 71/1967 Sb., o správním řízení (správní řád), ve znění pozdějších předpisů. 32)  § 27a zákona č. 29/1984 Sb., o soustavě základních škol, středních škol a vyšších odborných škol (školský zákon), ve znění zákona č. 138/1995 Sb. 32b)  Nařízení Evropského parlamentu a Rady (EU) č. 165/2014 ze dne 4. února 2014 o tachografech v silniční dopravě, o zrušení nařízení Rady (EHS) č. 3821/85 o záznamovém zařízení v silniční dopravě a o změně nařízení Evropského parlamentu a Rady (ES) č. 561/2006 o harmonizaci některých předpisů v sociální oblasti týkajících se silniční dopravy. 33)  Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění zákona č. 140/2001 Sb. 34a)  § 3 odst. 1 zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů. 34a)  § 37 zákona č. 56/2001 Sb. 35)  § 12 odst. 2 zákona č. 101/2000 Sb., o ochraně osobních údajů a o změně některých zákonů, ve znění zákona č. 177/2001 Sb. 35a)  Zákon č. 101/2000 Sb., ve znění pozdějších předpisů. 35b)  Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech a o změně některých zákonů (zákon o evidenci obyvatel), ve znění pozdějších předpisů. 35b)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 35c)  § 1 zákona č. 133/2000 Sb., ve znění zákona č. 53/2004 Sb. 35d)  Zákon č. 40/1993 Sb., o nabývání a pozbývání státního občanství České republiky, ve znění pozdějších předpisů. 35e)  § 4 písm. e) zákona č. 101/2000 Sb. 35f)  § 5 odst. 1 písm. c) zákona č. 101/2000 Sb., ve znění zákona č. 439/2004 Sb. 35g)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 38a)  § 69 zákona č. 129/2000 Sb., o krajích (krajské zřízení), ve znění pozdějších předpisů. 39)  Například § 33 zákona č. 283/1991 Sb., ve znění pozdějších předpisů, § 13 zákona č. 154/1994 Sb. 40)  Zákon č. 65/1965 Sb., zákoník práce, ve znění pozdějších předpisů. 41)  Vyhláška č. 101/1995 Sb., kterou se vydává Řád pro zdravotní a odbornou způsobilost osob při provozování dráhy a drážní dopravy. 42)  Nařízení Rady (EHS) č. 3820/85 ze dne 20. prosince 1985 o harmonizaci určitých sociálních právních předpisů v silniční dopravě. Evropská dohoda o práci osádek vozidel v mezinárodní silniční dopravě (AETR), vyhlášená pod č. 108/1976 Sb. Nařízení vlády č. 168/2002 Sb., kterým se stanoví způsob organizace práce a pracovních postupů, které je zaměstnavatel povinen zajistit při provozování dopravy dopravními prostředky. Vyhláška č. 478/2000 Sb., kterou se provádí zákon o silniční dopravě, ve znění vyhlášky č. 55/2003 Sb. 43)  Nařízení Evropského parlamentu a Rady (ES) č. 1071/2009 ze dne 21. října 2009, kterým se zavádějí společná pravidla týkající se závazných podmínek pro výkon povolání podnikatele v silniční dopravě a zrušuje směrnice Rady 96/26/ES, v platném znění. Nařízení Komise (EU) 2016/403 ze dne 18. března 2016, kterým se doplňuje nařízení Evropského parlamentu a Rady (ES) č. 1071/2009, pokud jde o klasifikaci závažných porušení pravidel Unie, která mohou vést ke ztrátě dobré pověsti podnikatele v silniční dopravě, a kterým se mění příloha III směrnice Evropského parlamentu a Rady 2006/22/ES. 44)  Například Úmluva o silničním provozu (Vídeň 1968), Úmluva o silničním provozu (Ženeva 1949). 45)  Zákon č. 341/2011 Sb., o Generální inspekci bezpečnostních sborů a o změně souvisejících zákonů. 46)  Zákon č. 167/1998 Sb., o návykových látkách a o změně některých dalších zákonů, ve znění pozdějších předpisů. 47)  Směrnice Rady 91/671/EHS ze dne 16. prosince 1991 o sbližování právních předpisů členských států týkajících se povin­ ného používání bezpečnostních pásů ve vozidlech s hmotností do 3,5 tuny. Směrnice Evropského parlamentu a Rady 2003/20/ES ze dne 8. dubna 2003, kterou se mění směrnice Rady 91/671/EHS o sbližování právních předpisů členských států týkajících se povinného používání bezpečnostních pásů ve vozidlech s hmotností do 3,5 tuny. Směrnice Evropského parlamentu a Rady 2006/126/ES ze dne 20. prosince 2006 o řidičských průkazech. Směrnice Evropského parlamentu a Rady (EU) 2015/413 ze dne 11. března 2015 o usnadnění přeshraniční výměny in­ formací o dopravních deliktech v oblasti bezpečnosti silničního provozu. Směrnice Evropského parlamentu a Rady 2003/59/ES ze dne 15. července 2003 o výchozí kvalifikaci a pravidelném ško­ lení řidičů některých silničních vozidel pro nákladní nebo osobní dopravu a o změně nařízení Rady (EHS) č. 3820/85 a směrnice Rady 91/439/EHS a zrušení směrnice Rady 76/914/EHS. Směrnice Komise 2014/85/EU ze dne 1. července 2014, kterou se mění směrnice Evropského parlamentu a Rady 2006/126/ES o řidičských průkazech. Směrnice Evropského parlamentu a Rady 2014/47/EU ze dne 3. dubna 2014 o silničních technických kontrolách užit­ kových vozidel provozovaných v Unii a o zrušení směrnice 2000/30/ES. Směrnice Evropského parlamentu a Rady (EU) 2015/719 ze dne 29. dubna 2015, kterou se mění směrnice Rady 96/53/ES, kterou se pro určitá silniční vozidla provozovaná v rámci Společenství stanoví maximální přípustné rozměry pro vnitrostátní a mezinárodní provoz a maximální přípustné hmotnosti pro mezinárodní provoz. Směrnice Evropského parlamentu a Rady (EU) 2018/645 ze dne 18. dubna 2018, kterou se mění směrnice 2003/59/ES o výchozí kvalifikaci a pravidelném školení řidičů některých silničních vozidel pro nákladní nebo osobní dopravu a směr­ nice 2006/126/ES o řidičských průkazech. Směrnice Komise (EU) 2020/612 ze dne 4. května 2020, kterou se mění směrnice Evropského parlamentu a Rady 2006/126/ES o řidičských průkazech. 48)  Nařízení Evropského parlamentu a Rady (ES) č. 1072/2009 ze dne 21. října 2009 o společných pravidlech pro přístup na trh mezinárodní silniční nákladní dopravy, v platném znění. 49)  Sdělení Ministerstva zahraničních věcí č. 62/2010 Sb. m. s., kterým se nahrazují sdělení Ministerstva zahraničních věcí č. 108/1976 Sb., č. 82/1984 Sb. a č. 80/1994 Sb., o vyhlášení přijetí změn a dodatků Evropské dohody o práci osádek vozi­ del v mezinárodní silniční dopravě (AETR), ve znění sdělení Ministerstva zahraničních věcí č. 82/2010 Sb. m. s. 50)  Nařízení Evropského parlamentu a Rady (EU) č. 168/2013 ze dne 15. ledna 2013 o schvalování dvoukolových nebo tříkolových vozidel a čtyřkolek a dozoru nad trhem s těmito vozidly, v platném znění. 51)  § 7 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce. 52)  Zákon č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách), ve zně­ ní pozdějších předpisů. 53)  Zákon č. 250/2017 Sb., o elektronické identifikaci, ve znění pozdějších předpisů. Nařízení Evropského parlamentu a Rady (EU) č. 910/2014 ze dne 23. července 2014 o elektronické identifikaci a služ­ bách vytvářejících důvěru pro elektronické transakce na vnitřním trhu a o zrušení směrnice 1999/93/ES, v platném zně­ ní."
+                    "text": "Tento zákon nabývá účinnosti dnem 1. ledna 2001 s výjimkou části šesté, která nabývá účinnosti dnem vyhlášení. Klaus v. r. Havel v. r. Zeman v. r. Příloha k zákonu č. 361/2000 Sb. Přehled jednání spočívajících v porušení vybraných povinností a počet bodů za tato jednání Porušení vybraných povinností Po­ čet bo­ dů 1. řízení motorového vozidla bezprostředně po požití alkoholického nápoje nebo v takové době po jeho požití, po kterou je řidič ještě pod vlivem alkoholu, je-li zjištěný obsah alkoholu u řidiče vyšší než 0,3 promile, nebo řízení motorového vozidla bezprostředně po užití jiné návykové látky nebo v takové době po jejím užití, po kterou je řidič ještě pod jejím vlivem 2. řízení motorového vozidla ve stavu vylučujícím způsobilost, který si řidič přivodil požitím alkoholic­ kého nápoje nebo užitím jiné návykové látky 6 3. odmítnutí řidiče podrobit se vyšetření ke zjištění, zda není ovlivněn alkoholem nebo jinou návykovou látkou 6 4. způsobení dopravní nehody, při které došlo k usmrcení nebo k těžké újmě na zdraví jiné osoby 5. otáčení, couvání nebo jízda v protisměru na dálnici nebo na silnici pro motorová vozidla 6. vjíždění na železniční přejezd v případě, kdy je to zakázáno 6 7. předjíždění vozidla v případě, kdy je to zakázáno 6 8. překročení nejvyšší dovolené rychlosti o 40 km.h-1 a více v obci nebo o 50 km.h-1 a více mimo obec 9. nezastavení vozidla na signál, který přikazuje řidiči zastavit vozidlo, nebo nezastavení vozidla na pokyn k zastavení vozidla daný při řízení nebo usměrňování provozu na pozemních komunikacích anebo při dohledu na bezpečnost a plynulost provozu na pozemních komunikacích osobou k tomu oprávněnou 6 10. ohrožení chodce přecházejícího pozemní komunikaci po přechodu pro chodce nebo ohrožení chodce přecházejícího pozemní komunikaci, na kterou řidič odbočuje, nebo ohrožení chodce při odbočování s vozidlem na místo ležící mimo pozemní komunikaci, při vjíždění na pozemní komunikaci nebo při otáčení nebo couvání 6 11. řízení motorového vozidla, které je technicky nezpůsobilé k provozu na pozemních komunikacích z důvodu nebezpečné závady2) 6 12. omezení chodce, který přechází pozemní komunikaci po přechodu pro chodce 13. neprodlené nezastavení vozidla při dopravní nehodě nebo nedovolené opuštění místa dopravní neho­ dy nebo neprodlené nevrácení se na místo dopravní nehody po poskytnutí nebo přivolání pomoci nebo po ohlášení nehody 4 14. nedání přednosti v jízdě 4 15. řízení motorového vozidla bez držení řidičského oprávnění pro příslušnou skupinu vozidel 16. porušení povinnosti použít dětskou autosedačku nebo bezpečnostní pás při přepravě dětí 17. překročení nejvyšší dovolené rychlosti o 20 km.h-1 a více v obci nebo o 30 km.h-1 a více mimo obec 18. řízení motorového vozidla řidičem, kterému byl řidičský průkaz zadržen nebo prohlášen za zadržený 19. řízení motorového vozidla řidičem, který je držitel řidičského průkazu členského státu, řidičského průkazu vydaného cizím státem nebo mezinárodního řidičského průkazu vydaného cizím státem a pozbyl právo k řízení motorového vozidla na území České republiky nebo je ve výkonu správního trestu nebo trestu zákazu činnosti spočívajícího v zákazu řízení motorových vozidel 20. ohrožení jiného řidiče při přejíždění z jednoho jízdního pruhu do druhého 21. porušení povinnosti být za jízdy připoután bezpečnostním pásem nebo užít ochrannou přílbu 22. držení telefonního přístroje nebo jiného hovorového nebo záznamového zařízení v ruce nebo jiným způsobem při jízdě vozidlem 4 23. překročení nejvyšší dovolené rychlosti o 10 km.h-1 a více 24. řízení motorového vozidla bez profesní způsobilosti 2 25. nezastavení vozidla před přechodem pro chodce v případech, kdy je řidič povinen tak učinit 26. neoprávněné stání s vozidlem na parkovišti vyhrazeném pro vozidlo označené parkovacím průkazem pro osoby se zdravotním postižením nebo neoprávněné použití parkovacího průkazu pro osoby se zdravotním postižením při stání nebo při jízdě 2 1)   Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 2)   Zákon č. 56/2001 Sb., o podmínkách provozu vozidel na pozemních komunikacích, ve znění pozdějších předpisů. 3)   Zákon č. 328/1999 Sb., o občanských průkazech. Zákon č. 329/1999 Sb., o cestovních dokladech a o změně zákona č. 283/1991 Sb., o Policii České republiky, ve znění pozdějších předpisů, (zákon o cestovních dokladech). Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů. 4)   Zákon č. 247/2000 Sb., o získávání a zdokonalování odborné způsobilosti k řízení motorových vozidel a o změnách ně­ kterých zákonů, ve znění pozdějších předpisů. 4a)  § 45 zákona č. 247/2000 Sb. 5)   Například § 17b zákona č. 553/1991 Sb., o obecní policii, ve znění pozdějších předpisů. 6)   Vyhláška č. 174/1994 Sb., kterou se stanoví obecné technické požadavky zabezpečující užívání staveb osobami s omeze­ nou schopností pohybu a orientace. 7)   Zákon č. 65/2017 Sb., o ochraně zdraví před škodlivými účinky návykových látek, ve znění pozdějších předpisů. 8)   Zákon č. 246/1992 Sb., na ochranu zvířat proti týrání, ve znění pozdějších předpisů. 8a)  § 2 písm. b) zákona č. 239/2000 Sb., o integrovaném záchranném systému a o změně některých zákonů, ve znění pozděj­ ších předpisů. 9a)  § 46 odst. 3 zákona č. 247/2000 Sb. 9b)  § 47 odst. 3 a 4 zákona č. 247/2000 Sb. 9c)  § 2 zákona č. 262/2006 Sb., zákoník práce. 9d)  Zákon č. 185/2004 Sb., o Celní správě České republiky. Zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 10)  § 2 odst. 10 zákona č. 111/1994 Sb., o silniční dopravě, ve znění zákona č. 150/2000 Sb. 11)  Zákon č. 266/1994 Sb., o dráhách, ve znění pozdějších předpisů. 12)  Zákon č. 300/2013 Sb., o Vojenské policii a o změně některých zákonů (zákon o Vojenské policii), ve znění pozdějších předpisů. 12a)  Například zákon č. 111/1994 Sb., o silniční dopravě, ve znění pozdějších předpisů, zákon č. 13/1997 Sb., o pozemních komunikacích, ve znění pozdějších předpisů. 13)  Zákon č. 273/2008 Sb., o Policii České republiky, ve znění pozdějších předpisů. 14)  Zákon č. 17/2012 Sb., o Celní správě České republiky, ve znění pozdějších předpisů. 14a)  Zákon č. 553/1991 Sb., o obecní policii, ve znění pozdějších předpisů. 14b)  § 24b zákona č. 555/1992 Sb., o Vězeňské službě a justiční stráži České republiky, ve znění zákona č. 436/2003 Sb. 14c)  Vyhláška č. 247/2001 Sb., o organizaci a činnosti jednotek požární ochrany. 15)  Zákon č. 153/1994 Sb., o zpravodajských službách České republiky, ve znění pozdějších předpisů. 16)  Například zákon č. 154/1994 Sb., o Bezpečnostní informační službě, ve znění pozdějších předpisů, zákon č. 67/1992 Sb., o Vojenském obranném zpravodajství, ve znění pozdějších předpisů, zákon č. 283/1991 Sb., o Policii České republiky, ve znění pozdějších předpisů. 17)  § 9 vyhlášky č. 177/1995 Sb., kterou se vydává stavební a technický řád drah. 18)  Zákon č. 54/1946 Sb., o letním čase. Nařízení vlády č. 41/1998 Sb., o zavedení letního času v letech 1998 až 2001. 18a)  § 21 odst. 3 vyhlášky č. 341/2002 Sb., o schvalování technické způsobilosti a o technických podmínkách provozu vozi­ del na pozemních komunikacích, ve znění pozdějších předpisů. 19)  Zákon č. 245/2000 Sb., o státních svátcích, o ostatních svátcích, o významných dnech a o dnech pracovního klidu. 20)  Vyhláška č. 61/1983 Sb., o Dohodě o mezinárodních přepravách zkazitelných potravin a o specializovaných prostředcích určených pro tyto přepravy (ATP), ve znění pozdějších předpisů. 20a)  § 12 a 13 zákona č. 13/1997 Sb., o pozemních komunikacích, ve znění zákona č. 102/2000 Sb. a zákona č. 80/2006 Sb. 21)  Zákon č. 111/1994 Sb., ve znění pozdějších předpisů. 22)  Například ČSN 01 8020 Dopravní značky na pozemních komunikacích, ČSN 36 560-1-1 Světelná signalizační zařízení, technické a funkční požadavky, ČSN 73 6021 Světelná signalizační zařízení, umístění a použití návěstidel. 23)  Například § 23 zákona č. 13/1997 Sb., ve znění zákona č. 102/2000 Sb. 24)  Zákon č. 329/2011 Sb., o poskytování dávek osobám se zdravotním postižením a o změně souvisejících zákonů. 25)  § 25 zákona č. 13/1997 Sb., ve znění zákona č. 102/2000 Sb. 27)  Zákon č. 553/1991 Sb., ve znění pozdějších předpisů. 27a)  Zákon č. 269/1994 Sb., o Rejstříku trestů, ve znění pozdějších předpisů. 28)  Zákon č. 455/1991 Sb., o živnostenském podnikání (živnostenský zákon), ve znění pozdějších předpisů. 29)  ČSN 66 6416. 31)  Zákon č. 71/1967 Sb., o správním řízení (správní řád), ve znění pozdějších předpisů. 32)  § 27a zákona č. 29/1984 Sb., o soustavě základních škol, středních škol a vyšších odborných škol (školský zákon), ve znění zákona č. 138/1995 Sb. 32b)  Nařízení Evropského parlamentu a Rady (EU) č. 165/2014 ze dne 4. února 2014 o tachografech v silniční dopravě, o zrušení nařízení Rady (EHS) č. 3821/85 o záznamovém zařízení v silniční dopravě a o změně nařízení Evropského parlamentu a Rady (ES) č. 561/2006 o harmonizaci některých předpisů v sociální oblasti týkajících se silniční dopravy. 33)  Zákon č. 326/1999 Sb., o pobytu cizinců na území České republiky a o změně některých zákonů, ve znění zákona č. 140/2001 Sb. 34a)  § 3 odst. 1 zákona č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů. 34a)  § 37 zákona č. 56/2001 Sb. 35)  § 12 odst. 2 zákona č. 101/2000 Sb., o ochraně osobních údajů a o změně některých zákonů, ve znění zákona č. 177/2001 Sb. 35a)  Zákon č. 101/2000 Sb., ve znění pozdějších předpisů. 35b)  Zákon č. 133/2000 Sb., o evidenci obyvatel a rodných číslech a o změně některých zákonů (zákon o evidenci obyvatel), ve znění pozdějších předpisů. 35b)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 35c)  § 1 zákona č. 133/2000 Sb., ve znění zákona č. 53/2004 Sb. 35d)  Zákon č. 40/1993 Sb., o nabývání a pozbývání státního občanství České republiky, ve znění pozdějších předpisů. 35e)  § 4 písm. e) zákona č. 101/2000 Sb. 35f)  § 5 odst. 1 písm. c) zákona č. 101/2000 Sb., ve znění zákona č. 439/2004 Sb. 35g)  Zákon č. 365/2000 Sb., o informačních systémech veřejné správy a o změně některých dalších zákonů, ve znění pozděj­ ších předpisů. 38a)  § 69 zákona č. 129/2000 Sb., o krajích (krajské zřízení), ve znění pozdějších předpisů. 39)  Například § 33 zákona č. 283/1991 Sb., ve znění pozdějších předpisů, § 13 zákona č. 154/1994 Sb. 40)  Zákon č. 65/1965 Sb., zákoník práce, ve znění pozdějších předpisů. 41)  Vyhláška č. 101/1995 Sb., kterou se vydává Řád pro zdravotní a odbornou způsobilost osob při provozování dráhy a drážní dopravy. 42)  Nařízení Rady (EHS) č. 3820/85 ze dne 20. prosince 1985 o harmonizaci určitých sociálních právních předpisů v silniční dopravě. Evropská dohoda o práci osádek vozidel v mezinárodní silniční dopravě (AETR), vyhlášená pod č. 108/1976 Sb. Nařízení vlády č. 168/2002 Sb., kterým se stanoví způsob organizace práce a pracovních postupů, které je zaměstnavatel povinen zajistit při provozování dopravy dopravními prostředky. Vyhláška č. 478/2000 Sb., kterou se provádí zákon o silniční dopravě, ve znění vyhlášky č. 55/2003 Sb. 43)  Nařízení Evropského parlamentu a Rady (ES) č. 1071/2009 ze dne 21. října 2009, kterým se zavádějí společná pravidla týkající se závazných podmínek pro výkon povolání podnikatele v silniční dopravě a zrušuje směrnice Rady 96/26/ES, v platném znění. Nařízení Komise (EU) 2016/403 ze dne 18. března 2016, kterým se doplňuje nařízení Evropského parlamentu a Rady (ES) č. 1071/2009, pokud jde o klasifikaci závažných porušení pravidel Unie, která mohou vést ke ztrátě dobré pověsti podnikatele v silniční dopravě, a kterým se mění příloha III směrnice Evropského parlamentu a Rady 2006/22/ES. 44)  Například Úmluva o silničním provozu (Vídeň 1968), Úmluva o silničním provozu (Ženeva 1949). 45)  Zákon č. 341/2011 Sb., o Generální inspekci bezpečnostních sborů a o změně souvisejících zákonů. 46)  Zákon č. 167/1998 Sb., o návykových látkách a o změně některých dalších zákonů, ve znění pozdějších předpisů. 47)  Směrnice Rady 91/671/EHS ze dne 16. prosince 1991 o sbližování právních předpisů členských států týkajících se povin­ ného používání bezpečnostních pásů ve vozidlech s hmotností do 3,5 tuny. Směrnice Evropského parlamentu a Rady 2003/20/ES ze dne 8. dubna 2003, kterou se mění směrnice Rady 91/671/EHS o sbližování právních předpisů členských států týkajících se povinného používání bezpečnostních pásů ve vozidlech s hmotností do 3,5 tuny. Směrnice Evropského parlamentu a Rady 2006/126/ES ze dne 20. prosince 2006 o řidičských průkazech. Směrnice Evropského parlamentu a Rady (EU) 2015/413 ze dne 11. března 2015 o usnadnění přeshraniční výměny in­ formací o dopravních deliktech v oblasti bezpečnosti silničního provozu. Směrnice Evropského parlamentu a Rady 2003/59/ES ze dne 15. července 2003 o výchozí kvalifikaci a pravidelném ško­ lení řidičů některých silničních vozidel pro nákladní nebo osobní dopravu a o změně nařízení Rady (EHS) č. 3820/85 a směrnice Rady 91/439/EHS a zrušení směrnice Rady 76/914/EHS. Směrnice Komise 2014/85/EU ze dne 1. července 2014, kterou se mění směrnice Evropského parlamentu a Rady 2006/126/ES o řidičských průkazech. Směrnice Evropského parlamentu a Rady 2014/47/EU ze dne 3. dubna 2014 o silničních technických kontrolách užit­ kových vozidel provozovaných v Unii a o zrušení směrnice 2000/30/ES. Směrnice Evropského parlamentu a Rady (EU) 2015/719 ze dne 29. dubna 2015, kterou se mění směrnice Rady 96/53/ES, kterou se pro určitá silniční vozidla provozovaná v rámci Společenství stanoví maximální přípustné rozměry pro vnitrostátní a mezinárodní provoz a maximální přípustné hmotnosti pro mezinárodní provoz. Směrnice Evropského parlamentu a Rady (EU) 2018/645 ze dne 18. dubna 2018, kterou se mění směrnice 2003/59/ES o výchozí kvalifikaci a pravidelném školení řidičů některých silničních vozidel pro nákladní nebo osobní dopravu a směr­ nice 2006/126/ES o řidičských průkazech. Směrnice Komise (EU) 2020/612 ze dne 4. května 2020, kterou se mění směrnice Evropského parlamentu a Rady 2006/126/ES o řidičských průkazech. 48)  Nařízení Evropského parlamentu a Rady (ES) č. 1072/2009 ze dne 21. října 2009 o společných pravidlech pro přístup na trh mezinárodní silniční nákladní dopravy, v platném znění. 49)  Sdělení Ministerstva zahraničních věcí č. 62/2010 Sb. m. s., kterým se nahrazují sdělení Ministerstva zahraničních věcí č. 108/1976 Sb., č. 82/1984 Sb. a č. 80/1994 Sb., o vyhlášení přijetí změn a dodatků Evropské dohody o práci osádek vozi­ del v mezinárodní silniční dopravě (AETR), ve znění sdělení Ministerstva zahraničních věcí č. 82/2010 Sb. m. s. 50)  Nařízení Evropského parlamentu a Rady (EU) č. 168/2013 ze dne 15. ledna 2013 o schvalování dvoukolových nebo tříkolových vozidel a čtyřkolek a dozoru nad trhem s těmito vozidly, v platném znění. 51)  § 7 zákona č. 297/2016 Sb., o službách vytvářejících důvěru pro elektronické transakce. 52)  Zákon č. 372/2011 Sb., o zdravotních službách a podmínkách jejich poskytování (zákon o zdravotních službách), ve zně­ ní pozdějších předpisů. 53)  Zákon č. 250/2017 Sb., o elektronické identifikaci, ve znění pozdějších předpisů. Nařízení Evropského parlamentu a Rady (EU) č. 910/2014 ze dne 23. července 2014 o elektronické identifikaci a služ­ bách vytvářejících důvěru pro elektronické transakce na vnitřním trhu a o zrušení směrnice 1999/93/ES, v platném zně­ ní."
                 }
             ]
         }

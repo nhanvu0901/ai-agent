@@ -1,4 +1,3 @@
-
 import fitz  # PyMuPDF
 import json
 import re
@@ -88,6 +87,29 @@ def extract_metadata(text_content_lines):
     return metadata
 
 
+# Helper function to remove duplicate phrases in a string
+def remove_duplicated_text(text):
+    if not text:
+        return text
+
+    # Split into words
+    words = text.split()
+    if len(words) <= 5:  # Don't process very short strings
+        return text
+
+    # Check for repeated phrases
+    for phrase_length in range(min(15, len(words) // 2), 1, -1):
+        for i in range(len(words) - 2 * phrase_length + 1):
+            phrase1 = ' '.join(words[i:i+phrase_length])
+            phrase2 = ' '.join(words[i+phrase_length:i+2*phrase_length])
+
+            if phrase1.lower() == phrase2.lower():
+                # Found a duplication - remove the second occurrence
+                return ' '.join(words[:i+phrase_length] + words[i+2*phrase_length:])
+
+    return text
+
+
 def structure_text_content(text_lines):
     structured_content = []
     current_part = None
@@ -140,10 +162,14 @@ def structure_text_content(text_lines):
             main_text_lines = [item for item in current_paragraph_text if isinstance(item, str)]
             sub_items = [item for item in current_paragraph_text if isinstance(item, dict)]
 
+            # Join the text and remove duplicated phrases
+            joined_text = " ".join(main_text_lines).strip()
+            deduped_text = remove_duplicated_text(joined_text)
+
             para_obj = {
                 "type": "paragraph",
                 "identifier": f"§ {current_paragraph_number}",
-                "text": " ".join(main_text_lines).strip()
+                "text": deduped_text
             }
             if sub_items:
                 para_obj["subsections"] = sub_items
@@ -183,7 +209,7 @@ def structure_text_content(text_lines):
             part_title = text_lines[line_idx + 1].strip() if line_idx + 1 < len(text_lines) else ""
             if line_idx + 2 < len(text_lines) and not (
                     paragraph_re.match(text_lines[line_idx + 2].strip()) or head_re.match(
-                    text_lines[line_idx + 2].strip()) or part_re.match(text_lines[line_idx + 2].strip())):
+                text_lines[line_idx + 2].strip()) or part_re.match(text_lines[line_idx + 2].strip())):
                 part_title += " " + text_lines[line_idx + 2].strip()
 
             current_part = {
@@ -207,7 +233,7 @@ def structure_text_content(text_lines):
             head_title = text_lines[line_idx + 1].strip() if line_idx + 1 < len(text_lines) else ""
             if line_idx + 2 < len(text_lines) and not (
                     paragraph_re.match(text_lines[line_idx + 2].strip()) or head_re.match(
-                    text_lines[line_idx + 2].strip()) or part_re.match(text_lines[line_idx + 2].strip())):
+                text_lines[line_idx + 2].strip()) or part_re.match(text_lines[line_idx + 2].strip())):
                 head_title += " " + text_lines[line_idx + 2].strip()
 
             current_head = {
@@ -224,6 +250,8 @@ def structure_text_content(text_lines):
             text_after_identifier = line_text_stripped[len(paragraph_match.group(0)):].strip()
             if text_after_identifier:
                 current_paragraph_text.append(text_after_identifier)
+
+            # Modified section to avoid duplication
             if line_idx + 1 < len(text_lines):
                 next_line_stripped = text_lines[line_idx + 1].strip()
                 if not (paragraph_re.match(next_line_stripped) or \
@@ -233,14 +261,15 @@ def structure_text_content(text_lines):
                         head_re.match(next_line_stripped) or \
                         next_line_stripped.lower().startswith("§") or \
                         next_line_stripped.lower().startswith("(") or \
-                        next_line_stripped.lower().startswith("čl.") or \
-                        len(next_line_stripped.split()) > 10
-                ):
-                    if current_paragraph_text and isinstance(current_paragraph_text[-1],
-                                                             str):
-                        current_paragraph_text[-1] += " " + next_line_stripped
-                    else:
-                        current_paragraph_text.append(next_line_stripped)
+                        next_line_stripped.lower().startswith("čl.")):
+
+                    # Check if next line is not a duplicate of text_after_identifier
+                    if text_after_identifier and next_line_stripped and \
+                            text_after_identifier.lower() != next_line_stripped.lower():
+                        if current_paragraph_text and isinstance(current_paragraph_text[-1], str):
+                            current_paragraph_text[-1] += " " + next_line_stripped
+                        else:
+                            current_paragraph_text.append(next_line_stripped)
             continue
 
         if subsection_l1_match:
@@ -330,7 +359,17 @@ def structure_text_content(text_lines):
                     sub_item["content"] = new_content[0] if len(new_content) == 1 and isinstance(new_content[0],
                                                                                                  str) else new_content
 
+                    # Also apply deduplication to subsection content if it's a string
+                    if isinstance(sub_item["content"], str):
+                        sub_item["content"] = remove_duplicated_text(sub_item["content"])
 
+
+    # Apply deduplication to subsection level 2 text
+    for item in structured_content:
+        if item.get("type") == "paragraph" and "subsections" in item:
+            for sub_item in item["subsections"]:
+                if sub_item.get("type") == "subsection_level2" and "text" in sub_item:
+                    sub_item["text"] = remove_duplicated_text(sub_item["text"])
 
     return structured_content
 
@@ -360,17 +399,15 @@ def pdf_to_structured_json(pdf_path, json_path):
             continue
         if re.fullmatch(r"\d+", stripped_line) and (len(cleaned_lines) > 0 and len(cleaned_lines[-1]) > 60 or len(
                 cleaned_lines) == 0):
-            pass
+            continue  # Skip page numbers
 
+        # Skip repeated headers
+        if page_num > 0 and stripped_line == doc[0].get_text("blocks")[0][4].split('\n')[0].strip():
+            continue
 
-        if page_num > 0 and stripped_line == doc[0].get_text("blocks")[0][4].split('\n')[
-            0].strip():
-
-            pass
-
-        cleaned_lines.append(stripped_line)
-
-    cleaned_lines = [line for line in cleaned_lines if line]
+        # Only add non-empty lines
+        if stripped_line:
+            cleaned_lines.append(stripped_line)
 
     metadata = extract_metadata(cleaned_lines)
     metadata["source_file"] = os.path.basename(pdf_path)

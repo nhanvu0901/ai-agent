@@ -1,10 +1,10 @@
 {
     "metadata": {
         "law_id": "481/2000 Sb.",
-        "title": "o daních z příjmů",
-        "promulgation_date": "20. listopadu 1992",
+        "title": "Státního fondu rozvoje bydlení formou dotace ke krytí části nákladů spojených s výstavbou bytů, ve znění pozdějších předpisů, a 2.   převod této nemovité věci na jinou osobu byl po stanovenou dobu zakázán podmínkami poskytnutí dotace podle bodu 1 a jedná se o první převod po uplynutí této doby s tím, že tento převod slouží k tomu, aby tato nemovitá věc byla ve vlastnictví fyzické osoby.",
         "effective_date": "1. ledna 1993",
-        "agency": "Česká národní rada",
+        "publication_date": "20. listopadu 1992",
+        "enforcing_agency": "UNKNOWN",
         "references": [
             "zákona č. 499/1990 Sb.",
             "zákona č. 22/1958 Sb.",
@@ -153,7 +153,6 @@
         "source_file": "Sb_1992_586_2024-07-19_IZ.pdf"
     },
     "text_content": [
-        "586",
         "ZÁKON",
         "České národní rady",
         "ze dne 20. listopadu 1992",
@@ -6861,7 +6860,7 @@
         {
             "type": "paragraph",
             "identifier": "§ 1",
-            "text": "Tento zákon zapracovává příslušné předpisy Evropské unie137) a upravuje Tento zákon zapracovává příslušné předpisy Evropské unie137) a upravuje",
+            "text": "Tento zákon zapracovává příslušné předpisy Evropské unie137) a upravuje",
             "subsections": [
                 {
                     "type": "subsection_level2",
@@ -6884,7 +6883,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 2",
-                    "text": "Poplatníci daně z příjmů fyzických osob Poplatníci daně z příjmů fyzických osob",
+                    "text": "Poplatníci daně z příjmů fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -6926,7 +6925,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 2a",
-                    "text": "Poplatník v paušálním režimu Poplatník v paušálním režimu",
+                    "text": "Poplatník v paušálním režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -7102,7 +7101,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 3",
-                    "text": "Předmět daně z příjmů fyzických osob Předmět daně z příjmů fyzických osob",
+                    "text": "Předmět daně z příjmů fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -7217,7 +7216,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 4",
-                    "text": "Osvobození od daně Osvobození od daně",
+                    "text": "Osvobození od daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -7397,7 +7396,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 4a",
-                    "text": "Osvobození bezúplatných příjmů Osvobození bezúplatných příjmů Od daně z příjmů fyzických osob se osvobozuje bezúplatný příjem",
+                    "text": "Osvobození bezúplatných příjmů Od daně z příjmů fyzických osob se osvobozuje bezúplatný příjem",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -7484,7 +7483,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 4b",
-                    "text": "Bytová potřeba Bytová potřeba",
+                    "text": "Bytová potřeba",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -7582,7 +7581,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 5",
-                    "text": "Základ daně a daňová ztráta Základ daně a daňová ztráta",
+                    "text": "Základ daně a daňová ztráta",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -7714,7 +7713,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 6",
-                    "text": "Příjmy ze závislé činnosti Příjmy ze závislé činnosti",
+                    "text": "Příjmy ze závislé činnosti",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8118,7 +8117,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 7",
-                    "text": "Příjmy ze samostatné činnosti Příjmy ze samostatné činnosti",
+                    "text": "Příjmy ze samostatné činnosti",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8308,7 +8307,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 7a",
-                    "text": "Paušální daň Paušální daň",
+                    "text": "Paušální daň",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8425,7 +8424,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 7b",
-                    "text": "Daňová evidence Daňová evidence",
+                    "text": "Daňová evidence",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8487,7 +8486,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 8",
-                    "text": "Příjmy z kapitálového majetku Příjmy z kapitálového majetku",
+                    "text": "Příjmy z kapitálového majetku",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8619,7 +8618,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 9",
-                    "text": "Příjmy z nájmu Příjmy z nájmu",
+                    "text": "Příjmy z nájmu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8705,7 +8704,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 10",
-                    "text": "Ostatní příjmy Ostatní příjmy",
+                    "text": "Ostatní příjmy",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8957,7 +8956,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 12",
-                    "text": "Společné příjmy a výdaje Společné příjmy a výdaje",
+                    "text": "Společné příjmy a výdaje",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -8988,7 +8987,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 13",
-                    "text": "Příjmy a výdaje spolupracujících osob Příjmy a výdaje spolupracujících osob",
+                    "text": "Příjmy a výdaje spolupracujících osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9084,7 +9083,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 15",
-                    "text": "Nezdanitelná část základu daně Nezdanitelná část základu daně",
+                    "text": "Nezdanitelná část základu daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9192,7 +9191,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 15a",
-                    "text": "Produkt spoření na stáří Produkt spoření na stáří",
+                    "text": "Produkt spoření na stáří",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9289,7 +9288,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 15b",
-                    "text": "Daňová podpora produktu spoření na stáří Daňová podpora produktu spoření na stáří",
+                    "text": "Daňová podpora produktu spoření na stáří",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9393,7 +9392,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 15c",
-                    "text": "Pojištění dlouhodobé péče Pojištění dlouhodobé péče",
+                    "text": "Pojištění dlouhodobé péče",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9448,7 +9447,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 16",
-                    "text": "Sazba a výpočet daně pro základ daně Sazba a výpočet daně pro základ daně",
+                    "text": "Sazba a výpočet daně pro základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9480,7 +9479,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 16a",
-                    "text": "Sazba a výpočet daně pro samostatný základ daně Sazba a výpočet daně pro samostatný základ daně",
+                    "text": "Sazba a výpočet daně pro samostatný základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9530,7 +9529,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 16b",
-                    "text": "Zdaňovací období Zdaňovací období Zdaňovacím obdobím daně z příjmů fyzických osob je kalendářní rok."
+                    "text": "Zdaňovací období Zdaňovacím obdobím daně z příjmů fyzických osob je kalendářní rok."
                 }
             ]
         },
@@ -9543,7 +9542,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 17",
-                    "text": "Poplatníci daně z příjmů právnických osob Poplatníci daně z příjmů právnických osob",
+                    "text": "Poplatníci daně z příjmů právnických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9622,7 +9621,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 17a",
-                    "text": "Veřejně prospěšný poplatník Veřejně prospěšný poplatník",
+                    "text": "Veřejně prospěšný poplatník",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9674,7 +9673,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 17b",
-                    "text": "Základní investiční fond Základní investiční fond",
+                    "text": "Základní investiční fond",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9708,7 +9707,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 17c",
-                    "text": "Poplatník daně z neočekávaných zisků Poplatník daně z neočekávaných zisků",
+                    "text": "Poplatník daně z neočekávaných zisků",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9872,7 +9871,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 18",
-                    "text": "Obecná ustanovení o předmětu daně Obecná ustanovení o předmětu daně",
+                    "text": "Obecná ustanovení o předmětu daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -9928,7 +9927,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 18a",
-                    "text": "Zvláštní ustanovení o předmětu daně veřejně prospěšných poplatníků Zvláštní ustanovení o předmětu daně veřejně prospěšných poplatníků",
+                    "text": "Zvláštní ustanovení o předmětu daně veřejně prospěšných poplatníků",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10075,7 +10074,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 19",
-                    "text": "Osvobození od daně Osvobození od daně",
+                    "text": "Osvobození od daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10386,7 +10385,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 19b",
-                    "text": "Osvobození bezúplatných příjmů Osvobození bezúplatných příjmů",
+                    "text": "Osvobození bezúplatných příjmů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10475,7 +10474,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20",
-                    "text": "Základ daně a položky snižující základ daně Základ daně a položky snižující základ daně",
+                    "text": "Základ daně a položky snižující základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10618,7 +10617,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20b",
-                    "text": "Samostatný základ daně Samostatný základ daně",
+                    "text": "Samostatný základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10656,7 +10655,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20b",
-                    "text": "a Základ daně z neočekávaných zisků Základ daně z neočekávaných zisků",
+                    "text": "a Základ daně z neočekávaných zisků",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10686,7 +10685,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20b",
-                    "text": "b Srovnávaný základ daně Srovnávaný základ daně",
+                    "text": "b Srovnávaný základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10727,7 +10726,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20b",
-                    "text": "c Srovnávací základ daně Srovnávací základ daně",
+                    "text": "c Srovnávací základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10787,7 +10786,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20b",
-                    "text": "d Průměr upravených srovnávacích základů daně Průměr upravených srovnávacích základů daně",
+                    "text": "d Průměr upravených srovnávacích základů daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -10960,7 +10959,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 20c",
-                    "text": "Obchodní majetek poplatníka daně z příjmů právnických osob Obchodní majetek poplatníka daně z příjmů právnických osob Obchodním majetkem poplatníka daně z příjmů právnických osob se pro účely daní z příjmů rozumí veškerý majetek, který",
+                    "text": "Obchodní majetek poplatníka daně z příjmů právnických osob Obchodním majetkem poplatníka daně z příjmů právnických osob se pro účely daní z příjmů rozumí veškerý majetek, který",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -10977,7 +10976,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21",
-                    "text": "Sazba a výpočet daně Sazba a výpočet daně",
+                    "text": "Sazba a výpočet daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11041,7 +11040,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21a",
-                    "text": "Zdaňovací období Zdaňovací období Zdaňovacím obdobím daně z příjmů právnických osob je",
+                    "text": "Zdaňovací období Zdaňovacím obdobím daně z příjmů právnických osob je",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -11076,7 +11075,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21b",
-                    "text": "Obecná společná ustanovení o věcech Obecná společná ustanovení o věcech",
+                    "text": "Obecná společná ustanovení o věcech",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11150,7 +11149,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21c",
-                    "text": "Obecná společná ustanovení o majetkových právech Obecná společná ustanovení o majetkových právech",
+                    "text": "Obecná společná ustanovení o majetkových právech",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11186,7 +11185,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21d",
-                    "text": "Obecná společná ustanovení o finančním leasingu Obecná společná ustanovení o finančním leasingu",
+                    "text": "Obecná společná ustanovení o finančním leasingu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11268,7 +11267,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21e",
-                    "text": "Obecná společná ustanovení o osobách Obecná společná ustanovení o osobách",
+                    "text": "Obecná společná ustanovení o osobách",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11304,7 +11303,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21f",
-                    "text": "Použití ustanovení o vkladech u svěřenských fondů, fundací a ústavů Použití ustanovení o vkladech u svěřenských fondů, fundací a ústavů",
+                    "text": "Použití ustanovení o vkladech u svěřenských fondů, fundací a ústavů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11326,7 +11325,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21g",
-                    "text": "Minimální a průměrná mzda Minimální a průměrná mzda",
+                    "text": "Minimální a průměrná mzda",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11357,17 +11356,17 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 21h",
-                    "text": "Vztah k účetním předpisům Vztah k účetním předpisům U poplatníka, který je účetní jednotkou, jsou příjmy jeho výnosy podle právních předpisů upravujících účetnictví a výdaji jeho náklady podle právních předpisů upravujících účetnictví, s výjimkou poplatníků, kteří účtují v soustavě jednoduchého účetnictví."
+                    "text": "Vztah k účetním předpisům U poplatníka, který je účetní jednotkou, jsou příjmy jeho výnosy podle právních předpisů upravujících účetnictví a výdaji jeho náklady podle právních předpisů upravujících účetnictví, s výjimkou poplatníků, kteří účtují v soustavě jednoduchého účetnictví."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 21i",
-                    "text": "Zvláštní ustanovení o vymezení dividendového příjmu Zvláštní ustanovení o vymezení dividendového příjmu Pro účely daní z příjmů se ustanovení o podílech na zisku použijí rovněž na příslušenství investičního nástroje patřícího podle přímo použitelného předpisu Evropské unie upravujícího obezřetnostní požadavky na úvěrové instituce a investiční podniky do vedlejšího kapitálu Tier 1."
+                    "text": "Zvláštní ustanovení o vymezení dividendového příjmu Pro účely daní z příjmů se ustanovení o podílech na zisku použijí rovněž na příslušenství investičního nástroje patřícího podle přímo použitelného předpisu Evropské unie upravujícího obezřetnostní požadavky na úvěrové instituce a investiční podniky do vedlejšího kapitálu Tier 1."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 22",
-                    "text": "Zdroj příjmů Zdroj příjmů",
+                    "text": "Zdroj příjmů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11461,7 +11460,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23",
-                    "text": "Základ daně Základ daně",
+                    "text": "Základ daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11808,7 +11807,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23a",
-                    "text": "Převod obchodního závodu na obchodní korporaci Převod obchodního závodu na obchodní korporaci",
+                    "text": "Převod obchodního závodu na obchodní korporaci",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11896,7 +11895,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23b",
-                    "text": "Výměna podílů Výměna podílů",
+                    "text": "Výměna podílů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -11969,7 +11968,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23c",
-                    "text": "Fúze a rozdělení obchodních korporací Fúze a rozdělení obchodních korporací",
+                    "text": "Fúze a rozdělení obchodních korporací",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -12184,7 +12183,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23e",
-                    "text": "Omezení uznatelnosti nadměrných výpůjčních výdajů Omezení uznatelnosti nadměrných výpůjčních výdajů",
+                    "text": "Omezení uznatelnosti nadměrných výpůjčních výdajů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -12345,7 +12344,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23f",
-                    "text": "Výjimky z režimu omezení uznatelnosti nadměrných výpůjčních výdajů Výjimky z režimu omezení uznatelnosti nadměrných výpůjčních výdajů Úprava výsledku hospodaření nebo rozdílu mezi příjmy a výdaji v důsledku omezení uznatelnosti nadměrných výpůjčních výdajů se nepoužije u poplatníka daně z příjmů právnických osob, který je",
+                    "text": "Výjimky z režimu omezení uznatelnosti nadměrných výpůjčních výdajů Úprava výsledku hospodaření nebo rozdílu mezi příjmy a výdaji v důsledku omezení uznatelnosti nadměrných výpůjčních výdajů se nepoužije u poplatníka daně z příjmů právnických osob, který je",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -12412,7 +12411,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23g",
-                    "text": "Zdanění při přemístění majetku bez změny vlastnictví Zdanění při přemístění majetku bez změny vlastnictví",
+                    "text": "Zdanění při přemístění majetku bez změny vlastnictví",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -12511,7 +12510,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23h",
-                    "text": "Řešení důsledků rozdílné právní kvalifikace Řešení důsledků rozdílné právní kvalifikace",
+                    "text": "Řešení důsledků rozdílné právní kvalifikace",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -12596,7 +12595,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23i",
-                    "text": "Kursový rozdíl Kursový rozdíl",
+                    "text": "Kursový rozdíl",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -12712,7 +12711,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 23j",
-                    "text": "Oznámení v souvislosti s režimem vylučování kursových rozdílů Oznámení v souvislosti s režimem vylučování kursových rozdílů",
+                    "text": "Oznámení v souvislosti s režimem vylučování kursových rozdílů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -13576,7 +13575,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 27",
-                    "text": "Hmotným majetkem vyloučeným z odpisování je Hmotným majetkem vyloučeným z odpisování je",
+                    "text": "Hmotným majetkem vyloučeným z odpisování je",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -14097,7 +14096,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30a",
-                    "text": "Mimořádné odpisy Mimořádné odpisy",
+                    "text": "Mimořádné odpisy",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14131,7 +14130,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30b",
-                    "text": "Odpisy hmotného majetku využívaného k výrobě elektřiny ze slunečního záření Odpisy hmotného majetku využívaného k výrobě elektřiny ze slunečního záření",
+                    "text": "Odpisy hmotného majetku využívaného k výrobě elektřiny ze slunečního záření",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14165,7 +14164,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30c",
-                    "text": "Odpisy při zvýšení spoluvlastnického podílu Odpisy při zvýšení spoluvlastnického podílu",
+                    "text": "Odpisy při zvýšení spoluvlastnického podílu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14195,7 +14194,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30d",
-                    "text": "Nemovitá kulturní památka Nemovitá kulturní památka",
+                    "text": "Nemovitá kulturní památka",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14245,7 +14244,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30e",
-                    "text": "Odpisování vozidla kategorie M1 Odpisování vozidla kategorie M1",
+                    "text": "Odpisování vozidla kategorie M1",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14410,7 +14409,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30f",
-                    "text": "Vozidlo kategorie M1 pořízené na finanční leasing Vozidlo kategorie M1 pořízené na finanční leasing",
+                    "text": "Vozidlo kategorie M1 pořízené na finanční leasing",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14541,7 +14540,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 30g",
-                    "text": "Společná ustanovení pro vozidlo kategorie M1 Společná ustanovení pro vozidlo kategorie M1",
+                    "text": "Společná ustanovení pro vozidlo kategorie M1",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14813,7 +14812,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 32b",
-                    "text": "Pacht obchodního závodu Pacht obchodního závodu",
+                    "text": "Pacht obchodního závodu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14885,7 +14884,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 32c",
-                    "text": "Nepeněžité vklady ze zahraničí Nepeněžité vklady ze zahraničí",
+                    "text": "Nepeněžité vklady ze zahraničí",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -14928,7 +14927,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 32d",
-                    "text": "Odpisy hmotného majetku odpisovaného v zahraničí Odpisy hmotného majetku odpisovaného v zahraničí Hmotný majetek, který byl odpisovaný v zahraničí před změnou daňového rezidenství poplatníka ze zahraničí do České republiky, nebo před jeho přeřazením do stálé provozovny poplatníka, který je daňovým nerezidentem, umístěné v České republice, poplatník odpisuje po tomto přemístění nebo přeřazení obdobně jako nabyvatel majetku podle § 32c."
+                    "text": "Odpisy hmotného majetku odpisovaného v zahraničí Hmotný majetek, který byl odpisovaný v zahraničí před změnou daňového rezidenství poplatníka ze zahraničí do České republiky, nebo před jeho přeřazením do stálé provozovny poplatníka, který je daňovým nerezidentem, umístěné v České republice, poplatník odpisuje po tomto přemístění nebo přeřazení obdobně jako nabyvatel majetku podle § 32c."
                 },
                 {
                     "type": "paragraph",
@@ -14980,7 +14979,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 33a",
-                    "text": "Závazné posouzení skutečnosti, zda je zásah do majetku technickým zhodnocením Závazné posouzení skutečnosti, zda je zásah do majetku technickým zhodnocením",
+                    "text": "Závazné posouzení skutečnosti, zda je zásah do majetku technickým zhodnocením",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15064,7 +15063,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34",
-                    "text": "Položky odčitatelné od základu daně Položky odčitatelné od základu daně",
+                    "text": "Položky odčitatelné od základu daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15122,7 +15121,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34a",
-                    "text": "Výše odpočtu na podporu výzkumu a vývoje Výše odpočtu na podporu výzkumu a vývoje",
+                    "text": "Výše odpočtu na podporu výzkumu a vývoje",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15180,7 +15179,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34b",
-                    "text": "Výdaje vynaložené na výzkum a vývoj zahrnované do odpočtu Výdaje vynaložené na výzkum a vývoj zahrnované do odpočtu",
+                    "text": "Výdaje vynaložené na výzkum a vývoj zahrnované do odpočtu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15284,7 +15283,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34c",
-                    "text": "Projektová dokumentace Projektová dokumentace",
+                    "text": "Projektová dokumentace",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15469,7 +15468,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34f",
-                    "text": "Obecné ustanovení o odpočtu na podporu odborného vzdělávání Obecné ustanovení o odpočtu na podporu odborného vzdělávání",
+                    "text": "Obecné ustanovení o odpočtu na podporu odborného vzdělávání",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15545,7 +15544,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34g",
-                    "text": "Odpočet na podporu pořízení majetku na odborné vzdělávání Odpočet na podporu pořízení majetku na odborné vzdělávání",
+                    "text": "Odpočet na podporu pořízení majetku na odborné vzdělávání",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15644,7 +15643,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 34h",
-                    "text": "Odpočet na podporu výdajů vynaložených na žáka nebo studenta Odpočet na podporu výdajů vynaložených na žáka nebo studenta Odpočet na podporu výdajů vynaložených na žáka nebo studenta v rámci odborného vzdělávání činí součin",
+                    "text": "Odpočet na podporu výdajů vynaložených na žáka nebo studenta v rámci odborného vzdělávání činí součin",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -15661,7 +15660,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 35",
-                    "text": "Sleva na dani Sleva na dani",
+                    "text": "Sleva na dani",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -15977,7 +15976,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 35b",
-                    "text": "a Slevy na dani pro poplatníky daně z příjmů fyzických osob Slevy na dani pro poplatníky daně z příjmů fyzických osob",
+                    "text": "a Slevy na dani pro poplatníky daně z příjmů fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16043,7 +16042,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 35b",
-                    "text": "b Sleva na manžela Sleva na manžela",
+                    "text": "b Sleva na manžela",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16125,7 +16124,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 35c",
-                    "text": "Daňové zvýhodnění pro poplatníky daně z příjmů fyzických osob Daňové zvýhodnění pro poplatníky daně z příjmů fyzických osob",
+                    "text": "Daňové zvýhodnění pro poplatníky daně z příjmů fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16355,7 +16354,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 36",
-                    "text": "Zvláštní sazba daně Zvláštní sazba daně",
+                    "text": "Zvláštní sazba daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16551,7 +16550,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 37",
-                    "text": "Mezinárodní smlouva Mezinárodní smlouva",
+                    "text": "Mezinárodní smlouva",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16649,7 +16648,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 37e",
-                    "text": "Přeměny jiných poplatníků než obchodních korporací Přeměny jiných poplatníků než obchodních korporací",
+                    "text": "Přeměny jiných poplatníků než obchodních korporací",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16671,7 +16670,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38",
-                    "text": "Přepočet měny pro výpočet daní z příjmů Přepočet měny pro výpočet daní z příjmů",
+                    "text": "Přepočet měny pro výpočet daní z příjmů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16787,7 +16786,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38a",
-                    "text": "Zálohy Zálohy",
+                    "text": "Zálohy",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -16918,7 +16917,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38a",
-                    "text": "a Zálohy na daň z neočekávaných zisků Zálohy na daň z neočekávaných zisků",
+                    "text": "a Zálohy na daň z neočekávaných zisků",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17036,12 +17035,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38b",
-                    "text": "Minimální výše daně Minimální výše daně Daň nebo penále se nepředepíše a neplatí, nepřesáhne-li 200 Kč nebo celkové zdanitelné příjmy nečiní u fyzické osoby více než 50 000 Kč. To neplatí, byla-li z těchto příjmů vybrána daň nebo záloha na daň srážkou."
+                    "text": "Minimální výše daně Daň nebo penále se nepředepíše a neplatí, nepřesáhne-li 200 Kč nebo celkové zdanitelné příjmy nečiní u fyzické osoby více než 50 000 Kč. To neplatí, byla-li z těchto příjmů vybrána daň nebo záloha na daň srážkou."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38b",
-                    "text": "a Položky evidované v měně účetnictví Položky evidované v měně účetnictví",
+                    "text": "a Položky evidované v měně účetnictví",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17065,7 +17064,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38b",
-                    "text": "b Přepočet kritérií v české měně Přepočet kritérií v české měně",
+                    "text": "b Přepočet kritérií v české měně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17109,7 +17108,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38b",
-                    "text": "c Měna přenositelných daňových položek pro jejich uplatnění Měna přenositelných daňových položek pro jejich uplatnění",
+                    "text": "c Měna přenositelných daňových položek pro jejich uplatnění",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17148,7 +17147,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38c",
-                    "text": "Plátce daně Plátce daně",
+                    "text": "Plátce daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17189,7 +17188,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38d",
-                    "text": "Daň vybíraná srážkou podle zvláštní sazby daně Daň vybíraná srážkou podle zvláštní sazby daně",
+                    "text": "Daň vybíraná srážkou podle zvláštní sazby daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17311,7 +17310,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38d",
-                    "text": "a Oznámení o příjmech plynoucích do zahraničí Oznámení o příjmech plynoucích do zahraničí",
+                    "text": "a Oznámení o příjmech plynoucích do zahraničí",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17393,7 +17392,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38e",
-                    "text": "Zajištění daně Zajištění daně",
+                    "text": "Zajištění daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17548,7 +17547,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38f",
-                    "text": "Vyloučení dvojího zdanění příjmů ze zahraničí Vyloučení dvojího zdanění příjmů ze zahraničí",
+                    "text": "Vyloučení dvojího zdanění příjmů ze zahraničí",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17687,7 +17686,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38f",
-                    "text": "a Zdanění ovládané zahraniční společnosti Zdanění ovládané zahraniční společnosti",
+                    "text": "a Zdanění ovládané zahraniční společnosti",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17886,7 +17885,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38g",
-                    "text": "Daňové přiznání k dani z příjmů fyzických osob Daňové přiznání k dani z příjmů fyzických osob",
+                    "text": "Daňové přiznání k dani z příjmů fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -17942,7 +17941,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38g",
-                    "text": "a Daňové přiznání podávané osobou spravující pozůstalost Daňové přiznání podávané osobou spravující pozůstalost Podává-li osoba spravující pozůstalost daňové tvrzení týkající se daňové povinnosti zůstavitele vzniklé ode dne jeho smrti do dne předcházejícího dni skončení řízení o pozůstalosti, neuplatní",
+                    "text": "a Daňové přiznání podávané osobou spravující pozůstalost Podává-li osoba spravující pozůstalost daňové tvrzení týkající se daňové povinnosti zůstavitele vzniklé ode dne jeho smrti do dne předcházejícího dni skončení řízení o pozůstalosti, neuplatní",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -17964,7 +17963,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38g",
-                    "text": "b Daňové přiznání v insolvenčním řízení Daňové přiznání v insolvenčním řízení",
+                    "text": "b Daňové přiznání v insolvenčním řízení",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18241,7 +18240,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38j",
-                    "text": "Povinnosti plátců daně z příjmů fyzických osob ze závislé činnosti Povinnosti plátců daně z příjmů fyzických osob ze závislé činnosti",
+                    "text": "Povinnosti plátců daně z příjmů fyzických osob ze závislé činnosti",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18677,7 +18676,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "a Správa paušálních veřejných pojistných Správa paušálních veřejných pojistných",
+                    "text": "a Správa paušálních veřejných pojistných",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18716,7 +18715,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "c Oznámení o vstupu do paušálního režimu Oznámení o vstupu do paušálního režimu",
+                    "text": "c Oznámení o vstupu do paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18792,7 +18791,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "d Společné oznámení při vstupu do paušálního režimu Společné oznámení při vstupu do paušálního režimu",
+                    "text": "d Společné oznámení při vstupu do paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18833,7 +18832,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "da Oznámení o změně zvoleného pásma paušálního režimu Oznámení o změně zvoleného pásma paušálního režimu",
+                    "text": "da Oznámení o změně zvoleného pásma paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18872,7 +18871,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "db Oznámení o jiné výši paušální daně Oznámení o jiné výši paušální daně",
+                    "text": "db Oznámení o jiné výši paušální daně",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18916,7 +18915,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "e Oznámení o dobrovolném vystoupení z paušálního režimu Oznámení o dobrovolném vystoupení z paušálního režimu",
+                    "text": "e Oznámení o dobrovolném vystoupení z paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18946,7 +18945,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "f Oznámení o nesplnění podmínek v paušálním režimu Oznámení o nesplnění podmínek v paušálním režimu",
+                    "text": "f Oznámení o nesplnění podmínek v paušálním režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -18991,7 +18990,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "g Oznámení o ukončení paušálního režimu Oznámení o ukončení paušálního režimu",
+                    "text": "g Oznámení o ukončení paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19015,7 +19014,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "ga Společné oznámení při ukončení paušálního režimu Společné oznámení při ukončení paušálního režimu",
+                    "text": "ga Společné oznámení při ukončení paušálního režimu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19050,7 +19049,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "h Daňové přiznání k paušální dani Daňové přiznání k paušální dani",
+                    "text": "h Daňové přiznání k paušální dani",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19072,12 +19071,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "i Splatnost paušálních veřejných pojistných Splatnost paušálních veřejných pojistných Paušální veřejná pojistná jsou splatná v poslední den lhůty pro podání daňového přiznání k dani z příjmů fyzických osob poplatníka, jehož daň je rovna paušální dani."
+                    "text": "i Splatnost paušálních veřejných pojistných Paušální veřejná pojistná jsou splatná v poslední den lhůty pro podání daňového přiznání k dani z příjmů fyzických osob poplatníka, jehož daň je rovna paušální dani."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "j Vyměření paušální daně a paušálních veřejných pojistných Vyměření paušální daně a paušálních veřejných pojistných",
+                    "text": "j Vyměření paušální daně a paušálních veřejných pojistných",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19198,7 +19197,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "l Společný osobní daňový účet Společný osobní daňový účet",
+                    "text": "l Společný osobní daňový účet",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19292,12 +19291,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "n Nedoplatek na záloze na veřejné pojistné Nedoplatek na záloze na veřejné pojistné Nedoplatek na záloze na veřejné pojistné splatné v průběhu zdaňovacího období, za které daň poplatníka není rovna paušální dani, s výjimkou příslušenství zaniká uplynutím posledního dne lhůty pro podání daňového přiznání k dani z příjmů fyzických osob za toto období."
+                    "text": "n Nedoplatek na záloze na veřejné pojistné Nedoplatek na záloze na veřejné pojistné splatné v průběhu zdaňovacího období, za které daň poplatníka není rovna paušální dani, s výjimkou příslušenství zaniká uplynutím posledního dne lhůty pro podání daňového přiznání k dani z příjmů fyzických osob za toto období."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "o Převod výnosu paušálního pojistného Převod výnosu paušálního pojistného",
+                    "text": "o Převod výnosu paušálního pojistného",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19327,7 +19326,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "p Poskytování informací správcem daně Poskytování informací správcem daně Správce daně poskytuje orgánům sociálního zabezpečení a správci registru všech pojištěnců veřejného zdravotního pojištění informace o",
+                    "text": "p Poskytování informací správcem daně Správce daně poskytuje orgánům sociálního zabezpečení a správci registru všech pojištěnců veřejného zdravotního pojištění informace o",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -19344,7 +19343,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38l",
-                    "text": "q Poskytování informací orgány sociálního zabezpečení a správcem Poskytování informací orgány sociálního zabezpečení a správcem registru všech pojištěnců veřejného zdravotního pojištění Orgány sociálního zabezpečení a správce registru všech pojištěnců veřejného zdravotního pojištění poskytují správci daně informace o osobách samostatně výdělečně činných pro potřeby paušálního režimu."
+                    "text": "q Poskytování informací orgány sociálního zabezpečení a správcem registru všech pojištěnců veřejného zdravotního pojištění Orgány sociálního zabezpečení a správce registru všech pojištěnců veřejného zdravotního pojištění poskytují správci daně informace o osobách samostatně výdělečně činných pro potřeby paušálního režimu."
                 },
                 {
                     "type": "paragraph",
@@ -19371,7 +19370,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38m",
-                    "text": "a Daňové přiznání k dani z příjmů právnických osob za období, za které se podává daňové přiznání",
+                    "text": "a Daňové přiznání k dani z příjmů právnických osob za období, za které se podává daňové přiznání k dani z příjmů právnických osob za období, za které se podává daňové přiznání",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19467,12 +19466,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38m",
-                    "text": "c Výjimka z oznamovací povinnosti Výjimka z oznamovací povinnosti Veřejně prospěšný poplatník a společenství vlastníků jednotek, kterým nevznikla ve zdaňovacím období daňová povinnost k dani z příjmů právnických osob, nejsou povinni sdělit tuto skutečnost správci daně."
+                    "text": "c Výjimka z oznamovací povinnosti Veřejně prospěšný poplatník a společenství vlastníků jednotek, kterým nevznikla ve zdaňovacím období daňová povinnost k dani z příjmů právnických osob, nejsou povinni sdělit tuto skutečnost správci daně."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38n",
-                    "text": "Daňová ztráta Daňová ztráta",
+                    "text": "Daňová ztráta",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19844,7 +19843,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38n",
-                    "text": "d Závazné posouzení způsobu určení základu daně daňového Závazné posouzení způsobu určení základu daně daňového nerezidenta z činností vykonávaných prostřednictvím stálé provozovny",
+                    "text": "d Závazné posouzení způsobu určení základu daně daňového nerezidenta z činností vykonávaných prostřednictvím stálé provozovny",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -19910,12 +19909,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38o",
-                    "text": "Zvláštní ustanovení o pokutě za opožděné tvrzení daně Zvláštní ustanovení o pokutě za opožděné tvrzení daně Je-li část dílčího základu daně z příjmů ze závislé činnosti, ze kterých plátce daně sráží zálohu na daň, vyšší než 50 % celkového základu daně, snižuje se pokuta za opožděné tvrzení daně u daňového přiznání k dani z příjmů fyzických osob na desetinu."
+                    "text": "Zvláštní ustanovení o pokutě za opožděné tvrzení daně Je-li část dílčího základu daně z příjmů ze závislé činnosti, ze kterých plátce daně sráží zálohu na daň, vyšší než 50 % celkového základu daně, snižuje se pokuta za opožděné tvrzení daně u daňového přiznání k dani z příjmů fyzických osob na desetinu."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38p",
-                    "text": "Zvláštní ustanovení o penále Zvláštní ustanovení o penále Pro účely výpočtu penále se vychází z částky daně tak, jak by byla stanovena oproti poslední známé dani, pokud by nebyly v rámci postupu vedoucího k doměření této daně z moci úřední dodatečně uplatněny vyšší částky odčitatelných položek podle § 34."
+                    "text": "Zvláštní ustanovení o penále Pro účely výpočtu penále se vychází z částky daně tak, jak by byla stanovena oproti poslední známé dani, pokud by nebyly v rámci postupu vedoucího k doměření této daně z moci úřední dodatečně uplatněny vyšší částky odčitatelných položek podle § 34."
                 },
                 {
                     "type": "paragraph",
@@ -20115,7 +20114,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38v",
-                    "text": "Oznámení o osvobozených příjmech fyzických osob Oznámení o osvobozených příjmech fyzických osob",
+                    "text": "Oznámení o osvobozených příjmech fyzických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20174,7 +20173,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38w",
-                    "text": "Pokuta za neoznámení osvobozeného příjmu Pokuta za neoznámení osvobozeného příjmu",
+                    "text": "Pokuta za neoznámení osvobozeného příjmu",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20240,7 +20239,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38x",
-                    "text": "Výzva k prokázání příjmů Výzva k prokázání příjmů",
+                    "text": "Výzva k prokázání příjmů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20310,12 +20309,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38y",
-                    "text": "Povinnost prokázat příjmy Povinnost prokázat příjmy Poplatník je povinen prokázat skutečnosti požadované ve výzvě k prokázání příjmů, ledaže prokáže, že nastaly v období, u kterého již uplynula lhůta pro stanovení daně."
+                    "text": "Povinnost prokázat příjmy Poplatník je povinen prokázat skutečnosti požadované ve výzvě k prokázání příjmů, ledaže prokáže, že nastaly v období, u kterého již uplynula lhůta pro stanovení daně."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "Prokázání příjmů Prokázání příjmů",
+                    "text": "Prokázání příjmů",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20351,7 +20350,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "a Stanovení daně podle pomůcek zvláštním způsobem Stanovení daně podle pomůcek zvláštním způsobem",
+                    "text": "a Stanovení daně podle pomůcek zvláštním způsobem",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20419,7 +20418,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "b Penále při stanovení daně podle pomůcek zvláštním způsobem Penále při stanovení daně podle pomůcek zvláštním způsobem Poplatníkovi vzniká povinnost uhradit penále z částky daně stanovené podle pomůcek zvláštním způsobem ve výši",
+                    "text": "b Penále při stanovení daně podle pomůcek zvláštním způsobem Poplatníkovi vzniká povinnost uhradit penále z částky daně stanovené podle pomůcek zvláštním způsobem ve výši",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -20436,7 +20435,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "c Výzva k podání prohlášení o majetku Výzva k podání prohlášení o majetku",
+                    "text": "c Výzva k podání prohlášení o majetku",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20489,7 +20488,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "d Náležitosti prohlášení o majetku Náležitosti prohlášení o majetku",
+                    "text": "d Náležitosti prohlášení o majetku",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20552,7 +20551,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "e Zvláštní ustanovení o náležitostech prohlášení o majetku Zvláštní ustanovení o náležitostech prohlášení o majetku",
+                    "text": "e Zvláštní ustanovení o náležitostech prohlášení o majetku",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20592,7 +20591,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 38z",
-                    "text": "f Zvláštní ustanovení o vratitelném přeplatku Zvláštní ustanovení o vratitelném přeplatku Pokud poplatník podá daňové přiznání nebo dodatečné daňové přiznání současně s žádostí o vrácení vratitelného přeplatku před uplynutím lhůty stanovené pro podání daňového přiznání nebo dodatečného daňového přiznání, hledí se na žádost jako na podanou v poslední den lhůty pro podání daňového přiznání nebo dodatečného daňového přiznání."
+                    "text": "f Zvláštní ustanovení o vratitelném přeplatku Pokud poplatník podá daňové přiznání nebo dodatečné daňové přiznání současně s žádostí o vrácení vratitelného přeplatku před uplynutím lhůty stanovené pro podání daňového přiznání nebo dodatečného daňového přiznání, hledí se na žádost jako na podanou v poslední den lhůty pro podání daňového přiznání nebo dodatečného daňového přiznání."
                 },
                 {
                     "type": "paragraph",
@@ -20686,12 +20685,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 39",
-                    "text": "Registrační povinnost plátce příjmu ze závislé činnosti Registrační povinnost plátce příjmu ze závislé činnosti Plátce daně, který je plátcem příjmu ze závislé činnosti, je povinen podat přihlášku k registraci k dani z příjmů fyzických nebo právnických osob u příslušného správce daně nejpozději do 8 dnů ode dne, kdy mu vznikla povinnost vykonávat tímto zákonem stanovené úkony plátce daně."
+                    "text": "Registrační povinnost plátce příjmu ze závislé činnosti Plátce daně, který je plátcem příjmu ze závislé činnosti, je povinen podat přihlášku k registraci k dani z příjmů fyzických nebo právnických osob u příslušného správce daně nejpozději do 8 dnů ode dne, kdy mu vznikla povinnost vykonávat tímto zákonem stanovené úkony plátce daně."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 39a",
-                    "text": "Registrační povinnost poplatníků daně z příjmů právnických osob Registrační povinnost poplatníků daně z příjmů právnických osob",
+                    "text": "Registrační povinnost poplatníků daně z příjmů právnických osob",
                     "subsections": [
                         {
                             "type": "subsection_level1",
@@ -20768,7 +20767,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 39p",
-                    "text": "Pravomoci vlády Pravomoci vlády Po vyhlášení stavu ohrožení státu nebo válečného stavu může vláda na dobu trvání stavu ohrožení státu nebo válečného stavu svým nařízením v nezbytném rozsahu pro zajištění nouzového nebo válečného státního rozpočtu",
+                    "text": "Pravomoci vlády Po vyhlášení stavu ohrožení státu nebo válečného stavu může vláda na dobu trvání stavu ohrožení státu nebo válečného stavu svým nařízením v nezbytném rozsahu pro zajištění nouzového nebo válečného státního rozpočtu",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -20785,7 +20784,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 39q",
-                    "text": "Pravomoci Ministerstva financí Pravomoci Ministerstva financí Ministerstvo financí může ve vztahu k zahraničí",
+                    "text": "Pravomoci Ministerstva financí Ministerstvo financí může ve vztahu k zahraničí",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -21035,12 +21034,12 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 41",
-                    "text": "Zrušují se: Zrušují se: 1.   zákon č. 76/1952 Sb., o dani ze mzdy, ve znění vládního nařízení č. 43/1953 Sb., vládního nařízení č. 112/1953 Sb., zákona č. 71/1957 Sb., zákona č. 101/1964 Sb., zákona č. 90/1968 Sb. a zákona č. 578/1991 Sb., 2.   § 8 zákona č. 88/1952 Sb., o materiálním zabezpečení příslušníků ozbrojených sil, 3.   zákon č. 36/1965 Sb., o dani z příjmů z literární a umělecké činnosti, ve znění zákona č. 160/1968 Sb. a zákona č. 578/1991 Sb., 4.   § 51 zákona č. 100/1970 Sb., o služebním poměru příslušníků Sboru národní bezpečnosti, 5.   zákon č. 172/1988 Sb., o zemědělské dani, ve znění zákona č. 157/1989 Sb., zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 6.   zákon č. 156/1989 Sb., o odvodech do státního rozpočtu, ve znění zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 7.   zákon č. 157/1989 Sb., o důchodové dani, ve znění zákona č. 108/1990 Sb., zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 8.   zákon č. 389/1990 Sb., o dani z příjmů obyvatelstva, ve znění zákona č. 578/1991 Sb., 9.   nařízení vlády České socialistické republiky č. 207/1989 Sb., o provádění odvodu ze zisku na základě finančního plánu, 10.  nařízení vlády České republiky č. 554/1991 Sb., o osvobození některých příjmů od daně z příjmů obyvatelstva a daňových úlevách pro začínající samostatně hospodařící rolníky, 11.  vyhláška federálního ministerstva financí, ministerstva financí České socialistické republiky a ministerstva financí Slovenské socialistické republiky č. 161/1976 Sb., kterou se provádí zákon o dani ze mzdy, ve znění vyhlášky č. 14/1982 Sb., vyhlášky č. 86/1984 Sb., vyhlášky č. 311/1990 Sb., vyhlášky č. 72/1991 Sb., zákona č. 578/1991 Sb. a vyhlášky č. 49/1992 Sb., 12.  vyhláška ministerstva financí č. 184/1968 Sb., k provedení zákona o dani z příjmů z literární a umělecké činnosti, ve znění vyhlášky č. 151/1980 Sb., vyhlášky č. 14/1982 Sb., vyhlášky č. 86/1984 Sb. a vyhlášky č. 7/1991 Sb., 13.  vyhláška federálního ministerstva financí č. 215/1988 Sb., kterou se provádí zákon o zemědělské dani, ve znění vyhlášky č. 559/1990 Sb., 14.  vyhláška federálního ministerstva financí č. 192/1989 Sb., kterou se provádí zákon o odvodech do státního rozpočtu, 15.  vyhláška federálního ministerstva financí č. 193/1989 Sb., kterou se provádí zákon o důchodové dani, ve znění vyhlášky č. 214/1990 Sb., 16.  vyhláška federálního ministerstva financí č. 211/1989 Sb., o financování některých zařízení společenské spotřeby a některých činností, 17.  vyhláška federálního ministerstva financí č. 586/1990 Sb., o odpisování základních prostředků, ve znění vyhlášky č. 345/1991 Sb., 18.  výnos ministerstva financí České socialistické republiky č. j. 153/39 337/71 o předkládání průkazů pro slevu na vyživované osoby u daně z příjmů z literární a umělecké činnosti a promíjení zmeškaných lhůt, registrovaný v částce 1/1972 Sb., 19.  výnos ministerstva financí České socialistické republiky č. j. 153/20 148/1972, kterým se vydává předpis „3 % daň z příjmů z literární a umělecké činnosti - postup při předkládání potvrzení“, registrovaný v částce 26/1972 Sb., 20.  výnos ministerstva financí České socialistické republiky č. j. 153/15 101/1974 o dani z příjmů z literární a umělecké činnosti u ročních příjmů pod 25 tis. Kčs, registrovaný v částce 14/1974 Sb., 21.  výnos ministerstva financí České socialistické republiky č. j. 153/25 508/1974 o postupu při předkládání potvrzení na 3 % daň z příjmů z literární a umělecké činnosti, registrovaný v částce 3/1975 Sb., 22.  výnos federálního ministerstva financí č. j. VI/1-7 718/1976 o výjimečném uznávání osob, u nichž došlo k zvýšení důchodů podle zákona č. 121/1975 Sb., o sociálním zabezpečení, za vyživované osoby pro účely daně ze mzdy, registrovaný v částce 10/1976 Sb., 23.  výnos federálního ministerstva financí č. j. VI/1-2 017/77 o zdaňování mezd vyplácených subjekty se sídlem v cizině za práci vykonávanou v ČSSR osobám, které se zde zdržují pouze dočasně, registrovaný v částce 9/1977 Sb., 24.  výnos federálního ministerstva financí č. j. VI/1-27 067/77 o posuzování hospodářského zabezpečení poskytovaného studujícím při cyklickém studiu na středních školách pro pracující u daně ze mzdy, registrovaný v částce 1/1978 Sb., 25.  výnos federálního ministerstva financí č. j. VI/1-8 762/78 „Odměny poskytované při udělení cen za vědeckou, technickou, uměleckou, publicistickou a jinou činnost; daň ze mzdy“, registrovaný v částce 15/1978 Sb., 26.  výnos federálního ministerstva financí č. j. VI/1-26 711/1978 o zdaňování náborových příspěvků poskytovaných pracovníkům v souvislosti s prováděním racionalizačních a organizačních opatření, registrovaný v částce 5/1979 Sb., 27.  výnos federálního ministerstva financí č. j. VI/1-4 537/79 - „Daňové posuzování hodnoty stravování a ubytování poskytovaného pracovníkům pionýrských táborů“, registrovaný v částce 11/1979 Sb., 28.  výnos federálního ministerstva financí č. j. VI/1-421/1981 o zdaňování odstupného vypláceného horníkům, registrovaný v částce 10/1981 Sb., 29.  výnos federálního ministerstva financí č. j. VI/1-584/82 o zvýšení hranice vlastního příjmu pro uznávání osob za vyživované podle výnosu o výjimečném uznávání osob, u nichž došlo ke zvýšení důchodu podle zákona č. 121/1975 Sb., o sociálním zabezpečení, za vyživované pro účely daně ze mzdy, registrovaný v částce 8/1982 Sb., 30.  výnos federálního ministerstva financí č. j. VI/1-12 836/82 o poskytování slev daně ze mzdy na zletilé děti, které se staly plně invalidní před dovršením věku rozhodného pro skončení povinné školní docházky, registrovaný v částce 3/1983 Sb., 31.  výnos federálního ministerstva financí č. j. VI/1-13 318/82 o zdaňování odměn za fotografické práce prováděné na základě dohod o pracích konaných mimo pracovní poměr, registrovaný v částce 3/1983 Sb., 32.  výnos federálního ministerstva financí č. j. V/1-3 776/83 o zdaňování odstupného poskytovaného horníkům, registrovaný v částce 14/1983 Sb., 33.  výnos federálního ministerstva financí č. j. V/1-21 317/84 o výjimečném uznávání vdov po účastních odboje a rodičů účastníka odboje, u nichž došlo ke zvýšení důchodu podle zákona č. 108/1984 Sb., o zvýšení některých nízkých důchodů a o dalších změnách v sociálním zabezpečení za vyživované osoby pro účely daně ze mzdy, registrovaný v částce 3/1985 Sb., 34.  výnos federálního ministerstva financí č. j. V/1-21 171/84 o daňovém posuzování zahraničních občanů zaměstnaných v československých organizacích na základě mezivládních dohod, registrovaný v částce 4/1985 Sb., 35.  výnos federálního ministerstva financí č. j. V/1-1 895/85 o daňovém posuzování příspěvků na úhradu za užívání družstevních bytů poskytovaných pracovníkům zemědělských organizací, registrovaný v částce 8/1985 Sb., 36.  výnos federálního ministerstva financí č. j. V/1-13 669/85 o zdaňování odměn za odběr a sběr biologického materiálu z lidského organismu na výrobu sér, očkovacích látek a léčiv a za odběr orgánů pro transplantaci, registrovaný v částce 26/1985 Sb., 37.  ustanovení § 7 odst. 8 výnosu federálního ministerstva financí č. j. III/3-10 780/86 a výnosu ministerstva financí ČSR č. j. 122/11 735/86 o poskytování příspěvků na úhradu za užívání družstevních bytů ve vymezeném území při západní hranici Československé socialistické republiky, registrovaného v částce 16/1986 Sb., 38.  výnos federálního ministerstva financí č. j. V/1-7 393/87 ze dne 15. 5. 1987 o prominutí důsledků opožděného předložení průkazu o počtu vyživovaných osob pro účely daně ze mzdy, registrovaný v částce 16/1987 Sb., 39.  výnos federálního ministerstva financí č. j. V/1-5 614/88 ze dne 29. dubna 1988 o daňovém posuzování zahraničních občanů v čs. organizacích, registrovaný v částce 12/1988 Sb., 40.  výnos federálního ministerstva financí č. j. II/4-19 752/88 ze dne 8. 12. 1988, kterým se osvobozují od daně ze mzdy věcné odměny poskytované pracovníkům v oblasti civilní obrany a branné výchovy, registrovaný v částce 47/1988 Sb., 41.  výnos federálního ministerstva financí č. j. II/4-22 067/89 ze dne 29. 12. 1989 o daňovém posuzování cestovních náhrad znalců za znalecké posudky o ceně staveb, pozemků, trvalých porostů a úhradách za zřízení práva osobního užívání pozemků, registrovaný v částce 40/1989 Sb., 42.  výnos federálního ministerstva financí č. j. II/1-18 039/1989, ministerstva financí, cena mezd ČSR č. j. 152/16 309/1989 a ministerstva financí, cen a mezd SSR č. j. 71/1 644/1989 o vymezení oprávnění finančních správ a národních výborů k povolování úlev na zemědělské dani a penále, registrovaný v částce 36/1989 Sb., 43.  výnos federálního ministerstva financí č. j. II/1-18 795/89, ministerstva financí, cen a mezd ČSR č. j. 152/23 286/89 a ministerstva financí, cen a mezd SSR č. j. 72/2 220/89 o vymezení oprávnění finančních správ a národních výborů k povolování úlev na odvodu ze zisku, důchodové dani a penále, registrovaný v částce 40/1989 Sb."
+                    "text": "Zrušují se: 1.   zákon č. 76/1952 Sb., o dani ze mzdy, ve znění vládního nařízení č. 43/1953 Sb., vládního nařízení č. 112/1953 Sb., zákona č. 71/1957 Sb., zákona č. 101/1964 Sb., zákona č. 90/1968 Sb. a zákona č. 578/1991 Sb., 2.   § 8 zákona č. 88/1952 Sb., o materiálním zabezpečení příslušníků ozbrojených sil, 3.   zákon č. 36/1965 Sb., o dani z příjmů z literární a umělecké činnosti, ve znění zákona č. 160/1968 Sb. a zákona č. 578/1991 Sb., 4.   § 51 zákona č. 100/1970 Sb., o služebním poměru příslušníků Sboru národní bezpečnosti, 5.   zákon č. 172/1988 Sb., o zemědělské dani, ve znění zákona č. 157/1989 Sb., zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 6.   zákon č. 156/1989 Sb., o odvodech do státního rozpočtu, ve znění zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 7.   zákon č. 157/1989 Sb., o důchodové dani, ve znění zákona č. 108/1990 Sb., zákona č. 574/1990 Sb. a zákona č. 578/1991 Sb., 8.   zákon č. 389/1990 Sb., o dani z příjmů obyvatelstva, ve znění zákona č. 578/1991 Sb., 9.   nařízení vlády České socialistické republiky č. 207/1989 Sb., o provádění odvodu ze zisku na základě finančního plánu, 10.  nařízení vlády České republiky č. 554/1991 Sb., o osvobození některých příjmů od daně z příjmů obyvatelstva a daňových úlevách pro začínající samostatně hospodařící rolníky, 11.  vyhláška federálního ministerstva financí, ministerstva financí České socialistické republiky a ministerstva financí Slovenské socialistické republiky č. 161/1976 Sb., kterou se provádí zákon o dani ze mzdy, ve znění vyhlášky č. 14/1982 Sb., vyhlášky č. 86/1984 Sb., vyhlášky č. 311/1990 Sb., vyhlášky č. 72/1991 Sb., zákona č. 578/1991 Sb. a vyhlášky č. 49/1992 Sb., 12.  vyhláška ministerstva financí č. 184/1968 Sb., k provedení zákona o dani z příjmů z literární a umělecké činnosti, ve znění vyhlášky č. 151/1980 Sb., vyhlášky č. 14/1982 Sb., vyhlášky č. 86/1984 Sb. a vyhlášky č. 7/1991 Sb., 13.  vyhláška federálního ministerstva financí č. 215/1988 Sb., kterou se provádí zákon o zemědělské dani, ve znění vyhlášky č. 559/1990 Sb., 14.  vyhláška federálního ministerstva financí č. 192/1989 Sb., kterou se provádí zákon o odvodech do státního rozpočtu, 15.  vyhláška federálního ministerstva financí č. 193/1989 Sb., kterou se provádí zákon o důchodové dani, ve znění vyhlášky č. 214/1990 Sb., 16.  vyhláška federálního ministerstva financí č. 211/1989 Sb., o financování některých zařízení společenské spotřeby a některých činností, 17.  vyhláška federálního ministerstva financí č. 586/1990 Sb., o odpisování základních prostředků, ve znění vyhlášky č. 345/1991 Sb., 18.  výnos ministerstva financí České socialistické republiky č. j. 153/39 337/71 o předkládání průkazů pro slevu na vyživované osoby u daně z příjmů z literární a umělecké činnosti a promíjení zmeškaných lhůt, registrovaný v částce 1/1972 Sb., 19.  výnos ministerstva financí České socialistické republiky č. j. 153/20 148/1972, kterým se vydává předpis „3 % daň z příjmů z literární a umělecké činnosti - postup při předkládání potvrzení“, registrovaný v částce 26/1972 Sb., 20.  výnos ministerstva financí České socialistické republiky č. j. 153/15 101/1974 o dani z příjmů z literární a umělecké činnosti u ročních příjmů pod 25 tis. Kčs, registrovaný v částce 14/1974 Sb., 21.  výnos ministerstva financí České socialistické republiky č. j. 153/25 508/1974 o postupu při předkládání potvrzení na 3 % daň z příjmů z literární a umělecké činnosti, registrovaný v částce 3/1975 Sb., 22.  výnos federálního ministerstva financí č. j. VI/1-7 718/1976 o výjimečném uznávání osob, u nichž došlo k zvýšení důchodů podle zákona č. 121/1975 Sb., o sociálním zabezpečení, za vyživované osoby pro účely daně ze mzdy, registrovaný v částce 10/1976 Sb., 23.  výnos federálního ministerstva financí č. j. VI/1-2 017/77 o zdaňování mezd vyplácených subjekty se sídlem v cizině za práci vykonávanou v ČSSR osobám, které se zde zdržují pouze dočasně, registrovaný v částce 9/1977 Sb., 24.  výnos federálního ministerstva financí č. j. VI/1-27 067/77 o posuzování hospodářského zabezpečení poskytovaného studujícím při cyklickém studiu na středních školách pro pracující u daně ze mzdy, registrovaný v částce 1/1978 Sb., 25.  výnos federálního ministerstva financí č. j. VI/1-8 762/78 „Odměny poskytované při udělení cen za vědeckou, technickou, uměleckou, publicistickou a jinou činnost; daň ze mzdy“, registrovaný v částce 15/1978 Sb., 26.  výnos federálního ministerstva financí č. j. VI/1-26 711/1978 o zdaňování náborových příspěvků poskytovaných pracovníkům v souvislosti s prováděním racionalizačních a organizačních opatření, registrovaný v částce 5/1979 Sb., 27.  výnos federálního ministerstva financí č. j. VI/1-4 537/79 - „Daňové posuzování hodnoty stravování a ubytování poskytovaného pracovníkům pionýrských táborů“, registrovaný v částce 11/1979 Sb., 28.  výnos federálního ministerstva financí č. j. VI/1-421/1981 o zdaňování odstupného vypláceného horníkům, registrovaný v částce 10/1981 Sb., 29.  výnos federálního ministerstva financí č. j. VI/1-584/82 o zvýšení hranice vlastního příjmu pro uznávání osob za vyživované podle výnosu o výjimečném uznávání osob, u nichž došlo ke zvýšení důchodu podle zákona č. 121/1975 Sb., o sociálním zabezpečení, za vyživované pro účely daně ze mzdy, registrovaný v částce 8/1982 Sb., 30.  výnos federálního ministerstva financí č. j. VI/1-12 836/82 o poskytování slev daně ze mzdy na zletilé děti, které se staly plně invalidní před dovršením věku rozhodného pro skončení povinné školní docházky, registrovaný v částce 3/1983 Sb., 31.  výnos federálního ministerstva financí č. j. VI/1-13 318/82 o zdaňování odměn za fotografické práce prováděné na základě dohod o pracích konaných mimo pracovní poměr, registrovaný v částce 3/1983 Sb., 32.  výnos federálního ministerstva financí č. j. V/1-3 776/83 o zdaňování odstupného poskytovaného horníkům, registrovaný v částce 14/1983 Sb., 33.  výnos federálního ministerstva financí č. j. V/1-21 317/84 o výjimečném uznávání vdov po účastních odboje a rodičů účastníka odboje, u nichž došlo ke zvýšení důchodu podle zákona č. 108/1984 Sb., o zvýšení některých nízkých důchodů a o dalších změnách v sociálním zabezpečení za vyživované osoby pro účely daně ze mzdy, registrovaný v částce 3/1985 Sb., 34.  výnos federálního ministerstva financí č. j. V/1-21 171/84 o daňovém posuzování zahraničních občanů zaměstnaných v československých organizacích na základě mezivládních dohod, registrovaný v částce 4/1985 Sb., 35.  výnos federálního ministerstva financí č. j. V/1-1 895/85 o daňovém posuzování příspěvků na úhradu za užívání družstevních bytů poskytovaných pracovníkům zemědělských organizací, registrovaný v částce 8/1985 Sb., 36.  výnos federálního ministerstva financí č. j. V/1-13 669/85 o zdaňování odměn za odběr a sběr biologického materiálu z lidského organismu na výrobu sér, očkovacích látek a léčiv a za odběr orgánů pro transplantaci, registrovaný v částce 26/1985 Sb., 37.  ustanovení § 7 odst. 8 výnosu federálního ministerstva financí č. j. III/3-10 780/86 a výnosu ministerstva financí ČSR č. j. 122/11 735/86 o poskytování příspěvků na úhradu za užívání družstevních bytů ve vymezeném území při západní hranici Československé socialistické republiky, registrovaného v částce 16/1986 Sb., 38.  výnos federálního ministerstva financí č. j. V/1-7 393/87 ze dne 15. 5. 1987 o prominutí důsledků opožděného předložení průkazu o počtu vyživovaných osob pro účely daně ze mzdy, registrovaný v částce 16/1987 Sb., 39.  výnos federálního ministerstva financí č. j. V/1-5 614/88 ze dne 29. dubna 1988 o daňovém posuzování zahraničních občanů v čs. organizacích, registrovaný v částce 12/1988 Sb., 40.  výnos federálního ministerstva financí č. j. II/4-19 752/88 ze dne 8. 12. 1988, kterým se osvobozují od daně ze mzdy věcné odměny poskytované pracovníkům v oblasti civilní obrany a branné výchovy, registrovaný v částce 47/1988 Sb., 41.  výnos federálního ministerstva financí č. j. II/4-22 067/89 ze dne 29. 12. 1989 o daňovém posuzování cestovních náhrad znalců za znalecké posudky o ceně staveb, pozemků, trvalých porostů a úhradách za zřízení práva osobního užívání pozemků, registrovaný v částce 40/1989 Sb., 42.  výnos federálního ministerstva financí č. j. II/1-18 039/1989, ministerstva financí, cena mezd ČSR č. j. 152/16 309/1989 a ministerstva financí, cen a mezd SSR č. j. 71/1 644/1989 o vymezení oprávnění finančních správ a národních výborů k povolování úlev na zemědělské dani a penále, registrovaný v částce 36/1989 Sb., 43.  výnos federálního ministerstva financí č. j. II/1-18 795/89, ministerstva financí, cen a mezd ČSR č. j. 152/23 286/89 a ministerstva financí, cen a mezd SSR č. j. 72/2 220/89 o vymezení oprávnění finančních správ a národních výborů k povolování úlev na odvodu ze zisku, důchodové dani a penále, registrovaný v částce 40/1989 Sb."
                 },
                 {
                     "type": "paragraph",
                     "identifier": "§ 42",
-                    "text": "Účinnost Účinnost Tento zákon nabývá účinnosti dnem 1. ledna 1993. Uhde v. r. Klaus v. r. Příloha č. 1 k zákonu č. 586/1992 Sb. Třídění hmotného majetku do odpisových skupin Položka+) CZ-CPA++) (1-1) 01.4 (1-2) 01.4 (1-3) 01.43.10 (1-4) 01.45.11 (1-5) 01.45.12 (1-6) 01.46.10 (1-7) 01.46.10 (1-8) 01.47.13 (1-9) 01.47.13 (1-10) 22.29.25 (1-11) 23.19.23 (1-12) 23.44.11 (1-13) 23.91.11 (1-14) 25.73 (1-15) 26.20 (1-16) 26.30.11 (1-17) 26.30.12 (1-18) 26.30.13 (1-19) 26.30.2 (1-20) 26.40.44 (1-21) 26.51 (1-22) 27.90.11 (1-23) 28.23 (1-24) 28.24 (1-25) 28.30.34 (1-26) 28.30.60 (1-27) 28.30.70 (1-28) 28.30.86 (1-29) 28.99.39 (1-30) 29.10.52 (1-31) 30.20.33 (1-32) 30.92.10 (1-33) 32.50.21 (1-34) 32.99.11 (1-35) 32.99.53 (1-36) 32.99.55 Položka+) CZ-CPA++) CZ-CC+++) (2-1) 01.43.10 (2-2) 13.92.2 (2-3) 13.93.1 (2-4) 13.94.1 (2-5) 13.96.16 (2-6) 15.12.1 (2-7) 16.23.20 (2-8) 22.23.20 (2-9) 22.29 (2-10) 25.11.23 (2-11) 25.40.12 (2-12) 25.71.1 (2-13) 25.72.1 (2-14) 25.73.60 (2-15) 25.91 (2-16) 25.92 (2-17) 25.93.1 (2-18) 26.20.17 (2-19) 26.30.1 (2-20) 26.30.40 (2-21) 26.30.5 (2-22) 26.40 (2-23) 26.51.3 (2-24) 26.52 (2-25) 26.60.1 (2-26) 26.70 (2-27) 27.11.31 (2-28) 27.11.32 (2-29) 27.11.50 (2-30) 27.12 (2-31) 27.12.31 (2-32) 27.2 (2-33) 27.31.12 (2-34) 27.40 (2-35) 27.51.15 (2-36) 27.52 (2-37) 27.90 (2-38) 28.11.11 (2-39) 28.12 (2-40) 28.13.1 (2-41) 28.13.21 (2-42) 28.21.1 (2-43) 28.22.14 (2-44) 28.22.15 (2-45) 27.51 (2-46) 28.25.11 (2-47) 28.25.13 (2-48) 28.29.11 (2-49) 28.29.12 (2-50) 28.29.2 (2-51) 28.29.3 (2-52) 28.29.41 (2-53) 28.29.42 (2-54) 28.29.43 (2-55) 28.29.50 (2-56) 28.29.60 (2-57) 28.30 (2-58) 28.4. (2-59) 28.9 (2-60) 28.96.10 (2-61) 28.99.1 (2-62) 28.99.20 (2-63) 28.99.31 (2-64) 28.99.32 (2-65) 29.10.2 (2-66) 29.10.30 (2-67) 29.10.4 (2-68) 29.10.5 (2-69) 29.20.2 (2-70) 29.31.22 (2-71) 30.12 (2-72) 30.30 (2-73) 30.91.1 (2-74) 30.92.20 (2-75) 30.99.10 (2-76) 31.0 (2-77) 32.2 (2-78) 32.3 (2-79) 32.40.4 (2-80) 32.50 (2-81) 58.11.1 (2-82) Položka+) CZ-CPA++) CZ-CC+++) (3-1) 127113 (3-2) 242061 (3-3) 23.61.20 (3-4) 230341 (3-5) 25.11.10 (3-6) 25.11.21 (3-7) 25.11.22 (3-8) 25.11.23 (3-9) 25.21.12 (3-10) 25.29.1 (3-11) 25.30 (3-12) 25.71.15 (3-13) 25.99.21 (3-14) 25.99.22 (3-15) 25.99.24 (3-16) 25.99.29 (3-17) 27.11 (3-18) 27.12. (3-19) 27.90.5 (3-20) 28.11.12 (3-21) 28.11.13 (3-22) 28.11.2 (3-23) 28.12.1 (3-24) 28.13.2 (3-25) 28.21.1 (3-26) 28.22.11 (3-27) 28.22.12 (3-28) 28.22.13 (3-29) 28.22.14 (3-30) 28.22.16 (3-31) 28.22.17 (3-32) 28.22.18 (3-33) 28.25.11 (3-34) 28.25.12 (3-35) 28.25.14 (3-36) 28.25.20 (3-37) 28.29.1 (3-38) 28.91.11 (3-39) 28.92.2 (3-40) 28.95.11 (3-41) 30.11 (3-42) 30.20 (3-43) 30.30 (3-44) Položka+) CZ-CC+++) (4-1) 1 (4-2) 1,2 (4-3) 1,2 (4-4) 125112 (4-5) 125222 (4-6) 127122 (4-7) 212121 (4-8) 212122 (4-9) 212123 (4-10) 212124 (4-11) 212221 (4-12) 212229 (4-13) 221 (4-14) 222 (4-15) 230 (4-16) 2302 (4-17) 230351 (4-18) 230451 (4-19) 241131 (4-20) 242052 (4-21) 242062 (4-22) - Položka+) CZ-CC+++) (5-1) 1 (5-2) 211 (5-3) 212111 (5-4) 212211 (5-5) 2130 (5-6) 2141 (5-7) 2142 (5-8) 2151 (5-9) 2152 (5-10) 2153 (5-11) 221141 (5-12) 221232 (5-13) 221241 (5-14) 221279 (5-15) 222232 (5-16) 222251 (5-17) 222252 (5-18) 222253 (5-19) 222332 (5-20) 222321 (5-21) 222479 (5-22) 230131 (5-23) 230132 (5-24) 230121 (5-25) 230151 (5-26) 230171 (5-27) 230279 (5-28) 230311 (5-29) 230318 (5-30) 230349 (5-31) 230411 (5-32) 230418 (5-33) 230449 (5-34) 230479 (5-35) 230471 (5-36) 241 (5-37) 2420 (5-38) 230379 (5-39) - Položka+) CZ-CC+++) (6-1) 121111 (6-2) 122 (6-3) 123011 (6-4) 123079 (6-5) 1261 (6-6) 1262 (6-7) 1272 (6-8) 1273 (6-9) Vysvětlivky: +) Položka = kód odpisové skupiny (1 až 6) a pořadové číslo. ++) CZ-CPA = kód „Klasifikace produkce (CZ-CPA)“ zavedené sdělením Českého statistického úřadu č. 275/2008 Sb., o zavedení Klasifikace produkce (CZ-CPA). Pro konkrétní obsahové vymezení náplně položky odpisové skupiny, je-li dále uvedený „Název“ s ohledem na stručnost textace definován jinak, je rozhodující stanovená položka CZ-CPA. +++) CZ-CC = kód „Klasifikace stavebních děl (CZ-CC)“ zavedené sdělením Českého statistického úřadu č. 321/2003 Sb., o zavedení Klasifikace stavebních děl CZ-CC. ++++) Název = Stručné označení majetku upřesněné pro účely hmotného majetku (např. vypuštění slov „díly“, „instalace“, „opravy a údržba“) s převážným použitím textace klasifikace CZ-CPA a CZ-CC. Název položky přílohy č. 1 může vymezovat i užší množinu majetku oproti textovému označení kódu Klasifikace produkce, například vymezení rozsahu majetku v názvu položky výčtem uvozeným slovem „Jen:“. +++++) Nedílnou součástí domů, budov a staveb (stavebních děl) jsou zařízení a předměty, které z hlediska stavebního díla umožňují jeho funkci a účel, ke kterému je určeno. Takováto zařízení a předměty musí být se stavebním dílem pevně spojena a nelze je demontovat, aniž by došlo ke znehodnocení funkce a účelu stavebního díla, a jsou zpravidla součástí celkové dodávky stavebního díla. ++++++) Oplocení a vnější osvětlovací sítě budov a staveb jsou odpisovány samostatně v odpisové skupině 4. +++++++) Nevztahuje se na budovy a stavby ze dřeva a plastů uvedené v odpisové skupině 4. Příloha č. 2 k zákonu č. 586/1992 Sb. Postup při přechodu z vedení účetnictví na daňovou evidenci z hlediska daně z příjmů fyzických osob Při přechodu z vedení účetnictví na daňovou evidenci, je v návaznosti na zvláštní právní předpisy20) postup pro účely zákona tento: 1.   Pohledávky a dluhy za kalendářní (hospodářský) rok, v němž poplatník vedl účetnictví, se vyloučí ze základu daně kalendářního roku, ve kterém poplatník zahájí vedení daňové evidence",
+                    "text": "Účinnost Tento zákon nabývá účinnosti dnem 1. ledna 1993. Uhde v. r. Klaus v. r. Příloha č. 1 k zákonu č. 586/1992 Sb. Třídění hmotného majetku do odpisových skupin Položka+) CZ-CPA++) (1-1) 01.4 (1-2) 01.4 (1-3) 01.43.10 (1-4) 01.45.11 (1-5) 01.45.12 (1-6) 01.46.10 (1-7) 01.46.10 (1-8) 01.47.13 (1-9) 01.47.13 (1-10) 22.29.25 (1-11) 23.19.23 (1-12) 23.44.11 (1-13) 23.91.11 (1-14) 25.73 (1-15) 26.20 (1-16) 26.30.11 (1-17) 26.30.12 (1-18) 26.30.13 (1-19) 26.30.2 (1-20) 26.40.44 (1-21) 26.51 (1-22) 27.90.11 (1-23) 28.23 (1-24) 28.24 (1-25) 28.30.34 (1-26) 28.30.60 (1-27) 28.30.70 (1-28) 28.30.86 (1-29) 28.99.39 (1-30) 29.10.52 (1-31) 30.20.33 (1-32) 30.92.10 (1-33) 32.50.21 (1-34) 32.99.11 (1-35) 32.99.53 (1-36) 32.99.55 Položka+) CZ-CPA++) CZ-CC+++) (2-1) 01.43.10 (2-2) 13.92.2 (2-3) 13.93.1 (2-4) 13.94.1 (2-5) 13.96.16 (2-6) 15.12.1 (2-7) 16.23.20 (2-8) 22.23.20 (2-9) 22.29 (2-10) 25.11.23 (2-11) 25.40.12 (2-12) 25.71.1 (2-13) 25.72.1 (2-14) 25.73.60 (2-15) 25.91 (2-16) 25.92 (2-17) 25.93.1 (2-18) 26.20.17 (2-19) 26.30.1 (2-20) 26.30.40 (2-21) 26.30.5 (2-22) 26.40 (2-23) 26.51.3 (2-24) 26.52 (2-25) 26.60.1 (2-26) 26.70 (2-27) 27.11.31 (2-28) 27.11.32 (2-29) 27.11.50 (2-30) 27.12 (2-31) 27.12.31 (2-32) 27.2 (2-33) 27.31.12 (2-34) 27.40 (2-35) 27.51.15 (2-36) 27.52 (2-37) 27.90 (2-38) 28.11.11 (2-39) 28.12 (2-40) 28.13.1 (2-41) 28.13.21 (2-42) 28.21.1 (2-43) 28.22.14 (2-44) 28.22.15 (2-45) 27.51 (2-46) 28.25.11 (2-47) 28.25.13 (2-48) 28.29.11 (2-49) 28.29.12 (2-50) 28.29.2 (2-51) 28.29.3 (2-52) 28.29.41 (2-53) 28.29.42 (2-54) 28.29.43 (2-55) 28.29.50 (2-56) 28.29.60 (2-57) 28.30 (2-58) 28.4. (2-59) 28.9 (2-60) 28.96.10 (2-61) 28.99.1 (2-62) 28.99.20 (2-63) 28.99.31 (2-64) 28.99.32 (2-65) 29.10.2 (2-66) 29.10.30 (2-67) 29.10.4 (2-68) 29.10.5 (2-69) 29.20.2 (2-70) 29.31.22 (2-71) 30.12 (2-72) 30.30 (2-73) 30.91.1 (2-74) 30.92.20 (2-75) 30.99.10 (2-76) 31.0 (2-77) 32.2 (2-78) 32.3 (2-79) 32.40.4 (2-80) 32.50 (2-81) 58.11.1 (2-82) Položka+) CZ-CPA++) CZ-CC+++) (3-1) 127113 (3-2) 242061 (3-3) 23.61.20 (3-4) 230341 (3-5) 25.11.10 (3-6) 25.11.21 (3-7) 25.11.22 (3-8) 25.11.23 (3-9) 25.21.12 (3-10) 25.29.1 (3-11) 25.30 (3-12) 25.71.15 (3-13) 25.99.21 (3-14) 25.99.22 (3-15) 25.99.24 (3-16) 25.99.29 (3-17) 27.11 (3-18) 27.12. (3-19) 27.90.5 (3-20) 28.11.12 (3-21) 28.11.13 (3-22) 28.11.2 (3-23) 28.12.1 (3-24) 28.13.2 (3-25) 28.21.1 (3-26) 28.22.11 (3-27) 28.22.12 (3-28) 28.22.13 (3-29) 28.22.14 (3-30) 28.22.16 (3-31) 28.22.17 (3-32) 28.22.18 (3-33) 28.25.11 (3-34) 28.25.12 (3-35) 28.25.14 (3-36) 28.25.20 (3-37) 28.29.1 (3-38) 28.91.11 (3-39) 28.92.2 (3-40) 28.95.11 (3-41) 30.11 (3-42) 30.20 (3-43) 30.30 (3-44) Položka+) CZ-CC+++) (4-1) 1 (4-2) 1,2 (4-3) 1,2 (4-4) 125112 (4-5) 125222 (4-6) 127122 (4-7) 212121 (4-8) 212122 (4-9) 212123 (4-10) 212124 (4-11) 212221 (4-12) 212229 (4-13) 221 (4-14) 222 (4-15) 230 (4-16) 2302 (4-17) 230351 (4-18) 230451 (4-19) 241131 (4-20) 242052 (4-21) 242062 (4-22) - Položka+) CZ-CC+++) (5-1) 1 (5-2) 211 (5-3) 212111 (5-4) 212211 (5-5) 2130 (5-6) 2141 (5-7) 2142 (5-8) 2151 (5-9) 2152 (5-10) 2153 (5-11) 221141 (5-12) 221232 (5-13) 221241 (5-14) 221279 (5-15) 222232 (5-16) 222251 (5-17) 222252 (5-18) 222253 (5-19) 222332 (5-20) 222321 (5-21) 222479 (5-22) 230131 (5-23) 230132 (5-24) 230121 (5-25) 230151 (5-26) 230171 (5-27) 230279 (5-28) 230311 (5-29) 230318 (5-30) 230349 (5-31) 230411 (5-32) 230418 (5-33) 230449 (5-34) 230479 (5-35) 230471 (5-36) 241 (5-37) 2420 (5-38) 230379 (5-39) - Položka+) CZ-CC+++) (6-1) 121111 (6-2) 122 (6-3) 123011 (6-4) 123079 (6-5) 1261 (6-6) 1262 (6-7) 1272 (6-8) 1273 (6-9) Vysvětlivky: +) Položka = kód odpisové skupiny (1 až 6) a pořadové číslo. ++) CZ-CPA = kód „Klasifikace produkce (CZ-CPA)“ zavedené sdělením Českého statistického úřadu č. 275/2008 Sb., o zavedení Klasifikace produkce (CZ-CPA). Pro konkrétní obsahové vymezení náplně položky odpisové skupiny, je-li dále uvedený „Název“ s ohledem na stručnost textace definován jinak, je rozhodující stanovená položka CZ-CPA. +++) CZ-CC = kód „Klasifikace stavebních děl (CZ-CC)“ zavedené sdělením Českého statistického úřadu č. 321/2003 Sb., o zavedení Klasifikace stavebních děl CZ-CC. ++++) Název = Stručné označení majetku upřesněné pro účely hmotného majetku (např. vypuštění slov „díly“, „instalace“, „opravy a údržba“) s převážným použitím textace klasifikace CZ-CPA a CZ-CC. Název položky přílohy č. 1 může vymezovat i užší množinu majetku oproti textovému označení kódu Klasifikace produkce, například vymezení rozsahu majetku v názvu položky výčtem uvozeným slovem „Jen:“. +++++) Nedílnou součástí domů, budov a staveb (stavebních děl) jsou zařízení a předměty, které z hlediska stavebního díla umožňují jeho funkci a účel, ke kterému je určeno. Takováto zařízení a předměty musí být se stavebním dílem pevně spojena a nelze je demontovat, aniž by došlo ke znehodnocení funkce a účelu stavebního díla, a jsou zpravidla součástí celkové dodávky stavebního díla. ++++++) Oplocení a vnější osvětlovací sítě budov a staveb jsou odpisovány samostatně v odpisové skupině 4. +++++++) Nevztahuje se na budovy a stavby ze dřeva a plastů uvedené v odpisové skupině 4. Příloha č. 2 k zákonu č. 586/1992 Sb. Postup při přechodu z vedení účetnictví na daňovou evidenci z hlediska daně z příjmů fyzických osob Při přechodu z vedení účetnictví na daňovou evidenci, je v návaznosti na zvláštní právní předpisy20) postup pro účely zákona tento: 1.   Pohledávky a dluhy za kalendářní (hospodářský) rok, v němž poplatník vedl účetnictví, se vyloučí ze základu daně kalendářního roku, ve kterém poplatník zahájí vedení daňové evidence",
                     "subsections": [
                         {
                             "type": "subsection_level2",
@@ -21057,7 +21056,7 @@
                 {
                     "type": "paragraph",
                     "identifier": "§ 119",
-                    "text": "a násl. zákona č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon). 64)  § 57b zákona č. 133/1985 Sb., o požární ochraně, ve znění zákona č. 163/1998 Sb. 64)  Zákon č. 42/1992 Sb., ve znění pozdějších předpisů. Zákon č. 229/1991 Sb., ve znění pozdějších předpisů. 66)  § 8 odst. 3, § 9 odst. 3 a § 9b odst. 2 zákona č. 328/1991 Sb., o konkursu a vyrovnání, ve znění pozdějších předpisů. 67)  Zákon č. 72/2000 Sb., o investičních pobídkách a o změně některých zákonů (zákon o investičních pobídkách). 78)  Vyhláška č. 102/1995 Sb., o schvalování technické způsobilosti a technických podmínkách provozu silničních vozidel na pozemních komunikacích, ve znění pozdějších předpisů. 79)  Zákon č. 151/2000 Sb., o telekomunikacích a o změně dalších zákonů. 80)  § 81 zákona č. 435/2004 Sb., o zaměstnanosti. 85)  § 14 zákona č. 458/2000 Sb., o podmínkách podnikání a o výkonu státní správy v energetických odvětvích a o změně některých zákonů (energetický zákon). 87)  Zákon č. 139/2002 Sb., o pozemkových úpravách a pozemkových úřadech a o změně zákona č. 229/1991 Sb., o úpravě vlastnických vztahů k půdě a jinému zemědělskému majetku, ve znění pozdějších předpisů, ve znění zákona č. 309/2002 Sb. 93)  Směrnice Rady 2011/96/EU. Směrnice Rady 2009/133/ES. Směrnice Rady 2003/49/ES. 99)  Sdělení Českého statistického úřadu č. 321/2003 Sb., k zavedení Klasifikace stavebních děl CZ-CC. 104)  Směrnice Rady 2003/48/ES ze dne 3. června 2003 o zdanění příjmů z úspor v podobě úrokových plateb, ve znění směrnice Rady 2004/66/ES, rozhodnutí Rady 2004/587/ES a směrnice Rady 2006/98/ES. 106)  Zákon č. 676/2004 Sb., o povinném značení lihu a o změně zákona č. 586/1992 Sb., o daních z příjmů, ve znění pozdějších předpisů. 109)  Zákon č. 21/1992 Sb., o bankách, ve znění pozdějších předpisů. Zákon č. 6/1993 Sb., o České národní bance, ve znění pozdějších předpisů. 114)  Zákon č. 123/2000 Sb., o zdravotnických prostředcích, ve znění pozdějších předpisů. 122)  Nařízení vlády č. 178/2001 Sb., kterým se stanoví podmínky ochrany zdraví zaměstnanců při práci, ve znění pozdějších předpisů. 125)  Zákon č. 427/1990 Sb., o převodech vlastnictví státu k některým věcem na jiné právnické nebo fyzické osoby, ve znění pozdějších předpisů. Zákon č. 500/1990 Sb., o působnosti orgánů České republiky ve věcech převodů vlastnictví státu k některým věcem na jiné právnické nebo fyzické osoby, ve znění pozdějších předpisů. Zákon č. 178/2005 Sb., o zrušení Fondu národního majetku České republiky a o působnosti Ministerstva financí při privatizaci majetku České republiky (zákon o zrušení Fondu národ­ ního majetku), ve znění pozdějších předpisů. 126)  Nařízení ES č. 1606/2002 Evropského parlamentu a Rady ze dne 19. července 2002 o používání Mezinárodních účetních standardů. 127)  Zákon č. 182/2006 Sb., o úpadku a způsobech jeho řešení (insolvenční zákon), ve znění pozdějších předpisů. 128)  Zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. Zákon č. 110/1997 Sb., o potravinách a tabákových výrobcích a o změně některých souvisejících zákonů, ve znění pozdějších předpisů. 130)  § 12 odst. 1 písm. c) zákona č. 117/1995 Sb., o státní sociální podpoře, ve znění pozdějších předpisů. 131)  Zákon č. 125/2008 Sb., o přeměnách obchodních společností a družstev. 132)  Například § 230 zákoníku práce. 133)  Zákon č. 435/2004 Sb., o zaměstnanosti. 136)  Nařízení Evropského parlamentu a Rady (ES) č. 883/2004 o koordinaci systémů sociálního zabezpečení, v platném znění. 137)  Směrnice Rady 2011/96/EU ze dne 30. listopadu 2011 o společném systému zdanění mateřských a dceřiných společností z různých členských států (přepracované znění), ve znění směr­ nice Rady 2013/13/EU, směrnice Rady 2014/86/EU a směrnice Rady 2015/121/EU. Směrnice Rady 2009/133/ES ze dne 19. října 2009 o společném systému zdanění při fúzích, rozděleních, částečných rozděleních, převodech aktiv a výměně akcií týkajících se společností z různých členských států a při přemístění sídla evropské společnosti nebo evropské družstevní společnosti mezi členskými státy (kodifikované znění), ve znění směrnice Rady 2013/13/EU. Směrnice Rady 2003/49/ES ze dne 3. června 2003 o společném systému zdanění úroků a licenčních poplatků mezi přidruženými společnostmi z různých členských států, ve znění směrnice Rady 2004/66/ES, směrnice Rady 2004/76/ES, směrnice Rady 2006/98/ES a směrnice Rady 2013/13/EU. Směrnice Rady 2003/48/ES ze dne 3. června 2003 o zdanění příjmů z úspor v podobě úrokových plateb, ve znění směrnice Rady 2004/66/ES, rozhodnutí Rady 2004/587/ES, směrnice Rady 2006/98/ES a směrnice Rady 2014/48/EU. Směrnice Rady 2016/1164/EU ze dne 12. července 2016, kterou se stanoví pravidla proti praktikám vyhýbání se daňovým povinnostem, které mají přímý vliv na fungování vnitřního trhu, ve znění směrnice Rady 2017/952/EU. 138)  Zákon č. 236/1995 Sb., o platu a dalších náležitostech spojených s výkonem funkce představitelů státní moci a některých státních orgánů a soudců a poslanců Evropského parlamentu, ve znění pozdějších předpisů. 139)  Zákon č. 455/1991 Sb., živnostenský zákon, ve znění pozdějších předpisů. 140)  Nařízení Komise 2017/1986 ze dne 31. října 2017, kterým se mění nařízení (ES) č. 1126/2008, kterým se přijímají některé mezinárodní účetní standardy v souladu s nařízením Evropské­ ho parlamentu a Rady (ES) č. 1606/2002, pokud jde o mezinárodní standard účetního výkaznictví 16. 141)  Směrnice Rady 2010/24/EU ze dne 16. března 2010 o vzájemné pomoci při vymáhání pohledávek vyplývajících z daní, poplatků, cel a jiných opatření. 142)  Nařízení Evropského parlamentu a Rady (EU) 2018/858 ze dne 30. května 2018 o schvalování motorových vozidel a jejich přípojných vozidel, jakož i systémů, konstrukčních částí a samostatných technických celků určených pro tato vozidla a o dozoru nad trhem s nimi, o změně nařízení (ES) č. 715/2007 a č. 595/2009 a o zrušení směrnice 2007/46/ES, v platném znění."
+                    "text": "a násl. zákona č. 183/2006 Sb., o územním plánování a stavebním řádu (stavební zákon). 64)  § 57b zákona č. 133/1985 Sb., o požární ochraně, ve znění zákona č. 163/1998 Sb. 64)  § 57b zákona č. 133/1985 Sb., o požární ochraně, ve znění zákona č. 163/1998 Sb. 64)  Zákon č. 42/1992 Sb., ve znění pozdějších předpisů. Zákon č. 229/1991 Sb., ve znění pozdějších předpisů. 66)  § 8 odst. 3, § 9 odst. 3 a § 9b odst. 2 zákona č. 328/1991 Sb., o konkursu a vyrovnání, ve znění pozdějších předpisů. 67)  Zákon č. 72/2000 Sb., o investičních pobídkách a o změně některých zákonů (zákon o investičních pobídkách). 78)  Vyhláška č. 102/1995 Sb., o schvalování technické způsobilosti a technických podmínkách provozu silničních vozidel na pozemních komunikacích, ve znění pozdějších předpisů. 79)  Zákon č. 151/2000 Sb., o telekomunikacích a o změně dalších zákonů. 80)  § 81 zákona č. 435/2004 Sb., o zaměstnanosti. 85)  § 14 zákona č. 458/2000 Sb., o podmínkách podnikání a o výkonu státní správy v energetických odvětvích a o změně některých zákonů (energetický zákon). 87)  Zákon č. 139/2002 Sb., o pozemkových úpravách a pozemkových úřadech a o změně zákona č. 229/1991 Sb., o úpravě vlastnických vztahů k půdě a jinému zemědělskému majetku, ve znění pozdějších předpisů, ve znění zákona č. 309/2002 Sb. 93)  Směrnice Rady 2011/96/EU. Směrnice Rady 2009/133/ES. Směrnice Rady 2003/49/ES. 99)  Sdělení Českého statistického úřadu č. 321/2003 Sb., k zavedení Klasifikace stavebních děl CZ-CC. 104)  Směrnice Rady 2003/48/ES ze dne 3. června 2003 o zdanění příjmů z úspor v podobě úrokových plateb, ve znění směrnice Rady 2004/66/ES, rozhodnutí Rady 2004/587/ES a směrnice Rady 2006/98/ES. 106)  Zákon č. 676/2004 Sb., o povinném značení lihu a o změně zákona č. 586/1992 Sb., o daních z příjmů, ve znění pozdějších předpisů. 109)  Zákon č. 21/1992 Sb., o bankách, ve znění pozdějších předpisů. Zákon č. 6/1993 Sb., o České národní bance, ve znění pozdějších předpisů. 114)  Zákon č. 123/2000 Sb., o zdravotnických prostředcích, ve znění pozdějších předpisů. 122)  Nařízení vlády č. 178/2001 Sb., kterým se stanoví podmínky ochrany zdraví zaměstnanců při práci, ve znění pozdějších předpisů. 125)  Zákon č. 427/1990 Sb., o převodech vlastnictví státu k některým věcem na jiné právnické nebo fyzické osoby, ve znění pozdějších předpisů. Zákon č. 500/1990 Sb., o působnosti orgánů České republiky ve věcech převodů vlastnictví státu k některým věcem na jiné právnické nebo fyzické osoby, ve znění pozdějších předpisů. Zákon č. 178/2005 Sb., o zrušení Fondu národního majetku České republiky a o působnosti Ministerstva financí při privatizaci majetku České republiky (zákon o zrušení Fondu národ­ ního majetku), ve znění pozdějších předpisů. 126)  Nařízení ES č. 1606/2002 Evropského parlamentu a Rady ze dne 19. července 2002 o používání Mezinárodních účetních standardů. 127)  Zákon č. 182/2006 Sb., o úpadku a způsobech jeho řešení (insolvenční zákon), ve znění pozdějších předpisů. 128)  Zákon č. 634/1992 Sb., o ochraně spotřebitele, ve znění pozdějších předpisů. Zákon č. 110/1997 Sb., o potravinách a tabákových výrobcích a o změně některých souvisejících zákonů, ve znění pozdějších předpisů. 130)  § 12 odst. 1 písm. c) zákona č. 117/1995 Sb., o státní sociální podpoře, ve znění pozdějších předpisů. 131)  Zákon č. 125/2008 Sb., o přeměnách obchodních společností a družstev. 132)  Například § 230 zákoníku práce. 133)  Zákon č. 435/2004 Sb., o zaměstnanosti. 136)  Nařízení Evropského parlamentu a Rady (ES) č. 883/2004 o koordinaci systémů sociálního zabezpečení, v platném znění. 137)  Směrnice Rady 2011/96/EU ze dne 30. listopadu 2011 o společném systému zdanění mateřských a dceřiných společností z různých členských států (přepracované znění), ve znění směr­ nice Rady 2013/13/EU, směrnice Rady 2014/86/EU a směrnice Rady 2015/121/EU. Směrnice Rady 2009/133/ES ze dne 19. října 2009 o společném systému zdanění při fúzích, rozděleních, částečných rozděleních, převodech aktiv a výměně akcií týkajících se společností z různých členských států a při přemístění sídla evropské společnosti nebo evropské družstevní společnosti mezi členskými státy (kodifikované znění), ve znění směrnice Rady 2013/13/EU. Směrnice Rady 2003/49/ES ze dne 3. června 2003 o společném systému zdanění úroků a licenčních poplatků mezi přidruženými společnostmi z různých členských států, ve znění směrnice Rady 2004/66/ES, směrnice Rady 2004/76/ES, směrnice Rady 2006/98/ES a směrnice Rady 2013/13/EU. Směrnice Rady 2003/48/ES ze dne 3. června 2003 o zdanění příjmů z úspor v podobě úrokových plateb, ve znění směrnice Rady 2004/66/ES, rozhodnutí Rady 2004/587/ES, směrnice Rady 2006/98/ES a směrnice Rady 2014/48/EU. Směrnice Rady 2016/1164/EU ze dne 12. července 2016, kterou se stanoví pravidla proti praktikám vyhýbání se daňovým povinnostem, které mají přímý vliv na fungování vnitřního trhu, ve znění směrnice Rady 2017/952/EU. 138)  Zákon č. 236/1995 Sb., o platu a dalších náležitostech spojených s výkonem funkce představitelů státní moci a některých státních orgánů a soudců a poslanců Evropského parlamentu, ve znění pozdějších předpisů. 139)  Zákon č. 455/1991 Sb., živnostenský zákon, ve znění pozdějších předpisů. 140)  Nařízení Komise 2017/1986 ze dne 31. října 2017, kterým se mění nařízení (ES) č. 1126/2008, kterým se přijímají některé mezinárodní účetní standardy v souladu s nařízením Evropské­ ho parlamentu a Rady (ES) č. 1606/2002, pokud jde o mezinárodní standard účetního výkaznictví 16. 141)  Směrnice Rady 2010/24/EU ze dne 16. března 2010 o vzájemné pomoci při vymáhání pohledávek vyplývajících z daní, poplatků, cel a jiných opatření. 142)  Nařízení Evropského parlamentu a Rady (EU) 2018/858 ze dne 30. května 2018 o schvalování motorových vozidel a jejich přípojných vozidel, jakož i systémů, konstrukčních částí a samostatných technických celků určených pro tato vozidla a o dozoru nad trhem s nimi, o změně nařízení (ES) č. 715/2007 a č. 595/2009 a o zrušení směrnice 2007/46/ES, v platném znění."
                 }
             ]
         }

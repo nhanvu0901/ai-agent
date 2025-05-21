@@ -108,42 +108,23 @@ AI Junior enables intelligent exploration of Czech legislative knowledge through
     - Neo4j Browser: http://localhost:7474 (user: neo4j, password: password)
     - Qdrant Dashboard: http://localhost:6333/dashboard
 
-5. **Import legal data**
+## 5. Import Legal Data
 
-   The PDF files have already been processed to JSON format in the `data/json` folder. The code for this processing is available in the `process_pdf_data_python` folder.
+The legal document PDFs have been pre-processed into JSON format and are available in the `data/json` directory. The processing code can be found in the `process_pdf_data_python` folder if you need to review or modify the conversion process.
 
-   To populate the Neo4j and Qdrant databases with this processed data:
+To import this processed data into both Neo4j and Qdrant databases:
 
-   For Docker environment:
-   ```bash
-   docker exec ai-junior-app node dist/graph/import-laws.js
-   ```
-
-   For local development:
-   ```bash
-   npm run dev:import
-   ```
-
-   This will read the JSON files from your data folder and populate both Neo4j and Qdrant databases with structured legal content and vector embeddings.
-
-### Local Development
-
-```bash
-# Install dependencies
-npm install
-
-# Run in development mode
-npm run dev
-
-# Run in debug mode
-npm run dev:debug
-
-# Build for production
-npm run build
-
-# Start production build
-npm run start
+### Windows (Run PowerShell as Administrator)
 ```
+wsl bash -c "tr -d '\r' < /mnt/your-path-to-shell-scripts/shell_scripts/import-laws.sh > /tmp/import-laws_fixed.sh && chmod +x /tmp/import-laws_fixed.sh && bash /tmp/import-laws_fixed.sh"
+```
+
+### Mac/Linux
+```
+.your-path-to-shell-scripts/shell_scripts/import-laws.sh
+```
+
+The import script will read the JSON files from your data folder and populate both databases: Neo4j with structured legal content and Qdrant with the corresponding vector embeddings.
 
 ## API Endpoints
 

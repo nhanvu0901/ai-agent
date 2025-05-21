@@ -9,8 +9,8 @@ let qdrantClient: QdrantClient | undefined;
 let embeddings: CohereEmbeddings | undefined;
 
 const QDRANT_COLLECTION_NAME = 'legal_documents'; // Define your collection name
-const MAX_RETRIES = 3; // Maximum number of retries for embedding generation
-const RETRY_DELAY = 2000; // Milliseconds to wait between retries
+const MAX_RETRIES = 3;
+const RETRY_DELAY = 2000;
 
 function getQdrantClient(): QdrantClient {
     if (!qdrantClient) {
@@ -89,37 +89,36 @@ export function isQdrantPayload(payload: any): payload is QdrantPayload {
     );
 }
 
-/**
- * Ensures that the Qdrant collection exists
- */
-export async function ensureQdrantCollection(collectionName: string = QDRANT_COLLECTION_NAME): Promise<void> {
+
+export async function ensureQdrantCollection(collectionName: string = QDRANT_COLLECTION_NAME): Promise<boolean> {
     const client = getQdrantClient();
     try {
         // Check if collection exists
         const collections = await client.getCollections();
+        console.log("Available Qdrant collections:", collections.collections.map(c => c.name));
+
         const exists = collections.collections.some(c => c.name === collectionName);
 
         if (!exists) {
-            console.log(`Creating Qdrant collection: ${collectionName}`);
-            // Create collection for embeddings
-            const embeddingSize = getEmbeddingsService().getDimension();
-
-            await client.createCollection(collectionName, {
-                vectors: {
-                    size: embeddingSize,
-                    distance: 'Cosine'
-                },
-                optimizers_config: {
-                    default_segment_number: 2
-                }
-            });
-            console.log(`Qdrant collection ${collectionName} created successfully.`);
+            console.log(`Collection "${collectionName}" does not exist in Qdrant.`);
+            return false;
         } else {
-            console.log(`Qdrant collection ${collectionName} already exists.`);
+            const collInfo = await client.getCollection(collectionName);
+            console.log(`Collection "${collectionName}" info:`, JSON.stringify({
+                vectorsCount: collInfo.vectors_count,
+                vectorSize: collInfo.config?.params?.vectors?.size,
+                distance: collInfo.config?.params?.vectors?.distance
+            }));
+
+            if (collInfo.vectors_count === 0) {
+                console.warn(`Collection "${collectionName}" exists but contains 0 vectors.`);
+            }
+
+            return true;
         }
     } catch (error) {
-        console.error('Error ensuring Qdrant collection:', error);
-        throw new Error(`Failed to create or verify Qdrant collection: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
+        console.error('Error checking Qdrant collection:', error);
+        return false;
     }
 }
 
@@ -132,7 +131,11 @@ export async function searchSimilarVectors(
     const client = getQdrantClient();
     try {
         // First, ensure the collection exists
-        await ensureQdrantCollection(collectionName);
+        const collectionExists = await ensureQdrantCollection(collectionName);
+        if (!collectionExists) {
+            console.error(`Collection "${collectionName}" does not exist. Cannot perform search.`);
+            return [];
+        }
 
         // Ensure limit is an integer
         const intLimit = Math.floor(limit);
@@ -141,58 +144,67 @@ export async function searchSimilarVectors(
         const queryVector = await generateEmbedding(queryText);
         console.log(`Successfully generated embedding vector of length ${queryVector.length}`);
 
+        // First try with score threshold if provided
+        if (scoreThreshold !== undefined && scoreThreshold > 0) {
+            try {
+                const searchParams = {
+                    vector: queryVector,
+                    limit: intLimit,
+                    with_payload: true,
+                    score_threshold: scoreThreshold
+                };
+
+                console.log(`Searching Qdrant collection "${collectionName}" with params:`,
+                    { limit: intLimit, score_threshold: scoreThreshold });
+
+                const searchResult = await client.search(collectionName, searchParams);
+                console.log(`Search with threshold ${scoreThreshold} returned ${searchResult.length} results`);
+
+                // If we got results, process them
+                if (searchResult.length > 0) {
+                    return processSearchResults(searchResult);
+                }
+
+                // If no results with threshold, we'll try without threshold below
+                console.log(`No results with score threshold ${scoreThreshold}, trying without threshold...`);
+            } catch (thresholdError) {
+                console.error('Error during threshold search:', thresholdError);
+                // Fall through to non-threshold search
+            }
+        }
+
+        // Try without score threshold if we got here
         const searchParams = {
             vector: queryVector,
             limit: intLimit,
             with_payload: true
         };
 
-        // Add score_threshold only if it's provided
-        if (scoreThreshold !== undefined) {
-            Object.assign(searchParams, { score_threshold: scoreThreshold });
-        }
-
-        console.log(`Searching Qdrant collection "${collectionName}" with params:`,
-            { limit: intLimit, withScoreThreshold: scoreThreshold !== undefined });
+        console.log(`Searching Qdrant collection "${collectionName}" without score threshold`);
 
         const searchResult = await client.search(collectionName, searchParams);
-        console.log(`Search returned ${searchResult.length} results`);
+        console.log(`Search without threshold returned ${searchResult.length} results`);
 
-        // Map results to SearchResultItem type
-        const mappedResults: SearchResultItem[] = [];
+        if (searchResult.length === 0) {
+            // If still no results, try with a smaller vector sample to confirm the API is working
+            console.log("Testing with a minimal search to check if Qdrant is responsive...");
+            const testResult = await client.search(collectionName, {
+                vector: queryVector,
+                limit: 1,
+                with_payload: true
+            });
 
-        for (const point of searchResult) {
-            if (isQdrantPayload(point.payload)) {
-                const payload = point.payload;
-
-                // Get the original string ID if available, otherwise use the numeric ID
-                const originalId = payload.original_id ? String(payload.original_id) : String(point.id);
-
-                // Map the type value - need to ensure it's one of the accepted values
-                let itemType: SearchResultItem['type'] = 'vector';
-                if (payload.type && ['law', 'part', 'head', 'paragraph', 'subsection', 'vector'].includes(payload.type)) {
-                    itemType = payload.type as SearchResultItem['type'];
-                }
-
-                mappedResults.push({
-                    id: originalId,
-                    score: point.score,
-                    type: itemType,
-                    content: payload.text,
-                    title: payload.title || `Document chunk ${originalId}`,
-                    law_id: payload.law_id,
-                    full_path: payload.full_path,
-                    metadata: {
-                        ...payload,
-                        qdrant_id: point.id,
-                    },
-                });
+            if (testResult.length === 0) {
+                console.warn("Qdrant test search also returned 0 results. Possible issues:");
+                console.warn("1. Collection may be empty");
+                console.warn("2. The embedding model may differ from what was used during indexing");
+                console.warn("3. There might be a connection or configuration issue");
             } else {
-                console.warn('Received Qdrant point with unexpected payload structure:', point);
+                console.log("Test search succeeded but main search returned no results.");
             }
         }
 
-        return mappedResults;
+        return processSearchResults(searchResult);
     } catch (error) {
         console.error('Error searching Qdrant:', error);
         // Provide more detailed error for debugging
@@ -209,4 +221,50 @@ export async function searchSimilarVectors(
         }
         return [];
     }
+}
+
+function processSearchResults(searchResult: any[]): SearchResultItem[] {
+    // Map results to SearchResultItem type
+    const mappedResults: SearchResultItem[] = [];
+
+    for (const point of searchResult) {
+        console.log(`Processing search result point with id: ${point.id}, score: ${point.score}`);
+
+        // Log full payload for debugging
+        if (config.debugMode) {
+            console.log(`Full payload for point ${point.id}:`, JSON.stringify(point.payload));
+        }
+
+        if (isQdrantPayload(point.payload)) {
+            const payload = point.payload;
+
+            // Get the original string ID if available, otherwise use the numeric ID
+            const originalId = payload.original_id ? String(payload.original_id) : String(point.id);
+
+            // Map the type value - need to ensure it's one of the accepted values
+            let itemType: SearchResultItem['type'] = 'vector';
+            if (payload.type && ['law', 'part', 'head', 'paragraph', 'subsection', 'vector'].includes(payload.type)) {
+                itemType = payload.type as SearchResultItem['type'];
+            }
+
+            mappedResults.push({
+                id: originalId,
+                score: point.score,
+                type: itemType,
+                content: payload.text,
+                title: payload.title || `Document chunk ${originalId}`,
+                law_id: payload.law_id,
+                full_path: payload.full_path,
+                metadata: {
+                    ...payload,
+                    qdrant_id: point.id,
+                },
+            });
+        } else {
+            console.warn('Received Qdrant point with unexpected payload structure:',
+                JSON.stringify(point.payload || {}));
+        }
+    }
+
+    return mappedResults;
 }

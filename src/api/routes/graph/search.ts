@@ -62,7 +62,7 @@ export default async function searchEndpoint(fastify: FastifyInstance) {
             },
         },
         async (request: FastifyRequest<{ Querystring: SearchQueryType }>, reply: FastifyReply) => {
-            const { query, searchType = 'hybrid', limit = 10, threshold = 0.7 } = request.query;
+            const { query, searchType = 'hybrid', limit = 8, threshold = 0.5 } = request.query;
             request.log.info({ query, searchType, limit }, 'Received search request');
 
             const startTime = Date.now();

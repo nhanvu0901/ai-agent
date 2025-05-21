@@ -463,25 +463,63 @@ async function runImportProcess(importer: Neo4jImporter, qdrantImporter: QdrantI
     console.log(`No JSON files found in ${JSON_DATA_DIR}.`);
     return;
   }
+  //If able to run the embed vector in a single run
+  // for (const file of files) {
+  //   const filePath = path.join(JSON_DATA_DIR, file);
+  //   console.log(`Reading file: ${filePath}`);
+  //   try {
+  //     const fileContent = fs.readFileSync(filePath, 'utf-8');
+  //     const lawData: LawJson = JSON.parse(fileContent);
+  //
+  //     // Import to Neo4j
+  //     await importer.importLawData(lawData);
+  //
+  //     // Create vector embeddings and store in Qdrant
+  //     await qdrantImporter.processLaw(lawData);
+  //
+  //     console.log(`Successfully processed file ${file} in both Neo4j and Qdrant.`);
+  //   } catch (fileProcessingError) {
+  //     console.error(`Error processing file ${filePath}:`, fileProcessingError);
+  //   }
+  // }
+  // console.log('All JSON files have been processed and imported to both Neo4j and Qdrant.');
 
+  // STEP 1: Process all files with Neo4j first
+  console.log("=== PHASE 1: IMPORTING DATA TO NEO4J ===");
   for (const file of files) {
     const filePath = path.join(JSON_DATA_DIR, file);
-    console.log(`Reading file: ${filePath}`);
+    console.log(`Reading file for Neo4j import: ${filePath}`);
     try {
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const lawData: LawJson = JSON.parse(fileContent);
 
-      // Import to Neo4j
+      // Import to Neo4j only
       await importer.importLawData(lawData);
-
-      // Create vector embeddings and store in Qdrant
-      await qdrantImporter.processLaw(lawData);
-
-      console.log(`Successfully processed file ${file} in both Neo4j and Qdrant.`);
+      console.log(`Successfully imported file ${file} to Neo4j.`);
     } catch (fileProcessingError) {
-      console.error(`Error processing file ${filePath}:`, fileProcessingError);
+      console.error(`Error processing file ${filePath} for Neo4j:`, fileProcessingError);
     }
   }
+  console.log("=== COMPLETED NEO4J IMPORT ===");
+
+  // STEP 2: Now process all files with Qdrant
+  console.log("=== PHASE 2: GENERATING EMBEDDINGS AND IMPORTING TO QDRANT ===");
+  for (const file of files) {
+    const filePath = path.join(JSON_DATA_DIR, file);
+    console.log(`Reading file for Qdrant import: ${filePath}`);
+    try {
+      const fileContent = fs.readFileSync(filePath, 'utf-8');
+      const lawData: LawJson = JSON.parse(fileContent);
+
+      // Process with Qdrant only
+      await qdrantImporter.processLaw(lawData);
+      console.log(`Successfully processed embeddings for file ${file} in Qdrant.`);
+    } catch (fileProcessingError) {
+      console.error(`Error processing file ${filePath} for Qdrant:`, fileProcessingError);
+    }
+  }
+  console.log("=== COMPLETED QDRANT IMPORT ===");
+
   console.log('All JSON files have been processed and imported to both Neo4j and Qdrant.');
 }
 

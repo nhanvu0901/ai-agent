@@ -1,8 +1,9 @@
 import { SearchResultItem } from '../types';
 import * as neo4jService from './neo4jService';
 import * as qdrantService from './qdrantService';
+import config from '../config/config';
 
-const MAX_RESULTS_PER_SOURCE = 7; // Max results from Neo4j or Qdrant before combining
+const MAX_RESULTS_PER_SOURCE = 8; // Increased from 7 to get more candidates
 const FINAL_CONTEXT_SIZE = 10; // Max number of items to send to LLM after combining/reranking
 
 export interface HybridSearchParams {
@@ -23,61 +24,81 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
     let graphResults: SearchResultItem[] = [];
     let vectorResults: SearchResultItem[] = [];
     let fullTextResults: SearchResultItem[] = [];
-    const allResults: SearchResultItem[] = [];
 
-    if (useGraph) {
-        try {
+    // Track timing for debugging
+    const startTime = Date.now();
+
+    // Start all searches concurrently with Promise.all
+    try {
+        const searchPromises = [];
+
+        if (useGraph) {
             if (useFullText) {
-                // Get law results from full-text search
-                graphResults = await neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE);
-
-                // Also get paragraph and subsection results from full-text search
-                const detailedResults = await neo4jService.searchParagraphsAndSubsectionsByFulltext(
-                  query,
-                  MAX_RESULTS_PER_SOURCE
+                searchPromises.push(
+                    neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE)
+                        .then(result => { graphResults = result; })
+                        .catch(error => {
+                            console.error('Error during graph search:', error);
+                            return [];
+                        })
                 );
 
-                fullTextResults = detailedResults;
-
-                console.log(`Graph + full-text search returned ${graphResults.length} law results and ${fullTextResults.length} paragraph/subsection results for query: "${query}"`);
+                searchPromises.push(
+                    neo4jService.searchParagraphsAndSubsectionsByFulltext(query, MAX_RESULTS_PER_SOURCE)
+                        .then(result => { fullTextResults = result; })
+                        .catch(error => {
+                            console.error('Error during full-text search:', error);
+                            return [];
+                        })
+                );
             } else {
-                // Fall back to keyword matching if full-text is disabled
-                graphResults = await neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE);
-                console.log(`Graph search returned ${graphResults.length} results for query: "${query}"`);
+                searchPromises.push(
+                    neo4jService.searchLegalTextByKeyword(query, MAX_RESULTS_PER_SOURCE)
+                        .then(result => { graphResults = result; })
+                        .catch(error => {
+                            console.error('Error during graph search:', error);
+                            return [];
+                        })
+                );
             }
-        } catch (error) {
-            console.error('Error during graph search:', error);
         }
-    }
 
-    if (useVector) {
-        try {
-            // Use Qdrant for vector search
-            vectorResults = await qdrantService.searchSimilarVectors(
-              query,
-              undefined,
-              MAX_RESULTS_PER_SOURCE,
-              0.7  // score threshold, adjust as needed
+        if (useVector) {
+            searchPromises.push(
+                qdrantService.searchSimilarVectors(
+                    query,
+                    undefined,
+                    MAX_RESULTS_PER_SOURCE,
+                    0.5
+                )
+                    .then(result => { vectorResults = result; })
+                    .catch(error => {
+                        console.error('Error during vector search:', error);
+                        return [];
+                    })
             );
-            console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
-        } catch (error) {
-            console.error('Error during vector search:', error);
         }
+
+        // Wait for all searches to complete
+        await Promise.all(searchPromises);
+
+        console.log(`Graph search returned ${graphResults.length} results for query: "${query}"`);
+        console.log(`Full-text search returned ${fullTextResults.length} paragraph/subsection results for query: "${query}"`);
+        console.log(`Vector search returned ${vectorResults.length} results for query: "${query}"`);
+    } catch (error) {
+        console.error('Error during hybrid search:', error);
     }
 
     const combined = new Map<string, SearchResultItem>();
 
-    // Helper function to create a unique key for a search result
+
     const getUniqueKey = (item: SearchResultItem): string => {
-        // For items with full_path, use that as it's most specific
         if (item.full_path) {
             return item.full_path;
         }
-        // Otherwise use the id
         return item.id;
     };
 
-    // Add graph results
     graphResults.forEach(item => {
         item.score = item.score || 0.5; // Assign a default score if not present
         const key = getUniqueKey(item);
@@ -85,8 +106,6 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
             combined.set(key, item);
         }
     });
-
-    // Add full-text paragraph and subsection results
     fullTextResults.forEach(item => {
         item.score = item.score || 0.8; // Prioritize full-text matches
         const key = getUniqueKey(item);
@@ -95,7 +114,6 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         }
     });
 
-    // Add vector results - vector search should always return a score
     vectorResults.forEach(item => {
         const key = getUniqueKey(item);
         // Only add if score is better or item doesn't exist
@@ -104,13 +122,30 @@ export async function hybridSearch(params: HybridSearchParams): Promise<SearchRe
         }
     });
 
-    // Sort by score (descending)
+
+    if (combined.size === 0) {
+        console.warn(`No results found from any source for query: "${query}"`);
+    }
+
     const sortedResults = Array.from(combined.values()).sort((a, b) => {
         const scoreA = a.score || 0;
         const scoreB = b.score || 0;
         return scoreB - scoreA;
     });
 
-    console.log(`Combined and sorted ${sortedResults.length} results.`);
+    // Log performance metrics
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+
+    console.log(`Hybrid search completed in ${duration}ms.`);
+    console.log(`Combined and sorted ${sortedResults.length} unique results.`);
+
+    if (config.debugMode && sortedResults.length > 0) {
+        console.log("Top result score:", sortedResults[0].score);
+        console.log("Top result type:", sortedResults[0].type);
+        console.log("Top result law_id:", sortedResults[0].law_id);
+    }
+
+    // Apply context window size limit
     return sortedResults.slice(0, FINAL_CONTEXT_SIZE);
 }

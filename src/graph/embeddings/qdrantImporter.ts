@@ -62,40 +62,34 @@ export class QdrantImporter {
   }
 
 
-  async generateEmbedding(text: string): Promise<number[]> {
-    let retries = 0;
 
-    // Truncate text if it's too long
-    const truncatedText = text.length > 8000 ? text.substring(0, 8000) : text;
+  async generateBatchEmbeddings(texts: string[]): Promise<number[][]> {
+    if (texts.length === 0) return [];
+
+    // Truncate texts if they're too long
+    const truncatedTexts = texts.map(text =>
+        text.length > 8000 ? text.substring(0, 8000) : text
+    );
+
+    let retries = 0;
 
     while (retries <= this.maxRetries) {
       try {
-        const vector = await this.embeddings.embedQuery(truncatedText);
-        return vector;
+        // Use Cohere's batch embedding capability
+        return await this.embeddings.embedBatch(truncatedTexts);
       } catch (error) {
-        // Better error handling with detailed logging
-        let errorMessage: string;
+        const errorMessage = error instanceof Error
+            ? error.message
+            : (typeof error === 'object' && error !== null
+                ? JSON.stringify(error)
+                : String(error));
 
-        if (error instanceof Error) {
-          errorMessage = error.message;
-        } else if (typeof error === 'object' && error !== null) {
-          try {
-            errorMessage = JSON.stringify(error);
-          } catch {
-            errorMessage = "Unknown object error";
-          }
-        } else {
-          errorMessage = String(error);
-        }
+        console.error(`Error generating batch embeddings (attempt ${retries + 1}/${this.maxRetries + 1}): ${errorMessage}`);
 
-        console.error(`Error generating embedding (attempt ${retries + 1}/${this.maxRetries + 1}): ${errorMessage}`);
-
-        // Last retry failed - throw the error
         if (retries === this.maxRetries) {
-          throw new Error(`Failed to generate embedding after ${this.maxRetries + 1} attempts: ${errorMessage}`);
+          throw new Error(`Failed to generate batch embeddings after ${this.maxRetries + 1} attempts: ${errorMessage}`);
         }
 
-        // Wait before retrying, with exponential backoff
         const delay = this.retryDelay * Math.pow(2, retries);
         console.log(`Waiting ${delay}ms before retry ${retries + 1}...`);
         await new Promise(resolve => setTimeout(resolve, delay));
@@ -103,39 +97,25 @@ export class QdrantImporter {
       }
     }
 
-    // This should never happen with the logic above, but TypeScript needs a return
-    throw new Error("Failed to generate embedding: Retry logic failed unexpectedly");
+    throw new Error("Failed to generate batch embeddings: Retry logic failed unexpectedly");
   }
 
-  /**
-   * Generate embeddings for multiple texts in batch with queue processing
-   */
-  async generateBatchEmbeddings(texts: string[]): Promise<number[][]> {
-    // Use Cohere's batch embedding capability
-    return await this.embeddings.embedBatch(texts);
-  }
 
-  /**
-   * Convert a string ID to a numeric ID suitable for Qdrant
-   * This uses a hash function to generate a positive integer from a string
-   */
   private getNumericId(stringId: string): number {
     // Use the idCounter to generate a sequential ID
     const id = this.idCounter++;
     return id;
   }
 
-  /**
-   * Convert QdrantPayload to a plain object that Qdrant accepts
-   */
+
   private convertPayloadToPlainObject(payload: QdrantPayload, originalId: string): Record<string, unknown> {
-    // Create a new plain object and copy all properties
+
     const plainObject: Record<string, unknown> = {
       ...payload,
-      original_id: originalId // Store the original string ID in the payload
+      original_id: originalId
     };
 
-    // Filter out null/undefined values
+
     Object.keys(plainObject).forEach(key => {
       if (plainObject[key] === null || plainObject[key] === undefined) {
         delete plainObject[key];
@@ -253,16 +233,12 @@ export class QdrantImporter {
       return searchResult.points.length > 0;
     } catch (error) {
       console.error(`Error checking if law ${lawId} exists:`, error);
-      // Depending on how you want to handle errors, you might re-throw or return false
-      // For now, let's assume if there's an error, we can't confirm existence,
-      // but in a production scenario, you might want more robust error handling.
+
       return false;
     }
   }
 
-  /**
-   * Process a law and create vector embeddings for its content
-   */
+
   async processLaw(lawJson: LawJson): Promise<void> {
     const { metadata, structured_text, text_content } = lawJson;
 
@@ -298,10 +274,9 @@ export class QdrantImporter {
       }
     });
 
-    // 2. Process each part, head, paragraph, and subsection
+
     let chunkCounter = 0;
 
-    // Process structured text recursively to create embeddings
     const processStructuredElements = (elements: StructuralElement[], parentPath = '') => {
       if (!elements || !Array.isArray(elements)) return;
 
@@ -310,19 +285,18 @@ export class QdrantImporter {
           let textContent = '';
           let fullPath = parentPath ? `${parentPath}_${element.type}:${element.identifier}` : `${metadata.law_id}_${element.type}:${element.identifier}`;
 
-          // Extract text content based on element type
+
           if (element.text) {
             textContent = element.text;
           } else if (element.title) {
             textContent = element.title;
           }
 
-          // Add title if available
+
           if (element.title && element.text) {
             textContent = `${element.title}\n${element.text}`;
           }
 
-          // Only create vectors for elements with text
           if (textContent && textContent.trim().length > 0) {
             chunkCounter++;
 

@@ -71,9 +71,24 @@ export default async function searchEndpoint(fastify: FastifyInstance) {
             try {
                 switch (searchType) {
                     case 'graph':
+
                         const graphResults = await neo4jService.searchLegalTextByKeyword(query, limit);
                         const detailedResults = await neo4jService.searchParagraphsAndSubsectionsByFulltext(query, limit);
-                        results = [...graphResults, ...detailedResults]
+
+
+                        const uniqueItems = new Map<string, SearchResultItem>();
+
+
+                        [...graphResults, ...detailedResults].forEach(item => {
+                            const key = item.full_path || item.id;
+
+                            // Only keep the item with the highest score
+                            if (!uniqueItems.has(key) || (uniqueItems.get(key)!.score || 0) < (item.score || 0)) {
+                                uniqueItems.set(key, item);
+                            }
+                        });
+
+                        results = Array.from(uniqueItems.values())
                             .sort((a, b) => (b.score || 0) - (a.score || 0))
                             .slice(0, limit);
                         break;
